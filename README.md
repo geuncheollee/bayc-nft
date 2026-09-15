@@ -8,7 +8,7 @@ This repository is the public computational record for the revised manuscript
 non-fungible token valuation**.
 
 Release version: `v3.3.6.4`  
-Zenodo DOI: pending the first GitHub Release archive
+Zenodo version DOI: [10.5281/zenodo.22770922](https://doi.org/10.5281/zenodo.22770922)
 
 ## What can be verified immediately
 
@@ -81,10 +81,9 @@ explicit account of this limitation.
 
 ## Citation and license
 
-Release metadata are in `.zenodo.json` and `CITATION.cff`. After Zenodo
-archives the first GitHub Release, the version DOI will replace the pending
-marker here and will be cited in the revised manuscript.
+Release metadata are in `.zenodo.json` and `CITATION.cff`. Zenodo permanently
+archives this exact `v3.3.6.4` release under version DOI
+[10.5281/zenodo.22770922](https://doi.org/10.5281/zenodo.22770922).
 
 The repository source code is licensed under MIT. No license is granted for
 excluded third-party transaction data, NFT images, or model weights.
-
