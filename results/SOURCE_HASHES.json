@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_directory_label": "production_execution_20260915_recommended16_v1",
+  "execution_profile": "recommended_16",
+  "source_sha256": {
+    "selected_configurations.json": "9614b1a0ef9b0b4121d47ae6b4258be7de6c3d47b78f63bff1e12a48565fb338",
+    "refit_summary.json": "2fc1b79248559deda822aa610c977299fd05b21806245a581acde651708db7bb",
+    "test_metrics_summary.json": "8b58ac4edc251e92331f08aa54628dae7c84f761e374baa802576565082cec49",
+    "confidence_intervals_summary.json": "70c79336e14eb95e56480a30136f4443baca0b7e8652305b7fccc03036e1da4c",
+    "evaluation_custody.json": "004757ff8a2d69272a51e7b7ec39dfb236d46ba4c6c4d377c78c350ec4c89927"
+  },
+  "binding": {
+    "approved_execution_manifest_sha256": "6bdd3e36bbe729de21eb355e4aa44d278b9bf2490a79d07585d49fd8aa7c8c63",
+    "approved_scope_decisions_sha256": "53e97c41a84f2ae89b1a7143d87e3eb1389de5bd67fd9f34a0d411804f02d190",
+    "freeze_manifest_sha256": "a84795a0999c267e791c3b5932b91eafbe06606e790eccf634e8b5a2dfe4fa76"
+  },
+  "note": "The selected-configurations public copy changes only the non-public approval-record path marker; its repository hash therefore differs from the source hash above. Other result JSON files are verbatim copies."
+}
+

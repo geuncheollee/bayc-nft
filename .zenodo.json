@@ -1,0 +1,25 @@
+{
+  "creators": [
+    {
+      "name": "Lee, Geun-Cheol",
+      "orcid": "0000-0002-8555-7064",
+      "affiliation": "College of Business, Konkuk University, Korea"
+    }
+  ],
+  "title": "Reproducibility code for Comparative analysis of image embedding models integrated with metadata for non-fungible token valuation",
+  "version": "3.3.6.4",
+  "description": "Reproducibility release containing the frozen analysis engine, processing and feature-extraction source code, completed public execution specification, public validation suite, certified non-row-level result summaries, and figure renderer for the revised BAYC/MAYC NFT valuation study. Transaction rows, NFT images, image embeddings, model binaries, row-level predictions, sealed test targets, and signed approval artifacts are not included; the data boundary and unavailable original Dune SQL are documented explicitly.",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "non-fungible tokens",
+    "NFT valuation",
+    "image embeddings",
+    "multimodal machine learning",
+    "BAYC",
+    "MAYC",
+    "reproducibility"
+  ]
+}

@@ -1,0 +1,28 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local operating-system/editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Sealed targets: never add to the public repository
+*.NOT_FOR_SELECTION.jsonl
+
+# Non-public row-level data, embeddings, models, and production work directories
+*.npy
+*.npz
+*.joblib
+*.pkl
+*.pickle
+*.safetensors
+production_execution_*/
+
+# Journal submission documents are maintained separately
+*.docx
+*.pdf

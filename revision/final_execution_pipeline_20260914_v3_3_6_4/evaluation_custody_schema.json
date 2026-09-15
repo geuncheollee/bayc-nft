@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvaluationCustodySchemaV3_3_6_4",
+  "description": "JSON Schema governing crash-safe single-pass evaluation custody record for Pipeline v3.3.6.4.",
+  "type": "object",
+  "required": [
+    "custody_metadata",
+    "status",
+    "timestamp_utc",
+    "pid",
+    "freeze_manifest_sha256",
+    "unsealed_conditions",
+    "completed_conditions"
+  ],
+  "properties": {
+    "custody_metadata": {
+      "type": "object",
+      "required": [
+        "record_name",
+        "pipeline_version",
+        "single_pass_policy"
+      ],
+      "properties": {
+        "record_name": {
+          "type": "string"
+        },
+        "pipeline_version": {
+          "type": "string"
+        },
+        "single_pass_policy": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "EVALUATION_STARTED",
+        "EVALUATION_FAILED",
+        "EVALUATION_COMPLETED"
+      ]
+    },
+    "timestamp_utc": {
+      "type": "string"
+    },
+    "failed_at_utc": {
+      "type": "string"
+    },
+    "completed_at_utc": {
+      "type": "string"
+    },
+    "pid": {
+      "type": "integer"
+    },
+    "freeze_manifest_sha256": {
+      "type": "string"
+    },
+    "approved_execution_manifest_sha256": {
+      "type": "string"
+    },
+    "execution_profile": {
+      "type": "string"
+    },
+    "unsealed_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completed_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "error_code": {
+      "type": "string"
+    },
+    "error_message": {
+      "type": "string"
+    },
+    "error": {
+      "type": "string"
+    },
+    "approved_scope_decisions_sha256": {
+      "type": "string"
+    },
+    "scope_decisions": {
+      "type": "object"
+    }
+  }
+}

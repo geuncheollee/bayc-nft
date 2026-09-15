@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-09-15T05:04:52Z",
+  "status": "REFIT_COMPLETED",
+  "pipeline_version": "3.3.6.4-production-pipeline-20260914-v3.3.6.4",
+  "execution_profile": "recommended_16",
+  "approved_scope_decisions_sha256": "53e97c41a84f2ae89b1a7143d87e3eb1389de5bd67fd9f34a0d411804f02d190",
+  "scope_decisions": {
+    "DECISION-01": "A",
+    "DECISION-02": "A",
+    "DECISION-03": "A",
+    "DECISION-04": "A"
+  },
+  "approved_execution_manifest_sha256": "6bdd3e36bbe729de21eb355e4aa44d278b9bf2490a79d07585d49fd8aa7c8c63",
+  "candidate_manifest_sha256": "6bdd3e36bbe729de21eb355e4aa44d278b9bf2490a79d07585d49fd8aa7c8c63",
+  "target_execution_engine": "revision/final_execution_pipeline_20260914_v3_3_6_4/",
+  "total_models": 16,
+  "models": [
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_BAYC_metadata.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_BAYC_augmented.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_BAYC_mandatory_benchmark.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_MAYC_metadata.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_MAYC_augmented.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_MAYC_mandatory_benchmark.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_BAYC_metadata.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_BAYC_augmented.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_BAYC_mandatory_benchmark.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_MAYC_metadata.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_MAYC_augmented.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_exact_one_wei_sensitivity_v1_MAYC_mandatory_benchmark.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_BAYC_exploratory_siglip2.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_BAYC_exploratory_clip_native.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_MAYC_exploratory_siglip2.joblib",
+    "revision\\production_execution_20260915_recommended16_v1\\refit_model_original_v1_MAYC_exploratory_dinov2_fullframe.joblib"
+  ]
+}

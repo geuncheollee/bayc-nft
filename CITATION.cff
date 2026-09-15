@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release."
+title: "Reproducibility code for Comparative analysis of image embedding models integrated with metadata for non-fungible token valuation"
+type: software
+authors:
+  - family-names: "Lee"
+    given-names: "Geun-Cheol"
+    orcid: "https://orcid.org/0000-0002-8555-7064"
+    affiliation: "College of Business, Konkuk University, Korea"
+version: 3.3.6.4
+date-released: 2026-09-15
+license: MIT
+repository-code: "https://github.com/geuncheollee/bayc-nft"
+keywords:
+  - non-fungible tokens
+  - NFT valuation
+  - image embeddings
+  - multimodal machine learning
+  - BAYC
+  - MAYC
+  - reproducibility

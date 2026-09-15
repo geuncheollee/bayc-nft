@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AuditAnchorSchemaV3_3_6_4",
+  "description": "JSON Schema governing external auditor approval anchor for Pipeline v3.3.6.4.",
+  "type": "object",
+  "required": [
+    "status",
+    "governance_gate",
+    "approved_execution_manifest_sha256",
+    "approved_profile",
+    "approved_by",
+    "approval_date_utc",
+    "approved_scope_decisions_sha256"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING_EXTERNAL_APPROVAL",
+        "APPROVED"
+      ]
+    },
+    "approved_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approval_date_utc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "governance_gate": {
+      "type": "string"
+    },
+    "approved_execution_manifest_sha256": {
+      "type": "string"
+    },
+    "approved_profile": {
+      "type": "string"
+    },
+    "approved_scope_decisions_sha256": {
+      "type": "string"
+    },
+    "pipeline_version": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

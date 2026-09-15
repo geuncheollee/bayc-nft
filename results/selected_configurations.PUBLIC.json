@@ -1,0 +1,271 @@
+{
+  "original_v1": {
+    "BAYC": {
+      "sample": "original_v1",
+      "collection": "BAYC",
+      "metadata": {
+        "family": "HistGradientBoosting",
+        "config": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "l2_regularization": 10.0
+        },
+        "pooled_mse": 1.9712860631115512
+      },
+      "augmented": {
+        "candidate_name": "late_HistGradientBoosting_LinearSVR",
+        "encoder": "dinov2_fullframe",
+        "image_weight": 0.0,
+        "pooled_mse": 1.9712860631115507,
+        "metadata_model": {
+          "family": "HistGradientBoosting",
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10.0
+          }
+        },
+        "image_model": {
+          "family": "LinearSVR",
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          }
+        }
+      },
+      "mandatory_benchmark": {
+        "family": "ElasticNet",
+        "config": {
+          "alpha": 0.1,
+          "l1_ratio": 0.5
+        },
+        "pooled_mse": 1.9577871974448577
+      },
+      "exploratory_augmented": {
+        "siglip2": {
+          "candidate_name": "late_HistGradientBoosting_LinearSVR",
+          "encoder": "siglip2",
+          "image_weight": 0.0,
+          "pooled_mse": 1.9712860631115507,
+          "metadata_model": {
+            "family": "HistGradientBoosting",
+            "config": {
+              "learning_rate": 0.05,
+              "max_leaf_nodes": 15,
+              "l2_regularization": 10.0
+            }
+          },
+          "image_model": {
+            "family": "LinearSVR",
+            "config": {
+              "C": 0.01,
+              "epsilon": 0.1
+            }
+          }
+        },
+        "clip_native": {
+          "candidate_name": "late_HistGradientBoosting_LinearSVR",
+          "encoder": "clip_native",
+          "image_weight": 0.0,
+          "pooled_mse": 1.9712860631115507,
+          "metadata_model": {
+            "family": "HistGradientBoosting",
+            "config": {
+              "learning_rate": 0.05,
+              "max_leaf_nodes": 15,
+              "l2_regularization": 10.0
+            }
+          },
+          "image_model": {
+            "family": "LinearSVR",
+            "config": {
+              "C": 0.01,
+              "epsilon": 0.1
+            }
+          }
+        }
+      }
+    },
+    "MAYC": {
+      "sample": "original_v1",
+      "collection": "MAYC",
+      "metadata": {
+        "family": "Ridge",
+        "config": {
+          "alpha": 100000.0
+        },
+        "pooled_mse": 0.16050419865501633
+      },
+      "augmented": {
+        "candidate_name": "late_LinearSVR_ElasticNet",
+        "encoder": "clip_native",
+        "image_weight": 0.7,
+        "pooled_mse": 0.1615096797495434,
+        "metadata_model": {
+          "family": "LinearSVR",
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          }
+        },
+        "image_model": {
+          "family": "ElasticNet",
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.1
+          }
+        }
+      },
+      "mandatory_benchmark": {
+        "family": "ElasticNet",
+        "config": {
+          "alpha": 0.01,
+          "l1_ratio": 0.5
+        },
+        "pooled_mse": 0.16040410473332511
+      },
+      "exploratory_augmented": {
+        "siglip2": {
+          "candidate_name": "late_LinearSVR_Ridge",
+          "encoder": "siglip2",
+          "image_weight": 0.7,
+          "pooled_mse": 0.16142215691750655,
+          "metadata_model": {
+            "family": "LinearSVR",
+            "config": {
+              "C": 0.01,
+              "epsilon": 0.1
+            }
+          },
+          "image_model": {
+            "family": "Ridge",
+            "config": {
+              "alpha": 100000.0
+            }
+          }
+        },
+        "dinov2_fullframe": {
+          "candidate_name": "late_LinearSVR_Ridge",
+          "encoder": "dinov2_fullframe",
+          "image_weight": 0.7,
+          "pooled_mse": 0.16173249304116077,
+          "metadata_model": {
+            "family": "LinearSVR",
+            "config": {
+              "C": 0.01,
+              "epsilon": 0.1
+            }
+          },
+          "image_model": {
+            "family": "Ridge",
+            "config": {
+              "alpha": 100000.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "exact_one_wei_sensitivity_v1": {
+    "BAYC": {
+      "sample": "exact_one_wei_sensitivity_v1",
+      "collection": "BAYC",
+      "metadata": {
+        "family": "HistGradientBoosting",
+        "config": {
+          "learning_rate": 0.05,
+          "max_leaf_nodes": 15,
+          "l2_regularization": 10.0
+        },
+        "pooled_mse": 0.1027609272189595
+      },
+      "augmented": {
+        "candidate_name": "late_HistGradientBoosting_PLS",
+        "encoder": "siglip2",
+        "image_weight": 0.3,
+        "pooled_mse": 0.10165402034746913,
+        "metadata_model": {
+          "family": "HistGradientBoosting",
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10.0
+          }
+        },
+        "image_model": {
+          "family": "PLS",
+          "config": {
+            "components": 16
+          }
+        }
+      },
+      "mandatory_benchmark": {
+        "family": "ElasticNet",
+        "config": {
+          "alpha": 0.1,
+          "l1_ratio": 0.5
+        },
+        "pooled_mse": 0.0906836168093109
+      },
+      "exploratory_augmented": {}
+    },
+    "MAYC": {
+      "sample": "exact_one_wei_sensitivity_v1",
+      "collection": "MAYC",
+      "metadata": {
+        "family": "Ridge",
+        "config": {
+          "alpha": 100000.0
+        },
+        "pooled_mse": 0.04993699807772379
+      },
+      "augmented": {
+        "candidate_name": "late_Ridge_LinearSVR",
+        "encoder": "siglip2",
+        "image_weight": 0.0,
+        "pooled_mse": 0.0499369980777238,
+        "metadata_model": {
+          "family": "Ridge",
+          "config": {
+            "alpha": 100000.0
+          }
+        },
+        "image_model": {
+          "family": "LinearSVR",
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          }
+        }
+      },
+      "mandatory_benchmark": {
+        "family": "ElasticNet",
+        "config": {
+          "alpha": 0.01,
+          "l1_ratio": 0.5
+        },
+        "pooled_mse": 0.05003835662465065
+      },
+      "exploratory_augmented": {}
+    }
+  },
+  "_metadata": {
+    "execution_profile": "recommended_16",
+    "pipeline_version": "3.3.6.4-production-pipeline-20260914-v3.3.6.4",
+    "approved_scope_decisions_sha256": "53e97c41a84f2ae89b1a7143d87e3eb1389de5bd67fd9f34a0d411804f02d190",
+    "approved_scope_decisions_path": "WITHHELD_NONPUBLIC_APPROVAL_RECORD",
+    "created_at_utc": "2026-09-15T05:00:26Z"
+  },
+  "execution_profile": "recommended_16",
+  "pipeline_version": "3.3.6.4-production-pipeline-20260914-v3.3.6.4",
+  "approved_scope_decisions_sha256": "53e97c41a84f2ae89b1a7143d87e3eb1389de5bd67fd9f34a0d411804f02d190",
+  "scope_decisions": {
+    "DECISION-01": "A",
+    "DECISION-02": "A",
+    "DECISION-03": "A",
+    "DECISION-04": "A"
+  },
+  "candidate_manifest_sha256": "6bdd3e36bbe729de21eb355e4aa44d278b9bf2490a79d07585d49fd8aa7c8c63",
+  "approved_execution_manifest_sha256": "6bdd3e36bbe729de21eb355e4aa44d278b9bf2490a79d07585d49fd8aa7c8c63",
+  "target_execution_engine": "revision/final_execution_pipeline_20260914_v3_3_6_4/"
+}

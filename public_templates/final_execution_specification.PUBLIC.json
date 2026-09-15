@@ -1,0 +1,633 @@
+{
+  "specification_metadata": {
+    "name": "Final Execution Specification v3.3.6.4",
+    "version": "3.3.6.4-production-pipeline-20260914-v3.3.6.4",
+    "status": "EXECUTION_COMPLETED_AND_PUBLIC_RECORD_PREPARED",
+    "created_at_utc": "2026-09-14T14:40:00Z",
+    "description": "Comprehensive final specification governing hyperparameter tuning, model refit, freeze audit, test evaluation, and paired cluster bootstrap inference v3.3.6.4 with Gate 1 scope decision verification, profile binding enforcement, Option B fail-closed semantics, fail-closed provenance validation, and exact canonical engine binding.",
+    "execution_policy": {
+      "strict_isolation": "Under no circumstances shall *.NOT_FOR_SELECTION.jsonl targets be parsed, opened, or scored prior to completed refit pipeline freeze.",
+      "single_pass_guarantee": "Final test evaluation is strictly single-pass. No post-test hyperparameter re-selection, candidate switching, or pipeline alteration is permitted.",
+      "execution_status": "The recommended_16 profile completed model selection, refit, single-pass out-of-time evaluation, and 2,000-iteration paired token-cluster bootstrap inference on 2026-09-15. Public non-row-level outputs are supplied in results/.",
+      "cli_exit_semantics": "Subcommands exit non-zero (sys.exit(1)) on any BLOCKED_*, FAIL, ERROR, or unhandled exception. Only preflight with PENDING_EXTERNAL_APPROVAL exits 0 with terminal notice.",
+      "one_wei_exact_determination": "Exact 1-wei trades are strictly determined by integer amount_raw == 1 or losslessly parsed Decimal(price_eth) * 10^18 == 1. Sub-wei (e.g. 0.5 wei), 0, negative values, non-integer wei, NaN, Inf, and missing values fail closed immediately.",
+      "custody_failure_lifecycle": "Failures during or after clean-slice verification atomically record EVALUATION_FAILED in evaluation_custody.json. Re-evaluation is strictly blocked by BLOCKED_PREVIOUS_EVALUATION_RECORD_EXISTS.",
+      "trust_anchor_policy": "Self-issued anchors inside the engine package directory or output directory are strictly prohibited. A signed external approval anchor must reside strictly outside both directories and must be passed via --external-anchor-path. It must bind the execution manifest SHA-256, execution profile, and exact approved scope-decisions SHA-256. CLI hash/profile flags are mandatory expectations only and never constitute approval evidence.",
+      "exact_integer_wei_policy": "Exact 1-wei trades are strictly evaluated by integer amount_raw == 1 or exact Decimal integer wei (price_eth * 10^18 == 1). Sub-wei (e.g. 0.5 wei), 0, negative values, non-integer wei strings, NaN, Inf, and discrepancies between amount_raw and price_eth fail closed with ValueError. Clean sensitivity sample condition is defined as the set-difference result of removing exact 1-wei trades."
+    },
+    "governance_reference": "Public Option A decision states are recorded below; the signed approval record is withheld from this public repository.",
+    "approved_scope_decisions_schema": "approved_scope_decisions.schema.json"
+  },
+  "sample_definitions": {
+    "primary": {
+      "name": "original_v1",
+      "description": "Primary revision sample using unchanged target generation from target_pipeline_20260909, with uniform transaction weight 1.0. Retains nominal trades; exact 1-wei exclusion is evaluated as a separate sensitivity sample.",
+      "target_directory": "revision/target_pipeline_20260909",
+      "split_directory": "revision/image_validation_20260909",
+      "bayc_dev_trades": 58635,
+      "mayc_dev_trades": 113823,
+      "total_dev_trades": 172458,
+      "bayc_d1_d3_forward_eval_trades": 28025,
+      "mayc_d1_d3_forward_eval_trades": 76357,
+      "total_d1_d3_forward_eval_trades": 104382,
+      "bayc_test_trades": 5120,
+      "mayc_test_trades": 13019,
+      "total_test_trades": 18139,
+      "d1_d3_distinct_tokens": {
+        "bayc": 3908,
+        "mayc": 6212,
+        "total": 10120
+      }
+    },
+    "sensitivity_exact_one_wei": {
+      "name": "exact_one_wei_sensitivity_v1",
+      "description": "Pre-specified robustness sample strictly excluding the 21 confirmed 1-wei nominal order-price transactions (9 in BAYC, 12 in MAYC) from primary development targets, and excluding 1-wei trades from the baseline market pool (9 in BAYC, 13 in MAYC) as specified in Diagnostic Amendment 20260909.json.",
+      "target_directory": "revision/one_wei_sensitivity_targets_20260909",
+      "split_directory": "revision/one_wei_sensitivity_targets_20260909",
+      "bayc_dev_trades": 58626,
+      "mayc_dev_trades": 113811,
+      "total_dev_trades": 172437,
+      "bayc_d1_d3_forward_eval_trades": 28016,
+      "mayc_d1_d3_forward_eval_trades": 76345,
+      "total_d1_d3_forward_eval_trades": 104361,
+      "bayc_test_trades": 5120,
+      "mayc_test_trades": 13019,
+      "total_test_trades": 18139,
+      "excluded_one_wei_transactions": {
+        "bayc": 9,
+        "mayc": 12,
+        "total": 21,
+        "temporal_test_one_wei_count": 0
+      },
+      "d1_d3_distinct_tokens": {
+        "bayc": 3908,
+        "mayc": 6211,
+        "total": 10119
+      }
+    }
+  },
+  "collections": {
+    "BAYC": {
+      "name": "Bored Ape Yacht Club",
+      "contract": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+      "cohort_tokens": 9366,
+      "development_unique_tokens": 9265,
+      "unseen_evaluation_tokens": 101,
+      "unseen_evaluation_trades": 342,
+      "selected_outer_metadata_family": "HistGradientBoosting",
+      "metadata_features": [
+        "background",
+        "fur",
+        "eyes",
+        "clothes",
+        "mouth",
+        "hat",
+        "earring"
+      ]
+    },
+    "MAYC": {
+      "name": "Mutant Ape Yacht Club",
+      "contract": "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+      "cohort_tokens": 12459,
+      "development_unique_tokens": 12239,
+      "unseen_evaluation_tokens": 220,
+      "unseen_evaluation_trades": 994,
+      "selected_outer_metadata_family": "Ridge",
+      "metadata_features": [
+        "background",
+        "fur",
+        "eyes",
+        "clothes",
+        "mouth",
+        "hat",
+        "earring",
+        "generation"
+      ]
+    }
+  },
+  "encoders": {
+    "scope_boundary": {
+      "approved_for_preparation": [
+        "siglip2",
+        "clip_native",
+        "dinov2_fullframe"
+      ],
+      "pending_policy_decisions": {
+        "legacy_7_encoders": "Proposed for exclusion due to irremediable lookahead/random-split flaws in legacy audits; awaiting user confirmation.",
+        "dinov3": "Proposed for exclusion due to August 2025 release date and HuggingFace gated licensing; awaiting user confirmation.",
+        "background_removal_nobg": "Proposed for exclusion from primary pipeline; maintained as auxiliary visual sensitivity.",
+        "trait_probes": "Maintained as separate interpretability auxiliary probe; not integrated into pricing prediction pipeline."
+      }
+    },
+    "specifications": {
+      "clip_native": {
+        "name": "clip_native",
+        "source_summary": "revision\\dinov2_clip_features_20260909\\extraction_summary.json",
+        "source_summary_sha256": "e9d91a9b06b9fff0a8c14381ecdf57e14779a6244ada3a2186d17e7be7fff427",
+        "collections": {
+          "BAYC": {
+            "dimensions": 768,
+            "matrix": "revision\\dinov2_clip_features_20260909\\bayc_features_clip_native.npy",
+            "matrix_sha256": "068e091f2ac13c65ade0a442cce5a3dba07fdb2bfdfe110d756d1b233807e768",
+            "manifest": "revision\\dinov2_clip_features_20260909\\manifest_bayc_clip_native.jsonl",
+            "manifest_sha256": "192e0f58035d2a369ff38a1ca3debe9ea008c6c1a7ad8e231601770f7242c79b",
+            "token_count": 9366
+          },
+          "MAYC": {
+            "dimensions": 768,
+            "matrix": "revision\\dinov2_clip_features_20260909\\mayc_features_clip_native.npy",
+            "matrix_sha256": "32e436bacab173bb70a965f062e696dc532ee0187af53e401e4015e25815d299",
+            "manifest": "revision\\dinov2_clip_features_20260909\\manifest_mayc_clip_native.jsonl",
+            "manifest_sha256": "7d754901a530a3541070e28c500e0510b7aa1368fc7ced963bfe02246e014e57",
+            "token_count": 12459
+          }
+        },
+        "preprocessing": "224 square resize; 224 center crop does not remove spatial border after square padding"
+      },
+      "siglip2": {
+        "name": "siglip2",
+        "source_summary": "revision\\siglip2_features_20260909\\extraction_summary.json",
+        "source_summary_sha256": "647f6ee9d521f5d3e31abc7e54f7bf15ae14c153d1efaf651d67e281c9174c53",
+        "collections": {
+          "BAYC": {
+            "dimensions": 1024,
+            "matrix": "revision\\siglip2_features_20260909\\bayc_features_siglip2.npy",
+            "matrix_sha256": "622ad451e39686b42feec112438dd2706f11108b398a8eb59fea4d1a886a5f64",
+            "manifest": "revision\\siglip2_features_20260909\\feature_manifest_bayc.jsonl",
+            "manifest_sha256": "3bf0b92995b9b106ddb65c626016f32593eae2dcc961290c99a568109571a6bd",
+            "token_count": 9366
+          },
+          "MAYC": {
+            "dimensions": 1024,
+            "matrix": "revision\\siglip2_features_20260909\\mayc_features_siglip2.npy",
+            "matrix_sha256": "b75583be1014832ac2450268b1bf6a29f310b1c57232b6e694d7f33d341699c1",
+            "manifest": "revision\\siglip2_features_20260909\\feature_manifest_mayc.jsonl",
+            "manifest_sha256": "d5bb4de762f96eab0ce550f7fe582181cf54fd3cc12c2d37e7fb1e65f50578ec",
+            "token_count": 12459
+          }
+        },
+        "preprocessing": "256 square direct resize, official bilinear processor"
+      },
+      "dinov2_fullframe": {
+        "name": "dinov2_fullframe",
+        "source_summary": "revision\\dinov2_fullframe_features_20260909\\extraction_summary.json",
+        "source_summary_sha256": "cf5238de93997efe436d549721c23c235c60d0508715835267443fab7bc918a6",
+        "collections": {
+          "BAYC": {
+            "dimensions": 1024,
+            "matrix": "revision\\dinov2_fullframe_features_20260909\\bayc_features_dinov2_fullframe.npy",
+            "matrix_sha256": "2aad264b6fe682c80f09778f13810cf41c0dfc6527a4551663dcf74d8e96deee",
+            "manifest": "revision\\dinov2_fullframe_features_20260909\\manifest_bayc_dinov2_fullframe.jsonl",
+            "manifest_sha256": "ce67fd66b7bfddeb744f0eb9604a2832d017788629ff8353afabff993ab80e1e",
+            "token_count": 9366
+          },
+          "MAYC": {
+            "dimensions": 1024,
+            "matrix": "revision\\dinov2_fullframe_features_20260909\\mayc_features_dinov2_fullframe.npy",
+            "matrix_sha256": "5ad2667067b13194d5aa03bbd5a7910c4845e48f5dd02b84174074d1037f132f",
+            "manifest": "revision\\dinov2_fullframe_features_20260909\\manifest_mayc_dinov2_fullframe.jsonl",
+            "manifest_sha256": "514fb47e27ebd8ea9d7b526f8dfb2f35ccb6ff8f1e7ddaa157f45c72f496c2a5",
+            "token_count": 12459
+          }
+        },
+        "preprocessing": "EXIF transpose, RGBA, neutral-gray square padding and straight-alpha composite; bicubic direct 224x224 resize; no center crop",
+        "model": {
+          "model_id": "facebook/dinov2-large",
+          "model_revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+          "checkpoint_safetensors_sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+          "checkpoint_path": "SET_ABSOLUTE_PATH_TO_LOCAL_DINOV2_LARGE_SNAPSHOT_BEFORE_EXECUTION",
+          "architecture": {
+            "model_type": "dinov2",
+            "hidden_size": 1024,
+            "num_hidden_layers": 24,
+            "num_attention_heads": 16,
+            "image_size": 224,
+            "patch_size": 14
+          },
+          "pooling": {
+            "method": "CLS token",
+            "attribute": "pooler_output",
+            "description": "Pre-trained ViT CLS token unnormalized representation"
+          },
+          "output_dimension": 1024,
+          "dtype": "float32"
+        }
+      }
+    }
+  },
+  "tuning_schedule_2024": {
+    "description": "Expanding prefix internal cross-validation across the three complete calendar quarters of 2024 within the pre-2025 development set.",
+    "quarters": [
+      {
+        "quarter": "2024 Q2",
+        "train_start_inclusive": "Inception (2021-05-01)",
+        "train_end_exclusive": "2024-04-01 00:00:00+00:00",
+        "validation_start_inclusive": "2024-04-01 00:00:00+00:00",
+        "validation_end_exclusive": "2024-07-01 00:00:00+00:00"
+      },
+      {
+        "quarter": "2024 Q3",
+        "train_start_inclusive": "Inception (2021-05-01)",
+        "train_end_exclusive": "2024-07-01 00:00:00+00:00",
+        "validation_start_inclusive": "2024-07-01 00:00:00+00:00",
+        "validation_end_exclusive": "2024-10-01 00:00:00+00:00"
+      },
+      {
+        "quarter": "2024 Q4",
+        "train_start_inclusive": "Inception (2021-05-01)",
+        "train_end_exclusive": "2024-10-01 00:00:00+00:00",
+        "validation_start_inclusive": "2024-10-01 00:00:00+00:00",
+        "validation_end_exclusive": "2025-01-01 00:00:00+00:00"
+      }
+    ],
+    "selection_criterion": "Minimum pooled validation SSE / n across the 3 internal quarters. Requires all quarter fits to be valid, finite, and converged."
+  },
+  "final_refit_specification": {
+    "horizon": "Inception to 2024-12-31 23:59:59 UTC (time < '2025-01-01')",
+    "trade_weights": 1.0,
+    "preprocessing": {
+      "metadata": "OneHotEncoder(handle_unknown='ignore', drop=None, sparse=False), VarianceThreshold(threshold=0.0) fitted strictly on full development training split. StandardScaler fitted on training split (passthrough for HistGradientBoosting).",
+      "vision": "Image mask (VarianceThreshold(threshold=0.0)) and StandardScaler fitted strictly on full development training split using token-transaction sample weights.",
+      "early_fusion": "Concatenation of separately standardized metadata and vision blocks; dynamic dimensionality (dynamic metadata features + native vision dimension).",
+      "late_fusion": "Convex blend: y_hat = (1 - w*) * y_hat_meta + w* * y_hat_image, where w* in [0.0..1.0] in steps of 0.1 is selected by pooled 2024 Q2-Q4 validation MSE."
+    },
+    "persistence": {
+      "format": "joblib archive with zlib compression level 3",
+      "contents": [
+        "pipeline/model",
+        "preprocessing_state",
+        "selected_config",
+        "training_source_rows_sha256"
+      ]
+    }
+  },
+  "model_grids_and_solvers": {
+    "Ridge": {
+      "solver": "cholesky",
+      "fit_intercept": true,
+      "grid": {
+        "alpha": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0,
+          10000.0,
+          100000.0,
+          1000000.0
+        ]
+      }
+    },
+    "PLS": {
+      "scale": false,
+      "max_iter": 500,
+      "tol": 1e-06,
+      "grid": {
+        "components": [
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "rank_constraint": "rank(X_train) >= components; len(model.n_iter_) == components; finite coefficients"
+    },
+    "LinearSVR_metadata": {
+      "implementation": "sklearn.svm.LinearSVR",
+      "loss": "squared_epsilon_insensitive",
+      "dual": false,
+      "tol": 0.0001,
+      "max_iter": 5000,
+      "random_state": 20260908,
+      "grid": {
+        "C": [
+          0.01,
+          0.1,
+          1.0
+        ],
+        "epsilon": [
+          0.1,
+          0.2
+        ]
+      },
+      "source": "revision/code/metadata_baseline_pipeline.py:79"
+    },
+    "LinearSVR_vision_and_early": {
+      "implementation": "CountedPrimalSVR",
+      "source": "revision/code/counted_primal_svr_v3.py",
+      "objective": "0.5 * (||beta||^2 + intercept^2) + C * sum(max(0, |y - (X beta + intercept)| - epsilon)^2)",
+      "optimization": "Newton-Raphson with Armijo backtracking line search",
+      "stopping_criterion": "Stationarity certificate: full primal gradient norm ||grad P(beta)||_2 <= 1e-6",
+      "max_iter": 5000,
+      "grid": {
+        "C": [
+          0.01,
+          0.1,
+          1.0
+        ],
+        "epsilon": [
+          0.1,
+          0.2
+        ]
+      }
+    },
+    "ElasticNet": {
+      "max_iter": 20000,
+      "tol": 0.0001,
+      "selection": "cyclic",
+      "random_state": 20260908,
+      "grid": {
+        "alpha": [
+          0.001,
+          0.01,
+          0.1,
+          1.0,
+          10.0
+        ],
+        "l1_ratio": [
+          0.1,
+          0.5,
+          0.9
+        ]
+      }
+    },
+    "HistGradientBoosting": {
+      "max_iter": 300,
+      "early_stopping": false,
+      "random_state": 20260908,
+      "grid": {
+        "learning_rate": [
+          0.05,
+          0.1
+        ],
+        "max_leaf_nodes": [
+          15,
+          31
+        ],
+        "l2_regularization": [
+          1.0,
+          10.0
+        ]
+      }
+    },
+    "LateFusionBlend": {
+      "grid": {
+        "image_weight": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1.0
+        ]
+      }
+    }
+  },
+  "tie_breaking_hierarchy": {
+    "absolute_mse_tolerance": 1e-12,
+    "family_priority_order": [
+      "Ridge",
+      "ElasticNet",
+      "PLS",
+      "LinearSVR",
+      "HistGradientBoosting"
+    ],
+    "intra_family_rules": {
+      "Ridge": "Larger alpha (stronger L2 regularization)",
+      "ElasticNet": "Larger alpha, then larger l1_ratio (sparser model)",
+      "PLS": "Fewer latent components (lower rank/simpler)",
+      "LinearSVR": "Smaller C (stronger regularization), then larger epsilon (wider margin)",
+      "HistGradientBoosting": "Fewer max_leaf_nodes, then larger l2_regularization, then smaller learning_rate",
+      "LateFusionBlend": "Smaller visual weight w (preferring parsimonious metadata baseline over visual augmentation)"
+    }
+  },
+  "statistical_inference_and_ci": {
+    "bootstrap": {
+      "method": "Paired token-cluster bootstrap",
+      "iterations": 2000,
+      "random_seed": 20260908,
+      "resampling_unit": "token_id (all transactions belonging to a resampled token are included together into both paired models simultaneously)",
+      "confidence_intervals": [
+        {
+          "level": 0.95,
+          "type": "Individual percentile CI for Delta_RMSE and U%"
+        },
+        {
+          "level": 0.975,
+          "type": "Bonferroni-adjusted joint percentile CI across both collections (BAYC and MAYC)"
+        }
+      ]
+    },
+    "calendar_block_bootstrap": {
+      "method": "14-day chronological calendar time-block paired bootstrap",
+      "iterations": 2000,
+      "random_seed": 20260908,
+      "purpose": "Robustness check against market-wide temporal autocorrelations and macro shocks"
+    },
+    "subgroup_analysis": {
+      "criteria": [
+        "Known tokens (traded during 2021-2024 development)",
+        "Unseen tokens (no trades during development)"
+      ],
+      "minimum_support_threshold": "At least 50 transactions across at least 30 distinct tokens; below threshold, only descriptive statistics are reported."
+    }
+  },
+  "input_manifest": {
+    "analysis_specification": {
+      "path": "revision\\data_audit_20260908\\analysis_specification_v1.json",
+      "sha256": "c4fe802fe518b3e18b4c0648b6fe0a5b5932941f18094b1099f6ec12b64efe15"
+    },
+    "analysis_amendment": {
+      "path": "revision\\Analysis Amendment 20260909.json",
+      "sha256": "bfe64a08804ef555745c9be3067fdb88d3fc19a18a2c471c7b335c448809130d"
+    },
+    "diagnostic_amendment": {
+      "path": "revision\\Diagnostic Amendment 20260909.json",
+      "sha256": "50833e687d2e450cdf2900274aba654df68665ca1ee3e6c466dd5e6088703c0a"
+    },
+    "svr_stable_line_search_amendment": {
+      "path": "revision\\SVR Stable Line Search Amendment 20260909.json",
+      "sha256": "82ce765a84b4175614ac2b58ea315a450fd7e4ef7c78a1bb314f39670ab70709"
+    },
+    "encoder_registry_v4": {
+      "path": "revision\\Encoder Development Registry 20260909 v4.json",
+      "sha256": "336842f115d4383c4ba0579cead0e001754070eb6ceb7738f37e1f4edc72cf17"
+    },
+    "encoder_execution_spec_v4": {
+      "path": "revision\\Encoder Development Execution Specification 20260909 v4.json",
+      "sha256": "d97ad037af2649ebc3ad5c6980f1fb2e7d150aaaec00cc1fb1e6c19bbc393913"
+    },
+    "cohort_release_v1": {
+      "path": "revision\\image_validation_20260909\\cohort_release_v1.json",
+      "sha256": "c18f5cc6d01c754a7d321611107d2ad708567accb72508f1f399bac73717eafd"
+    },
+    "master_tokens_v1": {
+      "path": "revision\\image_validation_20260909\\master_tokens_v1.jsonl",
+      "sha256": "9b6b46a8286a35e93cc86f3e3d3b6f608aae3876c27209ccea72090bd62e0465"
+    },
+    "metadata_normalized": {
+      "path": "revision\\data_audit_20260908\\metadata_normalized.jsonl",
+      "sha256": "f2741cfe033ea6bda0120a260a97f657e87a87239738b5c72058a825340fa369"
+    },
+    "split_manifest_original": {
+      "path": "revision\\image_validation_20260909\\image_ready_split_manifest_v1.json",
+      "sha256": "4b89f899e4974dd4be7f514618492c92000ea765001f49c79a7d8adbe5355377"
+    },
+    "split_manifest_1wei": {
+      "path": "revision\\one_wei_sensitivity_targets_20260909\\image_ready_split_manifest_v1.json",
+      "sha256": "296e0dcdac2d94b2435b746e52c22a647a473c9f7ca740eb614c172e24d64b6f"
+    },
+    "bayc_dev_targets_original": {
+      "path": "revision\\target_pipeline_20260909\\bayc_development_targets.jsonl",
+      "sha256": "790eb45a3264d32b6535cbe2ef340ab755804dd2c6d9a0934a1186414d7b6f60"
+    },
+    "mayc_dev_targets_original": {
+      "path": "revision\\target_pipeline_20260909\\mayc_development_targets.jsonl",
+      "sha256": "b106a9a54763121b234074ab9dfbbf386f9e62caeb88d1f4594dbc0fd8eafd43"
+    },
+    "bayc_dev_targets_1wei": {
+      "path": "revision\\one_wei_sensitivity_targets_20260909\\bayc_development_targets.jsonl",
+      "sha256": "78fa3679d25be58d13fd857b059eb2a1087b31b8a503f3456232d18d445527f2"
+    },
+    "mayc_dev_targets_1wei": {
+      "path": "revision\\one_wei_sensitivity_targets_20260909\\mayc_development_targets.jsonl",
+      "sha256": "4d3400c386168287cc0deb1cbbfd64b54c125c37932e2ad90ec47f3b7cf4bf44"
+    },
+    "bayc_test_targets_original": {
+      "path": "revision\\target_pipeline_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0",
+      "status": "SEALED",
+      "stat_size_bytes": 2546845
+    },
+    "mayc_test_targets_original": {
+      "path": "revision\\target_pipeline_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1",
+      "status": "SEALED",
+      "stat_size_bytes": 6497905
+    },
+    "bayc_test_targets_1wei": {
+      "path": "revision\\one_wei_sensitivity_targets_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0",
+      "status": "SEALED",
+      "stat_size_bytes": 2546845
+    },
+    "mayc_test_targets_1wei": {
+      "path": "revision\\one_wei_sensitivity_targets_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1",
+      "status": "SEALED",
+      "stat_size_bytes": 6497905
+    }
+  },
+  "selected_candidates": {
+    "primary": {
+      "BAYC": {
+        "metadata_family": "HistGradientBoosting",
+        "augmented_candidate": "late_HistGradientBoosting_LinearSVR",
+        "augmented_encoder": "dinov2_fullframe",
+        "development_image_weight": 0.0,
+        "note": "DINOv2 Full-Frame late candidate achieved lowest pooled development MSE with internal weight w=0.0 across D1-D3; reported as selected per Protocol without swapping.",
+        "mandatory_benchmark": "early_ElasticNet",
+        "exploratory_candidates": {
+          "siglip2": {
+            "candidate_name": "late_HistGradientBoosting_LinearSVR",
+            "metadata_family": "HistGradientBoosting",
+            "image_family": "LinearSVR"
+          },
+          "clip_native": {
+            "candidate_name": "late_HistGradientBoosting_LinearSVR",
+            "metadata_family": "HistGradientBoosting",
+            "image_family": "LinearSVR"
+          }
+        }
+      },
+      "MAYC": {
+        "metadata_family": "Ridge",
+        "augmented_candidate": "late_LinearSVR_ElasticNet",
+        "augmented_encoder": "clip_native",
+        "mandatory_benchmark": "early_ElasticNet",
+        "exploratory_candidates": {
+          "siglip2": {
+            "candidate_name": "late_LinearSVR_Ridge",
+            "metadata_family": "LinearSVR",
+            "image_family": "Ridge"
+          },
+          "dinov2_fullframe": {
+            "candidate_name": "late_LinearSVR_Ridge",
+            "metadata_family": "LinearSVR",
+            "image_family": "Ridge"
+          }
+        }
+      }
+    },
+    "sensitivity_exact_one_wei": {
+      "BAYC": {
+        "metadata_family": "HistGradientBoosting",
+        "augmented_candidate": "late_HistGradientBoosting_PLS",
+        "augmented_encoder": "siglip2",
+        "mandatory_benchmark": "early_ElasticNet"
+      },
+      "MAYC": {
+        "metadata_family": "Ridge",
+        "augmented_candidate": "late_Ridge_LinearSVR",
+        "augmented_encoder": "siglip2",
+        "mandatory_benchmark": "early_ElasticNet"
+      }
+    }
+  },
+  "governance_decisions_status": {
+    "DECISION-01": {
+      "status": "USER_APPROVED_OPTION_A",
+      "topic": "Primary Confirmatory Inference vs Multi-Encoder Layout",
+      "canonical_summary": "Two confirmatory tests (BAYC DINOv2 Full-Frame late_HistGradientBoosting_LinearSVR vs HistGradientBoosting, MAYC CLIP Native late_LinearSVR_ElasticNet vs Ridge) evaluated with Bonferroni two-sided 97.5% CI (alpha=0.025 per collection); all 3 encoders tabulated side-by-side in Table S1 as exploratory benchmarks."
+    },
+    "DECISION-02": {
+      "status": "USER_APPROVED_OPTION_A",
+      "topic": "Exact 1-Wei Sensitivity Reporting Structure",
+      "canonical_summary": "Dual reporting framework: (1) Fixed Primary Spec evaluated on clean test trades (set-difference excluding exact 1-wei trades) with zero refitting to assess parameter robustness against micro-penny removal; and (2) Independent Reselection Model refitted on clean development data to assess model selection stability."
+    },
+    "DECISION-03": {
+      "status": "USER_APPROVED_OPTION_A",
+      "topic": "BAYC Original A* Candidate Selection (w=0.0 Collapse)",
+      "canonical_summary": "Truthful empirical reporting of DINOv2 Full-Frame candidate (late_HistGradientBoosting_LinearSVR) with historical development weight w=0.0; post-hoc replacement with positive-weight runner-up (SigLIP 2) is strictly prohibited as cherry-picking."
+    },
+    "DECISION-04": {
+      "status": "USER_APPROVED_OPTION_A",
+      "topic": "Scope Exclusions (Legacy 7, DINOv3, NoBG, Trait Probe)",
+      "canonical_summary": "Formal exclusion from execution scope: legacy 7 encoders re-extraction (audited limitations disclosed), DINOv3 encoder (external gated licensing barriers and post-protocol release), NoBG universality claim retracted (standardize on full-frame unsegmented images), and trait probe analysis (optional secondary diagnostic decoupled from test unsealing)."
+    }
+  },
+  "execution_profiles": {
+    "policy": "Candidate executable profiles representing different operational scopes; NOT user decisions. Execution requires explicit specification via CLI arguments (--profile and --approved-profile). Implicit defaulting is strictly prohibited.",
+    "profiles": {
+      "recommended_16": {
+        "description": "Recommended production profile: 12 confirmatory models + 4 exploratory models covering all 3 vision encoders (SigLIP 2, CLIP Native, DINOv2 Full-Frame) across both collections.",
+        "model_count": 16,
+        "confirmatory_models": 12,
+        "exploratory_models": 4
+      },
+      "confirmatory_12": {
+        "description": "Minimal confirmatory profile: 12 models (6 BAYC + 6 MAYC) strictly executing primary and sensitivity confirmatory hypotheses.",
+        "model_count": 12,
+        "confirmatory_models": 12,
+        "exploratory_models": 0
+      }
+    }
+  },
+  "fixed_spec_1wei_evaluation": {
+    "description": "Fixed primary model specification evaluated directly on exact 1-wei clean test targets (set-difference excluding exact 1-wei trades).",
+    "exact_one_wei_definition": {
+      "criterion": "Exact 1-wei trade where integer amount_raw == 1 or losslessly parsed Decimal(price_eth) * 10^18 == 1. Sub-wei (e.g. 0.5 wei), 0, negative values, non-integer wei, NaN, Inf, and missing values fail closed.",
+      "filter_condition": "Exclude exact 1-wei trades (amount_raw == 1 or Decimal(price_eth) * 10^18 == 1)",
+      "clean_slice_invariant": "sensitivity_rows == primary_rows - exact_1_wei_rows strictly matched by source_row (exact set difference)"
+    },
+    "refit_policy": "Zero calls to .fit() or refitting; pre-fitted original_v1 bundles are loaded and invoked directly via .predict().",
+    "output_key": "metrics.exact_one_wei_sensitivity_v1.<COLL>.primary_fixed_spec"
+  },
+  "target_execution_engine": "revision/final_execution_pipeline_20260914_v3_3_6_4/"
+}
