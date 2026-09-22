@@ -1,89 +1,35 @@
-# NFT valuation reproducibility code
+# BAYC/MAYC revision reproducibility code
 
-[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--8555--7064-a6ce39.svg)](https://orcid.org/0000-0002-8555-7064)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Release **v4.0.0** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It supersedes the active v3.3.6.4 analysis, not its historical archive. The old version DOI 10.5281/zenodo.22770922 must not be cited as the archive of these new experiments. The new version DOI is linked from the v4.0.0 GitHub release after Zenodo processing.
 
-This repository is the public computational record for the revised manuscript
-**Comparative analysis of image embedding models integrated with metadata for
-non-fungible token valuation**.
+## What this version contains
 
-Release version: `v3.3.6.4`  
-Zenodo version DOI: [10.5281/zenodo.22770922](https://doi.org/10.5281/zenodo.22770922)
+- Eight TF-IDF metadata regression families per collection, with the originally executed one-hot comparisons retained and clearly identified.
+- Seven image encoders by eight regression families for image-only and corrected TF-IDF early fusion.
+- Conditional late fusion: a development-selected TF-IDF branch, 56 image branches and 11 image weights per collection (1,232 weighted combinations across both collections).
+- Paired token-cluster and 14-day-block uncertainty, zero-LRP comparisons, evaluation-order audit, transaction-quality sensitivities and strict refits, image residual learning, and development-quarter checks.
+- Executed source scripts and their shared dependencies, full available grids/freeze records, aggregate results, input hashes, and a public verification suite.
 
-## What can be verified immediately
+## Verify immediately, without private data
 
-- the final model grids, solver settings, seeds, temporal design, and approved
-  Option A scope recorded in the completed public execution specification;
-- the frozen modelling engine and supporting target, metadata, and
-  feature-construction source code;
-- the published selected configurations, refit record, out-of-time metrics,
-  and paired-bootstrap confidence intervals;
-- Figures 3 and 4 regenerated from the published summary JSON files;
-- repository file integrity through a SHA-256 manifest;
-- a public-only validation suite that does not require restricted transaction
-  rows, NFT images, embeddings, fitted models, or sealed test targets.
-
-## Quick verification
-
-The certified modelling environment was Windows x64 with Python 3.14.3. From
-the repository root:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\python -m pip install -r requirements.txt
-.venv\Scripts\python tests\test_public_release.py
+```sh
+python tests/test_public_release.py
+python tools/export_tables.py --output-dir reproduced_tables
 ```
 
-The test exits non-zero on any mismatch and prints a concise PASS/FAIL list.
-It is the supported public test. The internal production-lifecycle test is not
-published because it depends on non-public custody and sealed-input fixtures.
+Both commands use the Python standard library. The first checks file integrity, source syntax, development-selected metrics, search counts, uncertainty summaries and exclusion boundaries. The second exports human-readable tables from the published aggregates. Neither retrains models or independently reconstructs outcomes from raw transactions.
 
-Regenerate the published result figures with:
+Optional synthetic method tests require the modelling environment:
 
-```powershell
-.venv\Scripts\python figures\render_published_figures.py --output-dir reproduced_figures
+```sh
+python -m pip install -r requirements-models.txt
+python tests/test_synthetic_methods.py
 ```
 
-## Repository map
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for scientific execution order and [DATA_ACCESS.md](DATA_ACCESS.md) for inputs not redistributed. Original relative directory layouts are retained to preserve executed scripts and source hashes; historical filenames containing `nine_regressors` do not imply nine executed families in the reported final comparisons.
 
-- `revision/final_execution_pipeline_20260914_v3_3_6_4/code/pipeline.py` —
-  frozen modelling, evaluation, and inference engine;
-- `revision/code/` — target construction, metadata comparison, encoder
-  development, and certified primal-SVR support code;
-- `revision/feature_extraction/` — frozen DINOv2, CLIP, and SigLIP 2 feature
-  extraction programs, with portable environment-variable path overrides;
-- `public_templates/final_execution_specification.PUBLIC.json` — completed,
-  sanitized public record of the executed specification;
-- `results/` — final non-row-level configurations, metrics, confidence
-  intervals, custody completion record, and source hashes;
-- `figures/` — public summary-to-figure renderer;
-- `DATA_ACCESS.md` — data provenance, exclusions, and exact reproducibility
-  boundary;
-- `REPRODUCIBILITY.md` — staged reproduction instructions;
-- `REVIEWER_COVERAGE.md` — mapping of code/open-science reviewer requests to
-  public artifacts.
+## Interpretation and limits
 
-## Data boundary
+Selection uses 2024 Q2-Q4 forward validation, final fitting uses 2022-2024, and evaluation is 2025-01-01 through 2026-04-13. These are retrospective chronological analyses; repeated inspection during revision is disclosed. Bootstrap intervals condition on fitted models and do not quantify the entire model-selection process. Small or uncertain image gains are retained, including negative residual-correction results. The reported comparison does not establish general superiority of image fusion.
 
-This release does not contain transaction-level records, NFT image files,
-feature matrices, fitted model binaries, row-level predictions, signed
-approval documents, or sealed test targets. The final summary JSON files do
-not expose transaction rows. See `DATA_ACCESS.md` for the precise reason and
-the distinction between immediately verifiable results and reruns requiring
-the authors' structured input bundle.
-
-The original Dune SQL used to compile the historical transaction extract was
-not recovered. The repository therefore does not claim that an independent
-reader can reconstruct the exact compiled transaction table from blockchain
-events alone. It does provide the subsequent deterministic processing and
-analysis code, input contracts and hashes, final summary outputs, and an
-explicit account of this limitation.
-
-## Citation and license
-
-Release metadata are in `.zenodo.json` and `CITATION.cff`. Zenodo permanently
-archives this exact `v3.3.6.4` release under version DOI
-[10.5281/zenodo.22770922](https://doi.org/10.5281/zenodo.22770922).
-
-The repository source code is licensed under MIT. No license is granted for
-excluded third-party transaction data, NFT images, or model weights.
+The code is MIT-licensed, retaining the repository's existing licence. Third-party input data, model weights and images are not relicensed. Confidential peer-review reports, response letters, manuscript drafts, credentials, and local approval records are not published here.

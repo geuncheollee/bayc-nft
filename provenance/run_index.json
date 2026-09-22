@@ -1,0 +1,9 @@
+{
+  "metadata": "results/metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+  "image": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+  "early": "results/early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1",
+  "late": "results/late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2",
+  "fusion_uncertainty": "results/fusion_uncertainty_20260922_v1",
+  "zero_uncertainty": "results/fusion_vs_zero_uncertainty_20260922_v1",
+  "supplemental": "results/reviewer_priority4_20260922_v1"
+}

@@ -1,0 +1,328 @@
+{
+  "method": "fixed pre-2025-selected family/config, full-versus-strict training refit; 2025+ retrospective evaluation",
+  "collections": {
+    "BAYC": {
+      "selected": {
+        "metadata_family": "Ridge",
+        "metadata_config": {
+          "alpha": 1000
+        },
+        "early_encoder": "SAM",
+        "early_family": "LinearSVR",
+        "early_config": {
+          "C": 0.01,
+          "epsilon": 0.2
+        }
+      },
+      "refits": {
+        "full": {
+          "metadata": {
+            "training_transactions": 35206,
+            "training_tokens": 5746,
+            "target_parameters": {
+              "center": -0.014812120880714312,
+              "normalized_MAD": 0.0945891422454127
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 35206,
+            "training_tokens": 5746,
+            "target_parameters": {
+              "center": -0.014812120880714312,
+              "normalized_MAD": 0.0945891422454127
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": 4,
+              "seconds": 0.12440920004155487,
+              "primal_objective": 214.312886295047,
+              "primal_gradient_norm": 3.993158467303109e-13,
+              "objective_gap_upper_bound": 7.972657272497257e-26
+            },
+            "feature_dimension": 427
+          },
+          "evaluation_all_metadata_rmse": 0.252755229444784,
+          "evaluation_all_early_rmse": 0.25252791492869336,
+          "evaluation_strict_metadata_rmse": 0.25746551300512555,
+          "evaluation_strict_early_rmse": 0.25722962524399867,
+          "evaluation_strict_early_minus_metadata_rmse": -0.00023588776112687393
+        },
+        "strict": {
+          "metadata": {
+            "training_transactions": 30427,
+            "training_tokens": 5692,
+            "target_parameters": {
+              "center": -0.013698844358161802,
+              "normalized_MAD": 0.1010567076626086
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 30427,
+            "training_tokens": 5692,
+            "target_parameters": {
+              "center": -0.013698844358161802,
+              "normalized_MAD": 0.1010567076626086
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": 4,
+              "seconds": 0.11521150008775294,
+              "primal_objective": 172.0620837037577,
+              "primal_gradient_norm": 4.2801740899612386e-13,
+              "objective_gap_upper_bound": 9.159945120187759e-26
+            },
+            "feature_dimension": 427
+          },
+          "evaluation_all_metadata_rmse": 0.25246444729150197,
+          "evaluation_all_early_rmse": 0.2523552321099882,
+          "evaluation_strict_metadata_rmse": 0.25713791149485193,
+          "evaluation_strict_early_rmse": 0.25702409494943446,
+          "evaluation_strict_early_minus_metadata_rmse": -0.00011381654541747777
+        },
+        "strict_without_one_wei": {
+          "metadata": {
+            "training_transactions": 30424,
+            "training_tokens": 5692,
+            "target_parameters": {
+              "center": -0.013687521582455352,
+              "normalized_MAD": 0.1010318334832461
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 30424,
+            "training_tokens": 5692,
+            "target_parameters": {
+              "center": -0.013687521582455352,
+              "normalized_MAD": 0.1010318334832461
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": 4,
+              "seconds": 0.11745290004182607,
+              "primal_objective": 170.85305065851568,
+              "primal_gradient_norm": 5.025243455189754e-13,
+              "objective_gap_upper_bound": 1.2626535891963727e-25
+            },
+            "feature_dimension": 427
+          },
+          "evaluation_all_metadata_rmse": 0.2524543542116743,
+          "evaluation_all_early_rmse": 0.2523248678693971,
+          "evaluation_strict_metadata_rmse": 0.25712510943934586,
+          "evaluation_strict_early_rmse": 0.2569902249545535,
+          "evaluation_strict_early_minus_metadata_rmse": -0.0001348844847923747
+        }
+      },
+      "training_exact_one_wei_rows": 9,
+      "archived_reproduction": {
+        "metadata_max_abs_prediction_gap": 0.0,
+        "early_max_abs_prediction_gap": 1.9984014443252818e-14,
+        "metadata_rmse_gap": 0.0,
+        "early_rmse_gap": 0.0
+      }
+    },
+    "MAYC": {
+      "selected": {
+        "metadata_family": "XGBoost",
+        "metadata_config": {
+          "learning_rate": 0.1,
+          "max_leaf_nodes": 31,
+          "l2_regularization": 1
+        },
+        "early_encoder": "CLIP",
+        "early_family": "PLS",
+        "early_config": {
+          "components": 16
+        }
+      },
+      "refits": {
+        "full": {
+          "metadata": {
+            "training_transactions": 95207,
+            "training_tokens": 9568,
+            "target_parameters": {
+              "center": -0.02606722648712431,
+              "normalized_MAD": 0.08904794657791877
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 95207,
+            "training_tokens": 9568,
+            "target_parameters": {
+              "center": -0.02606722648712431,
+              "normalized_MAD": 0.08904794657791877
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "seconds": 1.7287312000989914
+            },
+            "feature_dimension": 1109
+          },
+          "evaluation_all_metadata_rmse": 0.16747925531384972,
+          "evaluation_all_early_rmse": 0.16589113312089118,
+          "evaluation_strict_metadata_rmse": 0.1640137193049504,
+          "evaluation_strict_early_rmse": 0.16207268741408173,
+          "evaluation_strict_early_minus_metadata_rmse": -0.0019410318908686663
+        },
+        "strict": {
+          "metadata": {
+            "training_transactions": 75210,
+            "training_tokens": 9516,
+            "target_parameters": {
+              "center": -0.02138079502495033,
+              "normalized_MAD": 0.10066989252261241
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 75210,
+            "training_tokens": 9516,
+            "target_parameters": {
+              "center": -0.02138079502495033,
+              "normalized_MAD": 0.10066989252261241
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "seconds": 1.5729877999983728
+            },
+            "feature_dimension": 1109
+          },
+          "evaluation_all_metadata_rmse": 0.167357358301197,
+          "evaluation_all_early_rmse": 0.16626916985309492,
+          "evaluation_strict_metadata_rmse": 0.16381566286640298,
+          "evaluation_strict_early_rmse": 0.16244352357233932,
+          "evaluation_strict_early_minus_metadata_rmse": -0.0013721392940636568
+        },
+        "strict_without_one_wei": {
+          "metadata": {
+            "training_transactions": 75200,
+            "training_tokens": 9515,
+            "target_parameters": {
+              "center": -0.02137218488556872,
+              "normalized_MAD": 0.10065694339188447
+            },
+            "fit_status": {
+              "valid": true,
+              "warnings": []
+            }
+          },
+          "early": {
+            "training_transactions": 75200,
+            "training_tokens": 9515,
+            "target_parameters": {
+              "center": -0.02137218488556872,
+              "normalized_MAD": 0.10065694339188447
+            },
+            "fit_status": {
+              "valid": true,
+              "converged": true,
+              "finite": true,
+              "warnings": [],
+              "n_iter": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "seconds": 1.5802952999947593
+            },
+            "feature_dimension": 1109
+          },
+          "evaluation_all_metadata_rmse": 0.16699841902508206,
+          "evaluation_all_early_rmse": 0.16627527865935665,
+          "evaluation_strict_metadata_rmse": 0.1634272404643192,
+          "evaluation_strict_early_rmse": 0.1624386156185517,
+          "evaluation_strict_early_minus_metadata_rmse": -0.000988624845767505
+        }
+      },
+      "training_exact_one_wei_rows": 12,
+      "archived_reproduction": {
+        "metadata_max_abs_prediction_gap": 0.0,
+        "early_max_abs_prediction_gap": 1.3766765505351941e-14,
+        "metadata_rmse_gap": 0.0,
+        "early_rmse_gap": 0.0
+      }
+    }
+  }
+}

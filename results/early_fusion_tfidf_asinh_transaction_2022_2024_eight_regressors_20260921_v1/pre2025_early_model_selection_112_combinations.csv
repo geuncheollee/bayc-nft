@@ -1,0 +1,113 @@
+﻿collection,encoder,family,metadata_dimension,idf_document_count,image_dimension,early_dimension,selected_config,pre2025_validation_transaction_rmse
+BAYC,DINOv2,OLS,171,5746,1024,1195,{},1.387676331102934
+BAYC,DINOv2,Ridge,171,5746,1024,1195,"{""alpha"": 10000}",1.3842925351149185
+BAYC,DINOv2,ElasticNet,171,5746,1024,1195,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.3836791732690015
+BAYC,DINOv2,PLS,171,5746,1024,1195,"{""components"": 8}",1.3844097929802526
+BAYC,DINOv2,LinearSVR,171,5746,1024,1195,"{""C"": 0.01, ""epsilon"": 0.2}",1.3863939024079168
+BAYC,DINOv2,HistGradientBoosting,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3860598863018887
+BAYC,DINOv2,XGBoost,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3857136726548556
+BAYC,DINOv2,LightGBM,171,5746,1024,1195,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3862563320328436
+BAYC,CLIP,OLS,171,5746,768,939,{},1.3859956902925124
+BAYC,CLIP,Ridge,171,5746,768,939,"{""alpha"": 10000}",1.3844126105220989
+BAYC,CLIP,ElasticNet,171,5746,768,939,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.3837881895613353
+BAYC,CLIP,PLS,171,5746,768,939,"{""components"": 8}",1.384000948988104
+BAYC,CLIP,LinearSVR,171,5746,768,939,"{""C"": 0.01, ""epsilon"": 0.2}",1.3858849978203942
+BAYC,CLIP,HistGradientBoosting,171,5746,768,939,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.385993327062388
+BAYC,CLIP,XGBoost,171,5746,768,939,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.385989364445842
+BAYC,CLIP,LightGBM,171,5746,768,939,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3860754493492944
+BAYC,SigLIP2,OLS,171,5746,1024,1195,{},1.389758119116489
+BAYC,SigLIP2,Ridge,171,5746,1024,1195,"{""alpha"": 1000}",1.3837488219153509
+BAYC,SigLIP2,ElasticNet,171,5746,1024,1195,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.383636227506758
+BAYC,SigLIP2,PLS,171,5746,1024,1195,"{""components"": 8}",1.383750027427579
+BAYC,SigLIP2,LinearSVR,171,5746,1024,1195,"{""C"": 0.01, ""epsilon"": 0.2}",1.384358273515564
+BAYC,SigLIP2,HistGradientBoosting,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3856501217401893
+BAYC,SigLIP2,XGBoost,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3854887216412966
+BAYC,SigLIP2,LightGBM,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3859186419752252
+BAYC,SAM,OLS,171,5746,256,427,{},1.3845757813616095
+BAYC,SAM,Ridge,171,5746,256,427,"{""alpha"": 100}",1.383597396257674
+BAYC,SAM,ElasticNet,171,5746,256,427,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",1.383662071733601
+BAYC,SAM,PLS,171,5746,256,427,"{""components"": 32}",1.3835849252692864
+BAYC,SAM,LinearSVR,171,5746,256,427,"{""C"": 0.01, ""epsilon"": 0.2}",1.3835343128780728
+BAYC,SAM,HistGradientBoosting,171,5746,256,427,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3864972085773857
+BAYC,SAM,XGBoost,171,5746,256,427,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3859127467046388
+BAYC,SAM,LightGBM,171,5746,256,427,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",1.386826425556547
+BAYC,SDXL_VAE,OLS,171,5746,1024,1195,{},1.3857057100851466
+BAYC,SDXL_VAE,Ridge,171,5746,1024,1195,"{""alpha"": 10000}",1.384351272158552
+BAYC,SDXL_VAE,ElasticNet,171,5746,1024,1195,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.3837712391627484
+BAYC,SDXL_VAE,PLS,171,5746,1024,1195,"{""components"": 8}",1.3846613971815058
+BAYC,SDXL_VAE,LinearSVR,171,5746,1024,1195,"{""C"": 0.01, ""epsilon"": 0.2}",1.3851482619476376
+BAYC,SDXL_VAE,HistGradientBoosting,171,5746,1024,1195,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3847698713222123
+BAYC,SDXL_VAE,XGBoost,171,5746,1024,1195,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3848442300548323
+BAYC,SDXL_VAE,LightGBM,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.384967928385187
+BAYC,DreamSim,OLS,171,5746,1024,1195,{},1.3866275420577805
+BAYC,DreamSim,Ridge,171,5746,1024,1195,"{""alpha"": 10000}",1.3850403706036292
+BAYC,DreamSim,ElasticNet,171,5746,1024,1195,"{""alpha"": 0.01, ""l1_ratio"": 0.9}",1.3840082063818522
+BAYC,DreamSim,PLS,171,5746,1024,1195,"{""components"": 64}",1.3865970854197698
+BAYC,DreamSim,LinearSVR,171,5746,1024,1195,"{""C"": 1, ""epsilon"": 0.2}",1.3862933483405797
+BAYC,DreamSim,HistGradientBoosting,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3854834032235979
+BAYC,DreamSim,XGBoost,171,5746,1024,1195,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3851221722646299
+BAYC,DreamSim,LightGBM,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3854691596898068
+BAYC,AIM,OLS,171,5746,1024,1195,{},1.3859803234408457
+BAYC,AIM,Ridge,171,5746,1024,1195,"{""alpha"": 1000}",1.3836640539235259
+BAYC,AIM,ElasticNet,171,5746,1024,1195,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.3836863138974187
+BAYC,AIM,PLS,171,5746,1024,1195,"{""components"": 8}",1.3838364122387519
+BAYC,AIM,LinearSVR,171,5746,1024,1195,"{""C"": 0.01, ""epsilon"": 0.1}",1.384623811926849
+BAYC,AIM,HistGradientBoosting,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3860410640568397
+BAYC,AIM,XGBoost,171,5746,1024,1195,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3858489691057723
+BAYC,AIM,LightGBM,171,5746,1024,1195,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.3862288911050205
+MAYC,DINOv2,OLS,341,9568,1024,1365,{},0.4031658146410459
+MAYC,DINOv2,Ridge,341,9568,1024,1365,"{""alpha"": 10000}",0.4024364823141618
+MAYC,DINOv2,ElasticNet,341,9568,1024,1365,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",0.4023516919956543
+MAYC,DINOv2,PLS,341,9568,1024,1365,"{""components"": 8}",0.4024546436414298
+MAYC,DINOv2,LinearSVR,341,9568,1024,1365,"{""C"": 0.01, ""epsilon"": 0.1}",0.4031628063438267
+MAYC,DINOv2,HistGradientBoosting,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4027089931890894
+MAYC,DINOv2,XGBoost,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4025380665323814
+MAYC,DINOv2,LightGBM,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4034359959997132
+MAYC,CLIP,OLS,341,9568,768,1109,{},0.40206983078320807
+MAYC,CLIP,Ridge,341,9568,768,1109,"{""alpha"": 1000}",0.40187265282666934
+MAYC,CLIP,ElasticNet,341,9568,768,1109,"{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.40190956031998865
+MAYC,CLIP,PLS,341,9568,768,1109,"{""components"": 16}",0.4017962604615376
+MAYC,CLIP,LinearSVR,341,9568,768,1109,"{""C"": 0.01, ""epsilon"": 0.1}",0.4020650342863092
+MAYC,CLIP,HistGradientBoosting,341,9568,768,1109,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4025546665388345
+MAYC,CLIP,XGBoost,341,9568,768,1109,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.40240910956447784
+MAYC,CLIP,LightGBM,341,9568,768,1109,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4030620456925085
+MAYC,SigLIP2,OLS,341,9568,1024,1365,{},0.4023881118420712
+MAYC,SigLIP2,Ridge,341,9568,1024,1365,"{""alpha"": 1000}",0.40189541965408465
+MAYC,SigLIP2,ElasticNet,341,9568,1024,1365,"{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.4019200609019983
+MAYC,SigLIP2,PLS,341,9568,1024,1365,"{""components"": 32}",0.4018699789455712
+MAYC,SigLIP2,LinearSVR,341,9568,1024,1365,"{""C"": 0.01, ""epsilon"": 0.1}",0.4022216514514649
+MAYC,SigLIP2,HistGradientBoosting,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4023538722678342
+MAYC,SigLIP2,XGBoost,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40235012055071573
+MAYC,SigLIP2,LightGBM,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4031513444167292
+MAYC,SAM,OLS,341,9568,256,597,{},0.4018827551226397
+MAYC,SAM,Ridge,341,9568,256,597,"{""alpha"": 0.01}",0.40188413749938817
+MAYC,SAM,ElasticNet,341,9568,256,597,"{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.40207430766213503
+MAYC,SAM,PLS,341,9568,256,597,"{""components"": 64}",0.4019574762015036
+MAYC,SAM,LinearSVR,341,9568,256,597,"{""C"": 1, ""epsilon"": 0.1}",0.4020557045118142
+MAYC,SAM,HistGradientBoosting,341,9568,256,597,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4025648809103552
+MAYC,SAM,XGBoost,341,9568,256,597,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4023377159356255
+MAYC,SAM,LightGBM,341,9568,256,597,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.4036813321062966
+MAYC,SDXL_VAE,OLS,341,9568,1024,1365,{},0.40234809584274944
+MAYC,SDXL_VAE,Ridge,341,9568,1024,1365,"{""alpha"": 1000}",0.40199332604775695
+MAYC,SDXL_VAE,ElasticNet,341,9568,1024,1365,"{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.4019699300711379
+MAYC,SDXL_VAE,PLS,341,9568,1024,1365,"{""components"": 8}",0.4021147118743913
+MAYC,SDXL_VAE,LinearSVR,341,9568,1024,1365,"{""C"": 0.01, ""epsilon"": 0.1}",0.4023485601101583
+MAYC,SDXL_VAE,HistGradientBoosting,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4025062241230729
+MAYC,SDXL_VAE,XGBoost,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.40238927476787467
+MAYC,SDXL_VAE,LightGBM,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4025801009859741
+MAYC,DreamSim,OLS,341,9568,1024,1365,{},0.402873726576645
+MAYC,DreamSim,Ridge,341,9568,1024,1365,"{""alpha"": 10000}",0.4026553053247194
+MAYC,DreamSim,ElasticNet,341,9568,1024,1365,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",0.4025895711111194
+MAYC,DreamSim,PLS,341,9568,1024,1365,"{""components"": 64}",0.40285398560974894
+MAYC,DreamSim,LinearSVR,341,9568,1024,1365,"{""C"": 0.01, ""epsilon"": 0.1}",0.40291727885083833
+MAYC,DreamSim,HistGradientBoosting,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40270036969086853
+MAYC,DreamSim,XGBoost,341,9568,1024,1365,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4025738725068523
+MAYC,DreamSim,LightGBM,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40335343742375196
+MAYC,AIM,OLS,341,9568,1024,1365,{},0.4032948457708287
+MAYC,AIM,Ridge,341,9568,1024,1365,"{""alpha"": 10000}",0.40257568388064763
+MAYC,AIM,ElasticNet,341,9568,1024,1365,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.40238489360993074
+MAYC,AIM,PLS,341,9568,1024,1365,"{""components"": 8}",0.40259758810750396
+MAYC,AIM,LinearSVR,341,9568,1024,1365,"{""C"": 1, ""epsilon"": 0.1}",0.4034072402356157
+MAYC,AIM,HistGradientBoosting,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.40267639280069717
+MAYC,AIM,XGBoost,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4025903223264819
+MAYC,AIM,LightGBM,341,9568,1024,1365,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40319871102932

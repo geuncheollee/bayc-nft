@@ -1,0 +1,902 @@
+{
+  "created_utc": "2026-09-20T10:23:47.316462+00:00",
+  "evaluation_labels_loaded_before_freeze": false,
+  "models": {
+    "BAYC__one-hot__OLS": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3840146620827387,
+      "model_path": "models\\BAYC_one_hot_OLS.joblib",
+      "model_sha256": "09fda0a42bd6f24612ea72da6d1cd9942d674435ebad2511a31a6da5c4a5078e",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__Ridge": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 1.3838398977285613,
+      "model_path": "models\\BAYC_one_hot_Ridge.joblib",
+      "model_sha256": "105f7e97d31dff21733a5e0087c8aea9e901976e00d1168745806bde3df5b004",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__ElasticNet": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.3838066191209621,
+      "model_path": "models\\BAYC_one_hot_ElasticNet.joblib",
+      "model_sha256": "9bdcebfd9e17221b3fd92a17ee2d479f0011353fe6d97702076aa915599147ec",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__PLS": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "PLS",
+      "selected_config": {
+        "components": 32
+      },
+      "pre2025_validation_transaction_rmse": 1.384014662082739,
+      "model_path": "models\\BAYC_one_hot_PLS.joblib",
+      "model_sha256": "1e806b694b1672428af325dc86a7f0178a077a346f9fa552b2a69d6b768d8a6d",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 32
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__LinearSVR": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.383883409087182,
+      "model_path": "models\\BAYC_one_hot_LinearSVR.joblib",
+      "model_sha256": "ca22d18266cf5ba1c62bfa41cb479703efce203601e777da7ca5a1211000658e",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3852900326190016,
+      "model_path": "models\\BAYC_one_hot_HistGradientBoosting.joblib",
+      "model_sha256": "67cf592570e0b3d5d6f955e4464a6ed5f6432a6d4d876819ad39282cd0f34fb6",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__XGBoost": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3852900329243725,
+      "model_path": "models\\BAYC_one_hot_XGBoost.joblib",
+      "model_sha256": "75604ace2c01a6faa0ad8d59e2be158dbce85fe8160cac9819199843c0fb3eb3",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__one-hot__LightGBM": {
+      "collection": "BAYC",
+      "encoding": "one-hot",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.385184284291194,
+      "model_path": "models\\BAYC_one_hot_LightGBM.joblib",
+      "model_sha256": "b845b2598bc06175cab9bd792ddf1123ef5686075e4b45b6bc773070702354e8",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__OLS": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3837716124030137,
+      "model_path": "models\\BAYC_TF_IDF_OLS.joblib",
+      "model_sha256": "8ccfb5b0e36e390628d8cd566b55bef8bfab36c02c932cf2c5c38f18ac20e030",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__Ridge": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 1.3836209400597699,
+      "model_path": "models\\BAYC_TF_IDF_Ridge.joblib",
+      "model_sha256": "76a2491e1cfc69fe23649c6b19aad8745559f499f65986253471a96bccd40315",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__ElasticNet": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 1.3836508348720182,
+      "model_path": "models\\BAYC_TF_IDF_ElasticNet.joblib",
+      "model_sha256": "03c90f27652d992bc64be01848e27efc0f177e62eaa926d664bdba4bd471a22b",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__PLS": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.3837066268046412,
+      "model_path": "models\\BAYC_TF_IDF_PLS.joblib",
+      "model_sha256": "cdac4a038f7a623b0f047037a5fa1a41753d59f7eb9151e97c9fe5b38c140f6e",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__LinearSVR": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3836230845277993,
+      "model_path": "models\\BAYC_TF_IDF_LinearSVR.joblib",
+      "model_sha256": "37655adec763ddad10e385acd05883b80c554001a7c0d17e5a109f77b5e35dcc",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3860396460015814,
+      "model_path": "models\\BAYC_TF_IDF_HistGradientBoosting.joblib",
+      "model_sha256": "17d202f82af26b35753eb2138bd84a5387baef847990cbf633a78314e34f83de",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__XGBoost": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3859760161785029,
+      "model_path": "models\\BAYC_TF_IDF_XGBoost.joblib",
+      "model_sha256": "0e63b8f61c84bba330a956374e3c6eaa2db40a4ac8b31a8e31d8fc557d8e6fe5",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "BAYC__TF-IDF__LightGBM": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3859202591665674,
+      "model_path": "models\\BAYC_TF_IDF_LightGBM.joblib",
+      "model_sha256": "d5fb0de19c689c87ddcad3c2e7b20c262cf868a1e8f3f823021990a3b918a8de",
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__OLS": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.40209857208679783,
+      "model_path": "models\\MAYC_one_hot_OLS.joblib",
+      "model_sha256": "6c963c9bc439fcb2b5f19c4bd0294bd8a929f0ad875d24227d787494d2b993fe",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__Ridge": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 0.01
+      },
+      "pre2025_validation_transaction_rmse": 0.4020985722125159,
+      "model_path": "models\\MAYC_one_hot_Ridge.joblib",
+      "model_sha256": "b6e48e3e44423030093ac649f5976857361b033efc6b2e1f974a36cf8a2169fd",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__ElasticNet": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.40210197587354646,
+      "model_path": "models\\MAYC_one_hot_ElasticNet.joblib",
+      "model_sha256": "286eccf06935b088cb27d7c2d96577e03057c85336d5e84b02f2c2447da1ab7c",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__PLS": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 0.40209646916673397,
+      "model_path": "models\\MAYC_one_hot_PLS.joblib",
+      "model_sha256": "ee3706e0a617ba3aa765d0a4426681a47f6c8662a0647459aba8abb444bca6e5",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__LinearSVR": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4022315984788388,
+      "model_path": "models\\MAYC_one_hot_LinearSVR.joblib",
+      "model_sha256": "e2bc5fca4abed56655129df0adb37c2af66928a9153fe74d7e1b881749492b62",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 1,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4019487115450753,
+      "model_path": "models\\MAYC_one_hot_HistGradientBoosting.joblib",
+      "model_sha256": "5c9dce9df985ceed56bd9e317e4c7f162015d60b529122cd6aa6f1d064be8621",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__XGBoost": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40194871255497805,
+      "model_path": "models\\MAYC_one_hot_XGBoost.joblib",
+      "model_sha256": "ea69a0dc327e9774499c7d35274c3096f614022851956283008341e75c055758",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__one-hot__LightGBM": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40195557890399725,
+      "model_path": "models\\MAYC_one_hot_LightGBM.joblib",
+      "model_sha256": "c40fd02ec78dde8e69380a7216c0804892173d4facf9802999ec99c20b6fec5a",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__OLS": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.4020113293666193,
+      "model_path": "models\\MAYC_TF_IDF_OLS.joblib",
+      "model_sha256": "17514829a70068f64f0c76b1b6febc51214d5222a349562e153b0da2857dbe6e",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__Ridge": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 0.01
+      },
+      "pre2025_validation_transaction_rmse": 0.4020113389926933,
+      "model_path": "models\\MAYC_TF_IDF_Ridge.joblib",
+      "model_sha256": "43fafdb2d9eed9c97a21a0fd07a703470696e9c22a2f7ae933c24358f215a2bd",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__ElasticNet": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4020385294573054,
+      "model_path": "models\\MAYC_TF_IDF_ElasticNet.joblib",
+      "model_sha256": "2316b3a0a06aadd2e70a3a389660d2429fdfc51f013efdbd284dd30f1b43310e",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__PLS": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "PLS",
+      "selected_config": {
+        "components": 32
+      },
+      "pre2025_validation_transaction_rmse": 0.4020113293666203,
+      "model_path": "models\\MAYC_TF_IDF_PLS.joblib",
+      "model_sha256": "30db22c7fe7c58f9c2cd6bb58563b0b8caa8544ab7c873e0840771fb83f4b76c",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 32
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__LinearSVR": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4021477369963618,
+      "model_path": "models\\MAYC_TF_IDF_LinearSVR.joblib",
+      "model_sha256": "9aefa35d7e1950ff6cb10a7d5c61f3e148dd510b0c3b10a7b5a8b618845f9d57",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 1,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40203061229107717,
+      "model_path": "models\\MAYC_TF_IDF_HistGradientBoosting.joblib",
+      "model_sha256": "640aaa2b68f06c42b9dbbad5bb3c69d11e6682b07b1bedeca0db22a9c50f22f1",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__XGBoost": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4019698128769849,
+      "model_path": "models\\MAYC_TF_IDF_XGBoost.joblib",
+      "model_sha256": "97e5c60383a42fe93f7106a9dc9e15a92fb747532d62bdb58553c5cc983a6ce5",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "MAYC__TF-IDF__LightGBM": {
+      "collection": "MAYC",
+      "encoding": "TF-IDF",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40200568221996325,
+      "model_path": "models\\MAYC_TF_IDF_LightGBM.joblib",
+      "model_sha256": "5954c4a929be591f9a055d2be9ae283f640cacddd682231393be157649f6b35d",
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "warnings": []
+          }
+        }
+      ]
+    }
+  },
+  "development_selected": {
+    "BAYC": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "selected_config": "{\"alpha\": 1000}",
+      "pre2025_validation_transaction_rmse": 1.3836209400597699
+    },
+    "MAYC": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "HistGradientBoosting",
+      "selected_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.05, \"max_leaf_nodes\": 31}",
+      "pre2025_validation_transaction_rmse": 0.4019487115450753
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-09-22T06:40:29.538848+00:00",
+  "purpose": "reviewer response priority 1; retrospective evaluation provenance audit",
+  "raw_trade_sources": {
+    "BAYC": {
+      "rows": 64191,
+      "min_time": "2021-04-30 12:38:59.000 UTC",
+      "max_time": "2026-04-14 07:21:47.000 UTC",
+      "rows_on_or_after_2026_04_15": 0,
+      "sha256": "37c60afa678c55fa4c521fe90b9ae91b3d7fdc9ea67cbf2ede09897dd39a6756"
+    },
+    "MAYC": {
+      "rows": 166140,
+      "min_time": "2021-08-29 01:05:16.000 UTC",
+      "max_time": "2026-04-14 09:32:35.000 UTC",
+      "rows_on_or_after_2026_04_15": 0,
+      "sha256": "c881ec41b2459baa2786674278c0fb3abae696cc46526f9f5833683e754d9d81"
+    }
+  },
+  "prior_runs": {
+    "metadata": {
+      "folder": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+      "freeze_utc": "2026-09-20T10:23:47.316462+00:00",
+      "freeze_sha256": "4e8ba493237077d10a80e30f4f511c596f30cf32f1afb1c009d9919e576fafed",
+      "completion_sha256": "277dc9e7d5d9275b6192a4c0f3f0ceb24d0d82674754c38a4e14ba8f57ad8343",
+      "run_level_freeze_flag": false
+    },
+    "image": {
+      "folder": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+      "freeze_utc": "2026-09-20T23:15:36.668397+00:00",
+      "freeze_sha256": "574c8dd7ab311bb6c87b45eba90b714c65db1831f4c6612e54496294d87083af",
+      "completion_sha256": "c199fa3dd3ab4326a8276c4d67cd14ee8bc9fa04f1eea3e4556af212eb975e6a",
+      "run_level_freeze_flag": false
+    },
+    "early": {
+      "folder": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1",
+      "freeze_utc": "2026-09-21T23:47:49.171498+00:00",
+      "freeze_sha256": "13fe17296796fb1586eb55e95feb45e904e19cab6a184b552f3416cebd134f83",
+      "completion_sha256": "d2434a32c13b1b60d1e2485f08ef07e45b3832ee090c88176d9f87a8a2fc40b2",
+      "run_level_freeze_flag": false
+    },
+    "late": {
+      "folder": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2",
+      "freeze_utc": "2026-09-22T03:57:52.626192+00:00",
+      "freeze_sha256": "270c83a2203c5c4f102b1fc369327caeb0b88298cae038d58191c4a5a8c9312b",
+      "completion_sha256": "fc9035eecf7193dbaf268e43db76af0c33267f58518920ae2ff42daeabfd27ce",
+      "run_level_freeze_flag": false
+    }
+  },
+  "claim_policy": {
+    "run_level_pre_evaluation_freeze": true,
+    "study_level_single_use_untouched_test": false,
+    "reason": "The same 2025+ test labels were evaluated by metadata, image, early, and late analyses, and the published-in-workspace study protocol evolved after viewing this period.",
+    "new_complete_day_after_2026_04_13_in_frozen_local_sources": false,
+    "permitted_description": "retrospective out-of-time evaluation with repeated study-level test inspection",
+    "remaining_editor_request": "a genuinely unused held-out set cannot be supplied from these frozen local raw files"
+  }
+}

@@ -1,59 +1,30 @@
-# Reproducibility guide
+# Reproduction levels and execution order
 
-## Level 1 — self-contained public verification
+## Level 1: public aggregate verification
 
-Install the pinned modelling and rendering dependencies and run:
+Run `python tests/test_public_release.py` and `python tools/export_tables.py --output-dir reproduced_tables`. No network, scientific libraries or private data are required. Inspect the original full candidate CSVs under the run directories indexed in `provenance/run_index.json`. Representatives are chosen by development RMSE, never by the lowest evaluation RMSE. Metadata-only OLS has lower evaluation point estimates than the selected fusion representatives in both collections; this does not justify post-hoc reselection.
 
-```powershell
-python tests\test_public_release.py
-```
+## Level 2: synthetic implementation checks
 
-This verifies JSON validity, completed governance state, cross-file provenance
-bindings, published primary metrics and confidence intervals, Python source
-compilation, the exact 1-wei classifier, model-construction functions, and the
-SHA-256 repository manifest. No private input is opened.
+Install `requirements-models.txt` and run `python tests/test_synthetic_methods.py`. These checks cover past-only references, target transform round trips, training-only TF-IDF and transaction-count aggregation. They are not full scientific replication.
 
-## Level 2 — regenerate published Figures 3 and 4
+## Level 3: full-data rerun (requires author inputs)
 
-```powershell
-python figures\render_published_figures.py --output-dir reproduced_figures
-```
+Make a **separate working copy**. Preserve this immutable archive. Published aggregates occupy paths used by the original runners: move the corresponding aggregate output directories aside in the working copy before a fresh run, retaining their manifests for comparison. Never erase the source archive or original study data. Inspect each script's `OUT` and resume behavior before execution; output paths are historical and not uniformly configurable. The late and supplemental directories contain code as well as outputs: retain `code/` when preparing fresh outputs.
 
-The renderer reads only `results/test_metrics_summary.json` and
-`results/confidence_intervals_summary.json`. It creates PNG and PDF copies and
-does not require transaction rows or model binaries.
+1. Prepare authorized raw exports, traits and images. `tmp/revision_review/revision_data_audit.py` performs the input/eligibility audit; `validate_revision_images.py` and `freeze_image_ready_cohort.py` build image-ready ledgers. The `tmp/` name is an original source location, not a disposable public dependency.
+2. Build past-only transaction targets with `revision/code/build_past_only_targets.py`. Follow its CLI and required upstream manifests. Existing protocol/amendment hashes are part of the checks.
+3. Extract DINOv2 full-frame, CLIP native and SigLIP 2 using the scripts in their named `revision/*features_20260909` directories. SAM, SDXL-VAE, DreamSim and AIMv2 use `revision/four_encoder_extension_20260917/run_full_extraction.py`; `run_pilot.py` supplies shared extraction definitions. The three original extraction scripts expect local checkpoint/cache paths; populate those documented paths with the stated model revisions. A cached file is not distributed with this release.
+4. Supply/reconstruct the audited embedding registries and row manifests listed in `provenance/required_inputs.json`. Fold-fitted PCA/scaling occurs in the regression runners, not on the full evaluation cohort.
+5. Metadata entry point: `results/metadata_asinh_transaction_2022_2024_nine_regressors_20260920/code/run_experiment.py`. The executed final family list excludes RandomForest and writes the **eight**-regressor `_v1` result directory. Shared modules retaining `nine` in their names must not be run as substitutes.
+6. Image entry point: `results/image_asinh_transaction_2022_2024_eight_regressors_20260920/code/run_image_experiment.py`.
+7. Early entry point: `results/early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921/code/run_early_fusion_tfidf_experiment.py`.
+8. Late entry point: `results/late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2/code/run_late_fusion_experiment.py`. It uses the pre-2025 branch results and validation predictions before loading evaluation predictions.
+9. Run `run_fusion_uncertainty.py` and `run_vs_zero_uncertainty.py` in their named result directories. Row-aligned predictions are necessary and are not public inputs.
+10. Supplemental order in `results/reviewer_priority4_20260922_v1/code`: stage1 audit; stage2 cleaning, refit and refit uncertainty; stage3 residual, strict residual and residual uncertainty; stage4 rolling and forward selection; `verify_results.py`.
 
-## Level 3 — feature reconstruction
+The release preserves executed scientific code rather than replacing it with a newly redesigned engine. A complete raw-input refit was **not** performed during packaging. Some historical helpers expose broader experiments; only the entry points above and the recorded final run indices support the reported revision. All library/extraction defaults should be read from source together with the saved configurations.
 
-The frozen scripts in `revision/feature_extraction/` require a master token
-index whose `image_path` values resolve below a chosen study root. Set:
+## Frozen-code integrity
 
-```powershell
-$env:BAYC_NFT_ROOT = 'D:\path\to\authorized\study_root'
-$env:BAYC_MASTER_TOKENS = 'D:\path\to\master_tokens_v1.jsonl'
-$env:BAYC_COHORT_RELEASE = 'D:\path\to\cohort_release_v1.json'
-$env:DINOV2_CHECKPOINT_DIR = 'D:\path\to\facebook-dinov2-large-snapshot'
-$env:CLIP_CHECKPOINT_DIR = 'D:\path\to\openai-clip-vit-large-patch14-snapshot'
-$env:SIGLIP2_CHECKPOINT_DIR = 'D:\path\to\google-siglip2-large-patch16-256-snapshot'
-```
-
-The exact model repository revisions and weight hashes are in the public
-execution specification. Install optional GPU dependencies from
-`requirements-feature-extraction.txt` and run the desired extraction script.
-
-## Level 4 — complete model refit and evaluation
-
-This level requires the structured private input bundle described in
-`DATA_ACCESS.md`. The production engine is deliberately fail-closed: it will
-not run active stages without matching manifests, approved scope records, and
-the external anchor. The public results allow verification of what was run;
-they do not bypass the original custody design.
-
-## Certified environments
-
-- Feature extraction: Python 3.12.13, PyTorch 2.7.1+cu118; SigLIP 2 also
-  records Transformers 4.56.2.
-- Final modelling: Python 3.14.3, NumPy 2.4.2, SciPy 1.17.1,
-  scikit-learn 1.8.0, Joblib 1.5.3, threadpoolctl 3.6.0.
-- Universal random seed: `20260908`.
-
+`provenance/source_files.json` links byte-identical public copies to their local source hashes. `MANIFEST_SHA256.json` covers release files except itself. Code is inspectable even where historical input acquisition is not independently reconstructible. Records with `evaluation_labels_loaded_before_freeze: false` indicate labels were not loaded before freezing; the supplemental audit's confusingly named `run_level_freeze_flag` stores this negative flag, not a failed-freeze indicator.

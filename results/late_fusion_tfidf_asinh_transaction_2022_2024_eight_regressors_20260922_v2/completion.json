@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-09-22T03:57:58.943540+00:00",
+  "passed": true,
+  "expected_fits": 342,
+  "actual_fits": 342,
+  "candidate_combinations": 112,
+  "weight_combinations": 1232,
+  "evaluation_predictions_loaded_after_freeze": true,
+  "elapsed_seconds": 3531.770443677902,
+  "prior_results_overwritten": false,
+  "manuscript_modified": false
+}

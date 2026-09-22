@@ -1,0 +1,306 @@
+{
+  "version": "1.0",
+  "policy_frozen_date": "2026-09-08",
+  "status": "POLICIES_AND_CANDIDATE_ROWS_FROZEN; FINAL_MULTIMODAL_COHORT_PENDING_IMAGE_ACQUISITION_AND_PROVENANCE",
+  "scope": "Retrospective incremental image utility in provided BAYC and metadata-covered ordinary MAYC trades",
+  "source_manifest_sha256": "3d7687846c0b348d959f35c1d7560ffde3a2d58be7503635a37f9dcbfdb3f30a",
+  "join_key": [
+    "blockchain",
+    "nft_contract_address",
+    "token_id"
+  ],
+  "collection_contracts": {
+    "BAYC": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+    "MAYC": "0x60e4d786628fea6478f785a6d7e704777c86a7c6"
+  },
+  "time": {
+    "timezone": "UTC",
+    "development_end_exclusive": "2025-01-01T00:00:00Z",
+    "final_test_start_inclusive": "2025-01-01T00:00:00Z",
+    "final_test_end_exclusive": "2026-04-14T00:00:00Z",
+    "terminal_partial_day_excluded": true,
+    "model_refit_during_final_test": false,
+    "post_submission_start": "2026-03-19T00:00:00Z",
+    "post_submission_role": "descriptive_subset_not_independent_confirmation",
+    "historical_data_previously_explored": true,
+    "prospective_deployment_claim": false
+  },
+  "currency": {
+    "unit": "ETH-denominated accounting units",
+    "allowed_contracts": {
+      "ETH": "0x0000000000000000000000000000000000000000",
+      "WETH": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "bpETH": "0x0000000000a39bb272e79075ade125fd351887ac"
+    },
+    "symbol_and_contract_must_match": true,
+    "raw_decimals": 18,
+    "raw_check_rtol": 1e-09,
+    "raw_check_atol": 1e-10,
+    "fee_adjustment": "none; gross traded amount_original, not net seller proceeds",
+    "exclude_other_currency_from_primary": true,
+    "bpeth_exclusion_sensitivity": true
+  },
+  "target": {
+    "formula": "ln(P_i_t / B_c_t)",
+    "price_column": "amount_original",
+    "baseline_statistic": "median",
+    "baseline_window_days": 20,
+    "baseline_interval": "[t-20 days,t)",
+    "minimum_prior_trades": 20,
+    "minimum_prior_distinct_tokens": 10,
+    "exclude_all_simultaneous_transactions": true,
+    "baseline_pool": "all base-clean collection trades independent of metadata/image availability; includes Mega",
+    "own_token_prior_trades_allowed": true,
+    "prior_test_trades_allowed_in_baseline": true,
+    "future_or_current_trade_in_baseline": false,
+    "additive_log_offset": 0,
+    "sensitive_windows_days": [
+      7,
+      30
+    ],
+    "sensitive_statistic": "mean",
+    "price_targets_materialized": false
+  },
+  "sampling": {
+    "unit": "transaction",
+    "training_weight": "one per transaction",
+    "primary_mayc_generations": [
+      "M1",
+      "M2"
+    ],
+    "mega_primary_excluded": true,
+    "missing_metadata": "exclude from paired primary; retain audit and market-baseline history",
+    "missing_image": "pending acquisition; do not substitute blank images",
+    "common_rows_across_primary_metadata_and_augmented": true,
+    "common_rows_across_frozen_primary_encoders": true,
+    "known_token": "token in eligible development training sample before 2025-01-01, fixed throughout test",
+    "observed_pretest_trade_flag_separate": true,
+    "new_token_id_ceiling_not_imposed": true
+  },
+  "image": {
+    "primary": "original artwork with original background",
+    "canonical_color_space": "sRGB",
+    "orient": "apply EXIF orientation if present",
+    "alpha": "straight-alpha composite over constant RGB(128,128,128) before resizing",
+    "nonsquare": "center pad to square with same neutral gray; no content cropping",
+    "resizing": "frozen official encoder processor",
+    "native_size_not_embedding_dimension": true,
+    "animated": "quarantine for review; no silent frame selection",
+    "nobg": "secondary only; same verified segmentation checkpoint for both collections; composite product of source alpha and foreground mask over same gray",
+    "current_nobg_masks": "unverified provenance; not automatically accepted",
+    "source_bytes_preserved": true,
+    "record_hash_version_pooling_dimension": true
+  },
+  "features": {
+    "primary_metadata": [
+      "background",
+      "fur",
+      "eyes",
+      "clothes",
+      "hat",
+      "mouth",
+      "earring",
+      "generation_for_MAYC"
+    ],
+    "encoding": "category-aware one-hot, fit on training only; explicit structural None; unknown-category audit",
+    "forbidden": [
+      "token_id",
+      "wallets",
+      "transaction_hash",
+      "future_or_full-period_aggregates",
+      "legacy_AvgPre",
+      "legacy_Trans_N",
+      "global_TFIDF_columns",
+      "Mega_name"
+    ],
+    "supplementary": [
+      "trait_count",
+      "training-only category-aware TF-IDF"
+    ]
+  },
+  "validation": {
+    "outer_development_windows": [
+      [
+        "2023-01-01",
+        "2023-07-01"
+      ],
+      [
+        "2023-07-01",
+        "2024-01-01"
+      ],
+      [
+        "2024-01-01",
+        "2025-01-01"
+      ]
+    ],
+    "inner": "last three complete calendar quarters before each outer origin; expanding training prefix",
+    "all_transforms_and_tuning_training_only": true,
+    "score": "pooled validation MSE; sqrt for RMSE reporting",
+    "final_hyperparameter_tuning_quarters": [
+      [
+        "2024-04-01",
+        "2024-07-01"
+      ],
+      [
+        "2024-07-01",
+        "2024-10-01"
+      ],
+      [
+        "2024-10-01",
+        "2025-01-01"
+      ]
+    ],
+    "learned_stacking_residual_oof": "quarterly past-only OOF from 2022-Q4 onward; each base tune uses preceding three quarters only",
+    "no_meta_fit_or_tuning_on_outer_validation": true,
+    "meta_inner_tuning": "chronological OOF prefix holdouts; if insufficient history, configuration is unavailable for that origin, never borrow future data",
+    "minimum_fold_support": {
+      "train_trades": 200,
+      "train_tokens": 100,
+      "validation_trades": 200,
+      "validation_tokens": 100
+    },
+    "final_metrics_not_used_for_selection": true
+  },
+  "regressors": {
+    "ridge": {
+      "alpha": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100
+      ]
+    },
+    "PLS": {
+      "components": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "scale": false
+    },
+    "LinearSVR_primary": {
+      "loss": "squared_epsilon_insensitive",
+      "dual": false,
+      "C": [
+        0.01,
+        0.1,
+        1
+      ],
+      "epsilon": [
+        0.1,
+        0.2
+      ],
+      "tol": 0.0001,
+      "max_iter": 5000
+    },
+    "LinearSVR_sensitivity": {
+      "loss": "epsilon_insensitive",
+      "dual": true,
+      "C": [
+        0.001,
+        0.01
+      ],
+      "epsilon": [
+        0.1,
+        0.2
+      ]
+    },
+    "ElasticNet": {
+      "alpha": [
+        0.001,
+        0.01,
+        0.1,
+        1,
+        10
+      ],
+      "l1_ratio": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "max_iter": 20000,
+      "tol": 0.0001
+    },
+    "metadata_nonlinear": {
+      "model": "HistGradientBoostingRegressor",
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "max_leaf_nodes": [
+        15,
+        31
+      ],
+      "l2_regularization": [
+        1,
+        10
+      ],
+      "max_iter": 300,
+      "early_stopping": false
+    }
+  },
+  "primary_comparison": {
+    "per_collection": "development-selected strong metadata-only M* versus development-selected augmented A*",
+    "A_candidates": [
+      "regularized early concatenation",
+      "validation-tuned weighted late fusion"
+    ],
+    "weighted_late_image_weights": [
+      0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "zero_image_weight_allowed": true,
+    "learned_stacking_and_residual": "preplanned secondary analyses requiring chronological OOF; not silently used to replace primary after test",
+    "final_collection_tests": 2,
+    "encoder_registry_must_be_frozen_before_any_final_scoring": true
+  },
+  "inference": {
+    "primary_metric": "transaction RMSE of log-relative-price",
+    "utility": "100*(RMSE_metadata-RMSE_augmented)/RMSE_metadata",
+    "auxiliary_metrics": [
+      "MAE",
+      "R2",
+      "equal-token RMSE"
+    ],
+    "paired_token_cluster_bootstrap": 2000,
+    "seed": 20260908,
+    "confidence": 0.95,
+    "simultaneous_two_collection_ci_confidence": 0.975,
+    "time_block_sensitivity": {
+      "calendar_days": 14,
+      "replicates": 2000,
+      "paired": true
+    },
+    "practical_threshold_percent": 1,
+    "threshold_sensitivity_percent": [
+      0.5,
+      2
+    ],
+    "threshold_is_author_defined_not_industry_standard": true,
+    "no_formal_equivalence_claim": true,
+    "subgroup_minimum": {
+      "trades": 50,
+      "tokens": 30
+    },
+    "no_performance_claim_from_sample_size": true
+  },
+  "readiness": {
+    "BAYC": "local trait-image pairing available; upstream provenance still to document",
+    "MAYC": "three temporary download probes succeeded; production cohort still pending bulk acquisition",
+    "external_query_and_export_metadata": "requested from user; not yet supplied",
+    "source_contracts_independently_authenticated": false,
+    "new_price_models_fit": false,
+    "final_price_targets_generated": false
+  }
+}

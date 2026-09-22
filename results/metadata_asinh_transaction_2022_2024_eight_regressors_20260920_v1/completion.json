@@ -1,0 +1,53 @@
+{
+  "completed_utc": "2026-09-20T10:28:56.530545+00:00",
+  "passed": true,
+  "minimum_expected_fits": 740,
+  "actual_fits_or_resumed_checkpoints": 740,
+  "combinations": 32,
+  "training_cohorts": [
+    {
+      "collection": "BAYC",
+      "training_transactions": 35206,
+      "training_tokens": 5746,
+      "training_min_time": "2022-01-01 00:03:36+00:00",
+      "training_max_time": "2024-12-31 23:57:11+00:00"
+    },
+    {
+      "collection": "MAYC",
+      "training_transactions": 95207,
+      "training_tokens": 9568,
+      "training_min_time": "2022-01-01 00:14:11+00:00",
+      "training_max_time": "2024-12-31 20:04:11+00:00"
+    }
+  ],
+  "evaluation_counts": {
+    "BAYC": {
+      "transactions": 5120,
+      "tokens": 1498
+    },
+    "MAYC": {
+      "transactions": 13019,
+      "tokens": 2492
+    }
+  },
+  "development_selected": {
+    "BAYC": {
+      "collection": "BAYC",
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "selected_config": "{\"alpha\": 1000}",
+      "pre2025_validation_transaction_rmse": 1.3836209400597699
+    },
+    "MAYC": {
+      "collection": "MAYC",
+      "encoding": "one-hot",
+      "family": "HistGradientBoosting",
+      "selected_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.05, \"max_leaf_nodes\": 31}",
+      "pre2025_validation_transaction_rmse": 0.4019487115450753
+    }
+  },
+  "evaluation_loaded_after_freeze": true,
+  "elapsed_seconds": 2887.181254863739,
+  "manuscript_modified": false,
+  "prior_results_overwritten": false
+}

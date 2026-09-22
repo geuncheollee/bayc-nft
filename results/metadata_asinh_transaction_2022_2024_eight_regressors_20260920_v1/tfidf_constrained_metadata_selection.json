@@ -1,0 +1,50 @@
+{
+  "decision": "Use TF-IDF metadata for both collections and choose the regression family within each collection by the lowest pooled 2024 Q2-Q4 transaction-weighted RMSE.",
+  "decision_status": "post-hoc common-representation constraint; learner choice within the TF-IDF candidate set uses pre-2025 validation only",
+  "target": "fold-fitted robust-asinh LRP with predictions reported after inverse transformation to original LRP",
+  "training_window": "2022-01-01 through 2024-12-31",
+  "evaluation_window": "fixed retrospective out-of-time window 2025-01-01 through 2026-04-13; not used for learner selection",
+  "selected_models": {
+    "BAYC": {
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "hyperparameters": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 1.3836209400597699,
+      "model_path": "models\\BAYC_TF_IDF_Ridge.joblib",
+      "model_sha256": "76a2491e1cfc69fe23649c6b19aad8745559f499f65986253471a96bccd40315",
+      "evaluation_performance_descriptive_not_for_selection": {
+        "transaction_rmse": 0.252755229444784,
+        "transaction_mae": 0.10693521788717711,
+        "transaction_r2": 0.14746661162736452,
+        "equal_token_rmse": 0.26642151058975055,
+        "equal_token_mae": 0.12146621374699798,
+        "equal_token_r2": 0.3045340639035691
+      }
+    },
+    "MAYC": {
+      "encoding": "TF-IDF",
+      "family": "XGBoost",
+      "hyperparameters": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4019698128769849,
+      "model_path": "models\\MAYC_TF_IDF_XGBoost.joblib",
+      "model_sha256": "97e5c60383a42fe93f7106a9dc9e15a92fb747532d62bdb58553c5cc983a6ce5",
+      "evaluation_performance_descriptive_not_for_selection": {
+        "transaction_rmse": 0.16747925531384972,
+        "transaction_mae": 0.0912984418814126,
+        "transaction_r2": 0.2323845335714112,
+        "equal_token_rmse": 0.2045401466546313,
+        "equal_token_mae": 0.11166066781521536,
+        "equal_token_r2": 0.2945945560558185
+      }
+    }
+  },
+  "original_unconstrained_selection_preserved": "selection_freeze.json",
+  "additional_refitting_required": false,
+  "manuscript_modified": false
+}

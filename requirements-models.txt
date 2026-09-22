@@ -1,0 +1,11 @@
+# Dependency declaration, not a reconstructed historical lockfile.
+numpy
+scipy
+scikit-learn
+joblib
+psutil
+threadpoolctl
+xgboost
+lightgbm
+pandas
+Pillow

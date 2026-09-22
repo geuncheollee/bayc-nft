@@ -1,0 +1,33 @@
+﻿collection,encoding,family,selected_config,pre2025_validation_transaction_rmse
+BAYC,one-hot,OLS,{},1.3840146620827387
+BAYC,one-hot,Ridge,"{""alpha"": 1000}",1.3838398977285613
+BAYC,one-hot,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.3838066191209621
+BAYC,one-hot,PLS,"{""components"": 32}",1.384014662082739
+BAYC,one-hot,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.383883409087182
+BAYC,one-hot,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.3852900326190016
+BAYC,one-hot,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.3852900329243725
+BAYC,one-hot,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.385184284291194
+BAYC,TF-IDF,OLS,{},1.3837716124030137
+BAYC,TF-IDF,Ridge,"{""alpha"": 1000}",1.3836209400597699
+BAYC,TF-IDF,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",1.3836508348720182
+BAYC,TF-IDF,PLS,"{""components"": 8}",1.3837066268046412
+BAYC,TF-IDF,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.3836230845277993
+BAYC,TF-IDF,HistGradientBoosting,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3860396460015814
+BAYC,TF-IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.3859760161785029
+BAYC,TF-IDF,LightGBM,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3859202591665674
+MAYC,one-hot,OLS,{},0.40209857208679783
+MAYC,one-hot,Ridge,"{""alpha"": 0.01}",0.4020985722125159
+MAYC,one-hot,ElasticNet,"{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.40210197587354646
+MAYC,one-hot,PLS,"{""components"": 8}",0.40209646916673397
+MAYC,one-hot,LinearSVR,"{""C"": 1, ""epsilon"": 0.1}",0.4022315984788388
+MAYC,one-hot,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4019487115450753
+MAYC,one-hot,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40194871255497805
+MAYC,one-hot,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.40195557890399725
+MAYC,TF-IDF,OLS,{},0.4020113293666193
+MAYC,TF-IDF,Ridge,"{""alpha"": 0.01}",0.4020113389926933
+MAYC,TF-IDF,ElasticNet,"{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.4020385294573054
+MAYC,TF-IDF,PLS,"{""components"": 32}",0.4020113293666203
+MAYC,TF-IDF,LinearSVR,"{""C"": 1, ""epsilon"": 0.1}",0.4021477369963618
+MAYC,TF-IDF,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.40203061229107717
+MAYC,TF-IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.4019698128769849
+MAYC,TF-IDF,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.40200568221996325

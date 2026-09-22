@@ -1,0 +1,4510 @@
+{
+  "created_utc": "2026-09-21T23:47:49.171498+00:00",
+  "evaluation_labels_loaded_before_freeze": false,
+  "models": {
+    "BAYC__DINOv2__OLS": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.387676331102934,
+      "model_path": "models\\BAYC_DINOv2_OLS.joblib",
+      "model_sha256": "2256a94c8004be362cf89a3f5768ef21d4ba8891ce4052566b28481ea7bbe2fd",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.729626200045459
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__Ridge": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 1.3842925351149185,
+      "model_path": "models\\BAYC_DINOv2_Ridge.joblib",
+      "model_sha256": "c21793e4b1bd2bc15f8f6b419cca6fb0c20284f10c9e1338ec646fd3c3acaf4e",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.1620671000564471
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.3836791732690015,
+      "model_path": "models\\BAYC_DINOv2_ElasticNet.joblib",
+      "model_sha256": "d5249692b1a6cafb562cebc5816bbf5c72156ac0373c2ad830f3b2c6a56e1e56",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 195,
+            "seconds": 0.6717112000333145
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__PLS": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.3844097929802526,
+      "model_path": "models\\BAYC_DINOv2_PLS.joblib",
+      "model_sha256": "ee240b09cb34bce470d0dc33ab710ba64260ae106be533197196b6ef01178749",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.6513960999436677
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3863939024079168,
+      "model_path": "models\\BAYC_DINOv2_LinearSVR.joblib",
+      "model_sha256": "3dc5d16fa7ac6f94e9acc394b4b7f593706ccb366ebb9d470743657c1be4c232",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 5,
+            "seconds": 0.9426248000236228,
+            "primal_objective": 196.57871844869464,
+            "primal_gradient_norm": 6.820680806398326e-13,
+            "objective_gap_upper_bound": 2.326084333138526e-25
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3860598863018887,
+      "model_path": "models\\BAYC_DINOv2_HistGradientBoosting.joblib",
+      "model_sha256": "2c8399a8b0e70fcc5647aa5ceb46c777dbb581cd2fa3964a6ee0aacfcb46d9f4",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 104.57642820000183
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3857136726548556,
+      "model_path": "models\\BAYC_DINOv2_XGBoost.joblib",
+      "model_sha256": "337e876ca022eb16dc7174408d01cdb06bb1b5599bc036e361fea4aa284216eb",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 24.557711000088602
+          }
+        }
+      ]
+    },
+    "BAYC__DINOv2__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "DINOv2",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3862563320328436,
+      "model_path": "models\\BAYC_DINOv2_LightGBM.joblib",
+      "model_sha256": "b71adbd10c1ff19a9e6debd1456022f51b73f00b5afd9d02a674984c18bb0a75",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 6.672990499995649
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__OLS": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3859956902925124,
+      "model_path": "models\\BAYC_CLIP_OLS.joblib",
+      "model_sha256": "a0abb8452ab4f19f716e632468f0143cbe76b8fb96e7f5446f3b8242e6523414",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.44067280006129295
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__Ridge": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 1.3844126105220989,
+      "model_path": "models\\BAYC_CLIP_Ridge.joblib",
+      "model_sha256": "d3d7b3ee3dd4483b60205232b307c38b4d1f383acca5e4cc17ea2f15bea442f4",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.10196230001747608
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.3837881895613353,
+      "model_path": "models\\BAYC_CLIP_ElasticNet.joblib",
+      "model_sha256": "5af501f45c9132a5e3e51da228d454229a43dca3269ebfea56215d640f70fd85",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 77,
+            "seconds": 0.23100400005932897
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__PLS": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.384000948988104,
+      "model_path": "models\\BAYC_CLIP_PLS.joblib",
+      "model_sha256": "ce50d3960f117ca6878713586ec538e9156941731d5424afb3c05454a85c7485",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.40921650000382215
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3858849978203942,
+      "model_path": "models\\BAYC_CLIP_LinearSVR.joblib",
+      "model_sha256": "f110809f408dfc8c28d66da3f3a2c9276632242629ca998c8d0b08e944f09248",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 5,
+            "seconds": 0.5466883999761194,
+            "primal_objective": 202.42058127739378,
+            "primal_gradient_norm": 3.56951264436113e-13,
+            "objective_gap_upper_bound": 6.370710259126993e-26
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.385993327062388,
+      "model_path": "models\\BAYC_CLIP_HistGradientBoosting.joblib",
+      "model_sha256": "218a27ff054767619cffc277c4449e811410afb222b8793f9aa34642a65ca6aa",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 78.0112475999631
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.385989364445842,
+      "model_path": "models\\BAYC_CLIP_XGBoost.joblib",
+      "model_sha256": "10d935b30aff55b2a9fe213b120bd644c0a99ce3aa4d10e5130c54b0d292e5f1",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 16.240786500042304
+          }
+        }
+      ]
+    },
+    "BAYC__CLIP__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "CLIP",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3860754493492944,
+      "model_path": "models\\BAYC_CLIP_LightGBM.joblib",
+      "model_sha256": "ad39930269b08f37d4dbf735bd14f28ac174dac744d4af13c5579c703d282b20",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 5.279227399965748
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__OLS": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.389758119116489,
+      "model_path": "models\\BAYC_SigLIP2_OLS.joblib",
+      "model_sha256": "02dca886964c7e80fd1f99721b60f9c014a52559a092c18e0346f08d2193b4b3",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.7062231000745669
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__Ridge": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 1.3837488219153509,
+      "model_path": "models\\BAYC_SigLIP2_Ridge.joblib",
+      "model_sha256": "b3dbadc80dd40e8229e125b99303fa7fd1604aa0a099a8bccbd21b84646ae2de",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.14720010000746697
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.383636227506758,
+      "model_path": "models\\BAYC_SigLIP2_ElasticNet.joblib",
+      "model_sha256": "9e8ca96ad3fc7c5ce6173071f9eecfbaca73b777175f868551a9837cf9812574",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 91,
+            "seconds": 0.32424330001231283
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__PLS": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.383750027427579,
+      "model_path": "models\\BAYC_SigLIP2_PLS.joblib",
+      "model_sha256": "7f4e2355508324dfb45b6666172560c66f9ec6ea3cb803daefbc2e2bc9cd2bc7",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.548035699990578
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.384358273515564,
+      "model_path": "models\\BAYC_SigLIP2_LinearSVR.joblib",
+      "model_sha256": "6072ac9684f8f850d20cc0565b7e95b90de5727fe08c8337094144d17e9731be",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 5,
+            "seconds": 0.8660313000436872,
+            "primal_objective": 202.36062816017025,
+            "primal_gradient_norm": 7.304373979256159e-13,
+            "objective_gap_upper_bound": 2.6676939614417224e-25
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3856501217401893,
+      "model_path": "models\\BAYC_SigLIP2_HistGradientBoosting.joblib",
+      "model_sha256": "d715364125a7850f5a7b34ad643b84ae8f75c689795f841de98abb858ebf690c",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 106.191736400011
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3854887216412966,
+      "model_path": "models\\BAYC_SigLIP2_XGBoost.joblib",
+      "model_sha256": "2d05b47fc50fe86c976ad2d9189d1bd6173d4c7603968e072616c0bce99f3b71",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 25.440815799986012
+          }
+        }
+      ]
+    },
+    "BAYC__SigLIP2__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "SigLIP2",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3859186419752252,
+      "model_path": "models\\BAYC_SigLIP2_LightGBM.joblib",
+      "model_sha256": "29887acf06c82f4b893c78082b6491de51063494ef8705c73ce9b9b674d4eeeb",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 7.016717499936931
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__OLS": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3845757813616095,
+      "model_path": "models\\BAYC_SAM_OLS.joblib",
+      "model_sha256": "592b811434c051966b8c435e62ecfd7a37d2802985dd160027032b1e84b89dfc",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.1273207999765873
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__Ridge": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 100
+      },
+      "pre2025_validation_transaction_rmse": 1.383597396257674,
+      "model_path": "models\\BAYC_SAM_Ridge.joblib",
+      "model_sha256": "b0cbb24ff315fe1109a489b376ed81e56820ff281ca7ef50fd967b9a001ca62d",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 100
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.03608630003873259
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 1.383662071733601,
+      "model_path": "models\\BAYC_SAM_ElasticNet.joblib",
+      "model_sha256": "eac42d2ca94b4ecdd40f3ddd58cf6edd36233de8f01dcedfa02cda2edf937523",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 327,
+            "seconds": 0.334929300006479
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__PLS": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "PLS",
+      "selected_config": {
+        "components": 32
+      },
+      "pre2025_validation_transaction_rmse": 1.3835849252692864,
+      "model_path": "models\\BAYC_SAM_PLS.joblib",
+      "model_sha256": "1d62ce1433a1fac772aadde6e5780477f5e139385b8e2c2c68cccd623bf9cedf",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 32
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.6532776000676677
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3835343128780728,
+      "model_path": "models\\BAYC_SAM_LinearSVR.joblib",
+      "model_sha256": "e9e2f64bb5d4b411de6e2d6be750c928a62ad06bfddd54561640c459117266f7",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 0.12303260003682226,
+            "primal_objective": 214.3128862950471,
+            "primal_gradient_norm": 7.91511812727066e-13,
+            "objective_gap_upper_bound": 3.13245474843243e-25
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3864972085773857,
+      "model_path": "models\\BAYC_SAM_HistGradientBoosting.joblib",
+      "model_sha256": "9bf186f7d3a75ae9d567c971c73c1c84829f8d3a672320a521f10ecffc43953a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 28.074160299962386
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3859127467046388,
+      "model_path": "models\\BAYC_SAM_XGBoost.joblib",
+      "model_sha256": "d648f64673d9f3109ea5419d75251468654081c6007b410ea6c403d17b757941",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 6.022790899965912
+          }
+        }
+      ]
+    },
+    "BAYC__SAM__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.386826425556547,
+      "model_path": "models\\BAYC_SAM_LightGBM.joblib",
+      "model_sha256": "887f16eec1581fedfb95e3fe1ca4e6c2e655f917863d94baf28f9ea7270ab65e",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 3.24768419994507
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__OLS": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3857057100851466,
+      "model_path": "models\\BAYC_SDXL_VAE_OLS.joblib",
+      "model_sha256": "189047ba302a99e69e60c47cabc8d1ac2140a47288f912d3d7eb64298eadd3f1",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.7594137999694794
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__Ridge": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 1.384351272158552,
+      "model_path": "models\\BAYC_SDXL_VAE_Ridge.joblib",
+      "model_sha256": "aacab635a50efda2788408c2ebc3b2a8cf766bb23d2971ff6095a362c19a8d6d",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.19539490004535764
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.3837712391627484,
+      "model_path": "models\\BAYC_SDXL_VAE_ElasticNet.joblib",
+      "model_sha256": "e2309e18f2a8e6ea825490c71b8d3d597b932853dcf42ade4f9c2b9690cbe903",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 73,
+            "seconds": 0.3628115999745205
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__PLS": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.3846613971815058,
+      "model_path": "models\\BAYC_SDXL_VAE_PLS.joblib",
+      "model_sha256": "374c6c6220bd1af562e939a80cde5b00033c3a9615b67482d5896ac5271f8915",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.6620238999603316
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3851482619476376,
+      "model_path": "models\\BAYC_SDXL_VAE_LinearSVR.joblib",
+      "model_sha256": "7737f374d5c0e30cb961e4f71d25541e24b097763944231d9ae9914ba0531ed9",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 5,
+            "seconds": 0.7418972998857498,
+            "primal_objective": 195.07014058458566,
+            "primal_gradient_norm": 5.879267261916493e-13,
+            "objective_gap_upper_bound": 1.728289176852153e-25
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3847698713222123,
+      "model_path": "models\\BAYC_SDXL_VAE_HistGradientBoosting.joblib",
+      "model_sha256": "1622008de2195fc712520f6bf4f31e3a13022c2df0d0bd1ecfc21eb5c5ea8f0c",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 104.59776529995725
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3848442300548323,
+      "model_path": "models\\BAYC_SDXL_VAE_XGBoost.joblib",
+      "model_sha256": "531dff57c4fac6c1b24627dd22e0c17017d9f689ea81ad89463cd12107e14c2a",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 24.941247300012037
+          }
+        }
+      ]
+    },
+    "BAYC__SDXL_VAE__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.384967928385187,
+      "model_path": "models\\BAYC_SDXL_VAE_LightGBM.joblib",
+      "model_sha256": "e952d1e4ff1d3d559e21ec41deea6a0fe56e4456553baf60d9d6fae300897682",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 7.257777699967846
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__OLS": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3866275420577805,
+      "model_path": "models\\BAYC_DreamSim_OLS.joblib",
+      "model_sha256": "278a5bdf4353bab33eebeab64fb9a9ad7177ecb834a2b0a71540460acee23614",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.7458077999763191
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__Ridge": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 1.3850403706036292,
+      "model_path": "models\\BAYC_DreamSim_Ridge.joblib",
+      "model_sha256": "000919c5cb97d828ff6e29932f9fd62777be4000880ecb17967eb07c71c33da3",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.15932390000671148
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.9
+      },
+      "pre2025_validation_transaction_rmse": 1.3840082063818522,
+      "model_path": "models\\BAYC_DreamSim_ElasticNet.joblib",
+      "model_sha256": "4d171936113039203aa643b4760f2b723b8e9092148976e7be70823237e435d4",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.9
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 27,
+            "seconds": 0.15807270002551377
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__PLS": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "PLS",
+      "selected_config": {
+        "components": 64
+      },
+      "pre2025_validation_transaction_rmse": 1.3865970854197698,
+      "model_path": "models\\BAYC_DreamSim_PLS.joblib",
+      "model_sha256": "94af060974c0383176aff102c6f6f2fd9c26c18c27bae13de37339bde79b2c66",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 64
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 3.845324599999003
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 1,
+        "epsilon": 0.2
+      },
+      "pre2025_validation_transaction_rmse": 1.3862933483405797,
+      "model_path": "models\\BAYC_DreamSim_LinearSVR.joblib",
+      "model_sha256": "25326aae7533f24354d7412ccc37662e338f1c22130ef3b757746d87b8b2bf74",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 1,
+            "epsilon": 0.2
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 5,
+            "seconds": 0.8082014999818057,
+            "primal_objective": 19392.19183293861,
+            "primal_gradient_norm": 2.1412948982754315e-10,
+            "objective_gap_upper_bound": 2.292571920690195e-20
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3854834032235979,
+      "model_path": "models\\BAYC_DreamSim_HistGradientBoosting.joblib",
+      "model_sha256": "0d73231c24a0cb133df94433a09e74f09498c459459a698f112339021c315d4d",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 104.38113160000648
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3851221722646299,
+      "model_path": "models\\BAYC_DreamSim_XGBoost.joblib",
+      "model_sha256": "105f85039b6e8dab387633a7b12e009eee117be7f99855edd2364c2369f5f492",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 25.558504699962214
+          }
+        }
+      ]
+    },
+    "BAYC__DreamSim__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3854691596898068,
+      "model_path": "models\\BAYC_DreamSim_LightGBM.joblib",
+      "model_sha256": "f850c6c827121115f0a738db5dfcacecd5d32ea02b9cea879c1faf8683ec5967",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c"
+      },
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 7.148724199971184
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__OLS": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 1.3859803234408457,
+      "model_path": "models\\BAYC_AIM_OLS.joblib",
+      "model_sha256": "8fb4a26026b001536b777304f4a4f4f9b08972bc5c8d146b45da9d812e8da81b",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.7409613999770954
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__Ridge": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 1.3836640539235259,
+      "model_path": "models\\BAYC_AIM_Ridge.joblib",
+      "model_sha256": "24778f46473747dd783165556d77774ad8cee0235d9c083ca16ca9db43c0a86a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.17032169993035495
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__ElasticNet": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 1.3836863138974187,
+      "model_path": "models\\BAYC_AIM_ElasticNet.joblib",
+      "model_sha256": "d8381471ca7b69cd83c2a0ab496b873d529ad55b2fd91ea2a015d57fddbd9026",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 141,
+            "seconds": 0.48239680007100105
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__PLS": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 1.3838364122387519,
+      "model_path": "models\\BAYC_AIM_PLS.joblib",
+      "model_sha256": "b137ba9707c998489888d12ad03a70a02879b8c948e10f78d2df7424d5236f02",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 0.6575531999114901
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__LinearSVR": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 1.384623811926849,
+      "model_path": "models\\BAYC_AIM_LinearSVR.joblib",
+      "model_sha256": "23df236fa046dbf79f14acf089ac210bb3694a2fed6d29e017620c44d582a1ce",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 0.6221188000636175,
+            "primal_objective": 236.26962413125943,
+            "primal_gradient_norm": 8.920230220722617e-13,
+            "objective_gap_upper_bound": 3.9785253595346533e-25
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__HistGradientBoosting": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3860410640568397,
+      "model_path": "models\\BAYC_AIM_HistGradientBoosting.joblib",
+      "model_sha256": "9e2f532df452d1764a4a9e59c2d93c2fd8f930fd0684cfec8666a81775801d4d",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 103.40412269998342
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__XGBoost": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 1.3858489691057723,
+      "model_path": "models\\BAYC_AIM_XGBoost.joblib",
+      "model_sha256": "47af00e821f2a4c5998b2254e8e518f5ea05fdd32cbf0b08ce6c02cf611c4aa2",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 25.961854699999094
+          }
+        }
+      ]
+    },
+    "BAYC__AIM__LightGBM": {
+      "collection": "BAYC",
+      "encoder": "AIM",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 1.3862288911050205,
+      "model_path": "models\\BAYC_AIM_LightGBM.joblib",
+      "model_sha256": "496ca75463490856d060b1015096295b28e5a84359950fff398a0812d25849e4",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.014812120880714312,
+        "normalized_MAD": 0.0945891422454127
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 13.029251900035888
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__OLS": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.4031658146410459,
+      "model_path": "models\\MAYC_DINOv2_OLS.joblib",
+      "model_sha256": "6e3f1829be9fead44fb97bf3d2cc86cf9d9aa1a0c2fabb0d6d2ae3e901ad5222",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 1.4542079999810085
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__Ridge": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 0.4024364823141618,
+      "model_path": "models\\MAYC_DINOv2_Ridge.joblib",
+      "model_sha256": "4ede45f0db6a907c8a8814b6d36ce47c848417a2e67cafc9af5fc4cfb89aefbe",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.31573760008905083
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4023516919956543,
+      "model_path": "models\\MAYC_DINOv2_ElasticNet.joblib",
+      "model_sha256": "b20745ad53f34503104218b65878907758766453d1492bf5c0328484652b370a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 1553,
+            "seconds": 13.390483200084418
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__PLS": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 0.4024546436414298,
+      "model_path": "models\\MAYC_DINOv2_PLS.joblib",
+      "model_sha256": "6ad5f8f9e5ce624c53bd4cf429197299cc0464746003e586bb909828cb8616d8",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 1.2708661999786273
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4031628063438267,
+      "model_path": "models\\MAYC_DINOv2_LinearSVR.joblib",
+      "model_sha256": "2398246777eb87db584d79e127fa11985a5ee41367c59311389b62992cb7ed7a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 1.2129521999740973,
+            "primal_objective": 730.8790186215111,
+            "primal_gradient_norm": 1.28616122649928e-12,
+            "objective_gap_upper_bound": 8.27105350275066e-25
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4027089931890894,
+      "model_path": "models\\MAYC_DINOv2_HistGradientBoosting.joblib",
+      "model_sha256": "23eb9fd0beaf954a7489be014913fb8b06370bc03c29d646e79b943de13bab01",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 132.60678599996027
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.4025380665323814,
+      "model_path": "models\\MAYC_DINOv2_XGBoost.joblib",
+      "model_sha256": "5f8fd3549c79c0ae2b7ea93ca073b357ec00057051a2da55ed6b2f76caacad1a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 25.975481200031936
+          }
+        }
+      ]
+    },
+    "MAYC__DINOv2__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "DINOv2",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4034359959997132,
+      "model_path": "models\\MAYC_DINOv2_LightGBM.joblib",
+      "model_sha256": "7135a6e090816314fa0b7c164434703f8c9e1977a819977d3095a6b4f4f3957f",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 16.857854999951087
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__OLS": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.40206983078320807,
+      "model_path": "models\\MAYC_CLIP_OLS.joblib",
+      "model_sha256": "77f3539db07ba8a0a913ad791c4a64fabc4563d1135e0bb90af51fb57ce7847f",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.8917531999759376
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__Ridge": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 0.40187265282666934,
+      "model_path": "models\\MAYC_CLIP_Ridge.joblib",
+      "model_sha256": "3f422b10a78f4435db960c47a456415e3b753c04853a5c6e41a7f78cbe3ca246",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.20911019993945956
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 0.40190956031998865,
+      "model_path": "models\\MAYC_CLIP_ElasticNet.joblib",
+      "model_sha256": "1b4805ce22c694b94a3d4f29ddc88a42c2c3aed6b462eab64b10cb3f3ce42498",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 1492,
+            "seconds": 8.565236800001003
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__PLS": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "selected_config": {
+        "components": 16
+      },
+      "pre2025_validation_transaction_rmse": 0.4017962604615376,
+      "model_path": "models\\MAYC_CLIP_PLS.joblib",
+      "model_sha256": "4c338480db05a741ba4eab017baa8aaf1af12e5dcbdceda2c14cce7213299ae7",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 16
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 1.71721879998222
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4020650342863092,
+      "model_path": "models\\MAYC_CLIP_LinearSVR.joblib",
+      "model_sha256": "2ce3e60974a46864356988b99e9f14a148a17aca2789315811998ef83ba0c584",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 0.83245879993774,
+            "primal_objective": 741.0768938230192,
+            "primal_gradient_norm": 4.6972393228834994e-07,
+            "objective_gap_upper_bound": 1.1032028628221518e-13
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025546665388345,
+      "model_path": "models\\MAYC_CLIP_HistGradientBoosting.joblib",
+      "model_sha256": "586bb1f9110252ebf6252e9952254724a3bac2b9ae56df1aae7c33f4e9ce08ce",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 103.21848689997569
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40240910956447784,
+      "model_path": "models\\MAYC_CLIP_XGBoost.joblib",
+      "model_sha256": "de763ef7bd1bc6a81cb39411d2d449c509c6c48fbdb47c282d727278036aa77d",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 21.4917539000744
+          }
+        }
+      ]
+    },
+    "MAYC__CLIP__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4030620456925085,
+      "model_path": "models\\MAYC_CLIP_LightGBM.joblib",
+      "model_sha256": "8e2b2f3b48ec791b4e9d95d551ac50433fe6a5596bc3b835e1ac27debdaf29f2",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 13.178603800013661
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__OLS": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.4023881118420712,
+      "model_path": "models\\MAYC_SigLIP2_OLS.joblib",
+      "model_sha256": "38ad538b9e8a1c05b1fd404bad592579f2497c2ff2765ef6b3d0199f95b17cce",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 1.4639083000365645
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__Ridge": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 0.40189541965408465,
+      "model_path": "models\\MAYC_SigLIP2_Ridge.joblib",
+      "model_sha256": "12b74c3cca0cf025c483e84bd31ab5e964026552a8a780ae9966f40865588c08",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.28346359997522086
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 0.4019200609019983,
+      "model_path": "models\\MAYC_SigLIP2_ElasticNet.joblib",
+      "model_sha256": "f8654b5e5041a20685fb663807e4b33b1937f6abced2e6d78e19dcfd17d405f5",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4221,
+            "seconds": 33.84564660000615
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__PLS": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "PLS",
+      "selected_config": {
+        "components": 32
+      },
+      "pre2025_validation_transaction_rmse": 0.4018699789455712,
+      "model_path": "models\\MAYC_SigLIP2_PLS.joblib",
+      "model_sha256": "d3cef402c76b0cf480ef4dc131c5a51ed6b470289f6ce610dffe29502dc4725d",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 32
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 3.927410200005397
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4022216514514649,
+      "model_path": "models\\MAYC_SigLIP2_LinearSVR.joblib",
+      "model_sha256": "6f54756186b41b15d3b4e6921928ff6a2298ea71ad1969aaf02abb1e8b3dd293",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 1.19466989999637,
+            "primal_objective": 738.0077378227181,
+            "primal_gradient_norm": 1.6566349742856956e-12,
+            "objective_gap_upper_bound": 1.3722197190132838e-24
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4023538722678342,
+      "model_path": "models\\MAYC_SigLIP2_HistGradientBoosting.joblib",
+      "model_sha256": "966c26f1cbaffd79e4184cb89f40614e60ce4abd247dbea042226b100a5ef9e6",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 130.85114549996797
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.40235012055071573,
+      "model_path": "models\\MAYC_SigLIP2_XGBoost.joblib",
+      "model_sha256": "5a297d7b3d89ce7cd142a2539192050c844bc5633bf4d593f89c459b972a07b1",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 49.41229570005089
+          }
+        }
+      ]
+    },
+    "MAYC__SigLIP2__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "SigLIP2",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.4031513444167292,
+      "model_path": "models\\MAYC_SigLIP2_LightGBM.joblib",
+      "model_sha256": "a965b4d8bf78d40aae36b059325a4b9231f2fe8e7619bbdd12b7dc249759be96",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 9.006228700047359
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__OLS": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.4018827551226397,
+      "model_path": "models\\MAYC_SAM_OLS.joblib",
+      "model_sha256": "e945cb2c949a7e19611d8b2639e2e0a85b415e0ec0dd2a02dcb2c5af0fa9eac1",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 0.32185730000492185
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__Ridge": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 0.01
+      },
+      "pre2025_validation_transaction_rmse": 0.40188413749938817,
+      "model_path": "models\\MAYC_SAM_Ridge.joblib",
+      "model_sha256": "80d6d3e0600543b5d6c6ce7197d8900706684699a5eaeb89e11e59989a3f6b83",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.09141330001875758
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 0.40207430766213503,
+      "model_path": "models\\MAYC_SAM_ElasticNet.joblib",
+      "model_sha256": "b0adda1967d0a3a85f5b35f7e300cacfedee76e2456187c2e24f48e128079457",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 3819,
+            "seconds": 11.89806190005038
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__PLS": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "PLS",
+      "selected_config": {
+        "components": 64
+      },
+      "pre2025_validation_transaction_rmse": 0.4019574762015036,
+      "model_path": "models\\MAYC_SAM_PLS.joblib",
+      "model_sha256": "bee57cf6baf614d1a7fc7fcfcf4b74ad35fbb6dcb6ed0af569dbc09ce496eb01",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 64
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 2.979670299915597
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4020557045118142,
+      "model_path": "models\\MAYC_SAM_LinearSVR.joblib",
+      "model_sha256": "1734754bee27aa8dd99256a2db0ee5b67ef940ce4af979f6ec238b25a770c4dd",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 1,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 0.3294369000941515,
+            "primal_objective": 75553.29273821217,
+            "primal_gradient_norm": 1.440560698387602e-09,
+            "objective_gap_upper_bound": 1.0376075628694878e-18
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025648809103552,
+      "model_path": "models\\MAYC_SAM_HistGradientBoosting.joblib",
+      "model_sha256": "74904d2e685f12a9130fb631990ee121373290f397a2d6fa116a5418436cbbe5",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 40.05560299998615
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4023377159356255,
+      "model_path": "models\\MAYC_SAM_XGBoost.joblib",
+      "model_sha256": "61f7ccf8e13f6ec91a335d88e3f9ddf1e432a70b64033670f5e1fda46aecf3d1",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 6.723354900022969
+          }
+        }
+      ]
+    },
+    "MAYC__SAM__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "SAM",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4036813321062966,
+      "model_path": "models\\MAYC_SAM_LightGBM.joblib",
+      "model_sha256": "c4a56fe3963d8364513a67c802c8a8f5492726d89d9b79581f7a1223b12e4f1a",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 4.850971500040032
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__OLS": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.40234809584274944,
+      "model_path": "models\\MAYC_SDXL_VAE_OLS.joblib",
+      "model_sha256": "891bff7e051840d2cb28f05f9f53be8e6794e1435e9c8d0388d43360a8ea55ae",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 1.40288219996728
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__Ridge": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 1000
+      },
+      "pre2025_validation_transaction_rmse": 0.40199332604775695,
+      "model_path": "models\\MAYC_SDXL_VAE_Ridge.joblib",
+      "model_sha256": "073ac2497f2d8051e860ab83e9a35b7d3bf1fa0cc5c37409f4220f0c4a31db1f",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 1000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.35025229991879314
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 0.4019699300711379,
+      "model_path": "models\\MAYC_SDXL_VAE_ElasticNet.joblib",
+      "model_sha256": "357180290b2f4083a9976ea8d2c4eee92498b801a32274eefc03ea9dd520f046",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.001,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 1664,
+            "seconds": 10.549493600032292
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__PLS": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 0.4021147118743913,
+      "model_path": "models\\MAYC_SDXL_VAE_PLS.joblib",
+      "model_sha256": "0bdff2f350b8bfa57430abdb82aaa18bf0af20211bc0c9b2785bdb3d53247776",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 1.2869475999614224
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4023485601101583,
+      "model_path": "models\\MAYC_SDXL_VAE_LinearSVR.joblib",
+      "model_sha256": "62e6ef27a53e1e72268cf1f3f2a412e02eac325b53f6364c5da12354b96669f8",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 1.2166838999837637,
+            "primal_objective": 732.9096901550768,
+            "primal_gradient_norm": 1.4223981029453757e-12,
+            "objective_gap_upper_bound": 1.0116081816313018e-24
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025062241230729,
+      "model_path": "models\\MAYC_SDXL_VAE_HistGradientBoosting.joblib",
+      "model_sha256": "a47e468b4e82f76f7eb4332f899f707a8f1c1426f880ae241968d5e2fc6f1b85",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 117.89545650000218
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.40238927476787467,
+      "model_path": "models\\MAYC_SDXL_VAE_XGBoost.joblib",
+      "model_sha256": "426be60810a79f6596e3546781a7c1101f1142b921e75fc6c828341e83a32739",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 27.503921299939975
+          }
+        }
+      ]
+    },
+    "MAYC__SDXL_VAE__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025801009859741,
+      "model_path": "models\\MAYC_SDXL_VAE_LightGBM.joblib",
+      "model_sha256": "395bbe2da9df7d034ba0e8395158249daa87bb5d6adc7c4083ad7b2685f74d7e",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+        "manifest_sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+        "pca_sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 18.077220299979672
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__OLS": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.402873726576645,
+      "model_path": "models\\MAYC_DreamSim_OLS.joblib",
+      "model_sha256": "4bccc9d2520659c4179a2f697409f108971b8da14f73aefc2ab9d9f9addf644b",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 1.4518121998989955
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__Ridge": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 0.4026553053247194,
+      "model_path": "models\\MAYC_DreamSim_Ridge.joblib",
+      "model_sha256": "25ea35f7ccedd142a8545f550f5be36cd7b364b6dbe02f47fb1961e5607ee8d8",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.29098070005420595
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025895711111194,
+      "model_path": "models\\MAYC_DreamSim_ElasticNet.joblib",
+      "model_sha256": "3038b5a87571f7a7b0ba7e81f09fa74fd39fc46716744ea56f23566a05845e82",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 316,
+            "seconds": 2.24685919994954
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__PLS": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "PLS",
+      "selected_config": {
+        "components": 64
+      },
+      "pre2025_validation_transaction_rmse": 0.40285398560974894,
+      "model_path": "models\\MAYC_DreamSim_PLS.joblib",
+      "model_sha256": "72d344435eefb977a8c0e7a3e4be064e67f252317bc63113c086bea398da5111",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 64
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 6.979331100010313
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.40291727885083833,
+      "model_path": "models\\MAYC_DreamSim_LinearSVR.joblib",
+      "model_sha256": "0a2a3a0773b485aef334266776e1f4913861537216fde67b875885f16531cfb5",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 1.2268796000862494,
+            "primal_objective": 730.6753141482601,
+            "primal_gradient_norm": 9.590819615977753e-13,
+            "objective_gap_upper_bound": 4.599191045311183e-25
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.40270036969086853,
+      "model_path": "models\\MAYC_DreamSim_HistGradientBoosting.joblib",
+      "model_sha256": "29fa0777637e1aa2aaa59ab2708e9924a332af770b65a00aa4c55836f6fad197",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 134.7120441000443
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      "pre2025_validation_transaction_rmse": 0.4025738725068523,
+      "model_path": "models\\MAYC_DreamSim_XGBoost.joblib",
+      "model_sha256": "9bad6706e56a98763054cb272d6e70a8ffa3e7f1583d497320956ae75806cbb9",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 27.544818199938163
+          }
+        }
+      ]
+    },
+    "MAYC__DreamSim__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "DreamSim",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40335343742375196,
+      "model_path": "models\\MAYC_DreamSim_LightGBM.joblib",
+      "model_sha256": "43e85ee4f1c3b87c74faf8d4a5ed772a5d7c6989fac35588269a02dc75435a94",
+      "projection": {
+        "type": "reused training-fold-only PCA",
+        "components": 1024,
+        "manifest": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\manifest.json",
+        "manifest_sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+        "matrix": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+        "matrix_sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+        "pca": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\DreamSim\\2025-01-01\\pca.joblib",
+        "pca_sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd"
+      },
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 17.701422299956903
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__OLS": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "OLS",
+      "selected_config": {},
+      "pre2025_validation_transaction_rmse": 0.4032948457708287,
+      "model_path": "models\\MAYC_AIM_OLS.joblib",
+      "model_sha256": "b73f5e71ecb3a060a58daaa5be19d17a06c1908779b5052b481bdd555dd6b923",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {},
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 1.3883196000242606
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__Ridge": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "Ridge",
+      "selected_config": {
+        "alpha": 10000
+      },
+      "pre2025_validation_transaction_rmse": 0.40257568388064763,
+      "model_path": "models\\MAYC_AIM_Ridge.joblib",
+      "model_sha256": "26b2a9b70ec70ad787a9de4a66ed9964e1d0a1356d918465075e02a9af6b2106",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 10000
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": null,
+            "seconds": 0.31619609997142106
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__ElasticNet": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "ElasticNet",
+      "selected_config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "pre2025_validation_transaction_rmse": 0.40238489360993074,
+      "model_path": "models\\MAYC_AIM_ElasticNet.joblib",
+      "model_sha256": "fe35b55599bce13a7e8c9f5bc46bc4454acafeacb619bc05a3d57a266502362d",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 276,
+            "seconds": 1.6567818000912666
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__PLS": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "PLS",
+      "selected_config": {
+        "components": 8
+      },
+      "pre2025_validation_transaction_rmse": 0.40259758810750396,
+      "model_path": "models\\MAYC_AIM_PLS.joblib",
+      "model_sha256": "9ba1df21dee7aed4bea7792cba4d5e6b2866f3ff30bf5c8a1d7d1b011c28383b",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "components": 8
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "seconds": 1.2029399001039565
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__LinearSVR": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "LinearSVR",
+      "selected_config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "pre2025_validation_transaction_rmse": 0.4034072402356157,
+      "model_path": "models\\MAYC_AIM_LinearSVR.joblib",
+      "model_sha256": "e36259066b75ab35fd339a5047260c66917418a99ab539ff80dfcf5096cd7212",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "C": 1,
+            "epsilon": 0.1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 4,
+            "seconds": 1.2073439999949187,
+            "primal_objective": 73211.78470191534,
+            "primal_gradient_norm": 3.4974801230964935e-10,
+            "objective_gap_upper_bound": 6.116183605727531e-20
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__HistGradientBoosting": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "HistGradientBoosting",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40267639280069717,
+      "model_path": "models\\MAYC_AIM_HistGradientBoosting.joblib",
+      "model_sha256": "5424db615eedb592977c06f3842bcb171ea27d6f5eb04b11569e3b6328b2cabe",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 118.40230630000588
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__XGBoost": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "XGBoost",
+      "selected_config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.4025903223264819,
+      "model_path": "models\\MAYC_AIM_XGBoost.joblib",
+      "model_sha256": "eb40bb3aa404323ef0d8ae25b8f378d6ecbd6da66efffd4262207ecddbe1bc13",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": [],
+            "seconds": 26.62501700001303
+          }
+        }
+      ]
+    },
+    "MAYC__AIM__LightGBM": {
+      "collection": "MAYC",
+      "encoder": "AIM",
+      "family": "LightGBM",
+      "selected_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "pre2025_validation_transaction_rmse": 0.40319871102932,
+      "model_path": "models\\MAYC_AIM_LightGBM.joblib",
+      "model_sha256": "fb66b3ca7ef5a1f66409eb0cfa432cd9432f7e2811743a6fe4cbd37395caa096",
+      "projection": null,
+      "target_parameters": {
+        "center": -0.02606722648712431,
+        "normalized_MAD": 0.08904794657791877
+      },
+      "attempts": [
+        {
+          "config": {
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1
+          },
+          "status": {
+            "valid": true,
+            "converged": true,
+            "finite": true,
+            "warnings": [],
+            "n_iter": 300,
+            "seconds": 17.367559000034817
+          }
+        }
+      ]
+    }
+  },
+  "selected_early_learner_by_encoder": {
+    "BAYC": {
+      "DINOv2": {
+        "collection": "BAYC",
+        "encoder": "DINOv2",
+        "family": "ElasticNet",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 1024,
+        "early_dimension": 1195,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 1.3836791732690015
+      },
+      "CLIP": {
+        "collection": "BAYC",
+        "encoder": "CLIP",
+        "family": "ElasticNet",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 768,
+        "early_dimension": 939,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 1.3837881895613353
+      },
+      "SigLIP2": {
+        "collection": "BAYC",
+        "encoder": "SigLIP2",
+        "family": "ElasticNet",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 1024,
+        "early_dimension": 1195,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 1.383636227506758
+      },
+      "SAM": {
+        "collection": "BAYC",
+        "encoder": "SAM",
+        "family": "LinearSVR",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 256,
+        "early_dimension": 427,
+        "selected_config": "{\"C\": 0.01, \"epsilon\": 0.2}",
+        "pre2025_validation_transaction_rmse": 1.3835343128780728
+      },
+      "SDXL_VAE": {
+        "collection": "BAYC",
+        "encoder": "SDXL_VAE",
+        "family": "ElasticNet",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 1024,
+        "early_dimension": 1195,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 1.3837712391627484
+      },
+      "DreamSim": {
+        "collection": "BAYC",
+        "encoder": "DreamSim",
+        "family": "ElasticNet",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 1024,
+        "early_dimension": 1195,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.9}",
+        "pre2025_validation_transaction_rmse": 1.3840082063818522
+      },
+      "AIM": {
+        "collection": "BAYC",
+        "encoder": "AIM",
+        "family": "Ridge",
+        "metadata_dimension": 171,
+        "idf_document_count": 5746,
+        "image_dimension": 1024,
+        "early_dimension": 1195,
+        "selected_config": "{\"alpha\": 1000}",
+        "pre2025_validation_transaction_rmse": 1.3836640539235259
+      }
+    },
+    "MAYC": {
+      "DINOv2": {
+        "collection": "MAYC",
+        "encoder": "DINOv2",
+        "family": "ElasticNet",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 1024,
+        "early_dimension": 1365,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.1}",
+        "pre2025_validation_transaction_rmse": 0.4023516919956543
+      },
+      "CLIP": {
+        "collection": "MAYC",
+        "encoder": "CLIP",
+        "family": "PLS",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 768,
+        "early_dimension": 1109,
+        "selected_config": "{\"components\": 16}",
+        "pre2025_validation_transaction_rmse": 0.4017962604615376
+      },
+      "SigLIP2": {
+        "collection": "MAYC",
+        "encoder": "SigLIP2",
+        "family": "PLS",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 1024,
+        "early_dimension": 1365,
+        "selected_config": "{\"components\": 32}",
+        "pre2025_validation_transaction_rmse": 0.4018699789455712
+      },
+      "SAM": {
+        "collection": "MAYC",
+        "encoder": "SAM",
+        "family": "OLS",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 256,
+        "early_dimension": 597,
+        "selected_config": "{}",
+        "pre2025_validation_transaction_rmse": 0.4018827551226397
+      },
+      "SDXL_VAE": {
+        "collection": "MAYC",
+        "encoder": "SDXL_VAE",
+        "family": "ElasticNet",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 1024,
+        "early_dimension": 1365,
+        "selected_config": "{\"alpha\": 0.001, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 0.4019699300711379
+      },
+      "DreamSim": {
+        "collection": "MAYC",
+        "encoder": "DreamSim",
+        "family": "XGBoost",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 1024,
+        "early_dimension": 1365,
+        "selected_config": "{\"l2_regularization\": 10, \"learning_rate\": 0.1, \"max_leaf_nodes\": 15}",
+        "pre2025_validation_transaction_rmse": 0.4025738725068523
+      },
+      "AIM": {
+        "collection": "MAYC",
+        "encoder": "AIM",
+        "family": "ElasticNet",
+        "metadata_dimension": 341,
+        "idf_document_count": 9568,
+        "image_dimension": 1024,
+        "early_dimension": 1365,
+        "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+        "pre2025_validation_transaction_rmse": 0.40238489360993074
+      }
+    }
+  },
+  "development_selected": {
+    "BAYC": {
+      "collection": "BAYC",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "metadata_dimension": 171,
+      "idf_document_count": 5746,
+      "image_dimension": 256,
+      "early_dimension": 427,
+      "selected_config": "{\"C\": 0.01, \"epsilon\": 0.2}",
+      "pre2025_validation_transaction_rmse": 1.3835343128780728
+    },
+    "MAYC": {
+      "collection": "MAYC",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "metadata_dimension": 341,
+      "idf_document_count": 9568,
+      "image_dimension": 768,
+      "early_dimension": 1109,
+      "selected_config": "{\"components\": 16}",
+      "pre2025_validation_transaction_rmse": 0.4017962604615376
+    }
+  }
+}

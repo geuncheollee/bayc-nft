@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-22T03:57:52.626192+00:00",
+  "evaluation_predictions_loaded_before_freeze": false,
+  "selected": {
+    "BAYC": {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "metadata_family": "Ridge",
+      "image_family": "XGBoost",
+      "metadata_config": "{\"alpha\": 1000}",
+      "image_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 15}",
+      "image_weight": 0.2,
+      "validation_n": 6187,
+      "pre2025_validation_transaction_rmse": 1.3835196132478815,
+      "pre2025_validation_transaction_mse": 1.9141265202415678
+    },
+    "MAYC": {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "metadata_family": "XGBoost",
+      "image_family": "PLS",
+      "metadata_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 31}",
+      "image_config": "{\"components\": 16}",
+      "image_weight": 0.4,
+      "validation_n": 16221,
+      "pre2025_validation_transaction_rmse": 0.401761060320268,
+      "pre2025_validation_transaction_mse": 0.161411949589666
+    }
+  },
+  "weight_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "metadata_prediction_source": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+  "image_prediction_source": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1"
+}

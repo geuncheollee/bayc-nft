@@ -1,0 +1,113 @@
+﻿collection,encoder,metadata_family,image_family,metadata_config,image_config,image_weight,validation_n,pre2025_validation_transaction_rmse,pre2025_validation_transaction_mse
+BAYC,DINOv2,Ridge,OLS,"{""alpha"": 1000}",{},0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DINOv2,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 100}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DINOv2,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DINOv2,Ridge,PLS,"{""alpha"": 1000}","{""components"": 32}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DINOv2,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 0.01, ""epsilon"": 0.1}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DINOv2,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.1,6187,1.3835985542544325,1.9143449593349555
+BAYC,DINOv2,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.1,6187,1.3836094740918894,1.9143751767968349
+BAYC,DINOv2,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,6187,1.383600344889997,1.9143499143797187
+BAYC,CLIP,Ridge,OLS,"{""alpha"": 1000}",{},0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,CLIP,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 100}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,CLIP,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,CLIP,Ridge,PLS,"{""alpha"": 1000}","{""components"": 32}",0.1,6187,1.3836172875328103,1.9143967983596513
+BAYC,CLIP,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 1, ""epsilon"": 0.2}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,CLIP,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,6187,1.38360972962737,1.9143758839195235
+BAYC,CLIP,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.1,6187,1.3836102545551812,1.9143773365102534
+BAYC,CLIP,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.1,6187,1.383610685196433,1.9143785281897425
+BAYC,SigLIP2,Ridge,OLS,"{""alpha"": 1000}",{},0.1,6187,1.3835568871860904,1.9142296600800641
+BAYC,SigLIP2,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 100}",0.2,6187,1.3835627062295472,1.9142457620692286
+BAYC,SigLIP2,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.2,6187,1.383591137213572,1.9143244349759456
+BAYC,SigLIP2,Ridge,PLS,"{""alpha"": 1000}","{""components"": 32}",0.2,6187,1.3835864486010632,1.9143114607525027
+BAYC,SigLIP2,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 0.01, ""epsilon"": 0.2}",0.2,6187,1.383559573797322,1.9142370942462272
+BAYC,SigLIP2,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.1,6187,1.3836168906792286,1.914395700172856
+BAYC,SigLIP2,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SigLIP2,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,6187,1.3836081960675155,1.9143716402252042
+BAYC,SAM,Ridge,OLS,"{""alpha"": 1000}",{},0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 0.01}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.01, ""l1_ratio"": 0.1}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,PLS,"{""alpha"": 1000}","{""components"": 64}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 1, ""epsilon"": 0.2}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SAM,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.1,6187,1.383616226836626,1.914393863165622
+BAYC,SAM,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,SDXL_VAE,Ridge,OLS,"{""alpha"": 1000}",{},0.1,6187,1.3836098090753195,1.9143761037694418
+BAYC,SDXL_VAE,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 1000}",0.1,6187,1.3835977822179721,1.914342822958491
+BAYC,SDXL_VAE,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.01, ""l1_ratio"": 0.1}",0.2,6187,1.3835860771617619,1.9143104329158727
+BAYC,SDXL_VAE,Ridge,PLS,"{""alpha"": 1000}","{""components"": 8}",0.1,6187,1.3836023429644397,1.9143554434566874
+BAYC,SDXL_VAE,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 0.01, ""epsilon"": 0.2}",0.1,6187,1.3836014615207144,1.914353004322257
+BAYC,SDXL_VAE,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.2,6187,1.3835309460927128,1.9141578787961968
+BAYC,SDXL_VAE,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.2,6187,1.3835356641209942,1.9141709338947204
+BAYC,SDXL_VAE,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.2,6187,1.3835541901156516,1.914222196986577
+BAYC,DreamSim,Ridge,OLS,"{""alpha"": 1000}",{},0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DreamSim,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 1000}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DreamSim,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.01, ""l1_ratio"": 0.1}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DreamSim,Ridge,PLS,"{""alpha"": 1000}","{""components"": 8}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DreamSim,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 0.01, ""epsilon"": 0.2}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,DreamSim,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.2,6187,1.3835314976047233,1.9141594048643684
+BAYC,DreamSim,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.2,6187,1.3835196132478815,1.9141265202415678
+BAYC,DreamSim,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,6187,1.3835736077048402,1.9142759279373867
+BAYC,AIM,Ridge,OLS,"{""alpha"": 1000}",{},0.1,6187,1.3836015592161741,1.9143532746654282
+BAYC,AIM,Ridge,Ridge,"{""alpha"": 1000}","{""alpha"": 100}",0.1,6187,1.383602218906529,1.9143551001630705
+BAYC,AIM,Ridge,ElasticNet,"{""alpha"": 1000}","{""alpha"": 0.001, ""l1_ratio"": 0.9}",0.1,6187,1.3835889194038666,1.9143182978971596
+BAYC,AIM,Ridge,PLS,"{""alpha"": 1000}","{""components"": 32}",0.1,6187,1.3835911957828642,1.9143245970478562
+BAYC,AIM,Ridge,LinearSVR,"{""alpha"": 1000}","{""C"": 0.01, ""epsilon"": 0.1}",0.1,6187,1.3836060469674,1.914365693204755
+BAYC,AIM,Ridge,HistGradientBoosting,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.1,6187,1.3836124570265758,1.9143834312391177
+BAYC,AIM,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",0.0,6187,1.38362094005977,1.9144069057718818
+BAYC,AIM,Ridge,LightGBM,"{""alpha"": 1000}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,6187,1.38362094005977,1.9144069057718818
+MAYC,DINOv2,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 64}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 1, ""epsilon"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DINOv2,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,CLIP,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.1,16221,0.40195794088775966,0.1615701862427277
+MAYC,CLIP,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.1,16221,0.4019582603238707,0.1615704430425926
+MAYC,CLIP,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.1,16221,0.4019680256155196,0.161578293617239
+MAYC,CLIP,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 64}",0.1,16221,0.4019641567514962,0.16157518331294143
+MAYC,CLIP,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 0.1, ""epsilon"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,CLIP,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,16221,0.40195130615923835,0.16156485252311775
+MAYC,CLIP,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,CLIP,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SigLIP2,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.1,16221,0.4019284579011939,0.16154648527083182
+MAYC,SigLIP2,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.1,16221,0.4019285531427872,0.1615465618314543
+MAYC,SigLIP2,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SigLIP2,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 64}",0.1,16221,0.4019441800895738,0.16155912390787971
+MAYC,SigLIP2,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 1, ""epsilon"": 0.1}",0.1,16221,0.4019461163888633,0.16156068048008965
+MAYC,SigLIP2,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,16221,0.40196233357246786,0.1615737176110239
+MAYC,SigLIP2,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,16221,0.40196173744591385,0.16157323837053778
+MAYC,SigLIP2,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,16221,0.4019679463353083,0.1615782298810253
+MAYC,SAM,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.1,16221,0.40196525379585374,0.1615760652591651
+MAYC,SAM,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.1,16221,0.40196541597542707,0.1615761956402981
+MAYC,SAM,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01, ""l1_ratio"": 0.5}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SAM,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 64}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SAM,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 1, ""epsilon"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SAM,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SAM,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SAM,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,SDXL_VAE,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.4,16221,0.40176108729889937,0.16141197126759382
+MAYC,SDXL_VAE,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.4,16221,0.40176108786809367,0.16141197172495408
+MAYC,SDXL_VAE,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.4,16221,0.4017791380865635,0.16142647580158187
+MAYC,SDXL_VAE,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 16}",0.4,16221,0.401761060320268,0.161411949589666
+MAYC,SDXL_VAE,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 1, ""epsilon"": 0.1}",0.3,16221,0.40182580837781084,0.16146398027848116
+MAYC,SDXL_VAE,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.1,16221,0.401958985615621,0.161571026117139
+MAYC,SDXL_VAE,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.1,16221,0.4019515351560571,0.161565036614311
+MAYC,SDXL_VAE,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.2,16221,0.4019347810547288,0.16155156822151276
+MAYC,DreamSim,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DreamSim,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.01}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DreamSim,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DreamSim,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 32}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DreamSim,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 1, ""epsilon"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,DreamSim,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.1,16221,0.40196580999448417,0.16157651240452175
+MAYC,DreamSim,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.1,16221,0.4019608503055386,0.16157252517835158
+MAYC,DreamSim,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,OLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",{},0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,Ridge,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 10}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,ElasticNet,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 64}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,LinearSVR,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""C"": 0.1, ""epsilon"": 0.1}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822
+MAYC,AIM,XGBoost,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.0,16221,0.40196981287698486,0.16157973046435822

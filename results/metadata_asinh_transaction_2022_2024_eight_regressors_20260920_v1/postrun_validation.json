@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "expected_total_fits": 740,
+  "reported_total_fits": 740,
+  "tuning_checkpoint_count": 708,
+  "all_tuning_fits_valid": true,
+  "no_training_row_before_2022": true,
+  "no_2025_plus_training_rows": true,
+  "selection_frozen_before_evaluation_load": true,
+  "selection_rows": 32,
+  "evaluation_rows_in_table": 32,
+  "all_32_selection_combinations_present": true,
+  "all_32_evaluation_combinations_present": true,
+  "random_forest_absent": true,
+  "prediction_file_count": 32,
+  "evaluation_counts": {
+    "BAYC": {
+      "transactions": 5120,
+      "tokens": 1498
+    },
+    "MAYC": {
+      "transactions": 13019,
+      "tokens": 2492
+    }
+  },
+  "identical_evaluation_rows_within_collection": true,
+  "finite_predictions": true,
+  "maximum_stored_vs_recalculated_metric_difference": 4.440892098500626e-16,
+  "development_selection_reproduced": {
+    "BAYC": true,
+    "MAYC": true
+  },
+  "input_hashes_match": true
+}

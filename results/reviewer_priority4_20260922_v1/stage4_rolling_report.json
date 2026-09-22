@@ -1,0 +1,155 @@
+{
+  "design": "three expanding-window 2024 Q2-Q4 fits of fixed representatives plus quarter-specific selection diagnostics",
+  "quarter_winner_is_not_independent_holdout": true,
+  "collections": {
+    "BAYC": {
+      "fixed_late_pooled_rmse_reproduced": 1.3835196132478815,
+      "fixed_late_original_pooled_rmse": 1.3835196132478815,
+      "early_better_than_metadata_quarters": 1,
+      "late_better_than_metadata_quarters": 2,
+      "same_quarter_weight_choices": [
+        0.5,
+        0.0,
+        0.2
+      ],
+      "quarter_metadata_winners": [
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "LightGBM",
+          "config": {
+            "l2_regularization": 1,
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15
+          },
+          "same_quarter_selected_rmse": 0.17590198904572935,
+          "valid_candidates": 59
+        },
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "LinearSVR",
+          "config": {
+            "C": 0.01,
+            "epsilon": 0.2
+          },
+          "same_quarter_selected_rmse": 3.173933624210083,
+          "valid_candidates": 59
+        },
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "Ridge",
+          "config": {
+            "alpha": 1
+          },
+          "same_quarter_selected_rmse": 0.32069898364477495,
+          "valid_candidates": 59
+        }
+      ],
+      "quarter_early_winners": [
+        {
+          "encoder_or_encoding": "AIM",
+          "family": "XGBoost",
+          "config": {
+            "l2_regularization": 10,
+            "learning_rate": 0.05,
+            "max_leaf_nodes": 15
+          },
+          "same_quarter_selected_rmse": 0.17466501333575468,
+          "valid_candidates": 406
+        },
+        {
+          "encoder_or_encoding": "AIM",
+          "family": "PLS",
+          "config": {
+            "components": 32
+          },
+          "same_quarter_selected_rmse": 3.173819057537861,
+          "valid_candidates": 407
+        },
+        {
+          "encoder_or_encoding": "SigLIP2",
+          "family": "Ridge",
+          "config": {
+            "alpha": 1000
+          },
+          "same_quarter_selected_rmse": 0.3194769279222782,
+          "valid_candidates": 407
+        }
+      ]
+    },
+    "MAYC": {
+      "fixed_late_pooled_rmse_reproduced": 0.401761060320268,
+      "fixed_late_original_pooled_rmse": 0.401761060320268,
+      "early_better_than_metadata_quarters": 2,
+      "late_better_than_metadata_quarters": 2,
+      "same_quarter_weight_choices": [
+        0.7000000000000001,
+        0.6000000000000001,
+        0.0
+      ],
+      "quarter_metadata_winners": [
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "ElasticNet",
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "same_quarter_selected_rmse": 0.2185180691341291,
+          "valid_candidates": 59
+        },
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "PLS",
+          "config": {
+            "components": 16
+          },
+          "same_quarter_selected_rmse": 0.1883037007723422,
+          "valid_candidates": 59
+        },
+        {
+          "encoder_or_encoding": "TF-IDF",
+          "family": "LightGBM",
+          "config": {
+            "l2_regularization": 1,
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31
+          },
+          "same_quarter_selected_rmse": 0.7491321715203894,
+          "valid_candidates": 59
+        }
+      ],
+      "quarter_early_winners": [
+        {
+          "encoder_or_encoding": "SDXL_VAE",
+          "family": "ElasticNet",
+          "config": {
+            "alpha": 0.01,
+            "l1_ratio": 0.5
+          },
+          "same_quarter_selected_rmse": 0.21838163047043951,
+          "valid_candidates": 411
+        },
+        {
+          "encoder_or_encoding": "SigLIP2",
+          "family": "PLS",
+          "config": {
+            "components": 16
+          },
+          "same_quarter_selected_rmse": 0.18816006305432956,
+          "valid_candidates": 411
+        },
+        {
+          "encoder_or_encoding": "SAM",
+          "family": "XGBoost",
+          "config": {
+            "l2_regularization": 1,
+            "learning_rate": 0.1,
+            "max_leaf_nodes": 31
+          },
+          "same_quarter_selected_rmse": 0.7494021888181559,
+          "valid_candidates": 411
+        }
+      ]
+    }
+  }
+}

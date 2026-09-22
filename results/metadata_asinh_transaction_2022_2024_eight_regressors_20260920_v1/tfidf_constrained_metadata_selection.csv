@@ -1,0 +1,3 @@
+collection,encoding,family,selected_hyperparameters,pre2025_validation_transaction_rmse,evaluation_transaction_rmse,evaluation_transaction_mae,evaluation_transaction_r2,evaluation_equal_token_rmse,evaluation_equal_token_mae,evaluation_equal_token_r2
+BAYC,TF-IDF,Ridge,"{alpha: 1000}",1.3836209400597699,0.252755229444784,0.10693521788717711,0.14746661162736452,0.26642151058975055,0.12146621374699798,0.3045340639035691
+MAYC,TF-IDF,XGBoost,"{learning_rate: 0.1; max_leaf_nodes: 31; l2_regularization: 1}",0.4019698128769849,0.16747925531384972,0.0912984418814126,0.2323845335714112,0.2045401466546313,0.11166066781521536,0.2945945560558185

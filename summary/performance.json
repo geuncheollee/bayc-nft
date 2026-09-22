@@ -1,0 +1,124 @@
+[
+  {
+    "collection": "BAYC",
+    "group": "LRP_zero",
+    "transaction_rmse": 0.27374421755215844,
+    "transaction_mae": 0.11797548679860506,
+    "transaction_r2": -2.31453148180627e-06,
+    "equal_token_rmse": 0.3217310277128561
+  },
+  {
+    "collection": "BAYC",
+    "group": "metadata",
+    "selection": {
+      "family": "Ridge"
+    },
+    "transaction_rmse": 0.252755229444784,
+    "transaction_mae": 0.10693521788717711,
+    "transaction_r2": 0.14746661162736452,
+    "equal_token_rmse": 0.26642151058975055,
+    "validation_rmse": 1.3836209400597699
+  },
+  {
+    "collection": "BAYC",
+    "group": "image",
+    "selection": {
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet"
+    },
+    "transaction_rmse": 0.2575980919904652,
+    "transaction_mae": 0.11055423348236357,
+    "transaction_r2": 0.11448406498835706,
+    "equal_token_rmse": 0.276449606785593,
+    "validation_rmse": 1.3843807479674342
+  },
+  {
+    "collection": "BAYC",
+    "group": "early",
+    "selection": {
+      "encoder": "SAM",
+      "family": "LinearSVR"
+    },
+    "transaction_rmse": 0.25252791492869336,
+    "transaction_mae": 0.10685743945183943,
+    "transaction_r2": 0.1489993678155198,
+    "equal_token_rmse": 0.2651710113586901,
+    "validation_rmse": 1.3835343128780728
+  },
+  {
+    "collection": "BAYC",
+    "group": "late",
+    "selection": {
+      "encoder": "DreamSim",
+      "metadata_family": "Ridge",
+      "image_family": "XGBoost",
+      "image_weight": "0.2"
+    },
+    "transaction_rmse": 0.25293512879497965,
+    "transaction_mae": 0.1068606062710733,
+    "transaction_r2": 0.14625259295963078,
+    "equal_token_rmse": 0.2662858307308526,
+    "validation_rmse": 1.3835196132478815
+  },
+  {
+    "collection": "MAYC",
+    "group": "LRP_zero",
+    "transaction_rmse": 0.19119015865646155,
+    "transaction_mae": 0.10957506621559503,
+    "transaction_r2": -0.0003517620912010244,
+    "equal_token_rmse": 0.24563015029714408
+  },
+  {
+    "collection": "MAYC",
+    "group": "metadata",
+    "selection": {
+      "family": "XGBoost"
+    },
+    "transaction_rmse": 0.16747925531384972,
+    "transaction_mae": 0.0912984418814126,
+    "transaction_r2": 0.2323845335714112,
+    "equal_token_rmse": 0.2045401466546313,
+    "validation_rmse": 0.4019698128769849
+  },
+  {
+    "collection": "MAYC",
+    "group": "image",
+    "selection": {
+      "encoder": "SDXL_VAE",
+      "family": "PLS"
+    },
+    "transaction_rmse": 0.16803047113250155,
+    "transaction_mae": 0.09140761481656641,
+    "transaction_r2": 0.2273233922810376,
+    "equal_token_rmse": 0.20494838326642728,
+    "validation_rmse": 0.40231386609974634
+  },
+  {
+    "collection": "MAYC",
+    "group": "early",
+    "selection": {
+      "encoder": "CLIP",
+      "family": "PLS"
+    },
+    "transaction_rmse": 0.16589113312089115,
+    "transaction_mae": 0.09012352186475887,
+    "transaction_r2": 0.24687333999576955,
+    "equal_token_rmse": 0.20066415775564417,
+    "validation_rmse": 0.4017962604615376
+  },
+  {
+    "collection": "MAYC",
+    "group": "late",
+    "selection": {
+      "encoder": "SDXL_VAE",
+      "metadata_family": "XGBoost",
+      "image_family": "PLS",
+      "image_weight": "0.4"
+    },
+    "transaction_rmse": 0.1663052572943481,
+    "transaction_mae": 0.09030598260598348,
+    "transaction_r2": 0.24310849443483395,
+    "equal_token_rmse": 0.202721680772422,
+    "validation_rmse": 0.401761060320268
+  }
+]

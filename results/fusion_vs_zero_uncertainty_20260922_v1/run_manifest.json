@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-09-22T05:44:54.264808+00:00",
+  "status": "retrospective_descriptive_uncertainty",
+  "reference": "LRP=0 prediction on identical evaluation rows",
+  "seed": 20260908,
+  "iterations": 2000,
+  "resampling": "paired token-cluster and nonoverlapping UTC 14-day calendar-block bootstrap",
+  "confidence_intervals": "percentile 95%, 97.5% (two collections), 99.375% (eight transaction-RMSE comparisons)",
+  "interpretation": "fixed-prediction sampling uncertainty only; previously examined evaluation set; no model-selection uncertainty",
+  "audits": [
+    {
+      "collection": "BAYC",
+      "n_transactions": 5120,
+      "n_tokens": 1498,
+      "n_14day_blocks": 34,
+      "baseline_reproduced": {
+        "transaction_rmse": 0.27374421755215844,
+        "equal_token_rmse": 0.32173102771285605
+      },
+      "selected_image_encoder": "SDXL_VAE",
+      "selected_image_family": "ElasticNet",
+      "selected_image_validation_rmse": 1.3843807479674342,
+      "selected_image_file": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_ElasticNet.npz",
+      "selected_image_sha256": "d0b6fd77a41c9e727be2371b43c8c4f1e5a6696cce5cc25d133eb693db3074d9",
+      "image_row_alignment_and_score_reproduced": true,
+      "other_model_audit": {
+        "collection": "BAYC",
+        "n_transactions": 5120,
+        "n_tokens": 1498,
+        "n_14day_blocks": 34,
+        "prediction_files": {
+          "metadata": {
+            "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_Ridge.npz",
+            "sha256": "1ce5c861bec320c605e58e873cf3a5ee6278fce7fb0d9155fe544500af2fcd91"
+          },
+          "early": {
+            "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_LinearSVR.npz",
+            "sha256": "3e4a62a34dbf759ce025a1d12212314f982464e8949262cf2d49d3ed4ed95638"
+          },
+          "late": {
+            "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\predictions\\BAYC_DreamSim_XGBoost.npz",
+            "sha256": "7b8e268af3a1f3a42dddc12abfae8e9febeecc2afe4124e16c5dbb9363e89437"
+          }
+        },
+        "target_file": {
+          "path": "revision\\target_pipeline_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+          "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0"
+        },
+        "row_alignment_passed": true,
+        "published_metric_reproduction_passed": true
+      }
+    },
+    {
+      "collection": "MAYC",
+      "n_transactions": 13019,
+      "n_tokens": 2492,
+      "n_14day_blocks": 34,
+      "baseline_reproduced": {
+        "transaction_rmse": 0.19119015865646155,
+        "equal_token_rmse": 0.24563015029714408
+      },
+      "selected_image_encoder": "SDXL_VAE",
+      "selected_image_family": "PLS",
+      "selected_image_validation_rmse": 0.40231386609974634,
+      "selected_image_file": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_PLS.npz",
+      "selected_image_sha256": "915f05347045dd221ee8593da67a55f0beade34cf1c5e01bf08260715a3381a6",
+      "image_row_alignment_and_score_reproduced": true,
+      "other_model_audit": {
+        "collection": "MAYC",
+        "n_transactions": 13019,
+        "n_tokens": 2492,
+        "n_14day_blocks": 34,
+        "prediction_files": {
+          "metadata": {
+            "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_XGBoost.npz",
+            "sha256": "3f1c2011c0b71c3bf880f7fdd578e2367216b163cfe018326dee707e19436e2f"
+          },
+          "early": {
+            "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_CLIP_PLS.npz",
+            "sha256": "c04a829659d1341d7c7caef7c6bd0cc1551f0eee46d2b02db480528588cc3fd7"
+          },
+          "late": {
+            "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\predictions\\MAYC_SDXL_VAE_PLS.npz",
+            "sha256": "ed4e5704f9afca4f7028f9ed49a909f5f161ed86b3d60bb4e05db30a3e553d33"
+          }
+        },
+        "target_file": {
+          "path": "revision\\target_pipeline_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+          "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1"
+        },
+        "row_alignment_passed": true,
+        "published_metric_reproduction_passed": true
+      }
+    }
+  ]
+}

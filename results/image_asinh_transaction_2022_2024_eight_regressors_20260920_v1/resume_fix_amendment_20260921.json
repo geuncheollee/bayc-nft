@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-20T23:13:23.0809148Z",
+  "reason": "Final refit used an empty validation set, but fit_model called estimator.predict on that empty matrix. scikit-learn rejected the zero-sample input, causing BAYC DINOv2 OLS to fail after tuning completed.",
+  "script": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920\\code\\run_image_experiment.py",
+  "old_sha256": "58105d517d731d426317d06b8a8825d2df32827f40d7a8b5c9387b0f740e13ef",
+  "new_sha256": "97cb961f72df0f98e0b54b54e32d0b457c4d20a23f1bd4b07b6579ccadb1ede8",
+  "changes": [
+    "Skip validation prediction when z_valid has zero rows for PLS, LinearSVR, and other estimator families.",
+    "Start resumed progress counting at zero so checkpoint traversal does not double-count existing fits.",
+    "Include attempted configurations and statuses in future final-refit failure messages."
+  ],
+  "validation": {
+    "py_compile": "passed",
+    "synthetic_ols_empty_validation": "passed",
+    "synthetic_prediction_shape": [0]
+  },
+  "prior_tuning_checkpoints_preserved": true,
+  "prior_results_overwritten": false
+}

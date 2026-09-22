@@ -1,0 +1,63 @@
+{
+  "stage": "TF-IDF metadata plus image prediction late fusion",
+  "collections": [
+    "BAYC",
+    "MAYC"
+  ],
+  "encoders": [
+    "DINOv2",
+    "CLIP",
+    "SigLIP2",
+    "SAM",
+    "SDXL_VAE",
+    "DreamSim",
+    "AIM"
+  ],
+  "image_families": [
+    "OLS",
+    "Ridge",
+    "ElasticNet",
+    "PLS",
+    "LinearSVR",
+    "HistGradientBoosting",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "metadata_selection": {
+    "BAYC": {
+      "family": "Ridge",
+      "config": {
+        "alpha": 1000
+      }
+    },
+    "MAYC": {
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31
+      }
+    }
+  },
+  "image_configuration": "one selected configuration per encoder and family from completed image-only pre-2025 tuning",
+  "weight_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "prediction_formula": "(1 - image_weight) * metadata_prediction + image_weight * image_prediction",
+  "target": "fold-fitted robust-asinh LRP; combine and score inverse-transformed original-LRP predictions",
+  "training_window": "2022-01-01 through 2024-12-31",
+  "selection": "pooled 2024 Q2-Q4 transaction-weighted RMSE on original LRP",
+  "evaluation": "fixed retrospective 2025-01-01 through 2026-04-13; prior evaluation predictions loaded after selection freeze",
+  "expected_recomputed_fits": 342,
+  "prior_results_overwritten": false
+}

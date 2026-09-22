@@ -1,0 +1,195 @@
+{
+  "verified_utc": "2026-09-22T07:02:16.635205+00:00",
+  "status": "four_priority_analyses_completed_with_no_fresh_untouched_test_available",
+  "stage1": "audit complete; truly unused final test unavailable in frozen local data",
+  "stage2": "selected metadata and early model strict-cleaning/refit sensitivity complete",
+  "stage3": "representative past-only OOF image residual correction complete",
+  "stage4": "three rolling quarters and two forward selection transfers complete",
+  "files": [
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\analysis_summary.md",
+      "sha256": "aba05ce9439a403981fa540d3f77b00bbb8745bc2dd8ea0b8bc08a6919a0ad5c",
+      "bytes": 12045
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage1_audit.py",
+      "sha256": "e750187703f4dfef14449f4d144f8fc558dd5a178fc99d4ec5b68f659e7787a3",
+      "bytes": 4112
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage2_cleaning.py",
+      "sha256": "c639f7afaf7a0ffbe38a94481941901f0b91b14bc2eb786c63f3d9f9bd6ee5fd",
+      "bytes": 6969
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage2_refit.py",
+      "sha256": "3f7d0a3a43d266e8e022978c2e193305ac574c86e079731fa61d92e26fc991b8",
+      "bytes": 10701
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage2_refit_uncertainty.py",
+      "sha256": "de9af781fc67f83c635d3e373503c82fe60aaa382de525f5d76af5447ad937cb",
+      "bytes": 2327
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage3_residual.py",
+      "sha256": "8aa03d63186d0d8d1a0793297c56f406a3459cd7b0930ba888a35cb1087e08ba",
+      "bytes": 9183
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage3_residual_uncertainty.py",
+      "sha256": "902a9b8c48987ab417f1be197831d4cbd6ff9d9142c22167a69138b6b2f592b8",
+      "bytes": 2428
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage3_strict_residual.py",
+      "sha256": "aefae0699950924efeb7aac16c2ea6fe6db533b6a85ef5ec8330ced6151c04bd",
+      "bytes": 7570
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage4_forward_selection.py",
+      "sha256": "183905a2dbd3c2bd055e57212aca4bf41a3bc7ca134a635ba2cddbbf692ee9b3",
+      "bytes": 3356
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\run_stage4_rolling.py",
+      "sha256": "9b88991cd83994458fb1e21124079f2054e92e0315c44a04b3342dd3a8906d80",
+      "bytes": 10166
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\code\\verify_results.py",
+      "sha256": "59fa5d3064a43b2612dfd5b473e60df329010f5d05f180427f1849166cfc8237",
+      "bytes": 4553
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage1_evaluation_audit.json",
+      "sha256": "c44049bb774b3d648653b675b1fef418716490b3455ceec528ace41184ec42b3",
+      "bytes": 2988
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_BAYC_full_refit_predictions.npz",
+      "sha256": "6b671fcff54c054f2fd30db57860f0695498f2a623946cff8803253e1ba2fb77",
+      "bytes": 94265
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_BAYC_strict_refit_predictions.npz",
+      "sha256": "2e7bc5511dd2302b3249aff6596895b72b2efc5eb14e730e783651d50ca0d9dd",
+      "bytes": 94302
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_BAYC_strict_without_one_wei_refit_predictions.npz",
+      "sha256": "989b42ba22f978378836f37de53e09d07c51ca8b707b72a0c2f45ffb5540799f",
+      "bytes": 94331
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_filter_audit.json",
+      "sha256": "5022be959183102c397701a7358c261490beed1202e5f5a887dc079204a6aaf3",
+      "bytes": 4583
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_fixed_prediction_sensitivity.csv",
+      "sha256": "8dbff8635ac8463408e70091fb130c5935344206e1e7c5c4270e7d28c96880a5",
+      "bytes": 4546
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_MAYC_full_refit_predictions.npz",
+      "sha256": "07f16cf672174ec3b921462c584245286cfa6b01e1afc523559d0d2fa4a2708c",
+      "bytes": 215373
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_MAYC_strict_refit_predictions.npz",
+      "sha256": "cb12c97e57a59e942861183fbf37d78d314b21cd82f7626d87a6bbbfaede13de",
+      "bytes": 215455
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_MAYC_strict_without_one_wei_refit_predictions.npz",
+      "sha256": "a54f4b765e08be3a28e91f4bf60e087feeee6efff3f702a1d5675ef61f8b409c",
+      "bytes": 215394
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_refit_report.json",
+      "sha256": "d019e9436becc48326255c74259be108c27d37b862b9bbc972e681d3328e571e",
+      "bytes": 10807
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage2_refit_token_intervals.csv",
+      "sha256": "954b9daea48070e9a19a632a64be5766930e199175776c2cacf4eedbda7ce8a0",
+      "bytes": 1137
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_BAYC_metadata_oof.npz",
+      "sha256": "5bd02e1094fe58973de35ad11d8b339dac3fea1c248357681e7f735cce6c7920",
+      "bytes": 108267
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_BAYC_residual_evaluation.npz",
+      "sha256": "e3b648dff8f3202eb53ec7e303436ac3fdba0c1362b6f15f53465c8ba0eac374",
+      "bytes": 93796
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_BAYC_strict_no_onewei_residual_evaluation.npz",
+      "sha256": "755c52ef7857e50d37a5a52144a87c9f584140b73047903bd5f6d249bf8d61c5",
+      "bytes": 86350
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_BAYC_strict_residual_evaluation.npz",
+      "sha256": "755c52ef7857e50d37a5a52144a87c9f584140b73047903bd5f6d249bf8d61c5",
+      "bytes": 86350
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_MAYC_metadata_oof.npz",
+      "sha256": "ba80ddbfc3fab70f9f6353b42afa82311356c64df56df97760cdc1ea1f1af1e5",
+      "bytes": 244254
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_MAYC_residual_evaluation.npz",
+      "sha256": "c8f89f915b1371d0f497f58321fe59aecfe8a08effcf3c494d6a3b40f8ffeb8f",
+      "bytes": 213922
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_MAYC_strict_no_onewei_residual_evaluation.npz",
+      "sha256": "060c1ac736525604bbdea65458d0882ba80556e35ba938823807c5651615cf7e",
+      "bytes": 195291
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_MAYC_strict_residual_evaluation.npz",
+      "sha256": "8b034c52b2bfa932304334812ae36e0000e0648ae3211442830dc2d21b87a36f",
+      "bytes": 195199
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_metadata_quarter_reproduction.csv",
+      "sha256": "22f0bbe5364f01b7d3081db4c509e8a204a5872e23c34a9d534fffc589184f2b",
+      "bytes": 1442
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_residual_intervals.csv",
+      "sha256": "9bd0f96534f11b2c5091aa8c7abd75538267f41bd2b3413af19f3edb04c50801",
+      "bytes": 1102
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_residual_report.json",
+      "sha256": "f90140b63e5ea69f97f2035572e1a268c84bb19ae4334ecee215786785e0586d",
+      "bytes": 3338
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage3_strict_residual_report.json",
+      "sha256": "dce11c039a9ecf8e569631b1172732337090930a159de1b1faa79badf11d4912",
+      "bytes": 6508
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage4_forward_selected_quarters.csv",
+      "sha256": "91fc7a45a419feac28f7cca3c282ae59c006a886b34f2f9ec8bee943f14ca929",
+      "bytes": 1315
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage4_rolling_quarters.csv",
+      "sha256": "3be2a25ddb926adf009eac39cd352e0f2fb4ce2f8a8b6d1fa6555068f5c6941a",
+      "bytes": 6995
+    },
+    {
+      "path": "results\\reviewer_priority4_20260922_v1\\stage4_rolling_report.json",
+      "sha256": "1c5be7a363703432619e635715af0b52df40c0e1d4f694f76658752ae5712002",
+      "bytes": 4590
+    }
+  ]
+}

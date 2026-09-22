@@ -1,0 +1,192 @@
+{
+  "design": "same metadata OOF predictions as stage3; strict-flag-only image residual training and evaluation",
+  "test_status": "retrospective descriptive, previously inspected 2025+ data",
+  "collections": {
+    "BAYC": {
+      "encoder": "SAM",
+      "strict_train_oof_rows": 5611,
+      "strict_q2_q3_rows": 4327,
+      "strict_q4_validation_rows": 1284,
+      "grid": [
+        {
+          "alpha": 0,
+          "strict_q4_rmse": 0.3248228041777033,
+          "strict_q4_partial_r2": 0.0
+        },
+        {
+          "alpha": 100.0,
+          "strict_q4_rmse": 0.3237140000412891,
+          "strict_q4_partial_r2": 0.006815479911087885
+        },
+        {
+          "alpha": 1000.0,
+          "strict_q4_rmse": 0.32261900215301664,
+          "strict_q4_partial_r2": 0.013523225632731672
+        },
+        {
+          "alpha": 10000.0,
+          "strict_q4_rmse": 0.32236075124975344,
+          "strict_q4_partial_r2": 0.015101908546301113
+        },
+        {
+          "alpha": 100000.0,
+          "strict_q4_rmse": 0.32249797842868855,
+          "strict_q4_partial_r2": 0.014263198787590303
+        },
+        {
+          "alpha": 1000000.0,
+          "strict_q4_rmse": 0.3226040230035389,
+          "strict_q4_partial_r2": 0.013614827428805487
+        }
+      ],
+      "selected_alpha": 10000.0,
+      "strict_q4_partial_r2": 0.015101908546301113,
+      "all_evaluation": {
+        "n": 5120,
+        "metadata_rmse": 0.252755229444784,
+        "residual_corrected_rmse": 0.25390342742719363,
+        "predictive_partial_r2": -0.00910609018752151
+      },
+      "strict_evaluation": {
+        "n": 4765,
+        "metadata_rmse": 0.25746551300512555,
+        "residual_corrected_rmse": 0.2582980094290711,
+        "predictive_partial_r2": -0.006477312811339342
+      },
+      "strict_without_one_wei": {
+        "training_oof_rows": 5611,
+        "excluded_one_wei_oof_rows": 0,
+        "strict_q4_validation_rows": 1284,
+        "grid": [
+          {
+            "alpha": 0,
+            "strict_no_onewei_q4_rmse": 0.3248228041777033,
+            "strict_no_onewei_q4_partial_r2": 0.0
+          },
+          {
+            "alpha": 100.0,
+            "strict_no_onewei_q4_rmse": 0.3237140000412891,
+            "strict_no_onewei_q4_partial_r2": 0.006815479911087885
+          },
+          {
+            "alpha": 1000.0,
+            "strict_no_onewei_q4_rmse": 0.32261900215301664,
+            "strict_no_onewei_q4_partial_r2": 0.013523225632731672
+          },
+          {
+            "alpha": 10000.0,
+            "strict_no_onewei_q4_rmse": 0.32236075124975344,
+            "strict_no_onewei_q4_partial_r2": 0.015101908546301113
+          },
+          {
+            "alpha": 100000.0,
+            "strict_no_onewei_q4_rmse": 0.32249797842868855,
+            "strict_no_onewei_q4_partial_r2": 0.014263198787590303
+          },
+          {
+            "alpha": 1000000.0,
+            "strict_no_onewei_q4_rmse": 0.3226040230035389,
+            "strict_no_onewei_q4_partial_r2": 0.013614827428805487
+          }
+        ],
+        "selected_alpha": 10000.0,
+        "strict_q4_partial_r2": 0.015101908546301113,
+        "strict_evaluation_rmse": 0.2582980094290711,
+        "strict_evaluation_predictive_partial_r2": -0.006477312811339342
+      }
+    },
+    "MAYC": {
+      "encoder": "CLIP",
+      "strict_train_oof_rows": 13573,
+      "strict_q2_q3_rows": 10297,
+      "strict_q4_validation_rows": 3276,
+      "grid": [
+        {
+          "alpha": 0,
+          "strict_q4_rmse": 0.7844546074251731,
+          "strict_q4_partial_r2": 0.0
+        },
+        {
+          "alpha": 100.0,
+          "strict_q4_rmse": 0.7834633792122778,
+          "strict_q4_partial_r2": 0.0025255813427207396
+        },
+        {
+          "alpha": 1000.0,
+          "strict_q4_rmse": 0.7811862852450702,
+          "strict_q4_partial_r2": 0.0083153662223715
+        },
+        {
+          "alpha": 10000.0,
+          "strict_q4_rmse": 0.7801071457204223,
+          "strict_q4_partial_r2": 0.01105332241735113
+        },
+        {
+          "alpha": 100000.0,
+          "strict_q4_rmse": 0.7796542463077341,
+          "strict_q4_partial_r2": 0.012201275893509167
+        },
+        {
+          "alpha": 1000000.0,
+          "strict_q4_rmse": 0.7795694651491327,
+          "strict_q4_partial_r2": 0.01241609462193538
+        }
+      ],
+      "selected_alpha": 1000000.0,
+      "strict_q4_partial_r2": 0.01241609462193538,
+      "all_evaluation": {
+        "n": 13019,
+        "metadata_rmse": 0.16747925531384972,
+        "residual_corrected_rmse": 0.17728997555155637,
+        "predictive_partial_r2": -0.1205889043493551
+      },
+      "strict_evaluation": {
+        "n": 11288,
+        "metadata_rmse": 0.1640137193049504,
+        "residual_corrected_rmse": 0.1724503277985701,
+        "predictive_partial_r2": -0.10552277559535472
+      },
+      "strict_without_one_wei": {
+        "training_oof_rows": 13572,
+        "excluded_one_wei_oof_rows": 1,
+        "strict_q4_validation_rows": 3275,
+        "grid": [
+          {
+            "alpha": 0,
+            "strict_no_onewei_q4_rmse": 0.2723541422027238,
+            "strict_no_onewei_q4_partial_r2": 0.0
+          },
+          {
+            "alpha": 100.0,
+            "strict_no_onewei_q4_rmse": 0.27122371315060584,
+            "strict_no_onewei_q4_partial_r2": 0.00828394289867207
+          },
+          {
+            "alpha": 1000.0,
+            "strict_no_onewei_q4_rmse": 0.26020496284779304,
+            "strict_no_onewei_q4_partial_r2": 0.0872261668842167
+          },
+          {
+            "alpha": 10000.0,
+            "strict_no_onewei_q4_rmse": 0.255568643977837,
+            "strict_no_onewei_q4_partial_r2": 0.11946389606904728
+          },
+          {
+            "alpha": 100000.0,
+            "strict_no_onewei_q4_rmse": 0.25475494246688235,
+            "strict_no_onewei_q4_partial_r2": 0.12506202368019026
+          },
+          {
+            "alpha": 1000000.0,
+            "strict_no_onewei_q4_rmse": 0.2555150088644477,
+            "strict_no_onewei_q4_partial_r2": 0.11983344608354407
+          }
+        ],
+        "selected_alpha": 100000.0,
+        "strict_q4_partial_r2": 0.12506202368019026,
+        "strict_evaluation_rmse": 0.1732236731544492,
+        "strict_evaluation_predictive_partial_r2": -0.1154603374284151
+      }
+    }
+  }
+}

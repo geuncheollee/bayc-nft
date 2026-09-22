@@ -1,0 +1,296 @@
+{
+  "stage": "image-only regression",
+  "collections": [
+    "BAYC",
+    "MAYC"
+  ],
+  "encoders": [
+    "DINOv2",
+    "CLIP",
+    "SigLIP2",
+    "SAM",
+    "SDXL_VAE",
+    "DreamSim",
+    "AIM"
+  ],
+  "families": [
+    "OLS",
+    "Ridge",
+    "ElasticNet",
+    "PLS",
+    "LinearSVR",
+    "HistGradientBoosting",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "grids": {
+    "OLS": [
+      {}
+    ],
+    "Ridge": [
+      {
+        "alpha": 0.01
+      },
+      {
+        "alpha": 0.1
+      },
+      {
+        "alpha": 1
+      },
+      {
+        "alpha": 10
+      },
+      {
+        "alpha": 100
+      },
+      {
+        "alpha": 1000
+      },
+      {
+        "alpha": 10000
+      },
+      {
+        "alpha": 100000
+      },
+      {
+        "alpha": 1000000
+      }
+    ],
+    "ElasticNet": [
+      {
+        "alpha": 0.001,
+        "l1_ratio": 0.1
+      },
+      {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 0.001,
+        "l1_ratio": 0.9
+      },
+      {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 0.01,
+        "l1_ratio": 0.9
+      },
+      {
+        "alpha": 0.1,
+        "l1_ratio": 0.1
+      },
+      {
+        "alpha": 0.1,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 0.1,
+        "l1_ratio": 0.9
+      },
+      {
+        "alpha": 1,
+        "l1_ratio": 0.1
+      },
+      {
+        "alpha": 1,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 1,
+        "l1_ratio": 0.9
+      },
+      {
+        "alpha": 10,
+        "l1_ratio": 0.1
+      },
+      {
+        "alpha": 10,
+        "l1_ratio": 0.5
+      },
+      {
+        "alpha": 10,
+        "l1_ratio": 0.9
+      }
+    ],
+    "PLS": [
+      {
+        "components": 8
+      },
+      {
+        "components": 16
+      },
+      {
+        "components": 32
+      },
+      {
+        "components": 64
+      }
+    ],
+    "LinearSVR": [
+      {
+        "C": 0.01,
+        "epsilon": 0.1
+      },
+      {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      {
+        "C": 0.1,
+        "epsilon": 0.1
+      },
+      {
+        "C": 0.1,
+        "epsilon": 0.2
+      },
+      {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      {
+        "C": 1,
+        "epsilon": 0.2
+      }
+    ],
+    "HistGradientBoosting": [
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      }
+    ],
+    "XGBoost": [
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      }
+    ],
+    "LightGBM": [
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 10
+      }
+    ]
+  },
+  "training_window": "2022-01-01 through 2024-12-31",
+  "training_unit": "uniform transaction weight, computed exactly with repeated-feature sufficient statistics",
+  "target": "fold-fitted robust-asinh LRP; all selection and reporting on inverse-transformed original LRP",
+  "selection": "pooled 2024 Q2-Q4 transaction-weighted RMSE",
+  "evaluation": "fixed retrospective 2025-01-01 through 2026-04-13; loaded only after freeze",
+  "dimensions": "stored representation for DINOv2/CLIP/SigLIP2/SAM/AIM; fold-local PCA1024 for SDXL_VAE/DreamSim",
+  "random_forest_excluded": true,
+  "seed": 20260908
+}

@@ -1,7 +1,0 @@
-# Pinned dependencies for Final Execution Pipeline v3.3.6.4
-# Certified target platform: Windows AMD64, Python 3.14.3
-numpy==2.4.2
-scipy==1.17.1
-scikit-learn==1.8.0
-joblib==1.5.3
-threadpoolctl==3.6.0

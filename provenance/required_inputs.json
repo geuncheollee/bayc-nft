@@ -1,0 +1,447 @@
+[
+  {
+    "path": "revision/data_audit_20260908/metadata_normalized.jsonl",
+    "sha256": "f2741cfe033ea6bda0120a260a97f657e87a87239738b5c72058a825340fa369",
+    "redistributed": false
+  },
+  {
+    "path": "revision/target_pipeline_20260909/bayc_development_targets.jsonl",
+    "sha256": "790eb45a3264d32b6535cbe2ef340ab755804dd2c6d9a0934a1186414d7b6f60",
+    "redistributed": false
+  },
+  {
+    "path": "revision/target_pipeline_20260909/bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+    "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0",
+    "redistributed": false
+  },
+  {
+    "path": "revision/target_pipeline_20260909/mayc_development_targets.jsonl",
+    "sha256": "b106a9a54763121b234074ab9dfbbf386f9e62caeb88d1f4594dbc0fd8eafd43",
+    "redistributed": false
+  },
+  {
+    "path": "revision/target_pipeline_20260909/mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+    "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1",
+    "redistributed": false
+  },
+  {
+    "path": "results/seven_encoder_pca1024_rerun/embedding_registry.json",
+    "sha256": "28e6080c68cd1cd9a99e5818fa18b2444ffda77cc25781312cb7d58e4a16f6b8",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_fullframe_features_20260909/bayc_features_dinov2_fullframe.npy",
+    "sha256": "2aad264b6fe682c80f09778f13810cf41c0dfc6527a4551663dcf74d8e96deee",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_fullframe_features_20260909/manifest_bayc_dinov2_fullframe.jsonl",
+    "sha256": "ce67fd66b7bfddeb744f0eb9604a2832d017788629ff8353afabff993ab80e1e",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_fullframe_features_20260909/mayc_features_dinov2_fullframe.npy",
+    "sha256": "5ad2667067b13194d5aa03bbd5a7910c4845e48f5dd02b84174074d1037f132f",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_fullframe_features_20260909/manifest_mayc_dinov2_fullframe.jsonl",
+    "sha256": "514fb47e27ebd8ea9d7b526f8dfb2f35ccb6ff8f1e7ddaa157f45c72f496c2a5",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_clip_features_20260909/bayc_features_clip_native.npy",
+    "sha256": "068e091f2ac13c65ade0a442cce5a3dba07fdb2bfdfe110d756d1b233807e768",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_clip_features_20260909/manifest_bayc_clip_native.jsonl",
+    "sha256": "192e0f58035d2a369ff38a1ca3debe9ea008c6c1a7ad8e231601770f7242c79b",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_clip_features_20260909/mayc_features_clip_native.npy",
+    "sha256": "32e436bacab173bb70a965f062e696dc532ee0187af53e401e4015e25815d299",
+    "redistributed": false
+  },
+  {
+    "path": "revision/dinov2_clip_features_20260909/manifest_mayc_clip_native.jsonl",
+    "sha256": "7d754901a530a3541070e28c500e0510b7aa1368fc7ced963bfe02246e014e57",
+    "redistributed": false
+  },
+  {
+    "path": "revision/siglip2_features_20260909/bayc_features_siglip2.npy",
+    "sha256": "622ad451e39686b42feec112438dd2706f11108b398a8eb59fea4d1a886a5f64",
+    "redistributed": false
+  },
+  {
+    "path": "revision/siglip2_features_20260909/feature_manifest_bayc.jsonl",
+    "sha256": "3bf0b92995b9b106ddb65c626016f32593eae2dcc961290c99a568109571a6bd",
+    "redistributed": false
+  },
+  {
+    "path": "revision/siglip2_features_20260909/mayc_features_siglip2.npy",
+    "sha256": "b75583be1014832ac2450268b1bf6a29f310b1c57232b6e694d7f33d341699c1",
+    "redistributed": false
+  },
+  {
+    "path": "revision/siglip2_features_20260909/feature_manifest_mayc.jsonl",
+    "sha256": "d5bb4de762f96eab0ce550f7fe582181cf54fd3cc12c2d37e7fb1e65f50578ec",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sam/bayc_sam_features.npy",
+    "sha256": "a847fbdec78aa0cf6fc24e292fc9fb1fd1c156863456507a7158b5ab44406504",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sam/bayc_sam_manifest.jsonl",
+    "sha256": "11b2f78f9c6c884f85e49c6d2b07d7f4f748588b3b8aa099b1b34ecc5fb37e6a",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sam/mayc_sam_features.npy",
+    "sha256": "b0ba6fd87ebf3c91cd2683ba4a8c16f5aed307f5e675e768c4557179ba07b99b",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sam/mayc_sam_manifest.jsonl",
+    "sha256": "2d13f44516fd85d7d2d183d34dba91dabf38e0e0bc489e0e198896b8aec192b9",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sdxl_vae/bayc_sdxl_vae_features.npy",
+    "sha256": "570a1d2cd7f9ab02dcdb39c87f21e75a3f6895923a6718639859bfafaf9b82f1",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sdxl_vae/bayc_sdxl_vae_manifest.jsonl",
+    "sha256": "b2b168c5ddc8dbbcf18d526fbcea49d752901a2427fdff36fe2632b28c9b6bbe",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sdxl_vae/mayc_sdxl_vae_features.npy",
+    "sha256": "4bccaede56f7707bd8733a1b3338fb39e5a4aa7c01d4a8a72a87be736def6606",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_sdxl_vae/mayc_sdxl_vae_manifest.jsonl",
+    "sha256": "3ce22f6111b042495674910007200cf3e354db0c139f77e5ef25fc05c2b362b8",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_dreamsim/bayc_dreamsim_features.npy",
+    "sha256": "e10c0937b5a91fd4612bbe844d3c99bd5ef83a5f8c8b2072304155e466f418f9",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_dreamsim/bayc_dreamsim_manifest.jsonl",
+    "sha256": "3eb464dc4ef3eb37afa6b590fee072219ff2a741f8b384a965ca8c020329c2e2",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_dreamsim/mayc_dreamsim_features.npy",
+    "sha256": "9051a713056d309da3c6b10100405e8724b214c3153c5b1831becfb875276744",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_dreamsim/mayc_dreamsim_manifest.jsonl",
+    "sha256": "7797bb6516e5a26216c75dfa17eba6adac32a99d0c78a28e252964938e797094",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_aimv2/bayc_aimv2_features.npy",
+    "sha256": "1924c2d59cfc5cc3588b3aec57e0b2f070245170ebeefc8e09755746ecc88761",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_aimv2/bayc_aimv2_manifest.jsonl",
+    "sha256": "2a00273aafb0149a7b2369bed72bd36110e7c0a9be7b9783d312612c14fd9541",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_aimv2/mayc_aimv2_features.npy",
+    "sha256": "56171cc5ce8984e2cb3c675fb22fe7ada5eed033132ba60ccc2c46ba724c33fb",
+    "redistributed": false
+  },
+  {
+    "path": "revision/four_encoder_extension_20260917/pilot_output/full_aimv2/mayc_aimv2_manifest.jsonl",
+    "sha256": "a5dc24b3a17c7460d60c777fe69420db02947bf11c5a77080cea574742c416a9",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-04-01/manifest.json",
+    "sha256": "afcf7e4b3ac836f190edd4b67edcd986af6ccd12bef8d88a9fbba47cd40421e4",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-04-01/embeddings_1024.npy",
+    "sha256": "f6d7d06a93998529c8fafb50dce693d0f6c53b0b514cb49daa3583f675b23884",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-04-01/pca.joblib",
+    "sha256": "26df84d8cd92cf55b87ce900f71cbdc3d257cf7bb5a2d58c5e33374eac8fcebd",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-07-01/manifest.json",
+    "sha256": "04e93b72c262f37c3883746b25ac91f5e7b20869e310b177547f2ddfe36182ff",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-07-01/embeddings_1024.npy",
+    "sha256": "3327b687035f3c5bf32641b355b4fb2657dcbe053d7fdcd1f3c9b25ae9013ac0",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-07-01/pca.joblib",
+    "sha256": "ccc01af2ac65ee1f8c36aa4adc145822e2c54b3cebc1f6cb88fe036b02c9a991",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-10-01/manifest.json",
+    "sha256": "d337ed082c7cde2f70a2b70672e2f88bf50bcd4da4ecbf9eb71096131fd71c66",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-10-01/embeddings_1024.npy",
+    "sha256": "2490d5ddb3272b7422a9a16115e376d3f849797ec7c5c9d5f160867a7fb7b38b",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2024-10-01/pca.joblib",
+    "sha256": "a1d4ebb77640905b36fd266dbd388b755b66abd894a0708c7f54f9c2f9adbd99",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2025-01-01/manifest.json",
+    "sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2025-01-01/embeddings_1024.npy",
+    "sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/SDXL_VAE/2025-01-01/pca.joblib",
+    "sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-04-01/manifest.json",
+    "sha256": "636868e4d766ba0ae965a738a9ed9b4d947e95b369398f61ade44ec55ffb2476",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-04-01/embeddings_1024.npy",
+    "sha256": "94ef4d49873161041684482bb2c352f866ae789092ab8669038392672558f37f",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-04-01/pca.joblib",
+    "sha256": "3b7dbeb6604ce3650be22339c0bca32c47a6353426104122d9b73d942c68570b",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-07-01/manifest.json",
+    "sha256": "1b6bd65270c55faff571c994dd9031ba6a2457444febca31bf8c7e6623bb26fe",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-07-01/embeddings_1024.npy",
+    "sha256": "d64a0707f2693b2df4308f47508c19c2459065dad460cd3318bd0e78500c7985",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-07-01/pca.joblib",
+    "sha256": "49f00d79044061d25c639245c4f0792d26c2524034c3a3e9bc79f631b72ab25a",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-10-01/manifest.json",
+    "sha256": "e429782c91b5bca964c712e955462fbc3b750e8ff565bb5f4ec3b279e11b33f6",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-10-01/embeddings_1024.npy",
+    "sha256": "6fcd2f804da6c368a5406a491d70e58ae5bb7bb3acdb302c3818413ca206ea25",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2024-10-01/pca.joblib",
+    "sha256": "2fa7064953e0667e82b995211b4917da63da620c22b80ceee222ad0d0a3b67d9",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2025-01-01/manifest.json",
+    "sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2025-01-01/embeddings_1024.npy",
+    "sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/BAYC/DreamSim/2025-01-01/pca.joblib",
+    "sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-04-01/manifest.json",
+    "sha256": "0143cc07b6984f2926035e9f6af3a90b6079c8ae6b01ef4d686a188c00d5cb08",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-04-01/embeddings_1024.npy",
+    "sha256": "0becd59664e5dc3c3d804e7e964d2c309149eeb57e40623f711ece22428898cd",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-04-01/pca.joblib",
+    "sha256": "4d2b2b4126fb166f3c38015dc9b49b4ed37e597dca1344dcf098c24f21588bbc",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-07-01/manifest.json",
+    "sha256": "714fcbe6f946f9f99269814a9cec244f585b04a12d0acd36de5ccb9ee4b59587",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-07-01/embeddings_1024.npy",
+    "sha256": "1ce350558c62787efac1c35a29953b62f326bc2e7c7b89dd1354f6e279ad4c31",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-07-01/pca.joblib",
+    "sha256": "53a09f7519f9e142f6b455ae7a39063d3ffec2e270c1600e9cea52225d85a565",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-10-01/manifest.json",
+    "sha256": "30266a59a3ac3de182e1613ae3d9dff4a36f7c86ea06a2ea00f7d11d36b0a645",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-10-01/embeddings_1024.npy",
+    "sha256": "2592066bfd27707e0168e3e94cfbb929f66d521c52006261e28050aeb828266b",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2024-10-01/pca.joblib",
+    "sha256": "62a6eae8cd889986aeed7f3deb2cb66f15f88f2322b2beb3b74fbb1e64589f34",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2025-01-01/manifest.json",
+    "sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2025-01-01/embeddings_1024.npy",
+    "sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/SDXL_VAE/2025-01-01/pca.joblib",
+    "sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-04-01/manifest.json",
+    "sha256": "ce77f93f7e754ebfd71efb172bbec6397fc4e490306dfabb3ec2a3638b48bff6",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-04-01/embeddings_1024.npy",
+    "sha256": "29e30db00ab7ded418f2f5be7d9b511c381052cdf741a45ed731be21af946e92",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-04-01/pca.joblib",
+    "sha256": "638ba6e680263ff8b0bc43646621d30a1a8848e85910a89160f2009da76ba7ce",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-07-01/manifest.json",
+    "sha256": "b15b3eca0ed0b79b3ed54772ceeead4f7e9e660d5b6c4aca69e3afc6b995ee3a",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-07-01/embeddings_1024.npy",
+    "sha256": "934b384f4f12f3bbb81f7c2d42251a3f9719a4764f287a1bdf604b5d65f37add",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-07-01/pca.joblib",
+    "sha256": "f3fa9164a4577be5d73a3ca07749bc6aafbeea30f7aa5ccd3f60f465735079cc",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-10-01/manifest.json",
+    "sha256": "20b8214e2c99c23943869739689649efdf09ea07c622b144c0529c458e3e3b36",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-10-01/embeddings_1024.npy",
+    "sha256": "966b57fff3d36e2c59767c5b924f6fd3010cc48884ae20faca644f1ba65df37c",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2024-10-01/pca.joblib",
+    "sha256": "35309b3faec4eb3201b75052c4ec47daf8db999e46c581449758a8ade84ba242",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2025-01-01/manifest.json",
+    "sha256": "cef109436e85891a9217ab39a56aa3b0730a31779208275273e7b504ce4e2223",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2025-01-01/embeddings_1024.npy",
+    "sha256": "5726d3e7577eefb0551dcbf60fef6f0338094487b6a5e61e969be98b18b8814e",
+    "redistributed": false
+  },
+  {
+    "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920_v1/reduced_embeddings/MAYC/DreamSim/2025-01-01/pca.joblib",
+    "sha256": "a1332048d4291215ddf88e14e2f7724822430553ab9723ff264a11332aee34bd",
+    "redistributed": false
+  },
+  {
+    "path": "revision/image_validation_20260909/master_tokens_v1.jsonl",
+    "sha256": "9b6b46a8286a35e93cc86f3e3d3b6f608aae3876c27209ccea72090bd62e0465",
+    "redistributed": false
+  },
+  {
+    "path": "revision/image_validation_20260909/image_ready_split_manifest_v1.json",
+    "sha256": "4b89f899e4974dd4be7f514618492c92000ea765001f49c79a7d8adbe5355377",
+    "redistributed": false
+  },
+  {
+    "path": "revision/image_validation_20260909/cohort_release_v1.json",
+    "sha256": "c18f5cc6d01c754a7d321611107d2ad708567accb72508f1f399bac73717eafd",
+    "redistributed": false
+  },
+  {
+    "path": "revision/data_audit_20260908/bayc_trade_eligibility.jsonl",
+    "sha256": "9f2b2ef5f6af0ba4cfe8358ac126027414b22cc5030925e56d0ba9a12d0febd8",
+    "redistributed": false
+  },
+  {
+    "path": "revision/data_audit_20260908/mayc_trade_eligibility.jsonl",
+    "sha256": "fdcbf22f1484882652675b9a6ea3bf8cfdb21ac027173dfd7b8d3548f5e435f5",
+    "redistributed": false
+  },
+  {
+    "path": "revision/Encoder Development Registry 20260909 v4.json",
+    "sha256": "336842f115d4383c4ba0579cead0e001754070eb6ceb7738f37e1f4edc72cf17",
+    "redistributed": false
+  },
+  {
+    "path": "results/seven_encoder_full_rerun/embedding_registry.json",
+    "sha256": "28e6080c68cd1cd9a99e5818fa18b2444ffda77cc25781312cb7d58e4a16f6b8",
+    "redistributed": false
+  }
+]

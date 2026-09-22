@@ -1,0 +1,53 @@
+{
+  "start_utc": "2026-09-22T02:59:07.342306+00:00",
+  "expected_fits": 342,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "machine": "Windows-11-10.0.26200-SP0",
+  "specification_sha256": "2da61e22ff77843327df51a0c7da99099e6d6e99adf81efe5803b0f77ce120c1",
+  "inputs": [
+    {
+      "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\code\\run_late_fusion_experiment.py",
+      "sha256": "af2dcacffa430680f32ee90ac8891f479571cb6939130653a5b10745432395c2"
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921\\code\\run_early_fusion_tfidf_experiment.py",
+      "sha256": "2667671dbbc9d6decd77ce90c860a151ead0b6469f7172e0a838c8aa6ffddd3a"
+    },
+    {
+      "path": "results\\metadata_asinh_nine_regressors_20260920\\code\\run_experiment.py",
+      "sha256": "ce24df53434bdc426c6685c53df9677dabac0bdd026758f8a8622b27d15fe033"
+    },
+    {
+      "path": "results\\metadata_temporal_token_balanced_20260920\\code\\run_temporal_token_balanced.py",
+      "sha256": "9a7d472a4b9dcf67c11b151b014f5cb6306fd670b2e5163bc383c72531bce54f"
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920\\code\\run_image_experiment.py",
+      "sha256": "97cb961f72df0f98e0b54b54e32d0b457c4d20a23f1bd4b07b6579ccadb1ede8"
+    },
+    {
+      "path": "results\\seven_encoder_pca1024_rerun\\embedding_registry.json",
+      "sha256": "28e6080c68cd1cd9a99e5818fa18b2444ffda77cc25781312cb7d58e4a16f6b8"
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\completion.json",
+      "sha256": "277dc9e7d5d9275b6192a4c0f3f0ceb24d0d82674754c38a4e14ba8f57ad8343"
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\pre2025_model_selection_32_combinations.csv",
+      "sha256": "0471fc83eafa9e4bf398548f504fb2dbb45206a434c291f5eca2cff5179f2983"
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\completion.json",
+      "sha256": "c199fa3dd3ab4326a8276c4d67cd14ee8bc9fa04f1eea3e4556af212eb975e6a"
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\pre2025_image_model_selection_112_combinations.csv",
+      "sha256": "719ac95f952526ae250cb09146c07d69287a8ffdf5025cf970c65e8fffecdd43"
+    },
+    {
+      "path": "revision\\data_audit_20260908\\metadata_normalized.jsonl",
+      "sha256": "f2741cfe033ea6bda0120a260a97f657e87a87239738b5c72058a825340fa369"
+    }
+  ]
+}

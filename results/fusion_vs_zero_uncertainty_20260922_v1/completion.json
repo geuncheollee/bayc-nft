@@ -1,0 +1,8 @@
+{
+  "completed_utc": "2026-09-22T05:44:54.265848+00:00",
+  "passed": true,
+  "comparison_rows": 24,
+  "collections": 2,
+  "iterations_per_resampling_per_collection": 2000,
+  "all_row_and_metric_checks_passed": true
+}

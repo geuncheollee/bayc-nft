@@ -1,5 +1,14 @@
--r requirements.txt
-torch==2.7.1
-transformers==4.56.2
-Pillow==12.3.0
-
+# Optional; install an appropriate torch/torchvision CUDA build separately.
+torch
+torchvision
+transformers
+diffusers
+timm
+dreamsim==0.2.1
+open-clip-torch
+peft
+accelerate
+safetensors
+huggingface-hub
+numpy
+Pillow

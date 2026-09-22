@@ -1,0 +1,45 @@
+{
+  "start_utc": "2026-09-20T09:40:49.351429+00:00",
+  "expected_fits": 740,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "machine": "Windows-11-10.0.26200-SP0",
+  "specification_sha256": "87fb65d505d3b59239fa1612909cab116f82f23079fc99ba49aa83cacc2744c1",
+  "inputs": [
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_nine_regressors_20260920\\code\\run_experiment.py",
+      "sha256": "120490da3648b35f592adb2149baa7bb1a342460be188c112639db53e4983b8e"
+    },
+    {
+      "path": "results\\metadata_asinh_nine_regressors_20260920\\code\\run_experiment.py",
+      "sha256": "ce24df53434bdc426c6685c53df9677dabac0bdd026758f8a8622b27d15fe033"
+    },
+    {
+      "path": "results\\metadata_temporal_token_balanced_20260920\\code\\run_temporal_token_balanced.py",
+      "sha256": "9a7d472a4b9dcf67c11b151b014f5cb6306fd670b2e5163bc383c72531bce54f"
+    },
+    {
+      "path": "results\\seven_encoder_full_rerun\\code\\canonical_runner.py",
+      "sha256": "d50feb0b2548924e2b129f22f8cae95fc5c1164d9f3ff93fa2903676f845f8b1"
+    },
+    {
+      "path": "revision\\data_audit_20260908\\metadata_normalized.jsonl",
+      "sha256": "f2741cfe033ea6bda0120a260a97f657e87a87239738b5c72058a825340fa369"
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_development_targets.jsonl",
+      "sha256": "790eb45a3264d32b6535cbe2ef340ab755804dd2c6d9a0934a1186414d7b6f60"
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0"
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_development_targets.jsonl",
+      "sha256": "b106a9a54763121b234074ab9dfbbf386f9e62caeb88d1f4594dbc0fd8eafd43"
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1"
+    }
+  ]
+}
