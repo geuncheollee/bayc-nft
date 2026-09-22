@@ -1,6 +1,6 @@
 # BAYC/MAYC revision reproducibility code
 
-Release **v4.0.0** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It supersedes the active v3.3.6.4 analysis, not its historical archive. The old version DOI 10.5281/zenodo.22770922 must not be cited as the archive of these new experiments. The new version DOI is linked from the v4.0.0 GitHub release after Zenodo processing.
+Release **v4.0.0** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. The frozen release is archived at **[10.5281/zenodo.22900290](https://doi.org/10.5281/zenodo.22900290)**. It supersedes the active v3.3.6.4 analysis, not its historical archive. The old version DOI 10.5281/zenodo.22770922 must not be cited as the archive of these new experiments. Both versions belong to the same Zenodo version family. After archival, this default-branch README and citation metadata were updated with the issued DOI; the v4.0.0 tag remains frozen.
 
 ## What this version contains
 
