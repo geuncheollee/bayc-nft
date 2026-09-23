@@ -11,23 +11,23 @@
   },
   {
     "path": ".zenodo.json",
-    "bytes": 1315,
-    "sha256": "dcee424a6d4bab75dea677c741a424dd31f9060d84e86b741175e18861744203"
+    "bytes": 1212,
+    "sha256": "5a5196b37a7b05e8bd5fede7832be72c732be1e945ebdc4d549530204488fb32"
   },
   {
     "path": "CHANGELOG.md",
-    "bytes": 860,
-    "sha256": "88c0f62e78368e68a7b97e07640a9f5190f55f4b671ab7f15eb1f9e887d94824"
+    "bytes": 1260,
+    "sha256": "0325f33f675c001dfd2d39a22eea8eccc39e63f2e0d698bc2d813e8c2770f63f"
   },
   {
     "path": "CITATION.cff",
-    "bytes": 574,
-    "sha256": "0366c36fb7c307ffd4ba99c1437ecace90ed16363b87364e4ce84834e30b83e6"
+    "bytes": 543,
+    "sha256": "28885ac893eb16ff9cf97e520e108a5092a2dc51c4050d7f950a73bbfe712476"
   },
   {
     "path": "DATA_ACCESS.md",
-    "bytes": 1987,
-    "sha256": "4df36a64ba275207275647c6680b1bf4e1baedb37e8a867ca599d8a9521d2c88"
+    "bytes": 2649,
+    "sha256": "4d2887123b902e75891d4e9ef608232863d00f15b13df24822c87cc043410128"
   },
   {
     "path": "ENVIRONMENTS.md",
@@ -46,8 +46,8 @@
   },
   {
     "path": "provenance/release_scope.json",
-    "bytes": 269,
-    "sha256": "cf28260df60c7868e6b18fbc8af14b1ac0934b603d8f3a1a20f52aba037253d8"
+    "bytes": 264,
+    "sha256": "0a21d39e5b7bfed8ce60b395959600ed05972e352be68168a5cddb5290019357"
   },
   {
     "path": "provenance/required_inputs.json",
@@ -66,8 +66,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 3310,
-    "sha256": "87f304afc478a2c3937d00821796c10396c49d0feba6cfdeaf4a92e6b639639c"
+    "bytes": 3189,
+    "sha256": "bcb09ce7777975f0b8d81c56fa7a415aa65759d5a49e18857025509c19ec329f"
   },
   {
     "path": "REPRODUCIBILITY.md",

@@ -1,7 +1,7 @@
 {
-  "version": "4.0.0",
-  "previous_version": "3.3.6.4",
-  "previous_version_doi": "10.5281/zenodo.22770922",
+  "version": "4.0.1",
+  "previous_version": "4.0.0",
+  "previous_version_doi": "10.5281/zenodo.22900290",
   "expected_concept_doi": "10.5281/zenodo.22770921",
   "full_raw_input_replay_during_packaging": false,
   "private_review_materials_included": false

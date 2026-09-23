@@ -7,8 +7,8 @@
     }
   ],
   "title": "Code for Image embeddings add limited predictive value to metadata in two NFT collections",
-  "version": "4.0.0",
-  "description": "Frozen source code and aggregate outputs for the September 2026 BAYC/MAYC revision experiments: eight TF-IDF metadata regressors, seven image encoders crossed with eight regressors, TF-IDF early fusion, conditional late fusion over eleven weights, paired uncertainty and four supplemental analyses. Includes source hashes, configurations, execution records, public validation tests, and an aggregate table exporter. Replaces the active v3.3.6.4 code tree. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions are excluded; full numerical refitting requires the documented author-supplied inputs. Public tests do not constitute an independent full-data replication.",
+  "version": "4.0.1",
+  "description": "Documentation-only correction to the frozen September 2026 BAYC/MAYC revision release. DATA_ACCESS.md now reproduces the DuneSQL query for the verified BAYC and MAYC contracts and distinguishes public query access from byte-identical reconstruction of the fixed historical export snapshot. Code, aggregate results and scientific conclusions are unchanged from v4.0.0. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions remain excluded; full numerical refitting requires the documented inputs. Public tests do not constitute an independent full-data replication.",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
