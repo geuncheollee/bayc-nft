@@ -11,18 +11,18 @@
   },
   {
     "path": ".zenodo.json",
-    "bytes": 1212,
-    "sha256": "1b04fe071b1c12bb218b25c262a3fdf47c2f0a3c5818f5028c36dc412d91ffde"
+    "bytes": 1496,
+    "sha256": "60339d3e273c47bd5b65ea59615d7360900059955be63a3229b73aa5fe42179a"
   },
   {
     "path": "CHANGELOG.md",
-    "bytes": 1503,
-    "sha256": "56b3e399f447fb2bac9ac17342a2c4b0a9d35d8099d53e699406a8229802b968"
+    "bytes": 1754,
+    "sha256": "8b88a0d87b581ad9236fa059edc64c6a7c57f2ceba102bfdefa2612f5127ef25"
   },
   {
     "path": "CITATION.cff",
-    "bytes": 572,
-    "sha256": "e12aeb87c57156383c8928a0501f968f587c068e05a8cd0dd3c04c667322b35d"
+    "bytes": 637,
+    "sha256": "89b60e1e40d78c1d4c3648f518536622cf7d498a056b202e6d256ce68cf3677e"
   },
   {
     "path": "DATA_ACCESS.md",
@@ -66,8 +66,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 3337,
-    "sha256": "812346e9eaa2d58eae52b7bf3ad4eafdfb1b2fd2a976a2448fc3e622fdc8bf66"
+    "bytes": 3204,
+    "sha256": "dc3f3a6372f27b1ee00c04f087b48afec78560de63018079645c239b4af1beac"
   },
   {
     "path": "REPRODUCIBILITY.md",

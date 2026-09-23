@@ -3,12 +3,20 @@
     {
       "name": "Lee, Geun-Cheol",
       "orcid": "0000-0002-8555-7064",
-      "affiliation": "College of Business, Konkuk University, Korea"
+      "affiliation": "College of Business, Konkuk University, Seoul 05029, South Korea"
+    },
+    {
+      "name": "Koo, Hoon-Young",
+      "affiliation": "School of Business, Chungnam National University, Daejeon 34134, South Korea"
+    },
+    {
+      "name": "Lee, Heejung",
+      "affiliation": "School of Interdisciplinary Industrial Studies, Hanyang University, Seoul 04763, South Korea"
     }
   ],
   "title": "Code for Image embeddings add limited predictive value to metadata in two NFT collections",
-  "version": "4.0.2",
-  "description": "Documentation-only correction to the frozen September 2026 BAYC/MAYC revision release. DATA_ACCESS.md now reproduces the DuneSQL query for the verified BAYC and MAYC contracts and distinguishes public query access from byte-identical reconstruction of the fixed historical export snapshot. Code, aggregate results and scientific conclusions are unchanged from v4.0.0. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions remain excluded; full numerical refitting requires the documented inputs. Public tests do not constitute an independent full-data replication.",
+  "version": "4.0.3",
+  "description": "Metadata correction to the frozen September 2026 BAYC/MAYC revision release: all three manuscript authors are listed as creators in this Zenodo record and CITATION.cff. DATA_ACCESS.md retains the DuneSQL query and its fixed-snapshot caveat. Modelling code, aggregate results and scientific conclusions are unchanged from v4.0.2. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions remain excluded; full numerical refitting requires the documented inputs. Public tests do not constitute an independent full-data replication.",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
