@@ -12,17 +12,17 @@
   {
     "path": ".zenodo.json",
     "bytes": 1212,
-    "sha256": "5a5196b37a7b05e8bd5fede7832be72c732be1e945ebdc4d549530204488fb32"
+    "sha256": "1b04fe071b1c12bb218b25c262a3fdf47c2f0a3c5818f5028c36dc412d91ffde"
   },
   {
     "path": "CHANGELOG.md",
-    "bytes": 1260,
-    "sha256": "0325f33f675c001dfd2d39a22eea8eccc39e63f2e0d698bc2d813e8c2770f63f"
+    "bytes": 1503,
+    "sha256": "56b3e399f447fb2bac9ac17342a2c4b0a9d35d8099d53e699406a8229802b968"
   },
   {
     "path": "CITATION.cff",
     "bytes": 543,
-    "sha256": "28885ac893eb16ff9cf97e520e108a5092a2dc51c4050d7f950a73bbfe712476"
+    "sha256": "47d38c44dfa40414bfc5a42a2313391bba61780936c7add3a1cd4e7d6038ed78"
   },
   {
     "path": "DATA_ACCESS.md",
@@ -47,7 +47,7 @@
   {
     "path": "provenance/release_scope.json",
     "bytes": 264,
-    "sha256": "0a21d39e5b7bfed8ce60b395959600ed05972e352be68168a5cddb5290019357"
+    "sha256": "16d6c3d6f8be2feafc9350e644dfe9c02d66c090be75adb473578226c6d77f7f"
   },
   {
     "path": "provenance/required_inputs.json",
@@ -67,7 +67,7 @@
   {
     "path": "README.md",
     "bytes": 3189,
-    "sha256": "bcb09ce7777975f0b8d81c56fa7a415aa65759d5a49e18857025509c19ec329f"
+    "sha256": "f528ec470e9bedd31af46bede8b70afa62a9091d2c362e99a59be2d932c87a57"
   },
   {
     "path": "REPRODUCIBILITY.md",

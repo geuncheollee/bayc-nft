@@ -1,3 +1,7 @@
+# v4.0.2 - 23 September 2026
+
+Reissues the v4.0.1 documentation-only correction after the first Zenodo webhook returned a server error. `DATA_ACCESS.md`, modelling code, aggregate results and scientific conclusions are unchanged from v4.0.1.
+
 # v4.0.1 - 23 September 2026
 
 Documentation-only correction. `DATA_ACCESS.md` now reproduces the DuneSQL query used to retrieve public Ethereum NFT transactions for the verified BAYC and MAYC contracts. It also distinguishes records returned when the query is rerun from byte-identical reconstruction of the fixed study snapshot. No modelling code, aggregate result or scientific conclusion changed.

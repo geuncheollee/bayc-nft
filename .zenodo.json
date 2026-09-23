@@ -7,7 +7,7 @@
     }
   ],
   "title": "Code for Image embeddings add limited predictive value to metadata in two NFT collections",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Documentation-only correction to the frozen September 2026 BAYC/MAYC revision release. DATA_ACCESS.md now reproduces the DuneSQL query for the verified BAYC and MAYC contracts and distinguishes public query access from byte-identical reconstruction of the fixed historical export snapshot. Code, aggregate results and scientific conclusions are unchanged from v4.0.0. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions remain excluded; full numerical refitting requires the documented inputs. Public tests do not constitute an independent full-data replication.",
   "access_right": "open",
   "license": "mit",

@@ -1,6 +1,6 @@
 # BAYC/MAYC revision reproducibility code
 
-Release **v4.0.1** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It is a documentation-only correction to v4.0.0 that publicly records the DuneSQL transaction query in `DATA_ACCESS.md`; no code, results or scientific conclusions changed. The version-specific Zenodo DOI is linked from the GitHub release page after archival. It supersedes the active v4.0.0 documentation, not that release's historical archive.
+Release **v4.0.2** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It is a documentation-only correction to v4.0.0 that publicly records the DuneSQL transaction query in `DATA_ACCESS.md`; no code, results or scientific conclusions changed. The version-specific Zenodo DOI is linked from the GitHub release page after archival. It supersedes the active v4.0.0 documentation, not that release's historical archive.
 
 ## What this version contains
 
