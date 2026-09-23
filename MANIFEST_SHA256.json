@@ -17,12 +17,12 @@
   {
     "path": "CHANGELOG.md",
     "bytes": 1754,
-    "sha256": "8b88a0d87b581ad9236fa059edc64c6a7c57f2ceba102bfdefa2612f5127ef25"
+    "sha256": "513168aead9730d4569bb2458be7583ab67bbd2c87a15a1a42e89ed2bb94b93b"
   },
   {
     "path": "CITATION.cff",
-    "bytes": 637,
-    "sha256": "89b60e1e40d78c1d4c3648f518536622cf7d498a056b202e6d256ce68cf3677e"
+    "bytes": 666,
+    "sha256": "d4e333fc459838a9e534356b20bcdc5f71a82241393505df4325893ec1ef3bc7"
   },
   {
     "path": "DATA_ACCESS.md",
@@ -66,8 +66,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 3204,
-    "sha256": "dc3f3a6372f27b1ee00c04f087b48afec78560de63018079645c239b4af1beac"
+    "bytes": 3373,
+    "sha256": "7175786fd0cf421e897683728060d39fa5655dbccb5dad011894d2b82e716f79"
   },
   {
     "path": "REPRODUCIBILITY.md",

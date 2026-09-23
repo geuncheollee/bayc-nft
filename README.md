@@ -1,6 +1,6 @@
 # BAYC/MAYC revision reproducibility code
 
-Release **v4.0.3** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It corrects the Zenodo and `CITATION.cff` creator list to include all three manuscript authors. The modelling code, aggregate results and DuneSQL transaction query are unchanged from v4.0.2. The version DOI will be added after Zenodo archives this release; the prior v4.0.2 version remains at [10.5281/zenodo.22920628](https://doi.org/10.5281/zenodo.22920628).
+Release **v4.0.3** supports *Image embeddings add limited predictive value to metadata in two NFT collections*. It corrects the Zenodo and `CITATION.cff` creator list to include all three manuscript authors. The modelling code, aggregate results and DuneSQL transaction query are unchanged from v4.0.2. The frozen release is archived at **[10.5281/zenodo.22921602](https://doi.org/10.5281/zenodo.22921602)**; the prior v4.0.2 version remains at [10.5281/zenodo.22920628](https://doi.org/10.5281/zenodo.22920628). The v4.0.3 tag remains frozen; this default-branch README and citation metadata were updated after archival with the issued DOI.
 
 ## What this version contains
 

@@ -1,4 +1,4 @@
-# v4.0.3 - 24 September 2026
+# v4.0.3 - 23 September 2026
 
 Corrects the software citation metadata and Zenodo creator list to include all three manuscript authors. Modelling code, data-access documentation, aggregate results and scientific conclusions are unchanged from v4.0.2.
 
