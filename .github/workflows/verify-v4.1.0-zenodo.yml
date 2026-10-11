@@ -82,7 +82,8 @@ jobs:
           doi = record["doi"]
           assert doi != old["doi"] and doi.startswith("10.5281/zenodo.")
           related = record["metadata"].get("related_identifiers", [])
-          assert any("github.com/geuncheollee/bayc-nft" in r["identifier"] and TAG in r["identifier"] for r in related), related
+          assert any(r["identifier"] == old["doi"] and r["relation"] == "isNewVersionOf" for r in related), related
+          print("New Zenodo record:", record["id"], doi, flush=True)
           verified = []
           for f in record["files"]:
               archive = public_bytes(f["links"]["self"])
