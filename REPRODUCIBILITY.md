@@ -1,30 +1,27 @@
-# Reproduction levels and execution order
+# Execution and verification
 
-## Level 1: public aggregate verification
+## Public fixed-prediction replay
 
-Run `python tests/test_public_release.py` and `python tools/export_tables.py --output-dir reproduced_tables`. No network, scientific libraries or private data are required. Inspect the original full candidate CSVs under the run directories indexed in `provenance/run_index.json`. Representatives are chosen by development RMSE, never by the lowest evaluation RMSE. Metadata-only OLS has lower evaluation point estimates than the selected fusion representatives in both collections; this does not justify post-hoc reselection.
+Run the commands in README.md. The script resolves inputs relative to its own package directory, not the working directory or the author's project path. It reads only data/catalog.json, the named numeric arrays, expected/reproduction_contract.json, and the package hash manifest. The expected contract supplies comparison labels and expected values; **all actual metrics and intervals are calculated from the numerical rows**.
 
-## Level 2: synthetic implementation checks
+Outputs are metrics.csv, confidence_intervals.csv, comparison_checks.csv, bootstrap_row_expansion_checks.csv, and verification_summary.json. The final process exits nonzero for an integrity or numerical mismatch. Expected tolerance is absolute 1e-10.
 
-Install `requirements-models.txt` and run `python tests/test_synthetic_methods.py`. These checks cover past-only references, target transform round trips, training-only TF-IDF and transaction-count aggregation. They are not full scientific replication.
+Forty datasets cover all rows of the twelve source tables identified in provenance/reproduction_coverage.csv. Additional metrics/intervals can be calculated from the included predictions. Model-selection uncertainty, new fitting, raw-target reconstruction and image extraction are outside this public replay.
 
-## Level 3: full-data rerun (requires author inputs)
+## Original versus current evidence
 
-Make a **separate working copy**. Preserve this immutable archive. Published aggregates occupy paths used by the original runners: move the corresponding aggregate output directories aside in the working copy before a fresh run, retaining their manifests for comparison. Never erase the source archive or original study data. Inspect each script's `OUT` and resume behavior before execution; output paths are historical and not uniformly configurable. The late and supplemental directories contain code as well as outputs: retain `code/` when preparing fresh outputs.
+- Original representatives and seen/unseen use the original frozen predictions; subgroup models were not reselected.
+- matched_original preserves the archived mixed implementations.
+- matched_current contains archived predictions plus current control/alternative fits. Metadata-family-specific encoder/configuration choices remain pre-2025 selections.
+- reselected_base and reselected_strict contain current uniformly counted fits for all three cleaning conditions, evaluated on common rows. They are not replacements selected by evaluation performance.
+- strict_refit/residual/fixed datasets preserve earlier supporting analyses with their original scope.
 
-1. Prepare authorized raw exports, traits and images. `tmp/revision_review/revision_data_audit.py` performs the input/eligibility audit; `validate_revision_images.py` and `freeze_image_ready_cohort.py` build image-ready ledgers. The `tmp/` name is an original source location, not a disposable public dependency.
-2. Build past-only transaction targets with `revision/code/build_past_only_targets.py`. Follow its CLI and required upstream manifests. Existing protocol/amendment hashes are part of the checks.
-3. Extract DINOv2 full-frame, CLIP native and SigLIP 2 using the scripts in their named `revision/*features_20260909` directories. SAM, SDXL-VAE, DreamSim and AIMv2 use `revision/four_encoder_extension_20260917/run_full_extraction.py`; `run_pilot.py` supplies shared extraction definitions. The three original extraction scripts expect local checkpoint/cache paths; populate those documented paths with the stated model revisions. A cached file is not distributed with this release.
-4. Supply/reconstruct the audited embedding registries and row manifests listed in `provenance/required_inputs.json`. Fold-fitted PCA/scaling occurs in the regression runners, not on the full evaluation cohort.
-5. Metadata entry point: `results/metadata_asinh_transaction_2022_2024_nine_regressors_20260920/code/run_experiment.py`. The executed final family list excludes RandomForest and writes the **eight**-regressor `_v1` result directory. Shared modules retaining `nine` in their names must not be run as substitutes.
-6. Image entry point: `results/image_asinh_transaction_2022_2024_eight_regressors_20260920/code/run_image_experiment.py`.
-7. Early entry point: `results/early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921/code/run_early_fusion_tfidf_experiment.py`.
-8. Late entry point: `results/late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2/code/run_late_fusion_experiment.py`. It uses the pre-2025 branch results and validation predictions before loading evaluation predictions.
-9. Run `run_fusion_uncertainty.py` and `run_vs_zero_uncertainty.py` in their named result directories. Row-aligned predictions are necessary and are not public inputs.
-10. Supplemental order in `results/reviewer_priority4_20260922_v1/code`: stage1 audit; stage2 cleaning, refit and refit uncertainty; stage3 residual, strict residual and residual uncertainty; stage4 rolling and forward selection; `verify_results.py`.
+## Full scientific source
 
-The release preserves executed scientific code rather than replacing it with a newly redesigned engine. A complete raw-input refit was **not** performed during packaging. Some historical helpers expose broader experiments; only the entry points above and the recorded final run indices support the reported revision. All library/extraction defaults should be read from source together with the saved configurations.
+legacy_v4_0_3/ preserves the previous code archive's relative layout and source hashes. analysis_source/ contains byte-identical October computational scripts, selected configurations, development scores and freeze records. The public replay is the portable, independently tested entry point.
 
-## Frozen-code integrity
+The historical training scripts retain original path and frozen-input assumptions; they are source records, not a turnkey public-data training interface. To refit, first obtain the hash-matched inputs described in DATA_ACCESS.md, assemble a separate work tree using the historical relative layouts and review ROOT/output/cache settings. The original execution_sources.json also records vendored scientific-package files. Exact historical hash guards cannot be substituted by a different package version without a documented new run.
 
-`provenance/source_files.json` links byte-identical public copies to their local source hashes. `MANIFEST_SHA256.json` covers release files except itself. Code is inspectable even where historical input acquisition is not independently reconstructible. Records with `evaluation_labels_loaded_before_freeze: false` indicate labels were not loaded before freezing; the supplemental audit's confusingly named `run_level_freeze_flag` stores this negative flag, not a failed-freeze indicator.
+The strict run's scientific order is prepare/fold-fit development candidates, select/freeze configurations and late weights, final fit, evaluate, paired bootstrap, independent verification. No evaluation-driven choice is authorized by the public data. Follow legacy_v4_0_3/REPRODUCIBILITY.md for upstream extraction and baseline dependencies.
+
+No full model training or image extraction was repeated while assembling this archive. The package validates exact fixed-prediction reproduction, not universal environment or row/count equivalence.

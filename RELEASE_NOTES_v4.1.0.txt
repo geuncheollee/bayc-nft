@@ -1,0 +1,18 @@
+BAYC/MAYC numerical reproducibility package v4.1.0
+
+This version supports the manuscript Evaluating image embeddings and metadata for NFT price prediction using temporal validation.
+
+Added coverage
+- Pseudonymized evaluation targets, aligned fixed-model predictions, token groups, 14-day calendar blocks, and overlap/cleaning indicators across 40 datasets.
+- Seen/unseen-token evaluation, matched-family and transaction-row/count-based comparisons, and full model selection under three cleaning conditions.
+- Executed analysis source, development-selection records, input inventories, data dictionary, environment records, and SHA-256 integrity checks.
+- The previous v4.0.3 public source archive, preserved separately under legacy_v4_0_3/.
+
+Numerical validation
+The independent local replay reproduced 9,550 numeric entries from 1,381 rows across 12 result tables within 1e-10 absolute tolerance (maximum absolute difference below 1.91e-13). An additional 192 explicit bootstrap row-expansion checks passed. The publication build changes documentation and metadata only; numerical data, source code, and expected tables match the validated package.
+
+Scope
+This package reproduces metrics and confidence intervals from fixed targets and predictions. It does not redistribute raw transaction exports, NFT images, embedding matrices, or fitted model files, and does not demonstrate end-to-end raw-input refitting. Bootstrap intervals are conditional on fitted predictions.
+
+Earlier versions
+Existing releases and their DOIs are retained. DOI 10.5281/zenodo.22921602 identifies v4.0.3; it must not be cited as the DOI of v4.1.0. Cite the version-specific Zenodo record associated with this release.

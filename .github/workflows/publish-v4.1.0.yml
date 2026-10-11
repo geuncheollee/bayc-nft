@@ -1,0 +1,127 @@
+name: Publish verified v4.1.0 package
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-v4.1.0.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-bayc-v4.1.0
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'geuncheollee/bayc-nft'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Verify package and publish only v4.1.0
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        shell: python
+        run: |
+          import hashlib, io, json, os, pathlib, subprocess, sys, tarfile, urllib.request, urllib.error, zipfile
+          
+          REPO = "geuncheollee/bayc-nft"
+          TAG = "v4.1.0"
+          SHA = os.environ["RELEASE_COMMIT"]
+          assert os.environ["GITHUB_REPOSITORY"] == REPO
+          BASE = "https://api.github.com/repos/" + REPO
+          ZIP_NAME = "bayc-mayc-v4.1.0.zip"
+          ZIP_SHA256 = "fd3b499509235f70437d557c379e054e81603da776100c2be7ab7bc2f4f7dcc1"
+          MANIFEST_SHA256 = "8e4f6911d23e07fa3f3040833b3466679ef57b9016263881bc53856e93b27dba"
+          
+          def get_bytes(url):
+              with urllib.request.urlopen(url, timeout=120) as response:
+                  return response.read()
+          
+          def api(path, method="GET", body=None, binary=False):
+              url = path if path.startswith("https://uploads.github.com/") else BASE + path
+              assert url.startswith(BASE + "/") or url.startswith("https://uploads.github.com/repos/" + REPO + "/")
+              headers = {"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                         "Accept": "application/vnd.github+json", "User-Agent": "bayc-v4.1.0-publication"}
+              data = body if binary else (json.dumps(body).encode() if body is not None else None)
+              if data is not None:
+                  headers["Content-Type"] = "application/zip" if binary else "application/json"
+              request = urllib.request.Request(url, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(request, timeout=180) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as error:
+                  if method == "GET" and error.code == 404:
+                      return None
+                  raise RuntimeError(f"GitHub {method} failed with HTTP {error.code}") from None
+          
+          old_releases = {r["id"]: r for r in api("/releases?per_page=100") if r["tag_name"] != TAG}
+          old_refs = {r["ref"]: r["object"] for r in api("/git/matching-refs/tags/") if r["ref"] != "refs/tags/" + TAG}
+          assert len(old_releases) >= 5
+          raw = "https://raw.githubusercontent.com/" + REPO + "/" + SHA + "/"
+          archive = get_bytes(raw + "dist/" + ZIP_NAME)
+          assert hashlib.sha256(archive).hexdigest() == ZIP_SHA256, "ZIP hash mismatch"
+          with zipfile.ZipFile(io.BytesIO(archive)) as z:
+              prefix = "bayc-mayc-v4.1.0/"
+              members = [i for i in z.infolist() if not i.is_dir()]
+              assert len(members) == 251 and len({i.filename for i in members}) == 251
+              manifest_bytes = z.read(prefix + "MANIFEST_SHA256.json")
+              assert hashlib.sha256(manifest_bytes).hexdigest() == MANIFEST_SHA256
+              manifest = json.loads(manifest_bytes)
+              assert len(manifest) == 250
+              expected = {prefix + m["path"] for m in manifest} | {prefix + "MANIFEST_SHA256.json"}
+              assert {i.filename for i in members} == expected
+              for m in manifest:
+                  content = z.read(prefix + m["path"])
+                  assert len(content) == m["bytes"] and hashlib.sha256(content).hexdigest() == m["sha256"], m["path"]
+              source = get_bytes(BASE + "/tarball/" + SHA)
+              with tarfile.open(fileobj=io.BytesIO(source), mode="r:gz") as t:
+                  entries = {m.name.split("/", 1)[1]: m for m in t.getmembers() if m.isfile() and "/" in m.name}
+                  for item in members:
+                      relative = item.filename[len(prefix):]
+                      assert t.extractfile(entries[relative]).read() == z.read(item), relative
+              out = pathlib.Path("verified_package")
+              out.mkdir(exist_ok=True)
+              for item in members:
+                  relative = item.filename[len(prefix):]
+                  target = (out / relative).resolve()
+                  assert target.is_relative_to(out.resolve())
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(z.read(item))
+          subprocess.run([sys.executable, "-m", "pip", "install", "-r", str(out / "requirements-replay.txt")], check=True)
+          subprocess.run([sys.executable, str(out / "tools/validate_package.py")], check=True)
+          notes = get_bytes(raw + "RELEASE_NOTES_v4.1.0.txt").decode("utf-8")
+          notes += "\n\nRelease asset SHA-256: `" + ZIP_SHA256 + "`. All 251 package files are also included in this tag's source archive.\n"
+          notes += "\nZenodo archival status: a new version DOI must be verified separately; the v4.0.3 DOI remains unchanged.\n"
+          tag = api("/git/ref/tags/" + TAG)
+          if tag is not None:
+              assert tag["object"]["type"] == "commit" and tag["object"]["sha"] == SHA, "Existing tag points elsewhere"
+          release = api("/releases/tags/" + TAG)
+          if release is None:
+              release = api("/releases", "POST", {"tag_name": TAG, "target_commitish": SHA,
+                           "name": "v4.1.0 - Numerical reproducibility package",
+                           "body": notes, "draft": True, "prerelease": False})
+          assert release["target_commitish"] == SHA, "Existing release targets a different commit"
+          assets = api("/releases/" + str(release["id"]) + "/assets")
+          matches = [a for a in assets if a["name"] == ZIP_NAME]
+          assert len(matches) <= 1
+          if matches:
+              asset = matches[0]
+          else:
+              assert release["draft"], "Refusing to modify an already published release"
+              asset = api(release["upload_url"].split("{")[0] + "?name=" + ZIP_NAME, "POST", archive, binary=True)
+          assert asset["size"] == len(archive) and asset.get("digest") == "sha256:" + ZIP_SHA256
+          if release["draft"]:
+              release = api("/releases/" + str(release["id"]), "PATCH", {"draft": False, "make_latest": "true"})
+          assert release["draft"] is False and release["prerelease"] is False
+          tag = api("/git/ref/tags/" + TAG)
+          assert tag["object"]["sha"] == SHA
+          after_releases = {r["id"]: r for r in api("/releases?per_page=100")}
+          for identifier, before in old_releases.items():
+              after = after_releases[identifier]
+              for field in ["tag_name", "name", "body", "target_commitish", "published_at", "updated_at", "assets"]:
+                  assert before[field] == after[field], ("Existing release changed", identifier, field)
+          after_refs = {r["ref"]: r["object"] for r in api("/git/matching-refs/tags/")}
+          assert all(after_refs.get(ref) == value for ref, value in old_refs.items())
+          print(json.dumps({"published": True, "release_url": release["html_url"], "commit": SHA,
+                            "asset_sha256": ZIP_SHA256, "package_files_verified": 251,
+                            "preserved_releases": len(old_releases), "preserved_tags": len(old_refs)}))
+          

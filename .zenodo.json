@@ -14,9 +14,9 @@
       "affiliation": "School of Interdisciplinary Industrial Studies, Hanyang University, Seoul 04763, South Korea"
     }
   ],
-  "title": "Code for Image embeddings add limited predictive value to metadata in two NFT collections",
-  "version": "4.0.3",
-  "description": "Metadata correction to the frozen September 2026 BAYC/MAYC revision release: all three manuscript authors are listed as creators in this Zenodo record and CITATION.cff. DATA_ACCESS.md retains the DuneSQL query and its fixed-snapshot caveat. Modelling code, aggregate results and scientific conclusions are unchanged from v4.0.2. Raw transaction data, NFT images, embeddings, fitted models and row-level predictions remain excluded; full numerical refitting requires the documented inputs. Public tests do not constitute an independent full-data replication.",
+  "title": "Reproducibility package for Evaluating image embeddings and metadata for NFT price prediction using temporal validation",
+  "version": "4.1.0",
+  "description": "Version 4.1.0 contains pseudonymized evaluation targets, grouping information and aligned predictions for recomputation of primary and October 2026 sensitivity-analysis metrics and confidence intervals. Includes executed source, development-selection records, access instructions and integrity checks. Local verification reproduced 9,550 numeric entries across 12 result tables. This is fixed-prediction numerical replay; raw third-party inputs and full refitting are outside its scope. Source code is licensed under MIT; excluded third-party materials are not relicensed.",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
@@ -29,5 +29,12 @@
     "BAYC",
     "MAYC",
     "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22921602",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
   ]
 }

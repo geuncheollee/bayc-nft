@@ -1,0 +1,3 @@
+﻿collection,training_sales,training_tokens,evaluation_sales,evaluation_tokens,strict_evaluation_sales,training_min,training_max,evaluation_min,evaluation_max,2024-04-01_train_sales,2024-04-01_validation_sales,2024-07-01_train_sales,2024-07-01_validation_sales,2024-10-01_train_sales,2024-10-01_validation_sales,pooled_validation_sales
+BAYC,35206,5746,5120,1498,4765,2022-01-01 00:03:36+00:00,2024-12-31 23:57:11+00:00,2025-01-01 00:05:47+00:00,2026-04-13 16:37:47+00:00,29019,3643,32662,1150,33812,1394,6187
+MAYC,95207,9568,13019,2492,11288,2022-01-01 00:14:11+00:00,2024-12-31 20:04:11+00:00,2025-01-01 00:29:59+00:00,2026-04-13 23:27:59+00:00,78986,10092,89078,2495,91573,3634,16221

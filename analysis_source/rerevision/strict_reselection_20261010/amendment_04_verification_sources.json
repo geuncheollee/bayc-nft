@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-10-10T05:36:47.446Z",
+  "scope": "Postprocessing only. Complete source manifest includes report generator. Extend independent verifier to check PCA files, checkpoint-to-preprocessing hashes, token-to-evaluation prediction alignment and final late blend formula. No training, filtering, search or selection rules changed.",
+  "execution_sources_sha256": "50a1d358945bfcfcbcdc0a6988052a7f37f5de3a86483d122ecbc754d323a089",
+  "evaluation_labels_loaded": false
+}

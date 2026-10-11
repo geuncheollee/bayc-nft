@@ -1,0 +1,9 @@
+﻿collection,group,encoding,family,selected_config,pre2025_validation_transaction_rmse,encoder,native_dimension,analysis_dimension,metadata_dimension,idf_document_count,image_dimension,early_dimension,metadata_family,image_family,metadata_config,image_config,image_weight,validation_n,pre2025_validation_transaction_mse
+BAYC,metadata,TF-IDF,Ridge,"{""alpha"": 1000}",1.3836209400597699,,,,,,,,,,,,,,
+BAYC,image,,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",1.3843807479674342,SDXL_VAE,16384,1024,,,,,,,,,,,
+BAYC,early,,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.3835343128780728,SAM,,,171,5746,256,427,,,,,,,
+BAYC,late,,,,1.3835196132478815,DreamSim,,,,,,,Ridge,XGBoost,"{""alpha"": 1000}","{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.2,6187,1.9141265202415678
+MAYC,metadata,TF-IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.4019698128769849,,,,,,,,,,,,,,
+MAYC,image,,PLS,"{""components"": 16}",0.40231386609974634,SDXL_VAE,16384,1024,,,,,,,,,,,
+MAYC,early,,PLS,"{""components"": 16}",0.4017962604615376,CLIP,,,341,9568,768,1109,,,,,,,
+MAYC,late,,,,0.401761060320268,SDXL_VAE,,,,,,,XGBoost,PLS,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}","{""components"": 16}",0.4,16221,0.161411949589666

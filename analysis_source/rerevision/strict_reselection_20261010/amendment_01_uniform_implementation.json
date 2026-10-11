@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-10T05:24:04.718769+00:00",
+  "reason": "Step 4 showed tree training implementation dependence. Step 5 requires uniform training representation across feature groups.",
+  "decision": "All feature groups use token-level transformed-target means and sale-count weights for squared-loss models. PLS uses signed weighted centering; SVR retains all transaction responses and the regularized intercept.",
+  "tree_limit": "All trees consistently use counted training across metadata/image/early. This is an explicitly different algorithm from transaction-row tree fitting, NOT a claim of implementation equivalence. Base condition is rerun in the same runtime; compare cleaning conditions within this implementation.",
+  "runtime": {
+    "sklearn": "1.8.0",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "xgboost": "3.0.5",
+    "lightgbm": "4.6.0"
+  },
+  "new_evaluation_results_loaded": false,
+  "original_analysis_plan_sha256": "ed4715b95550236f491a4ba91326d4438c5c6b8687649ee4e7f8b43235449b28",
+  "protocol_sha256": "a50266e665f3f8ff622147c035afaec03269fd4c4bd0f2e80bcb5e3ffef3750b"
+}

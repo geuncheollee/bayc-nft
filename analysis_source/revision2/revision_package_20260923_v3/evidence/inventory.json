@@ -1,0 +1,1010 @@
+{
+  "metadata": {
+    "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+    "files": [
+      "analysis_summary.md",
+      "baseline_results.csv",
+      "cohort_audit.csv",
+      "completion.json",
+      "experiment_specification.json",
+      "fixed_out_of_time_evaluation_32_combinations.csv",
+      "postrun_validation.json",
+      "pre2025_model_selection_32_combinations.csv",
+      "pre2025_tuning_all_configs.csv",
+      "progress.json",
+      "run_manifest.json",
+      "selection_freeze.json",
+      "tfidf_constrained_metadata_selection.csv",
+      "tfidf_constrained_metadata_selection.json",
+      "TFIDF_CONSTRAINED_SELECTION.md",
+      "training_performance_32_combinations.csv"
+    ],
+    "baseline_results.csv": {
+      "rows": 8,
+      "columns": [
+        "collection",
+        "sample",
+        "baseline",
+        "constant_prediction",
+        "equal_token_n_transactions",
+        "equal_token_n_tokens",
+        "equal_token_rmse",
+        "equal_token_mae",
+        "equal_token_r2",
+        "equal_token_target_sd",
+        "transaction_rmse",
+        "transaction_mae",
+        "transaction_r2",
+        "transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "sample": "training_2022_2024",
+          "baseline": "LRP_zero",
+          "constant_prediction": "0.0",
+          "equal_token_n_transactions": "35206",
+          "equal_token_n_tokens": "5746",
+          "equal_token_rmse": "0.8784607134643608",
+          "equal_token_mae": "0.1936836226944849",
+          "equal_token_r2": "-0.002295548725201657",
+          "equal_token_target_sd": "0.877454171372585",
+          "transaction_rmse": "0.7750883006921888",
+          "transaction_mae": "0.1264950264806943",
+          "transaction_r2": "-0.0013471858535751835",
+          "transaction_target_sd": "0.7745667336219183"
+        }
+      ]
+    },
+    "cohort_audit.csv": {
+      "rows": 2,
+      "columns": [
+        "collection",
+        "training_transactions",
+        "training_tokens",
+        "training_min_time",
+        "training_max_time"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "training_transactions": "35206",
+          "training_tokens": "5746",
+          "training_min_time": "2022-01-01 00:03:36+00:00",
+          "training_max_time": "2024-12-31 23:57:11+00:00"
+        }
+      ]
+    },
+    "fixed_out_of_time_evaluation_32_combinations.csv": {
+      "rows": 32,
+      "columns": [
+        "collection",
+        "encoding",
+        "family",
+        "development_selected",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd",
+        "known_equal_token_n_transactions",
+        "known_equal_token_n_tokens",
+        "known_equal_token_rmse",
+        "known_equal_token_mae",
+        "known_equal_token_r2",
+        "known_equal_token_target_sd",
+        "unseen_equal_token_n_transactions",
+        "unseen_equal_token_n_tokens",
+        "unseen_equal_token_rmse",
+        "unseen_equal_token_mae",
+        "unseen_equal_token_r2",
+        "unseen_equal_token_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoding": "one-hot",
+          "family": "OLS",
+          "development_selected": "False",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.3840146620827387",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.2657348045485846",
+          "evaluation_equal_token_mae": "0.12130344516761099",
+          "evaluation_equal_token_r2": "0.30811459441321665",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.2524425248852931",
+          "evaluation_transaction_mae": "0.10690096391058837",
+          "evaluation_transaction_r2": "0.14957478693378545",
+          "evaluation_transaction_target_sd": "0.2737439007579036",
+          "known_equal_token_n_transactions": "3538",
+          "known_equal_token_n_tokens": "1012",
+          "known_equal_token_rmse": "0.29040051375763887",
+          "known_equal_token_mae": "0.11998979408052991",
+          "known_equal_token_r2": "0.29110364486682183",
+          "known_equal_token_target_sd": "0.3449101767701867",
+          "unseen_equal_token_n_transactions": "1582",
+          "unseen_equal_token_n_tokens": "486",
+          "unseen_equal_token_rmse": "0.2050634833884244",
+          "unseen_equal_token_mae": "0.12403886677280855",
+          "unseen_equal_token_r2": "0.36331769718356244",
+          "unseen_equal_token_target_sd": "0.25699634166343244"
+        }
+      ]
+    },
+    "pre2025_model_selection_32_combinations.csv": {
+      "rows": 32,
+      "columns": [
+        "collection",
+        "encoding",
+        "family",
+        "selected_config",
+        "pre2025_validation_transaction_rmse"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoding": "one-hot",
+          "family": "OLS",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.3840146620827387"
+        }
+      ]
+    },
+    "pre2025_tuning_all_configs.csv": {
+      "rows": 708,
+      "columns": [
+        "collection",
+        "encoding",
+        "family",
+        "origin",
+        "end",
+        "valid",
+        "train_n",
+        "validation_n",
+        "training_min",
+        "training_max",
+        "training_row_sha256",
+        "validation_row_sha256",
+        "dimension",
+        "transaction_mse",
+        "transaction_rmse",
+        "equal_token_mse",
+        "equal_token_rmse",
+        "equal_token_n",
+        "seconds",
+        "config",
+        "status",
+        "target_parameters"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoding": "one-hot",
+          "family": "OLS",
+          "origin": "2024-04-01",
+          "end": "2024-07-01",
+          "valid": "True",
+          "train_n": "29019",
+          "validation_n": "3643",
+          "training_min": "2022-01-01 00:03:36+00:00",
+          "training_max": "2024-03-31 23:18:35+00:00",
+          "training_row_sha256": "62d3f670c9681fbccd86f3ceb7f6f0aedf2a046b6f4da5c37e7c84feca590f4d",
+          "validation_row_sha256": "82e8fcafedb1dc06cd0cc6d906be19ef4942359e6fda0bfb3767731b8cf6945d",
+          "dimension": "171",
+          "transaction_mse": "0.03304337823420895",
+          "transaction_rmse": "0.1817783766959342",
+          "equal_token_mse": "0.05751380180179832",
+          "equal_token_rmse": "0.23982035318504208",
+          "equal_token_n": "841",
+          "seconds": "0.30962240003282204",
+          "config": "{}",
+          "status": "{\"valid\": true, \"warnings\": []}",
+          "target_parameters": "{\"center\": -0.014252022707201389, \"normalized_MAD\": 0.08531864517626224}"
+        }
+      ]
+    },
+    "tfidf_constrained_metadata_selection.csv": {
+      "rows": 2,
+      "columns": [
+        "collection",
+        "encoding",
+        "family",
+        "selected_hyperparameters",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoding": "TF-IDF",
+          "family": "Ridge",
+          "selected_hyperparameters": "{alpha: 1000}",
+          "pre2025_validation_transaction_rmse": "1.3836209400597699",
+          "evaluation_transaction_rmse": "0.252755229444784",
+          "evaluation_transaction_mae": "0.10693521788717711",
+          "evaluation_transaction_r2": "0.14746661162736452",
+          "evaluation_equal_token_rmse": "0.26642151058975055",
+          "evaluation_equal_token_mae": "0.12146621374699798",
+          "evaluation_equal_token_r2": "0.3045340639035691"
+        }
+      ]
+    },
+    "training_performance_32_combinations.csv": {
+      "rows": 32,
+      "columns": [
+        "collection",
+        "encoding",
+        "family",
+        "training_equal_token_n_transactions",
+        "training_equal_token_n_tokens",
+        "training_equal_token_rmse",
+        "training_equal_token_mae",
+        "training_equal_token_r2",
+        "training_equal_token_target_sd",
+        "training_transaction_rmse",
+        "training_transaction_mae",
+        "training_transaction_r2",
+        "training_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoding": "one-hot",
+          "family": "OLS",
+          "training_equal_token_n_transactions": "35206",
+          "training_equal_token_n_tokens": "5746",
+          "training_equal_token_rmse": "0.8603755274166728",
+          "training_equal_token_mae": "0.16767727275834335",
+          "training_equal_token_r2": "0.038548875489608614",
+          "training_equal_token_target_sd": "0.877454171372585",
+          "training_transaction_rmse": "0.7698338090643473",
+          "training_transaction_mae": "0.11731517833012009",
+          "training_transaction_r2": "0.012183493777925936",
+          "training_transaction_target_sd": "0.7745667336219183"
+        }
+      ]
+    }
+  },
+  "image": {
+    "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1",
+    "files": [
+      "analysis_summary.md",
+      "completion.json",
+      "embedding_audit.csv",
+      "experiment_specification.json",
+      "fixed_out_of_time_image_evaluation_112_combinations.csv",
+      "pre2025_image_model_selection_112_combinations.csv",
+      "pre2025_tuning_all_configs.csv",
+      "progress.json",
+      "resume_20260920_234433.stderr.log",
+      "resume_20260920_234433.stdout.log",
+      "resume_fix_20260921_081411.stderr.log",
+      "resume_fix_20260921_081411.stdout.log",
+      "resume_fix_amendment_20260921.json",
+      "run_manifest.json",
+      "selected_image_learner_by_encoder.csv",
+      "selection_freeze.json",
+      "training_performance_112_combinations.csv",
+      "worker.stderr.log",
+      "worker.stdout.log"
+    ],
+    "embedding_audit.csv": {
+      "rows": 14,
+      "columns": [
+        "collection",
+        "encoder",
+        "matrix_path",
+        "matrix_sha256",
+        "native_dimension",
+        "dtype",
+        "matrix_rows",
+        "registry_token_ids",
+        "duplicate_registry_token_ids",
+        "training_transactions",
+        "training_tokens",
+        "missing_training_tokens",
+        "row_alignment_verified",
+        "finite_matrix"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "matrix_path": "revision\\dinov2_fullframe_features_20260909\\bayc_features_dinov2_fullframe.npy",
+          "matrix_sha256": "2aad264b6fe682c80f09778f13810cf41c0dfc6527a4551663dcf74d8e96deee",
+          "native_dimension": "1024",
+          "dtype": "float32",
+          "matrix_rows": "9366",
+          "registry_token_ids": "9366",
+          "duplicate_registry_token_ids": "0",
+          "training_transactions": "35206",
+          "training_tokens": "5746",
+          "missing_training_tokens": "0",
+          "row_alignment_verified": "True",
+          "finite_matrix": "True"
+        }
+      ]
+    },
+    "fixed_out_of_time_image_evaluation_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "encoder_learner_selected_pre2025",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "encoder_learner_selected_pre2025": "False",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.3859838816558887",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.2915212981609759",
+          "evaluation_equal_token_mae": "0.1310954787524543",
+          "evaluation_equal_token_r2": "0.16732050756869588",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.26308105179003927",
+          "evaluation_transaction_mae": "0.11400054441760459",
+          "evaluation_transaction_r2": "0.07638657701024498",
+          "evaluation_transaction_target_sd": "0.2737439007579036"
+        }
+      ]
+    },
+    "pre2025_image_model_selection_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "native_dimension",
+        "analysis_dimension",
+        "selected_config",
+        "pre2025_validation_transaction_rmse"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "native_dimension": "1024",
+          "analysis_dimension": "1024",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.3859838816558887"
+        }
+      ]
+    },
+    "pre2025_tuning_all_configs.csv": {
+      "rows": 2478,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "origin",
+        "end",
+        "valid",
+        "train_n",
+        "validation_n",
+        "training_min",
+        "training_max",
+        "training_row_sha256",
+        "validation_row_sha256",
+        "analysis_dimension",
+        "native_dimension",
+        "transaction_mse",
+        "transaction_rmse",
+        "equal_token_mse",
+        "equal_token_rmse",
+        "config",
+        "status",
+        "target_parameters",
+        "projection"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "origin": "2024-04-01",
+          "end": "2024-07-01",
+          "valid": "True",
+          "train_n": "29019",
+          "validation_n": "3643",
+          "training_min": "2022-01-01 00:03:36+00:00",
+          "training_max": "2024-03-31 23:18:35+00:00",
+          "training_row_sha256": "62d3f670c9681fbccd86f3ceb7f6f0aedf2a046b6f4da5c37e7c84feca590f4d",
+          "validation_row_sha256": "82e8fcafedb1dc06cd0cc6d906be19ef4942359e6fda0bfb3767731b8cf6945d",
+          "analysis_dimension": "1024",
+          "native_dimension": "1024",
+          "transaction_mse": "0.032790237809895574",
+          "transaction_rmse": "0.18108074941830668",
+          "equal_token_mse": "0.05679734484105914",
+          "equal_token_rmse": "0.23832193529144383",
+          "config": "{}",
+          "status": "{\"converged\": true, \"finite\": true, \"n_iter\": [], \"seconds\": 0.48643009999068454, \"valid\": true, \"warnings\": []}",
+          "target_parameters": "{\"center\": -0.014252022707201389, \"normalized_MAD\": 0.08531864517626224}",
+          "projection": "null"
+        }
+      ]
+    },
+    "selected_image_learner_by_encoder.csv": {
+      "rows": 14,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "encoder_learner_selected_pre2025",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "PLS",
+          "encoder_learner_selected_pre2025": "True",
+          "selected_config": "{\"components\": 32}",
+          "pre2025_validation_transaction_rmse": "1.3857625699374594",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.29499455718585255",
+          "evaluation_equal_token_mae": "0.13030583168882304",
+          "evaluation_equal_token_r2": "0.14736079788508682",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.26327425496534346",
+          "evaluation_transaction_mae": "0.11234349501554383",
+          "evaluation_transaction_r2": "0.07502950040835477",
+          "evaluation_transaction_target_sd": "0.2737439007579036"
+        }
+      ]
+    },
+    "training_performance_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "training_equal_token_n_transactions",
+        "training_equal_token_n_tokens",
+        "training_equal_token_rmse",
+        "training_equal_token_mae",
+        "training_equal_token_r2",
+        "training_equal_token_target_sd",
+        "training_transaction_rmse",
+        "training_transaction_mae",
+        "training_transaction_r2",
+        "training_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "training_equal_token_n_transactions": "35206",
+          "training_equal_token_n_tokens": "5746",
+          "training_equal_token_rmse": "0.8613235926289383",
+          "training_equal_token_mae": "0.16862404319570884",
+          "training_equal_token_r2": "0.03642882315048612",
+          "training_equal_token_target_sd": "0.877454171372585",
+          "training_transaction_rmse": "0.7692458741839255",
+          "training_transaction_mae": "0.11502248457800472",
+          "training_transaction_r2": "0.013691741402533375",
+          "training_transaction_target_sd": "0.7745667336219183"
+        }
+      ]
+    }
+  },
+  "early": {
+    "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1",
+    "files": [
+      "analysis_summary.md",
+      "cohort_audit.csv",
+      "completion.json",
+      "development_selected_early_model.csv",
+      "experiment_specification.json",
+      "fixed_out_of_time_early_evaluation_112_combinations.csv",
+      "pre2025_early_model_selection_112_combinations.csv",
+      "pre2025_tuning_all_configs.csv",
+      "progress.json",
+      "run_manifest.json",
+      "selected_early_learner_by_encoder.csv",
+      "selection_freeze.json",
+      "training_performance_112_combinations.csv",
+      "worker_20260921_175602.stderr.log",
+      "worker_20260921_175602.stdout.log",
+      "worker_20260921_175622.stderr.log",
+      "worker_20260921_175622.stdout.log"
+    ],
+    "cohort_audit.csv": {
+      "rows": 14,
+      "columns": [
+        "collection",
+        "encoder",
+        "training_transactions",
+        "training_tokens",
+        "registry_tokens",
+        "native_image_dimension",
+        "training_min",
+        "training_max",
+        "token_alignment_verified"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "training_transactions": "35206",
+          "training_tokens": "5746",
+          "registry_tokens": "9366",
+          "native_image_dimension": "1024",
+          "training_min": "2022-01-01 00:03:36+00:00",
+          "training_max": "2024-12-31 23:57:11+00:00",
+          "token_alignment_verified": "True"
+        }
+      ]
+    },
+    "development_selected_early_model.csv": {
+      "rows": 2,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "encoder_learner_selected_pre2025",
+        "overall_selected_pre2025",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "SAM",
+          "family": "LinearSVR",
+          "encoder_learner_selected_pre2025": "True",
+          "overall_selected_pre2025": "True",
+          "selected_config": "{\"C\": 0.01, \"epsilon\": 0.2}",
+          "pre2025_validation_transaction_rmse": "1.3835343128780728",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.2651710113586901",
+          "evaluation_equal_token_mae": "0.12113415665046447",
+          "evaluation_equal_token_r2": "0.3110473414114948",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.25252791492869336",
+          "evaluation_transaction_mae": "0.10685743945183943",
+          "evaluation_transaction_r2": "0.1489993678155198",
+          "evaluation_transaction_target_sd": "0.2737439007579036"
+        }
+      ]
+    },
+    "fixed_out_of_time_early_evaluation_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "encoder_learner_selected_pre2025",
+        "overall_selected_pre2025",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "encoder_learner_selected_pre2025": "False",
+          "overall_selected_pre2025": "False",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.387676331102934",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.27906204691887215",
+          "evaluation_equal_token_mae": "0.12759926911512234",
+          "evaluation_equal_token_r2": "0.23697487052426047",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.2588856495398795",
+          "evaluation_transaction_mae": "0.11241295905680704",
+          "evaluation_transaction_r2": "0.10560975895459557",
+          "evaluation_transaction_target_sd": "0.2737439007579036"
+        }
+      ]
+    },
+    "pre2025_early_model_selection_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "metadata_dimension",
+        "idf_document_count",
+        "image_dimension",
+        "early_dimension",
+        "selected_config",
+        "pre2025_validation_transaction_rmse"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "metadata_dimension": "171",
+          "idf_document_count": "5746",
+          "image_dimension": "1024",
+          "early_dimension": "1195",
+          "selected_config": "{}",
+          "pre2025_validation_transaction_rmse": "1.387676331102934"
+        }
+      ]
+    },
+    "pre2025_tuning_all_configs.csv": {
+      "rows": 2478,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "origin",
+        "end",
+        "valid",
+        "train_n",
+        "validation_n",
+        "training_min",
+        "training_max",
+        "training_row_sha256",
+        "validation_row_sha256",
+        "metadata_dimension",
+        "idf_document_count",
+        "image_dimension",
+        "early_dimension",
+        "native_image_dimension",
+        "prediction_file",
+        "prediction_sha256",
+        "transaction_mse",
+        "transaction_rmse",
+        "equal_token_mse",
+        "equal_token_rmse",
+        "config",
+        "status",
+        "target_parameters",
+        "projection"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "origin": "2024-04-01",
+          "end": "2024-07-01",
+          "valid": "True",
+          "train_n": "29019",
+          "validation_n": "3643",
+          "training_min": "2022-01-01 00:03:36+00:00",
+          "training_max": "2024-03-31 23:18:35+00:00",
+          "training_row_sha256": "62d3f670c9681fbccd86f3ceb7f6f0aedf2a046b6f4da5c37e7c84feca590f4d",
+          "validation_row_sha256": "82e8fcafedb1dc06cd0cc6d906be19ef4942359e6fda0bfb3767731b8cf6945d",
+          "metadata_dimension": "171",
+          "idf_document_count": "5209",
+          "image_dimension": "1024",
+          "early_dimension": "1195",
+          "native_image_dimension": "1024",
+          "prediction_file": "checkpoints\\BAYC\\DINOv2\\2024-04-01\\OLS\\0.npy",
+          "prediction_sha256": "7f8d9a2e31c53afd0c4e9a241cf6475d1ad49d9b6b5063149b85a6244afad00d",
+          "transaction_mse": "0.043021923954225244",
+          "transaction_rmse": "0.20741727014456932",
+          "equal_token_mse": "0.07853580591542257",
+          "equal_token_rmse": "0.2802424056338058",
+          "config": "{}",
+          "status": "{\"converged\": true, \"finite\": true, \"n_iter\": [], \"seconds\": 0.817247300001327, \"valid\": true, \"warnings\": []}",
+          "target_parameters": "{\"center\": -0.014252022707201389, \"normalized_MAD\": 0.08531864517626224}",
+          "projection": "null"
+        }
+      ]
+    },
+    "selected_early_learner_by_encoder.csv": {
+      "rows": 14,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "encoder_learner_selected_pre2025",
+        "overall_selected_pre2025",
+        "selected_config",
+        "pre2025_validation_transaction_rmse",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "ElasticNet",
+          "encoder_learner_selected_pre2025": "True",
+          "overall_selected_pre2025": "False",
+          "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.5}",
+          "pre2025_validation_transaction_rmse": "1.3836791732690015",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.27042916170559844",
+          "evaluation_equal_token_mae": "0.12272546648837837",
+          "evaluation_equal_token_r2": "0.2834535740321086",
+          "evaluation_equal_token_target_sd": "0.3194709364844748",
+          "evaluation_transaction_rmse": "0.2540555832880539",
+          "evaluation_transaction_mae": "0.10726713709727234",
+          "evaluation_transaction_r2": "0.13867196256032321",
+          "evaluation_transaction_target_sd": "0.2737439007579036"
+        }
+      ]
+    },
+    "training_performance_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "family",
+        "training_equal_token_n_transactions",
+        "training_equal_token_n_tokens",
+        "training_equal_token_rmse",
+        "training_equal_token_mae",
+        "training_equal_token_r2",
+        "training_equal_token_target_sd",
+        "training_transaction_rmse",
+        "training_transaction_mae",
+        "training_transaction_r2",
+        "training_transaction_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "family": "OLS",
+          "training_equal_token_n_transactions": "35206",
+          "training_equal_token_n_tokens": "5746",
+          "training_equal_token_rmse": "0.8694669574878261",
+          "training_equal_token_mae": "0.1639621490735848",
+          "training_equal_token_r2": "0.01812256750162944",
+          "training_equal_token_target_sd": "0.877454171372585",
+          "training_transaction_rmse": "0.7702593520176705",
+          "training_transaction_mae": "0.11324384661372221",
+          "training_transaction_r2": "0.01109111635901916",
+          "training_transaction_target_sd": "0.7745667336219184"
+        }
+      ]
+    }
+  },
+  "late": {
+    "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2",
+    "files": [
+      "analysis_summary.md",
+      "completion.json",
+      "development_selected_late_model.csv",
+      "experiment_specification.json",
+      "fixed_out_of_time_late_evaluation_112_combinations.csv",
+      "pre2025_late_model_selection_112_combinations.csv",
+      "pre2025_weight_grid_1232_combinations.csv",
+      "progress.json",
+      "run_manifest.json",
+      "selection_freeze.json",
+      "worker_20260922_115904.stderr.log",
+      "worker_20260922_115904.stdout.log"
+    ],
+    "development_selected_late_model.csv": {
+      "rows": 2,
+      "columns": [
+        "collection",
+        "encoder",
+        "metadata_family",
+        "image_family",
+        "metadata_config",
+        "image_config",
+        "image_weight",
+        "validation_n",
+        "pre2025_validation_transaction_rmse",
+        "pre2025_validation_transaction_mse",
+        "overall_selected_pre2025",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DreamSim",
+          "metadata_family": "Ridge",
+          "image_family": "XGBoost",
+          "metadata_config": "{\"alpha\": 1000}",
+          "image_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 15}",
+          "image_weight": "0.2",
+          "validation_n": "6187",
+          "pre2025_validation_transaction_rmse": "1.3835196132478815",
+          "pre2025_validation_transaction_mse": "1.9141265202415678",
+          "overall_selected_pre2025": "True",
+          "evaluation_transaction_rmse": "0.25293512879497965",
+          "evaluation_transaction_mae": "0.1068606062710733",
+          "evaluation_transaction_r2": "0.14625259295963078",
+          "evaluation_transaction_target_sd": "0.2737439007579036",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.2662858307308526",
+          "evaluation_equal_token_mae": "0.12134782991010068",
+          "evaluation_equal_token_r2": "0.3052422401498306",
+          "evaluation_equal_token_target_sd": "0.3194709364844748"
+        }
+      ]
+    },
+    "fixed_out_of_time_late_evaluation_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "metadata_family",
+        "image_family",
+        "metadata_config",
+        "image_config",
+        "image_weight",
+        "validation_n",
+        "pre2025_validation_transaction_rmse",
+        "pre2025_validation_transaction_mse",
+        "overall_selected_pre2025",
+        "evaluation_transaction_rmse",
+        "evaluation_transaction_mae",
+        "evaluation_transaction_r2",
+        "evaluation_transaction_target_sd",
+        "evaluation_equal_token_n_transactions",
+        "evaluation_equal_token_n_tokens",
+        "evaluation_equal_token_rmse",
+        "evaluation_equal_token_mae",
+        "evaluation_equal_token_r2",
+        "evaluation_equal_token_target_sd"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "metadata_family": "Ridge",
+          "image_family": "OLS",
+          "metadata_config": "{\"alpha\": 1000}",
+          "image_config": "{}",
+          "image_weight": "0.0",
+          "validation_n": "6187",
+          "pre2025_validation_transaction_rmse": "1.38362094005977",
+          "pre2025_validation_transaction_mse": "1.9144069057718818",
+          "overall_selected_pre2025": "False",
+          "evaluation_transaction_rmse": "0.252755229444784",
+          "evaluation_transaction_mae": "0.10693521788717711",
+          "evaluation_transaction_r2": "0.14746661162736452",
+          "evaluation_transaction_target_sd": "0.2737439007579036",
+          "evaluation_equal_token_n_transactions": "5120",
+          "evaluation_equal_token_n_tokens": "1498",
+          "evaluation_equal_token_rmse": "0.26642151058975055",
+          "evaluation_equal_token_mae": "0.12146621374699798",
+          "evaluation_equal_token_r2": "0.3045340639035691",
+          "evaluation_equal_token_target_sd": "0.3194709364844748"
+        }
+      ]
+    },
+    "pre2025_late_model_selection_112_combinations.csv": {
+      "rows": 112,
+      "columns": [
+        "collection",
+        "encoder",
+        "metadata_family",
+        "image_family",
+        "metadata_config",
+        "image_config",
+        "image_weight",
+        "validation_n",
+        "pre2025_validation_transaction_rmse",
+        "pre2025_validation_transaction_mse"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "metadata_family": "Ridge",
+          "image_family": "OLS",
+          "metadata_config": "{\"alpha\": 1000}",
+          "image_config": "{}",
+          "image_weight": "0.0",
+          "validation_n": "6187",
+          "pre2025_validation_transaction_rmse": "1.38362094005977",
+          "pre2025_validation_transaction_mse": "1.9144069057718818"
+        }
+      ]
+    },
+    "pre2025_weight_grid_1232_combinations.csv": {
+      "rows": 1232,
+      "columns": [
+        "collection",
+        "encoder",
+        "image_family",
+        "image_weight",
+        "validation_n",
+        "pre2025_validation_transaction_mse",
+        "pre2025_validation_transaction_rmse"
+      ],
+      "first": [
+        {
+          "collection": "BAYC",
+          "encoder": "DINOv2",
+          "image_family": "OLS",
+          "image_weight": "0.0",
+          "validation_n": "6187",
+          "pre2025_validation_transaction_mse": "1.9144069057718818",
+          "pre2025_validation_transaction_rmse": "1.38362094005977"
+        }
+      ]
+    }
+  }
+}

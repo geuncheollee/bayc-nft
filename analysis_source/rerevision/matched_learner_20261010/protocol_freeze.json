@@ -1,0 +1,1914 @@
+{
+  "created_utc": "2026-10-10T01:07:14.104487+00:00",
+  "scope": "Matched learner comparisons and row-versus-counted implementation audit; no new model selection from evaluation",
+  "cases": [
+    {
+      "id": "BAYC_metadata_TF_IDF_OLS",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 1.3837716124030137,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_Ridge",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "Ridge",
+      "config": {
+        "alpha": 1000
+      },
+      "development_rmse": 1.3836209400597699,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_ElasticNet",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "development_rmse": 1.3836508348720182,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_PLS",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "PLS",
+      "config": {
+        "components": 8
+      },
+      "development_rmse": 1.3837066268046412,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_LinearSVR",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LinearSVR",
+      "config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "development_rmse": 1.3836230845277993,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_HistGradientBoosting",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3860396460015814,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_XGBoost",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 1.3859760161785029,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_metadata_TF_IDF_LightGBM",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3859202591665674,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_OLS",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 0.4020113293666193,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_Ridge",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "Ridge",
+      "config": {
+        "alpha": 0.01
+      },
+      "development_rmse": 0.4020113389926933,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_ElasticNet",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.1
+      },
+      "development_rmse": 0.4020385294573054,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_PLS",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "PLS",
+      "config": {
+        "components": 32
+      },
+      "development_rmse": 0.4020113293666203,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_LinearSVR",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LinearSVR",
+      "config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "development_rmse": 0.4021477369963618,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_HistGradientBoosting",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.40203061229107717,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_XGBoost",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.4019698128769849,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "MAYC_metadata_TF_IDF_LightGBM",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.40200568221996325,
+      "role": "matched",
+      "original_implementation": "row",
+      "alternative_implementation": "counted"
+    },
+    {
+      "id": "BAYC_image_AIM_OLS",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "AIM",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 1.3851019007334247,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SDXL_VAE_Ridge",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "Ridge",
+      "config": {
+        "alpha": 1000
+      },
+      "development_rmse": 1.3845859017860909,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SDXL_VAE_ElasticNet",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "development_rmse": 1.3843807479674342,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SigLIP2_PLS",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SigLIP2",
+      "family": "PLS",
+      "config": {
+        "components": 32
+      },
+      "development_rmse": 1.3846473149861585,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SigLIP2_LinearSVR",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SigLIP2",
+      "family": "LinearSVR",
+      "config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "development_rmse": 1.38479045911654,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SDXL_VAE_HistGradientBoosting",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3844754379363233,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SDXL_VAE_XGBoost",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 1.384759138658085,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_SDXL_VAE_LightGBM",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 1.38485566724397,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_OLS",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 0.4023139208107301,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_Ridge",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "Ridge",
+      "config": {
+        "alpha": 0.01
+      },
+      "development_rmse": 0.40231392153914913,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_ElasticNet",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.1
+      },
+      "development_rmse": 0.40233424957366937,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_PLS",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "config": {
+        "components": 16
+      },
+      "development_rmse": 0.40231386609974634,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_LinearSVR",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "LinearSVR",
+      "config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "development_rmse": 0.402490468199114,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_HistGradientBoosting",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.4026594818886485,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_XGBoost",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.40262134711811276,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_image_SDXL_VAE_LightGBM",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 0.40261370823019654,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SAM_OLS",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 1.3845757813616095,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SAM_Ridge",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "Ridge",
+      "config": {
+        "alpha": 100
+      },
+      "development_rmse": 1.383597396257674,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SigLIP2_ElasticNet",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SigLIP2",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "development_rmse": 1.383636227506758,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SAM_PLS",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "PLS",
+      "config": {
+        "components": 32
+      },
+      "development_rmse": 1.3835849252692864,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SAM_LinearSVR",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "development_rmse": 1.3835343128780728,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SDXL_VAE_HistGradientBoosting",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3847698713222123,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SDXL_VAE_XGBoost",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SDXL_VAE",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 10,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3848442300548323,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_early_SDXL_VAE_LightGBM",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.384967928385187,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_SAM_OLS",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "OLS",
+      "config": {},
+      "development_rmse": 0.4018827551226397,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_CLIP_Ridge",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "Ridge",
+      "config": {
+        "alpha": 1000
+      },
+      "development_rmse": 0.40187265282666934,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_CLIP_ElasticNet",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "ElasticNet",
+      "config": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      },
+      "development_rmse": 0.40190956031998865,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_CLIP_PLS",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "config": {
+        "components": 16
+      },
+      "development_rmse": 0.4017962604615376,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_SAM_LinearSVR",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "config": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "development_rmse": 0.4020557045118142,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_SigLIP2_HistGradientBoosting",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "SigLIP2",
+      "family": "HistGradientBoosting",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.4023538722678342,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_SAM_XGBoost",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 0.4023377159356255,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "MAYC_early_SDXL_VAE_LightGBM",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31
+      },
+      "development_rmse": 0.4025801009859741,
+      "role": "matched",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    },
+    {
+      "id": "BAYC_image_DreamSim_XGBoost",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "DreamSim",
+      "family": "XGBoost",
+      "config": {
+        "l2_regularization": 1,
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15
+      },
+      "development_rmse": 1.3849173632427434,
+      "role": "late_component",
+      "original_implementation": "counted",
+      "alternative_implementation": "row"
+    }
+  ],
+  "late_representatives": [
+    {
+      "collection": "BAYC",
+      "encoder": "DreamSim",
+      "metadata_family": "Ridge",
+      "image_family": "XGBoost",
+      "metadata_config": "{\"alpha\": 1000}",
+      "image_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 15}",
+      "image_weight": "0.2",
+      "validation_n": "6187",
+      "pre2025_validation_transaction_rmse": "1.3835196132478815",
+      "pre2025_validation_transaction_mse": "1.9141265202415678",
+      "overall_selected_pre2025": "True",
+      "evaluation_transaction_rmse": "0.25293512879497965",
+      "evaluation_transaction_mae": "0.1068606062710733",
+      "evaluation_transaction_r2": "0.14625259295963078",
+      "evaluation_transaction_target_sd": "0.2737439007579036",
+      "evaluation_equal_token_n_transactions": "5120",
+      "evaluation_equal_token_n_tokens": "1498",
+      "evaluation_equal_token_rmse": "0.2662858307308526",
+      "evaluation_equal_token_mae": "0.12134782991010068",
+      "evaluation_equal_token_r2": "0.3052422401498306",
+      "evaluation_equal_token_target_sd": "0.3194709364844748"
+    },
+    {
+      "collection": "MAYC",
+      "encoder": "SDXL_VAE",
+      "metadata_family": "XGBoost",
+      "image_family": "PLS",
+      "metadata_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 31}",
+      "image_config": "{\"components\": 16}",
+      "image_weight": "0.4",
+      "validation_n": "16221",
+      "pre2025_validation_transaction_rmse": "0.401761060320268",
+      "pre2025_validation_transaction_mse": "0.161411949589666",
+      "overall_selected_pre2025": "True",
+      "evaluation_transaction_rmse": "0.1663052572943481",
+      "evaluation_transaction_mae": "0.09030598260598348",
+      "evaluation_transaction_r2": "0.24310849443483395",
+      "evaluation_transaction_target_sd": "0.19115654080030414",
+      "evaluation_equal_token_n_transactions": "13019",
+      "evaluation_equal_token_n_tokens": "2492",
+      "evaluation_equal_token_rmse": "0.202721680772422",
+      "evaluation_equal_token_mae": "0.11029840946875494",
+      "evaluation_equal_token_r2": "0.3070816259884974",
+      "evaluation_equal_token_target_sd": "0.24353375185129997"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "rerevision\\baseline_audit_20261010\\Analysis_Plan.md",
+      "sha256": "ed4715b95550236f491a4ba91326d4438c5c6b8687649ee4e7f8b43235449b28",
+      "bytes": 7791,
+      "baseline_verified": false
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\baseline_manifest.json",
+      "sha256": "4fe0086678833fccfff36205261c8e9a30accb8e48bd6461be814a0cf82be5b3",
+      "bytes": 3457717,
+      "baseline_verified": false
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\plan_freeze.json",
+      "sha256": "7d0309e4e51cb0c9c39fb67ec40a9ee6ff8e072d27275be88ddba3728b662cbe",
+      "bytes": 194,
+      "baseline_verified": false
+    },
+    {
+      "path": "rerevision\\matched_learner_20261010\\code\\freeze_protocol.py",
+      "sha256": "fb88983bb4d122d8003b379423834c392016423308c0d6144044428f53b92a12",
+      "bytes": 5993,
+      "baseline_verified": false
+    },
+    {
+      "path": "rerevision\\matched_learner_20261010\\code\\run_implementation.py",
+      "sha256": "dd444e3ec7081406da7c8770085db965e345039d9a9acfb694f7f4580c9a7fe7",
+      "bytes": 10226,
+      "baseline_verified": false
+    },
+    {
+      "path": "rerevision\\matched_learner_20261010\\code\\shared.py",
+      "sha256": "7915eba0fdcc9f3fa21fef98ed6db21de740672ad6f334af283c137d4b2658a4",
+      "bytes": 2221,
+      "baseline_verified": false
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921\\code\\run_early_fusion_tfidf_experiment.py",
+      "sha256": "2667671dbbc9d6decd77ce90c860a151ead0b6469f7172e0a838c8aa6ffddd3a",
+      "bytes": 36064,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SAM_LinearSVR.joblib",
+      "sha256": "e9e2f64bb5d4b411de6e2d6be750c928a62ad06bfddd54561640c459117266f7",
+      "bytes": 28309,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SAM_OLS.joblib",
+      "sha256": "592b811434c051966b8c435e62ecfd7a37d2802985dd160027032b1e84b89dfc",
+      "bytes": 31854,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SAM_PLS.joblib",
+      "sha256": "1d62ce1433a1fac772aadde6e5780477f5e139385b8e2c2c68cccd623bf9cedf",
+      "bytes": 11733127,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SAM_Ridge.joblib",
+      "sha256": "b0cbb24ff315fe1109a489b376ed81e56820ff281ca7ef50fd967b9a001ca62d",
+      "bytes": 28049,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SDXL_VAE_HistGradientBoosting.joblib",
+      "sha256": "1622008de2195fc712520f6bf4f31e3a13022c2df0d0bd1ecfc21eb5c5ea8f0c",
+      "bytes": 2405602,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SDXL_VAE_LightGBM.joblib",
+      "sha256": "e952d1e4ff1d3d559e21ec41deea6a0fe56e4456553baf60d9d6fae300897682",
+      "bytes": 265135,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SDXL_VAE_XGBoost.joblib",
+      "sha256": "531dff57c4fac6c1b24627dd22e0c17017d9f689ea81ad89463cd12107e14c2a",
+      "bytes": 196681,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\BAYC_SigLIP2_ElasticNet.joblib",
+      "sha256": "9e8ca96ad3fc7c5ce6173071f9eecfbaca73b777175f868551a9837cf9812574",
+      "bytes": 44546,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_CLIP_ElasticNet.joblib",
+      "sha256": "1b4805ce22c694b94a3d4f29ddc88a42c2c3aed6b462eab64b10cb3f3ce42498",
+      "bytes": 56337,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_CLIP_PLS.joblib",
+      "sha256": "4c338480db05a741ba4eab017baa8aaf1af12e5dcbdceda2c14cce7213299ae7",
+      "bytes": 9962617,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_CLIP_Ridge.joblib",
+      "sha256": "3f422b10a78f4435db960c47a456415e3b753c04853a5c6e41a7f78cbe3ca246",
+      "bytes": 58405,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_SAM_LinearSVR.joblib",
+      "sha256": "1734754bee27aa8dd99256a2db0ee5b67ef940ce4af979f6ec238b25a770c4dd",
+      "bytes": 43009,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_SAM_OLS.joblib",
+      "sha256": "e945cb2c949a7e19611d8b2639e2e0a85b415e0ec0dd2a02dcb2c5af0fa9eac1",
+      "bytes": 47149,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_SAM_XGBoost.joblib",
+      "sha256": "61f7ccf8e13f6ec91a335d88e3f9ddf1e432a70b64033670f5e1fda46aecf3d1",
+      "bytes": 187915,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_SDXL_VAE_LightGBM.joblib",
+      "sha256": "395bbe2da9df7d034ba0e8395158249daa87bb5d6adc7c4083ad7b2685f74d7e",
+      "bytes": 488562,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\models\\MAYC_SigLIP2_HistGradientBoosting.joblib",
+      "sha256": "966c26f1cbaffd79e4184cb89f40614e60ce4abd247dbea042226b100a5ef9e6",
+      "bytes": 2758099,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\pre2025_early_model_selection_112_combinations.csv",
+      "sha256": "28d09c6c9dc652c8a70ef3700f70d54b32fe51e4141aa460994516f53b32d785",
+      "bytes": 11714,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_LinearSVR.npz",
+      "sha256": "3e4a62a34dbf759ce025a1d12212314f982464e8949262cf2d49d3ed4ed95638",
+      "bytes": 75665,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_OLS.npz",
+      "sha256": "6d3b8ca710ea4f2df307db56b8e8adc45e702490484678dfb0ead518008960d0",
+      "bytes": 75689,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_PLS.npz",
+      "sha256": "5bee75f65f29d31022fa7b32a1287b6cafcb7961030818e4b5a1f12823677214",
+      "bytes": 75669,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_Ridge.npz",
+      "sha256": "eb186c68f999cef885468b75d2489e90b778cdb08a312a4e041a296b77539396",
+      "bytes": 75663,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SDXL_VAE_HistGradientBoosting.npz",
+      "sha256": "70743a8a0523a3b06ab662f8af57b5b2d95d2ac26fbfe42f7d48159134d32075",
+      "bytes": 75702,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SDXL_VAE_LightGBM.npz",
+      "sha256": "091ac433a7b5207105b932e15ee1c1f4bedb31a82bb64869772afcecec0b85b1",
+      "bytes": 75691,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SDXL_VAE_XGBoost.npz",
+      "sha256": "8af0e240635ed5a371d4b43266b3748bc1fef6c65d9c934786c2d0690e6ca8fa",
+      "bytes": 75684,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SigLIP2_ElasticNet.npz",
+      "sha256": "bd9304bfff2c3a350a232083a183faa9055694770e0d14d5792bc856d653c125",
+      "bytes": 75677,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_CLIP_ElasticNet.npz",
+      "sha256": "09c3620dbdad2da34cf8d29280b7ed43caf5b0f68aaefc206e2de7e36726ddc3",
+      "bytes": 175027,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_CLIP_PLS.npz",
+      "sha256": "c04a829659d1341d7c7caef7c6bd0cc1551f0eee46d2b02db480528588cc3fd7",
+      "bytes": 174963,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_CLIP_Ridge.npz",
+      "sha256": "3faaf899732db251e8ce1f714b602f4ea11d9fd611a4f480069da5e9217b8ffd",
+      "bytes": 174988,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_SAM_LinearSVR.npz",
+      "sha256": "a075440a4acf4b71599d4993c26cf8fc64a228da3d5ce2e9ac35444231e4f7ac",
+      "bytes": 174937,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_SAM_OLS.npz",
+      "sha256": "55b07d9d698223fb1024bbcc6903b9d9c3204973f92012ee9c0e45203bce0110",
+      "bytes": 174954,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_SAM_XGBoost.npz",
+      "sha256": "d3ca910420366924383c2c1b017e11bcb53b6726f58e9e786487ef25aaea2e57",
+      "bytes": 175027,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_SDXL_VAE_LightGBM.npz",
+      "sha256": "c5711ae4ccec0cc29d6d8928ee5bfccb4a25611382565ade22ae2b228656848a",
+      "bytes": 175045,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_SigLIP2_HistGradientBoosting.npz",
+      "sha256": "27e46dcd0d5753a6f4166227cee9a0cae3e35144ff7238429b7d33a8341ca876",
+      "bytes": 175016,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\selection_freeze.json",
+      "sha256": "13fe17296796fb1586eb55e95feb45e904e19cab6a184b552f3416cebd134f83",
+      "bytes": 149620,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920\\code\\run_image_experiment.py",
+      "sha256": "97cb961f72df0f98e0b54b54e32d0b457c4d20a23f1bd4b07b6579ccadb1ede8",
+      "bytes": 29935,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_AIM_OLS.joblib",
+      "sha256": "8b7718bf954159b8cdfc206913a537bad97a709ebd73c65ce386e515d1cbb09a",
+      "bytes": 49612,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_DreamSim_XGBoost.joblib",
+      "sha256": "63c3400bfb9f9ac91670e826166c4e8be6bb7c4c08427e48fbb87b941f7a31e7",
+      "bytes": 186470,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SDXL_VAE_ElasticNet.joblib",
+      "sha256": "20fceaec876c37ebeb2ad8c5a6d076ca13c7e2e2a39d74a72e8ba2ce5bf16cd8",
+      "bytes": 40918,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SDXL_VAE_HistGradientBoosting.joblib",
+      "sha256": "5d18172b87282d08a11c36a705b36580d56c8b8a1c4366ab0a39cebb9a6f411a",
+      "bytes": 2261021,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SDXL_VAE_LightGBM.joblib",
+      "sha256": "c99829442165bd48417929e0b8eace4f8cda9123fa75e1bb53e4354721d207e9",
+      "bytes": 438484,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SDXL_VAE_Ridge.joblib",
+      "sha256": "643c0fb38605095ea0ca6e83a48d29bab384f3bbf9288e0cefb346fffba12cc8",
+      "bytes": 41496,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SDXL_VAE_XGBoost.joblib",
+      "sha256": "8c9bbf55e4a51a11f58dfa5c2d721f47ec67e0ebf120abf10682ada02de2a129",
+      "bytes": 345322,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SigLIP2_LinearSVR.joblib",
+      "sha256": "22778feeb8e1f681d67d93ceb98c2eca3faecee3456db1b1bdad571c13cab663",
+      "bytes": 41312,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_SigLIP2_PLS.joblib",
+      "sha256": "bc9f1184941320145188c76609cb350d1f832db0fcbbaf0fab6337fb6a939c25",
+      "bytes": 12136585,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_ElasticNet.joblib",
+      "sha256": "7014cb69abe59c2e91a3fdb38429e4a6e91e914d55d4edad40d66161e01db408",
+      "bytes": 47342,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_HistGradientBoosting.joblib",
+      "sha256": "d428b5425b20c90130114b00e918bcb357a98b485f3c93d3a367e382e1caa854",
+      "bytes": 2533536,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_LightGBM.joblib",
+      "sha256": "d426aea5f23ca1eb0ae143e88fc17eec3ba7248ded56775f62d1e1e4dcd2d9bb",
+      "bytes": 254396,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_LinearSVR.joblib",
+      "sha256": "22d49f5de9b1a4265d6d175eebbcc970f22192e0e1cad342d8aa99e6cf474b34",
+      "bytes": 47602,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_OLS.joblib",
+      "sha256": "f277306912f470444384ce6c64fc963134937af63707538da5ebe61afcc15f82",
+      "bytes": 55924,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_PLS.joblib",
+      "sha256": "99acc2bc5525bd2d9657eb88ed11e97b80d9480a081a5cf612ff396d13ea47a3",
+      "bytes": 9880524,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_Ridge.joblib",
+      "sha256": "9fefa678661b2c1faa5dc0fea50ffd4517a07e4b5c98801db00207f6ff434609",
+      "bytes": 47334,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_SDXL_VAE_XGBoost.joblib",
+      "sha256": "60e87a8e0d7013ada25e549e10a17c4065bb6cf2fc1b5c036500c52799e42e6e",
+      "bytes": 354428,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\pre2025_image_model_selection_112_combinations.csv",
+      "sha256": "719ac95f952526ae250cb09146c07d69287a8ffdf5025cf970c65e8fffecdd43",
+      "bytes": 10673,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_AIM_OLS.npz",
+      "sha256": "2a9b325b605faffb3f867efb8989f09dcabfcaaa01e7e9dbf57af0f1a57a3bc0",
+      "bytes": 75461,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_DreamSim_XGBoost.npz",
+      "sha256": "b568dcc51869a9064c9a9b1e0724d0f74f40ea10a26d4da72863879259a54f52",
+      "bytes": 75454,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_ElasticNet.npz",
+      "sha256": "d0b6fd77a41c9e727be2371b43c8c4f1e5a6696cce5cc25d133eb693db3074d9",
+      "bytes": 75465,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_HistGradientBoosting.npz",
+      "sha256": "cddec38163f7d082e785bc3baf29501da732e89d9e61f7c6ec827b50c3d6dd54",
+      "bytes": 75425,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_LightGBM.npz",
+      "sha256": "33458cbd40854d6e86c3cfd3e8b5b1e4e80dd487547704e470e64f9cee286941",
+      "bytes": 75472,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_Ridge.npz",
+      "sha256": "b375c85d2864f12d36c9eb3cc221f620ead26a60a854c33c0f2eee8396595f75",
+      "bytes": 75441,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_XGBoost.npz",
+      "sha256": "cc5c095135eff09829a9b94591a5a77fd66a3e04c5c0b42d977bfe7062b29fbd",
+      "bytes": 75465,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SigLIP2_LinearSVR.npz",
+      "sha256": "07d73268f1991eb1e6cb47ffa87ac677398cd6f33b2b2f616982366e24af85f2",
+      "bytes": 75462,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SigLIP2_PLS.npz",
+      "sha256": "3094f51f1f8cb43452805d16b5ca4d3bd5235be1dd6fc356a95ab90a724c3839",
+      "bytes": 75450,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_ElasticNet.npz",
+      "sha256": "84041e7170449480c5c59e8d50d2de04606f1aebfc6aba3012e027c41e21302c",
+      "bytes": 173976,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_HistGradientBoosting.npz",
+      "sha256": "9f01c016569879ee6d29b625ba97da021bd2289162749e87d5a033591091d0fe",
+      "bytes": 173999,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_LightGBM.npz",
+      "sha256": "e94c60be961d408c044faa342d116d4bae2f80518ba04d0ed5270500465318f6",
+      "bytes": 173951,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_LinearSVR.npz",
+      "sha256": "39090a1dc481307aed9d0eff40fee44258efbafccd563f82f06be0d63fbf8b75",
+      "bytes": 173907,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_OLS.npz",
+      "sha256": "46fb0057e08c0c2752ce5b494fb70cc51e203eb50be89d0258d51d81fdd19a7f",
+      "bytes": 173969,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_PLS.npz",
+      "sha256": "915f05347045dd221ee8593da67a55f0beade34cf1c5e01bf08260715a3381a6",
+      "bytes": 173967,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_Ridge.npz",
+      "sha256": "4d515b7c0385db93525b1b0b49086e651d9155fb40be6363cafe2443867bf9bd",
+      "bytes": 173936,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_XGBoost.npz",
+      "sha256": "938915c80435c0a50585d3a34779f176527977bcd6a0d729e3ec75614e5b062f",
+      "bytes": 173985,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-04-01\\embeddings_1024.npy",
+      "sha256": "94ef4d49873161041684482bb2c352f866ae789092ab8669038392672558f37f",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-04-01\\manifest.json",
+      "sha256": "636868e4d766ba0ae965a738a9ed9b4d947e95b369398f61ade44ec55ffb2476",
+      "bytes": 1331,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-04-01\\pca.joblib",
+      "sha256": "3b7dbeb6604ce3650be22339c0bca32c47a6353426104122d9b73d942c68570b",
+      "bytes": 14085499,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-07-01\\embeddings_1024.npy",
+      "sha256": "d64a0707f2693b2df4308f47508c19c2459065dad460cd3318bd0e78500c7985",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-07-01\\manifest.json",
+      "sha256": "1b6bd65270c55faff571c994dd9031ba6a2457444febca31bf8c7e6623bb26fe",
+      "bytes": 1330,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-07-01\\pca.joblib",
+      "sha256": "49f00d79044061d25c639245c4f0792d26c2524034c3a3e9bc79f631b72ab25a",
+      "bytes": 14085450,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-10-01\\embeddings_1024.npy",
+      "sha256": "6fcd2f804da6c368a5406a491d70e58ae5bb7bb3acdb302c3818413ca206ea25",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-10-01\\manifest.json",
+      "sha256": "e429782c91b5bca964c712e955462fbc3b750e8ff565bb5f4ec3b279e11b33f6",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2024-10-01\\pca.joblib",
+      "sha256": "2fa7064953e0667e82b995211b4917da63da620c22b80ceee222ad0d0a3b67d9",
+      "bytes": 14085456,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\embeddings_1024.npy",
+      "sha256": "183de5f5a0507e6eb9383fd02dbaa1e0df0ca8e55020db1406e3a782ade1774d",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\manifest.json",
+      "sha256": "8fd86015249b79a208148501867cd2ee53ff6c509dd2636134cac4bcd43c7c70",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\DreamSim\\2025-01-01\\pca.joblib",
+      "sha256": "8a54754853c1527c6b9c69244136b30e56368d9afeb00344c17a15a48d9d2a6c",
+      "bytes": 14085519,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-04-01\\embeddings_1024.npy",
+      "sha256": "f6d7d06a93998529c8fafb50dce693d0f6c53b0b514cb49daa3583f675b23884",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-04-01\\manifest.json",
+      "sha256": "afcf7e4b3ac836f190edd4b67edcd986af6ccd12bef8d88a9fbba47cd40421e4",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-04-01\\pca.joblib",
+      "sha256": "26df84d8cd92cf55b87ce900f71cbdc3d257cf7bb5a2d58c5e33374eac8fcebd",
+      "bytes": 128646434,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-07-01\\embeddings_1024.npy",
+      "sha256": "3327b687035f3c5bf32641b355b4fb2657dcbe053d7fdcd1f3c9b25ae9013ac0",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-07-01\\manifest.json",
+      "sha256": "04e93b72c262f37c3883746b25ac91f5e7b20869e310b177547f2ddfe36182ff",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-07-01\\pca.joblib",
+      "sha256": "ccc01af2ac65ee1f8c36aa4adc145822e2c54b3cebc1f6cb88fe036b02c9a991",
+      "bytes": 128655708,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-10-01\\embeddings_1024.npy",
+      "sha256": "2490d5ddb3272b7422a9a16115e376d3f849797ec7c5c9d5f160867a7fb7b38b",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-10-01\\manifest.json",
+      "sha256": "d337ed082c7cde2f70a2b70672e2f88bf50bcd4da4ecbf9eb71096131fd71c66",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2024-10-01\\pca.joblib",
+      "sha256": "a1d4ebb77640905b36fd266dbd388b755b66abd894a0708c7f54f9c2f9adbd99",
+      "bytes": 128640496,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+      "sha256": "c0592d45061c31e2afa930b2e26301fbb28242d90ba3dd2c4ad8afe5f578599b",
+      "bytes": 76726400,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+      "sha256": "6ae55d4b4482c709494c7be4ffd48ca9a9b5860a93055cf565559a14f5745b46",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\BAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+      "sha256": "54fd3504f78759f1d3476a7ef0f5341035c3cafaf84821e0b817ec55efe48f0e",
+      "bytes": 128653615,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-04-01\\embeddings_1024.npy",
+      "sha256": "0becd59664e5dc3c3d804e7e964d2c309149eeb57e40623f711ece22428898cd",
+      "bytes": 102064256,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-04-01\\manifest.json",
+      "sha256": "0143cc07b6984f2926035e9f6af3a90b6079c8ae6b01ef4d686a188c00d5cb08",
+      "bytes": 1333,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-04-01\\pca.joblib",
+      "sha256": "4d2b2b4126fb166f3c38015dc9b49b4ed37e597dca1344dcf098c24f21588bbc",
+      "bytes": 128693725,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-07-01\\embeddings_1024.npy",
+      "sha256": "1ce350558c62787efac1c35a29953b62f326bc2e7c7b89dd1354f6e279ad4c31",
+      "bytes": 102064256,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-07-01\\manifest.json",
+      "sha256": "714fcbe6f946f9f99269814a9cec244f585b04a12d0acd36de5ccb9ee4b59587",
+      "bytes": 1333,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-07-01\\pca.joblib",
+      "sha256": "53a09f7519f9e142f6b455ae7a39063d3ffec2e270c1600e9cea52225d85a565",
+      "bytes": 128674634,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-10-01\\embeddings_1024.npy",
+      "sha256": "2592066bfd27707e0168e3e94cfbb929f66d521c52006261e28050aeb828266b",
+      "bytes": 102064256,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-10-01\\manifest.json",
+      "sha256": "30266a59a3ac3de182e1613ae3d9dff4a36f7c86ea06a2ea00f7d11d36b0a645",
+      "bytes": 1332,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2024-10-01\\pca.joblib",
+      "sha256": "62a6eae8cd889986aeed7f3deb2cb66f15f88f2322b2beb3b74fbb1e64589f34",
+      "bytes": 128668178,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\embeddings_1024.npy",
+      "sha256": "019a4582caea8e7689af535597ab577d8e4daeaa73a5855827e1ee053472803c",
+      "bytes": 102064256,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\manifest.json",
+      "sha256": "a3120223436db21c5a70e2737db29c50915b01ce1a7d5c657f5d1302f923e0e3",
+      "bytes": 1333,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\reduced_embeddings\\MAYC\\SDXL_VAE\\2025-01-01\\pca.joblib",
+      "sha256": "88d9a2e0ac48c9c3e81235cd86a89994765d6b21001b353db97485ec03d7bd47",
+      "bytes": 128669502,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\selection_freeze.json",
+      "sha256": "574c8dd7ab311bb6c87b45eba90b714c65db1831f4c6612e54496294d87083af",
+      "bytes": 145133,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\development_selected_late_model.csv",
+      "sha256": "d461684fa459c5456f3477e54ebba9a50fd10c7b5ca706b76bf331069b096a9f",
+      "bytes": 1189,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_nine_regressors_20260920\\code\\run_experiment.py",
+      "sha256": "ce24df53434bdc426c6685c53df9677dabac0bdd026758f8a8622b27d15fe033",
+      "bytes": 34249,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_ElasticNet.joblib",
+      "sha256": "03c90f27652d992bc64be01848e27efc0f177e62eaa926d664bdba4bd471a22b",
+      "bytes": 19739,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_HistGradientBoosting.joblib",
+      "sha256": "17d202f82af26b35753eb2138bd84a5387baef847990cbf633a78314e34f83de",
+      "bytes": 345994,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_LightGBM.joblib",
+      "sha256": "d5fb0de19c689c87ddcad3c2e7b20c262cf868a1e8f3f823021990a3b918a8de",
+      "bytes": 183010,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_LinearSVR.joblib",
+      "sha256": "37655adec763ddad10e385acd05883b80c554001a7c0d17e5a109f77b5e35dcc",
+      "bytes": 19782,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_OLS.joblib",
+      "sha256": "8ccfb5b0e36e390628d8cd566b55bef8bfab36c02c932cf2c5c38f18ac20e030",
+      "bytes": 21043,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_PLS.joblib",
+      "sha256": "cdac4a038f7a623b0f047037a5fa1a41753d59f7eb9151e97c9fe5b38c140f6e",
+      "bytes": 5908846,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_Ridge.joblib",
+      "sha256": "76a2491e1cfc69fe23649c6b19aad8745559f499f65986253471a96bccd40315",
+      "bytes": 19746,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\BAYC_TF_IDF_XGBoost.joblib",
+      "sha256": "0e63b8f61c84bba330a956374e3c6eaa2db40a4ac8b31a8e31d8fc557d8e6fe5",
+      "bytes": 307494,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_ElasticNet.joblib",
+      "sha256": "2316b3a0a06aadd2e70a3a389660d2429fdfc51f013efdbd284dd30f1b43310e",
+      "bytes": 32622,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_HistGradientBoosting.joblib",
+      "sha256": "640aaa2b68f06c42b9dbbad5bb3c69d11e6682b07b1bedeca0db22a9c50f22f1",
+      "bytes": 701519,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_LightGBM.joblib",
+      "sha256": "5954c4a929be591f9a055d2be9ae283f640cacddd682231393be157649f6b35d",
+      "bytes": 371917,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_LinearSVR.joblib",
+      "sha256": "9aefa35d7e1950ff6cb10a7d5c61f3e148dd510b0c3b10a7b5a8b618845f9d57",
+      "bytes": 32624,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_OLS.joblib",
+      "sha256": "17514829a70068f64f0c76b1b6febc51214d5222a349562e153b0da2857dbe6e",
+      "bytes": 35517,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_PLS.joblib",
+      "sha256": "30db22c7fe7c58f9c2cd6bb58563b0b8caa8544ab7c873e0840771fb83f4b76c",
+      "bytes": 69294141,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_Ridge.joblib",
+      "sha256": "43fafdb2d9eed9c97a21a0fd07a703470696e9c22a2f7ae933c24358f215a2bd",
+      "bytes": 32585,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\models\\MAYC_TF_IDF_XGBoost.joblib",
+      "sha256": "97e5c60383a42fe93f7106a9dc9e15a92fb747532d62bdb58553c5cc983a6ce5",
+      "bytes": 326604,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\pre2025_model_selection_32_combinations.csv",
+      "sha256": "0471fc83eafa9e4bf398548f504fb2dbb45206a434c291f5eca2cff5179f2983",
+      "bytes": 2821,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_ElasticNet.npz",
+      "sha256": "ef4eea3004961eab90c5b5c8cc52d06f4ff15e08acec4872329d80e15d842223",
+      "bytes": 76463,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_HistGradientBoosting.npz",
+      "sha256": "cbae6a02637715bb8f2cad9561dcdb86fafca8ecfdce44f97298b2e98edad4b0",
+      "bytes": 76461,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_LightGBM.npz",
+      "sha256": "7ffe90b33198f89bdc11b284b8eb01acfb89badcad3eb7386e9043d5e1776c8d",
+      "bytes": 76480,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_LinearSVR.npz",
+      "sha256": "56ea6b3a4685dfc73b7a14d5c6df7a045a4c7224fe5f7bcdf2ef0b924ed7bb2e",
+      "bytes": 76471,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_OLS.npz",
+      "sha256": "35abb1adc9a05786754f2a4167a560c0346b8a71098a60e73a05f47a6a884eb9",
+      "bytes": 76474,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_PLS.npz",
+      "sha256": "b364272f2a97459c97d5eef6b238c2bbb7e6cdc0dcd64181c1cfcf002785e83c",
+      "bytes": 76498,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_Ridge.npz",
+      "sha256": "1ce5c861bec320c605e58e873cf3a5ee6278fce7fb0d9155fe544500af2fcd91",
+      "bytes": 76467,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_XGBoost.npz",
+      "sha256": "bc0ac5f5576346eeb40576d4d95ac6a670dda195206d4c18cec03cd5fcd3294c",
+      "bytes": 76480,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_ElasticNet.npz",
+      "sha256": "adf5589b8ac43f35c2a7259a8f3c76b66eb5140b4cfe21849d8e7cf521f21a4f",
+      "bytes": 175652,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_HistGradientBoosting.npz",
+      "sha256": "39f2b287982560c8848678d38fa0016723c8619024dfe59eedb311b909b3666e",
+      "bytes": 175775,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_LightGBM.npz",
+      "sha256": "d08b7874854fb55d9f1cdccd2d845982de715e53fcf522fd1986616541b1d0b5",
+      "bytes": 175790,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_LinearSVR.npz",
+      "sha256": "5924d2c3f45893b859ab2178db940849c08b20bd181fed6c6e969d8c0a774971",
+      "bytes": 175618,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_OLS.npz",
+      "sha256": "cc5932e12198ddc710d2eafccc4bb2218f560c8dbb6208a30912f908f785827a",
+      "bytes": 175632,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_PLS.npz",
+      "sha256": "fd8dd34237b6e05f785d69e5499e540ad22242795d22b1ab7dfad6fd18d70daf",
+      "bytes": 175616,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_Ridge.npz",
+      "sha256": "717b161649969e15f8e8ac70520dc71a6bde171a1be84778e7b5bfa128288583",
+      "bytes": 175656,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_XGBoost.npz",
+      "sha256": "3f1c2011c0b71c3bf880f7fdd578e2367216b163cfe018326dee707e19436e2f",
+      "bytes": 175733,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\selection_freeze.json",
+      "sha256": "4e8ba493237077d10a80e30f4f511c596f30cf32f1afb1c009d9919e576fafed",
+      "bytes": 26441,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_boosting_benchmark_20260918\\code\\run_boosting.py",
+      "sha256": "da028593ba96bef59f46795a6d1d053ccec9b2aba857ddb008888fc761f64f97",
+      "bytes": 16988,
+      "baseline_verified": false
+    },
+    {
+      "path": "results\\metadata_temporal_token_balanced_20260920\\code\\run_temporal_token_balanced.py",
+      "sha256": "9a7d472a4b9dcf67c11b151b014f5cb6306fd670b2e5163bc383c72531bce54f",
+      "bytes": 22148,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\seven_encoder_full_rerun\\code\\audit_inputs.py",
+      "sha256": "8aaba4cceabce712fb96e4fc78a42b725d806e3a1c5108bb3b627189cc38c373",
+      "bytes": 14386,
+      "baseline_verified": false
+    },
+    {
+      "path": "results\\seven_encoder_full_rerun\\code\\canonical_runner.py",
+      "sha256": "d50feb0b2548924e2b129f22f8cae95fc5c1164d9f3ff93fa2903676f845f8b1",
+      "bytes": 31474,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\seven_encoder_full_rerun\\code\\evaluate_frozen.py",
+      "sha256": "2493365cd6e957a1ad14f0ceee6db22f4c4b603ddc958cbab72aee58e6d844a8",
+      "bytes": 11089,
+      "baseline_verified": false
+    },
+    {
+      "path": "results\\seven_encoder_pca1024_rerun\\code\\pca_runner.py",
+      "sha256": "6f6da1e7e5d1ddf389546662d7451d2880d2a3ca0cc29806dac69465c3d08d00",
+      "bytes": 11968,
+      "baseline_verified": true
+    },
+    {
+      "path": "results\\seven_encoder_pca1024_rerun\\embedding_registry.json",
+      "sha256": "28e6080c68cd1cd9a99e5818fa18b2444ffda77cc25781312cb7d58e4a16f6b8",
+      "bytes": 2309528,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\code\\counted_primal_svr_v3.py",
+      "sha256": "96d547716e885ba8893e679a85039e4bf3b5e90944d19f0c6867babfad173a84",
+      "bytes": 3268,
+      "baseline_verified": false
+    },
+    {
+      "path": "revision\\code\\encoder_development_v4.py",
+      "sha256": "48523d4a38b2e03b60695c6232363daf8328bb7f3cd3da504fbd051d439b613c",
+      "bytes": 27751,
+      "baseline_verified": false
+    },
+    {
+      "path": "revision\\code\\full_metadata_comparison.py",
+      "sha256": "142e041f010116f6db6b90f93502bb4a09e2fc68dc70aa89e0bc34605a444ba7",
+      "bytes": 22020,
+      "baseline_verified": false
+    },
+    {
+      "path": "revision\\code\\metadata_baseline_pipeline.py",
+      "sha256": "be625454ecfb76692a33a2c7b05ff48d81ba1ac73aaf2a255632e5960c2399e0",
+      "bytes": 16768,
+      "baseline_verified": false
+    },
+    {
+      "path": "revision\\data_audit_20260908\\metadata_normalized.jsonl",
+      "sha256": "f2741cfe033ea6bda0120a260a97f657e87a87239738b5c72058a825340fa369",
+      "bytes": 12534066,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\dinov2_clip_features_20260909\\manifest_mayc_clip_native.jsonl",
+      "sha256": "7d754901a530a3541070e28c500e0510b7aa1368fc7ced963bfe02246e014e57",
+      "bytes": 5263517,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\dinov2_clip_features_20260909\\mayc_features_clip_native.npy",
+      "sha256": "32e436bacab173bb70a965f062e696dc532ee0187af53e401e4015e25815d299",
+      "bytes": 38274176,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_aimv2\\bayc_aimv2_features.npy",
+      "sha256": "1924c2d59cfc5cc3588b3aec57e0b2f070245170ebeefc8e09755746ecc88761",
+      "bytes": 38363264,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_aimv2\\bayc_aimv2_manifest.jsonl",
+      "sha256": "2a00273aafb0149a7b2369bed72bd36110e7c0a9be7b9783d312612c14fd9541",
+      "bytes": 2406080,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_dreamsim\\bayc_dreamsim_features.npy",
+      "sha256": "e10c0937b5a91fd4612bbe844d3c99bd5ef83a5f8c8b2072304155e466f418f9",
+      "bytes": 67135616,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_dreamsim\\bayc_dreamsim_manifest.jsonl",
+      "sha256": "3eb464dc4ef3eb37afa6b590fee072219ff2a741f8b384a965ca8c020329c2e2",
+      "bytes": 2406080,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sam\\bayc_sam_features.npy",
+      "sha256": "a847fbdec78aa0cf6fc24e292fc9fb1fd1c156863456507a7158b5ab44406504",
+      "bytes": 9590912,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sam\\bayc_sam_manifest.jsonl",
+      "sha256": "11b2f78f9c6c884f85e49c6d2b07d7f4f748588b3b8aa099b1b34ecc5fb37e6a",
+      "bytes": 3277118,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sam\\mayc_sam_features.npy",
+      "sha256": "b0ba6fd87ebf3c91cd2683ba4a8c16f5aed307f5e675e768c4557179ba07b99b",
+      "bytes": 12758144,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sam\\mayc_sam_manifest.jsonl",
+      "sha256": "2d13f44516fd85d7d2d183d34dba91dabf38e0e0bc489e0e198896b8aec192b9",
+      "bytes": 3727527,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sdxl_vae\\bayc_sdxl_vae_features.npy",
+      "sha256": "570a1d2cd7f9ab02dcdb39c87f21e75a3f6895923a6718639859bfafaf9b82f1",
+      "bytes": 613810304,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sdxl_vae\\bayc_sdxl_vae_manifest.jsonl",
+      "sha256": "b2b168c5ddc8dbbcf18d526fbcea49d752901a2427fdff36fe2632b28c9b6bbe",
+      "bytes": 2865014,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sdxl_vae\\mayc_sdxl_vae_features.npy",
+      "sha256": "4bccaede56f7707bd8733a1b3338fb39e5a4aa7c01d4a8a72a87be736def6606",
+      "bytes": 816513152,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\four_encoder_extension_20260917\\pilot_output\\full_sdxl_vae\\mayc_sdxl_vae_manifest.jsonl",
+      "sha256": "3ce22f6111b042495674910007200cf3e354db0c139f77e5ef25fc05c2b362b8",
+      "bytes": 3814689,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\siglip2_features_20260909\\bayc_features_siglip2.npy",
+      "sha256": "622ad451e39686b42feec112438dd2706f11108b398a8eb59fea4d1a886a5f64",
+      "bytes": 38363264,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\siglip2_features_20260909\\feature_manifest_bayc.jsonl",
+      "sha256": "3bf0b92995b9b106ddb65c626016f32593eae2dcc961290c99a568109571a6bd",
+      "bytes": 3865084,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\siglip2_features_20260909\\feature_manifest_mayc.jsonl",
+      "sha256": "d5bb4de762f96eab0ce550f7fe582181cf54fd3cc12c2d37e7fb1e65f50578ec",
+      "bytes": 5213681,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\siglip2_features_20260909\\mayc_features_siglip2.npy",
+      "sha256": "b75583be1014832ac2450268b1bf6a29f310b1c57232b6e694d7f33d341699c1",
+      "bytes": 51032192,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_development_targets.jsonl",
+      "sha256": "790eb45a3264d32b6535cbe2ef340ab755804dd2c6d9a0934a1186414d7b6f60",
+      "bytes": 28954051,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0",
+      "bytes": 2546845,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_development_targets.jsonl",
+      "sha256": "b106a9a54763121b234074ab9dfbbf386f9e62caeb88d1f4594dbc0fd8eafd43",
+      "bytes": 56334505,
+      "baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1",
+      "bytes": 6497905,
+      "baseline_verified": true
+    }
+  ],
+  "origins": [
+    [
+      "2024-04-01",
+      "2024-07-01"
+    ],
+    [
+      "2024-07-01",
+      "2024-10-01"
+    ],
+    [
+      "2024-10-01",
+      "2025-01-01"
+    ],
+    [
+      "2025-01-01",
+      "2026-04-14"
+    ]
+  ],
+  "planned_alternative_fits": 196,
+  "selection": "Within each of eight learners choose metadata TF-IDF, image encoder and early encoder separately by original pooled pre-2025 score; preserve config. Same-family does not mean same selected hyperparameters or identical encoder.",
+  "implementation": "Reuse archived original fits; refit the opposite implementation on the same features, target transform, training rows, learner and settings. Metadata row->counted; image/early counted->row. Final archived models are re-predicted to verify preprocessing and runtime.",
+  "count_rules": "Squared-loss learners use transformed-target token means and sale-count weights. PLS uses signed sqrt(count/2) weighted-centred construction. Counted SVR retains each transaction response and intercept penalty.",
+  "preprocessing": "Preserve metadata raw TF-IDF for trees and standardized TF-IDF for linear learners. Image/early preserve standardized features. Use existing train-only PCA at each origin. Identical matrices within every row/count pair.",
+  "solver": "Historical model defaults retained; memory-only copy_X/copy=False on disposable expanded arrays allowed. Record convergence warnings. No evaluation-based fallback.",
+  "development": "Three fixed 2024 folds for the same config. No retuning. Compare counterpart pooled score with archived original. Final training all 2022–2024.",
+  "evaluation": "2025-01-01 through 2026-04-13 unchanged, plus fixed original late weights for implementation sensitivity.",
+  "inference": "2000 paired token-cluster and 14-day calendar bootstrap, seed 20260908; 95% exploratory CI. Include equal-token CI via token bootstrap. Compare feature gains under original mixed, all-row and all-counted implementations.",
+  "differences": "Report all numeric changes and signs; do not assert equivalence from crossing-zero intervals. For objective-equivalent non-tree models investigate material differences and optimization/rank details. Trees need not match because of bins/minimum-row rules.",
+  "memory": "One model worker, three threads; unique-feature matrices cached only within a task; PCA reused without writing original paths.",
+  "prior_evaluation_inspection": true
+}

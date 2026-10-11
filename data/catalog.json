@@ -1,0 +1,794 @@
+[
+  {
+    "id": "BAYC_original_all",
+    "collection": "BAYC",
+    "path": "data/BAYC_original_all.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_original_seen",
+    "collection": "BAYC",
+    "path": "data/BAYC_original_seen.npz",
+    "n_transactions": 3538,
+    "n_tokens": 1012,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_original_unseen",
+    "collection": "BAYC",
+    "path": "data/BAYC_original_unseen.npz",
+    "n_transactions": 1582,
+    "n_tokens": 486,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_matched_original",
+    "collection": "BAYC",
+    "path": "data/BAYC_matched_original.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "BAYC_metadata_TF_IDF_OLS|original",
+      "BAYC_metadata_TF_IDF_Ridge|original",
+      "BAYC_metadata_TF_IDF_ElasticNet|original",
+      "BAYC_metadata_TF_IDF_PLS|original",
+      "BAYC_metadata_TF_IDF_LinearSVR|original",
+      "BAYC_metadata_TF_IDF_HistGradientBoosting|original",
+      "BAYC_metadata_TF_IDF_XGBoost|original",
+      "BAYC_metadata_TF_IDF_LightGBM|original",
+      "BAYC_image_AIM_OLS|original",
+      "BAYC_image_SDXL_VAE_Ridge|original",
+      "BAYC_image_SDXL_VAE_ElasticNet|original",
+      "BAYC_image_SigLIP2_PLS|original",
+      "BAYC_image_SigLIP2_LinearSVR|original",
+      "BAYC_image_SDXL_VAE_HistGradientBoosting|original",
+      "BAYC_image_SDXL_VAE_XGBoost|original",
+      "BAYC_image_SDXL_VAE_LightGBM|original",
+      "BAYC_early_SAM_OLS|original",
+      "BAYC_early_SAM_Ridge|original",
+      "BAYC_early_SigLIP2_ElasticNet|original",
+      "BAYC_early_SAM_PLS|original",
+      "BAYC_early_SAM_LinearSVR|original",
+      "BAYC_early_SDXL_VAE_HistGradientBoosting|original",
+      "BAYC_early_SDXL_VAE_XGBoost|original",
+      "BAYC_early_SDXL_VAE_LightGBM|original",
+      "BAYC_image_DreamSim_XGBoost|original",
+      "BAYC_late|original"
+    ],
+    "scope": "Archived implementation",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_matched_current",
+    "collection": "BAYC",
+    "path": "data/BAYC_matched_current.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "BAYC_metadata_TF_IDF_OLS|original",
+      "BAYC_metadata_TF_IDF_OLS|alternative",
+      "BAYC_metadata_TF_IDF_OLS|control",
+      "BAYC_metadata_TF_IDF_Ridge|original",
+      "BAYC_metadata_TF_IDF_Ridge|alternative",
+      "BAYC_metadata_TF_IDF_Ridge|control",
+      "BAYC_metadata_TF_IDF_ElasticNet|original",
+      "BAYC_metadata_TF_IDF_ElasticNet|alternative",
+      "BAYC_metadata_TF_IDF_ElasticNet|control",
+      "BAYC_metadata_TF_IDF_PLS|original",
+      "BAYC_metadata_TF_IDF_PLS|alternative",
+      "BAYC_metadata_TF_IDF_PLS|control",
+      "BAYC_metadata_TF_IDF_LinearSVR|original",
+      "BAYC_metadata_TF_IDF_LinearSVR|alternative",
+      "BAYC_metadata_TF_IDF_LinearSVR|control",
+      "BAYC_metadata_TF_IDF_HistGradientBoosting|original",
+      "BAYC_metadata_TF_IDF_HistGradientBoosting|alternative",
+      "BAYC_metadata_TF_IDF_HistGradientBoosting|control",
+      "BAYC_metadata_TF_IDF_XGBoost|original",
+      "BAYC_metadata_TF_IDF_XGBoost|alternative",
+      "BAYC_metadata_TF_IDF_XGBoost|control",
+      "BAYC_metadata_TF_IDF_LightGBM|original",
+      "BAYC_metadata_TF_IDF_LightGBM|alternative",
+      "BAYC_metadata_TF_IDF_LightGBM|control",
+      "BAYC_image_AIM_OLS|original",
+      "BAYC_image_AIM_OLS|alternative",
+      "BAYC_image_AIM_OLS|control",
+      "BAYC_image_SDXL_VAE_Ridge|original",
+      "BAYC_image_SDXL_VAE_Ridge|alternative",
+      "BAYC_image_SDXL_VAE_Ridge|control",
+      "BAYC_image_SDXL_VAE_ElasticNet|original",
+      "BAYC_image_SDXL_VAE_ElasticNet|alternative",
+      "BAYC_image_SDXL_VAE_ElasticNet|control",
+      "BAYC_image_SigLIP2_PLS|original",
+      "BAYC_image_SigLIP2_PLS|alternative",
+      "BAYC_image_SigLIP2_PLS|control",
+      "BAYC_image_SigLIP2_LinearSVR|original",
+      "BAYC_image_SigLIP2_LinearSVR|alternative",
+      "BAYC_image_SigLIP2_LinearSVR|control",
+      "BAYC_image_SDXL_VAE_HistGradientBoosting|original",
+      "BAYC_image_SDXL_VAE_HistGradientBoosting|alternative",
+      "BAYC_image_SDXL_VAE_HistGradientBoosting|control",
+      "BAYC_image_SDXL_VAE_XGBoost|original",
+      "BAYC_image_SDXL_VAE_XGBoost|alternative",
+      "BAYC_image_SDXL_VAE_XGBoost|control",
+      "BAYC_image_SDXL_VAE_LightGBM|original",
+      "BAYC_image_SDXL_VAE_LightGBM|alternative",
+      "BAYC_image_SDXL_VAE_LightGBM|control",
+      "BAYC_early_SAM_OLS|original",
+      "BAYC_early_SAM_OLS|alternative",
+      "BAYC_early_SAM_OLS|control",
+      "BAYC_early_SAM_Ridge|original",
+      "BAYC_early_SAM_Ridge|alternative",
+      "BAYC_early_SAM_Ridge|control",
+      "BAYC_early_SigLIP2_ElasticNet|original",
+      "BAYC_early_SigLIP2_ElasticNet|alternative",
+      "BAYC_early_SigLIP2_ElasticNet|control",
+      "BAYC_early_SAM_PLS|original",
+      "BAYC_early_SAM_PLS|alternative",
+      "BAYC_early_SAM_PLS|control",
+      "BAYC_early_SAM_LinearSVR|original",
+      "BAYC_early_SAM_LinearSVR|alternative",
+      "BAYC_early_SAM_LinearSVR|control",
+      "BAYC_early_SDXL_VAE_HistGradientBoosting|original",
+      "BAYC_early_SDXL_VAE_HistGradientBoosting|alternative",
+      "BAYC_early_SDXL_VAE_HistGradientBoosting|control",
+      "BAYC_early_SDXL_VAE_XGBoost|original",
+      "BAYC_early_SDXL_VAE_XGBoost|alternative",
+      "BAYC_early_SDXL_VAE_XGBoost|control",
+      "BAYC_early_SDXL_VAE_LightGBM|original",
+      "BAYC_early_SDXL_VAE_LightGBM|alternative",
+      "BAYC_early_SDXL_VAE_LightGBM|control",
+      "BAYC_image_DreamSim_XGBoost|original",
+      "BAYC_image_DreamSim_XGBoost|alternative",
+      "BAYC_image_DreamSim_XGBoost|control",
+      "BAYC_late|original",
+      "BAYC_late|row",
+      "BAYC_late|counted"
+    ],
+    "scope": "Archived plus current row/count controls, fixed configurations",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_reselected_base",
+    "collection": "BAYC",
+    "path": "data/BAYC_reselected_base.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "zero",
+      "base__metadata",
+      "base__image",
+      "base__early",
+      "base__late",
+      "strict__metadata",
+      "strict__image",
+      "strict__early",
+      "strict__late",
+      "strict_no_wei__metadata",
+      "strict_no_wei__image",
+      "strict_no_wei__early",
+      "strict_no_wei__late"
+    ],
+    "scope": "Full pre-2025 reselection under three cleaning conditions; common base evaluation rows",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_reselected_strict",
+    "collection": "BAYC",
+    "path": "data/BAYC_reselected_strict.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "zero",
+      "base__metadata",
+      "base__image",
+      "base__early",
+      "base__late",
+      "strict__metadata",
+      "strict__image",
+      "strict__early",
+      "strict__late",
+      "strict_no_wei__metadata",
+      "strict_no_wei__image",
+      "strict_no_wei__early",
+      "strict_no_wei__late"
+    ],
+    "scope": "Full pre-2025 reselection under three cleaning conditions; common strict evaluation rows",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_original_all",
+    "collection": "MAYC",
+    "path": "data/MAYC_original_all.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_original_seen",
+    "collection": "MAYC",
+    "path": "data/MAYC_original_seen.npz",
+    "n_transactions": 10919,
+    "n_tokens": 2028,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_original_unseen",
+    "collection": "MAYC",
+    "path": "data/MAYC_original_unseen.npz",
+    "n_transactions": 2100,
+    "n_tokens": 464,
+    "models": [
+      "zero",
+      "metadata",
+      "image",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed representatives; actual 2022–2024 training membership",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_matched_original",
+    "collection": "MAYC",
+    "path": "data/MAYC_matched_original.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "MAYC_metadata_TF_IDF_OLS|original",
+      "MAYC_metadata_TF_IDF_Ridge|original",
+      "MAYC_metadata_TF_IDF_ElasticNet|original",
+      "MAYC_metadata_TF_IDF_PLS|original",
+      "MAYC_metadata_TF_IDF_LinearSVR|original",
+      "MAYC_metadata_TF_IDF_HistGradientBoosting|original",
+      "MAYC_metadata_TF_IDF_XGBoost|original",
+      "MAYC_metadata_TF_IDF_LightGBM|original",
+      "MAYC_image_SDXL_VAE_OLS|original",
+      "MAYC_image_SDXL_VAE_Ridge|original",
+      "MAYC_image_SDXL_VAE_ElasticNet|original",
+      "MAYC_image_SDXL_VAE_PLS|original",
+      "MAYC_image_SDXL_VAE_LinearSVR|original",
+      "MAYC_image_SDXL_VAE_HistGradientBoosting|original",
+      "MAYC_image_SDXL_VAE_XGBoost|original",
+      "MAYC_image_SDXL_VAE_LightGBM|original",
+      "MAYC_early_SAM_OLS|original",
+      "MAYC_early_CLIP_Ridge|original",
+      "MAYC_early_CLIP_ElasticNet|original",
+      "MAYC_early_CLIP_PLS|original",
+      "MAYC_early_SAM_LinearSVR|original",
+      "MAYC_early_SigLIP2_HistGradientBoosting|original",
+      "MAYC_early_SAM_XGBoost|original",
+      "MAYC_early_SDXL_VAE_LightGBM|original",
+      "MAYC_late|original"
+    ],
+    "scope": "Archived implementation",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_matched_current",
+    "collection": "MAYC",
+    "path": "data/MAYC_matched_current.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "MAYC_metadata_TF_IDF_OLS|original",
+      "MAYC_metadata_TF_IDF_OLS|alternative",
+      "MAYC_metadata_TF_IDF_OLS|control",
+      "MAYC_metadata_TF_IDF_Ridge|original",
+      "MAYC_metadata_TF_IDF_Ridge|alternative",
+      "MAYC_metadata_TF_IDF_Ridge|control",
+      "MAYC_metadata_TF_IDF_ElasticNet|original",
+      "MAYC_metadata_TF_IDF_ElasticNet|alternative",
+      "MAYC_metadata_TF_IDF_ElasticNet|control",
+      "MAYC_metadata_TF_IDF_PLS|original",
+      "MAYC_metadata_TF_IDF_PLS|alternative",
+      "MAYC_metadata_TF_IDF_PLS|control",
+      "MAYC_metadata_TF_IDF_LinearSVR|original",
+      "MAYC_metadata_TF_IDF_LinearSVR|alternative",
+      "MAYC_metadata_TF_IDF_LinearSVR|control",
+      "MAYC_metadata_TF_IDF_HistGradientBoosting|original",
+      "MAYC_metadata_TF_IDF_HistGradientBoosting|alternative",
+      "MAYC_metadata_TF_IDF_HistGradientBoosting|control",
+      "MAYC_metadata_TF_IDF_XGBoost|original",
+      "MAYC_metadata_TF_IDF_XGBoost|alternative",
+      "MAYC_metadata_TF_IDF_XGBoost|control",
+      "MAYC_metadata_TF_IDF_LightGBM|original",
+      "MAYC_metadata_TF_IDF_LightGBM|alternative",
+      "MAYC_metadata_TF_IDF_LightGBM|control",
+      "MAYC_image_SDXL_VAE_OLS|original",
+      "MAYC_image_SDXL_VAE_OLS|alternative",
+      "MAYC_image_SDXL_VAE_OLS|control",
+      "MAYC_image_SDXL_VAE_Ridge|original",
+      "MAYC_image_SDXL_VAE_Ridge|alternative",
+      "MAYC_image_SDXL_VAE_Ridge|control",
+      "MAYC_image_SDXL_VAE_ElasticNet|original",
+      "MAYC_image_SDXL_VAE_ElasticNet|alternative",
+      "MAYC_image_SDXL_VAE_ElasticNet|control",
+      "MAYC_image_SDXL_VAE_PLS|original",
+      "MAYC_image_SDXL_VAE_PLS|alternative",
+      "MAYC_image_SDXL_VAE_PLS|control",
+      "MAYC_image_SDXL_VAE_LinearSVR|original",
+      "MAYC_image_SDXL_VAE_LinearSVR|alternative",
+      "MAYC_image_SDXL_VAE_LinearSVR|control",
+      "MAYC_image_SDXL_VAE_HistGradientBoosting|original",
+      "MAYC_image_SDXL_VAE_HistGradientBoosting|alternative",
+      "MAYC_image_SDXL_VAE_HistGradientBoosting|control",
+      "MAYC_image_SDXL_VAE_XGBoost|original",
+      "MAYC_image_SDXL_VAE_XGBoost|alternative",
+      "MAYC_image_SDXL_VAE_XGBoost|control",
+      "MAYC_image_SDXL_VAE_LightGBM|original",
+      "MAYC_image_SDXL_VAE_LightGBM|alternative",
+      "MAYC_image_SDXL_VAE_LightGBM|control",
+      "MAYC_early_SAM_OLS|original",
+      "MAYC_early_SAM_OLS|alternative",
+      "MAYC_early_SAM_OLS|control",
+      "MAYC_early_CLIP_Ridge|original",
+      "MAYC_early_CLIP_Ridge|alternative",
+      "MAYC_early_CLIP_Ridge|control",
+      "MAYC_early_CLIP_ElasticNet|original",
+      "MAYC_early_CLIP_ElasticNet|alternative",
+      "MAYC_early_CLIP_ElasticNet|control",
+      "MAYC_early_CLIP_PLS|original",
+      "MAYC_early_CLIP_PLS|alternative",
+      "MAYC_early_CLIP_PLS|control",
+      "MAYC_early_SAM_LinearSVR|original",
+      "MAYC_early_SAM_LinearSVR|alternative",
+      "MAYC_early_SAM_LinearSVR|control",
+      "MAYC_early_SigLIP2_HistGradientBoosting|original",
+      "MAYC_early_SigLIP2_HistGradientBoosting|alternative",
+      "MAYC_early_SigLIP2_HistGradientBoosting|control",
+      "MAYC_early_SAM_XGBoost|original",
+      "MAYC_early_SAM_XGBoost|alternative",
+      "MAYC_early_SAM_XGBoost|control",
+      "MAYC_early_SDXL_VAE_LightGBM|original",
+      "MAYC_early_SDXL_VAE_LightGBM|alternative",
+      "MAYC_early_SDXL_VAE_LightGBM|control",
+      "MAYC_late|original",
+      "MAYC_late|row",
+      "MAYC_late|counted"
+    ],
+    "scope": "Archived plus current row/count controls, fixed configurations",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_reselected_base",
+    "collection": "MAYC",
+    "path": "data/MAYC_reselected_base.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "zero",
+      "base__metadata",
+      "base__image",
+      "base__early",
+      "base__late",
+      "strict__metadata",
+      "strict__image",
+      "strict__early",
+      "strict__late",
+      "strict_no_wei__metadata",
+      "strict_no_wei__image",
+      "strict_no_wei__early",
+      "strict_no_wei__late"
+    ],
+    "scope": "Full pre-2025 reselection under three cleaning conditions; common base evaluation rows",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_reselected_strict",
+    "collection": "MAYC",
+    "path": "data/MAYC_reselected_strict.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "zero",
+      "base__metadata",
+      "base__image",
+      "base__early",
+      "base__late",
+      "strict__metadata",
+      "strict__image",
+      "strict__early",
+      "strict__late",
+      "strict_no_wei__metadata",
+      "strict_no_wei__image",
+      "strict_no_wei__early",
+      "strict_no_wei__late"
+    ],
+    "scope": "Full pre-2025 reselection under three cleaning conditions; common strict evaluation rows",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_strict_refit_full",
+    "collection": "BAYC",
+    "path": "data/BAYC_strict_refit_full.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_strict_refit_strict",
+    "collection": "BAYC",
+    "path": "data/BAYC_strict_refit_strict.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_strict_refit_strict_without_one_wei",
+    "collection": "BAYC",
+    "path": "data/BAYC_strict_refit_strict_without_one_wei.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_strict_refit_full",
+    "collection": "MAYC",
+    "path": "data/MAYC_strict_refit_full.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_strict_refit_strict",
+    "collection": "MAYC",
+    "path": "data/MAYC_strict_refit_strict.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_strict_refit_strict_without_one_wei",
+    "collection": "MAYC",
+    "path": "data/MAYC_strict_refit_strict_without_one_wei.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "early"
+    ],
+    "scope": "Previously reported strict_refit; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_residual_all_oof_residuals_all_evaluation",
+    "collection": "BAYC",
+    "path": "data/BAYC_residual_all_oof_residuals_all_evaluation.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_residual_strict_oof_residuals_strict_evaluation",
+    "collection": "BAYC",
+    "path": "data/BAYC_residual_strict_oof_residuals_strict_evaluation.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_residual_strict_no_onewei_oof_residuals_strict_evaluation",
+    "collection": "BAYC",
+    "path": "data/BAYC_residual_strict_no_onewei_oof_residuals_strict_evaluation.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_residual_all_oof_residuals_all_evaluation",
+    "collection": "MAYC",
+    "path": "data/MAYC_residual_all_oof_residuals_all_evaluation.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_residual_strict_oof_residuals_strict_evaluation",
+    "collection": "MAYC",
+    "path": "data/MAYC_residual_strict_oof_residuals_strict_evaluation.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_residual_strict_no_onewei_oof_residuals_strict_evaluation",
+    "collection": "MAYC",
+    "path": "data/MAYC_residual_strict_no_onewei_oof_residuals_strict_evaluation.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "residual"
+    ],
+    "scope": "Previously reported residual; fixed configurations, separate from full reselection",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_all_evaluated",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_all_evaluated.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: all_evaluated",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_strict_clean_flag",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_strict_clean_flag.npz",
+    "n_transactions": 4765,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: strict_clean_flag",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_exclude_reverse_pair_24h",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_exclude_reverse_pair_24h.npz",
+    "n_transactions": 5100,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_reverse_pair_24h",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_exclude_observed_multi_nft_tx",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_exclude_observed_multi_nft_tx.npz",
+    "n_transactions": 4785,
+    "n_tokens": 1489,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_observed_multi_nft_tx",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_exclude_exact_one_wei",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_exclude_exact_one_wei.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_exact_one_wei",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_exclude_below_1e_minus_6_eth",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_exclude_below_1e_minus_6_eth.npz",
+    "n_transactions": 5120,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_below_1e_minus_6_eth",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "BAYC_fixed_first_evaluation_sale_per_token",
+    "collection": "BAYC",
+    "path": "data/BAYC_fixed_first_evaluation_sale_per_token.npz",
+    "n_transactions": 1498,
+    "n_tokens": 1498,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: first_evaluation_sale_per_token",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_all_evaluated",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_all_evaluated.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: all_evaluated",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_strict_clean_flag",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_strict_clean_flag.npz",
+    "n_transactions": 11288,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: strict_clean_flag",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_exclude_reverse_pair_24h",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_exclude_reverse_pair_24h.npz",
+    "n_transactions": 12929,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_reverse_pair_24h",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_exclude_observed_multi_nft_tx",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_exclude_observed_multi_nft_tx.npz",
+    "n_transactions": 11369,
+    "n_tokens": 2461,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_observed_multi_nft_tx",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_exclude_exact_one_wei",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_exclude_exact_one_wei.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_exact_one_wei",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_exclude_below_1e_minus_6_eth",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_exclude_below_1e_minus_6_eth.npz",
+    "n_transactions": 13019,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: exclude_below_1e_minus_6_eth",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  },
+  {
+    "id": "MAYC_fixed_first_evaluation_sale_per_token",
+    "collection": "MAYC",
+    "path": "data/MAYC_fixed_first_evaluation_sale_per_token.npz",
+    "n_transactions": 2492,
+    "n_tokens": 2492,
+    "models": [
+      "metadata",
+      "early",
+      "late"
+    ],
+    "scope": "Original fixed predictions, sensitivity: first_evaluation_sale_per_token",
+    "grouping_order": "token_cluster_order preserves the source NumPy unique order; pseudonyms must not be sorted as a substitute"
+  }
+]

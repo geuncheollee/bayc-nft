@@ -1,0 +1,50 @@
+﻿id,collection,group,encoder,family,config,development_rmse,role,original_implementation,alternative_implementation
+BAYC_metadata_TF_IDF_OLS,BAYC,metadata,TF_IDF,OLS,{},1.3837716124030137,matched,row,counted
+BAYC_metadata_TF_IDF_Ridge,BAYC,metadata,TF_IDF,Ridge,"{""alpha"": 1000}",1.3836209400597699,matched,row,counted
+BAYC_metadata_TF_IDF_ElasticNet,BAYC,metadata,TF_IDF,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",1.3836508348720182,matched,row,counted
+BAYC_metadata_TF_IDF_PLS,BAYC,metadata,TF_IDF,PLS,"{""components"": 8}",1.3837066268046412,matched,row,counted
+BAYC_metadata_TF_IDF_LinearSVR,BAYC,metadata,TF_IDF,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.3836230845277993,matched,row,counted
+BAYC_metadata_TF_IDF_HistGradientBoosting,BAYC,metadata,TF_IDF,HistGradientBoosting,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3860396460015814,matched,row,counted
+BAYC_metadata_TF_IDF_XGBoost,BAYC,metadata,TF_IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.3859760161785029,matched,row,counted
+BAYC_metadata_TF_IDF_LightGBM,BAYC,metadata,TF_IDF,LightGBM,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3859202591665674,matched,row,counted
+MAYC_metadata_TF_IDF_OLS,MAYC,metadata,TF_IDF,OLS,{},0.4020113293666193,matched,row,counted
+MAYC_metadata_TF_IDF_Ridge,MAYC,metadata,TF_IDF,Ridge,"{""alpha"": 0.01}",0.4020113389926933,matched,row,counted
+MAYC_metadata_TF_IDF_ElasticNet,MAYC,metadata,TF_IDF,ElasticNet,"{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.4020385294573054,matched,row,counted
+MAYC_metadata_TF_IDF_PLS,MAYC,metadata,TF_IDF,PLS,"{""components"": 32}",0.4020113293666203,matched,row,counted
+MAYC_metadata_TF_IDF_LinearSVR,MAYC,metadata,TF_IDF,LinearSVR,"{""C"": 1, ""epsilon"": 0.1}",0.4021477369963618,matched,row,counted
+MAYC_metadata_TF_IDF_HistGradientBoosting,MAYC,metadata,TF_IDF,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.40203061229107717,matched,row,counted
+MAYC_metadata_TF_IDF_XGBoost,MAYC,metadata,TF_IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.4019698128769849,matched,row,counted
+MAYC_metadata_TF_IDF_LightGBM,MAYC,metadata,TF_IDF,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 31}",0.40200568221996325,matched,row,counted
+BAYC_image_AIM_OLS,BAYC,image,AIM,OLS,{},1.3851019007334247,matched,counted,row
+BAYC_image_SDXL_VAE_Ridge,BAYC,image,SDXL_VAE,Ridge,"{""alpha"": 1000}",1.3845859017860909,matched,counted,row
+BAYC_image_SDXL_VAE_ElasticNet,BAYC,image,SDXL_VAE,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",1.3843807479674342,matched,counted,row
+BAYC_image_SigLIP2_PLS,BAYC,image,SigLIP2,PLS,"{""components"": 32}",1.3846473149861585,matched,counted,row
+BAYC_image_SigLIP2_LinearSVR,BAYC,image,SigLIP2,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.38479045911654,matched,counted,row
+BAYC_image_SDXL_VAE_HistGradientBoosting,BAYC,image,SDXL_VAE,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.3844754379363233,matched,counted,row
+BAYC_image_SDXL_VAE_XGBoost,BAYC,image,SDXL_VAE,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.384759138658085,matched,counted,row
+BAYC_image_SDXL_VAE_LightGBM,BAYC,image,SDXL_VAE,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",1.38485566724397,matched,counted,row
+MAYC_image_SDXL_VAE_OLS,MAYC,image,SDXL_VAE,OLS,{},0.4023139208107301,matched,counted,row
+MAYC_image_SDXL_VAE_Ridge,MAYC,image,SDXL_VAE,Ridge,"{""alpha"": 0.01}",0.40231392153914913,matched,counted,row
+MAYC_image_SDXL_VAE_ElasticNet,MAYC,image,SDXL_VAE,ElasticNet,"{""alpha"": 0.001, ""l1_ratio"": 0.1}",0.40233424957366937,matched,counted,row
+MAYC_image_SDXL_VAE_PLS,MAYC,image,SDXL_VAE,PLS,"{""components"": 16}",0.40231386609974634,matched,counted,row
+MAYC_image_SDXL_VAE_LinearSVR,MAYC,image,SDXL_VAE,LinearSVR,"{""C"": 1, ""epsilon"": 0.1}",0.402490468199114,matched,counted,row
+MAYC_image_SDXL_VAE_HistGradientBoosting,MAYC,image,SDXL_VAE,HistGradientBoosting,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4026594818886485,matched,counted,row
+MAYC_image_SDXL_VAE_XGBoost,MAYC,image,SDXL_VAE,XGBoost,"{""l2_regularization"": 10, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.40262134711811276,matched,counted,row
+MAYC_image_SDXL_VAE_LightGBM,MAYC,image,SDXL_VAE,LightGBM,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.40261370823019654,matched,counted,row
+BAYC_early_SAM_OLS,BAYC,early,SAM,OLS,{},1.3845757813616095,matched,counted,row
+BAYC_early_SAM_Ridge,BAYC,early,SAM,Ridge,"{""alpha"": 100}",1.383597396257674,matched,counted,row
+BAYC_early_SigLIP2_ElasticNet,BAYC,early,SigLIP2,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",1.383636227506758,matched,counted,row
+BAYC_early_SAM_PLS,BAYC,early,SAM,PLS,"{""components"": 32}",1.3835849252692864,matched,counted,row
+BAYC_early_SAM_LinearSVR,BAYC,early,SAM,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",1.3835343128780728,matched,counted,row
+BAYC_early_SDXL_VAE_HistGradientBoosting,BAYC,early,SDXL_VAE,HistGradientBoosting,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3847698713222123,matched,counted,row
+BAYC_early_SDXL_VAE_XGBoost,BAYC,early,SDXL_VAE,XGBoost,"{""l2_regularization"": 10, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3848442300548323,matched,counted,row
+BAYC_early_SDXL_VAE_LightGBM,BAYC,early,SDXL_VAE,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 15}",1.384967928385187,matched,counted,row
+MAYC_early_SAM_OLS,MAYC,early,SAM,OLS,{},0.4018827551226397,matched,counted,row
+MAYC_early_CLIP_Ridge,MAYC,early,CLIP,Ridge,"{""alpha"": 1000}",0.40187265282666934,matched,counted,row
+MAYC_early_CLIP_ElasticNet,MAYC,early,CLIP,ElasticNet,"{""alpha"": 0.001, ""l1_ratio"": 0.5}",0.40190956031998865,matched,counted,row
+MAYC_early_CLIP_PLS,MAYC,early,CLIP,PLS,"{""components"": 16}",0.4017962604615376,matched,counted,row
+MAYC_early_SAM_LinearSVR,MAYC,early,SAM,LinearSVR,"{""C"": 1, ""epsilon"": 0.1}",0.4020557045118142,matched,counted,row
+MAYC_early_SigLIP2_HistGradientBoosting,MAYC,early,SigLIP2,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4023538722678342,matched,counted,row
+MAYC_early_SAM_XGBoost,MAYC,early,SAM,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",0.4023377159356255,matched,counted,row
+MAYC_early_SDXL_VAE_LightGBM,MAYC,early,SDXL_VAE,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4025801009859741,matched,counted,row
+BAYC_image_DreamSim_XGBoost,BAYC,image,DreamSim,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",1.3849173632427434,late_component,counted,row

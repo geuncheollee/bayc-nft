@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-10T05:25:33.156Z",
+  "reason": "Preflight exposed numpy Unicode min/max unsupported. Use object dtype for time comparisons and cast evaluation timestamps to strings at NPZ export. No analysis decisions or candidate fits changed.",
+  "development_fits_before_fix": 0,
+  "initial_protocol_sha256": "a50266e665f3f8ff622147c035afaec03269fd4c4bd0f2e80bcb5e3ffef3750b",
+  "execution_sources_sha256": "d632d536cc032d69268c3af70f5a300f0349fbfc2adbcc3f5e9ad84d3508ef0e"
+}

@@ -1,9 +1,9 @@
-# Environments and provenance
+# Environments
 
-The executed run manifests record Python 3.14.3 for metadata/image/late fusion and Python 3.12.13 for corrected TF-IDF early fusion. Feature extraction records describe Python 3.12.13, PyTorch 2.7.1+cu118 and an NVIDIA GeForce GTX 1080 Ti for the documented environment. These are not a complete uniform historical lockfile.
+The **public replay** requires Python >=3.11 and NumPy 2.4.2 only. requirements-replay.txt pins that dependency. It uses no pandas, scikit-learn, model checkpoints or compiled training packages.
 
-`requirements-models.txt` declares modelling dependencies; it is not a claim that every historical run used today's installed versions. `requirements-feature-extraction.txt` lists optional checkpoint-specific dependencies; install a suitable CUDA/PyTorch build separately. Extraction code records actual model IDs, available revisions, preprocessing and pooling. No model weights are vendored.
+Packaging verification uses Python 3.14.3 on Windows in a separate virtual environment and a copied extraction of the release. The verification receipt records whether NumPy was installed from a downloaded wheel or copied from the already installed, version-checked distribution. An offline copy is environment isolation, not a successful clean package-index installation.
 
-Public aggregate checks require only Python >=3.11 and its standard library. Synthetic tests exercise selected implemented numerical invariants without NFT data. `provenance/public_test_environment.json`, when supplied, records the environment of release-time tests, not reconstructed historical versions.
+The **October model experiments** used NumPy 2.4.2, SciPy 1.17.1, scikit-learn 1.8.0, joblib 1.5.3, threadpoolctl 3.6.0, XGBoost 3.0.5 and LightGBM 4.6.0; the latter packages were resolved from local experiment package directories. requirements-october-models.txt records these versions. It does not claim the historical original experiments used them or that full training has been independently reinstalled here.
 
-Do not execute the full model scripts merely to verify the public release: they need excluded data and can take substantial resources. Historical output and checkpoint paths can be write-once. Use a fresh work copy and read REPRODUCIBILITY.md first.
+Earlier experimental and release-checking environments remain documented in legacy_v4_0_3/ENVIRONMENTS.md and its run manifests. The old release-validation lockfile is not the public replay environment and is not an October refit lockfile.

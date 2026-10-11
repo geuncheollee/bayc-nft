@@ -1,0 +1,476 @@
+{
+  "created_utc": "2026-10-11T03:15:14.163812+00:00",
+  "initial_selection_sha256": "0b1c0d36c83be3f7f8b6ae78f70bb2e13a070abb4367866630e8f01a5903e096",
+  "representatives": [
+    {
+      "condition": "base",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "Ridge",
+      "config_index": 5,
+      "config": {
+        "alpha": 1000
+      },
+      "valid": true,
+      "n": 6187,
+      "mse_lrp": 1.9144069057718816,
+      "rmse": 1.3836209400597699
+    },
+    {
+      "condition": "base",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "config_index": 3,
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "valid": true,
+      "n": 6187,
+      "mse_lrp": 1.9165100553428722,
+      "rmse": 1.3843807479674342
+    },
+    {
+      "condition": "base",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SAM",
+      "family": "LinearSVR",
+      "config_index": 1,
+      "config": {
+        "C": 0.01,
+        "epsilon": 0.2
+      },
+      "valid": true,
+      "n": 6187,
+      "mse_lrp": 1.9141671949110013,
+      "rmse": 1.3835343128780728
+    },
+    {
+      "condition": "base",
+      "collection": "BAYC",
+      "group": "late",
+      "encoder": "DreamSim",
+      "family": "XGBoost",
+      "config_index": 4,
+      "config": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1
+      },
+      "metadata_family": "Ridge",
+      "metadata_config": {
+        "alpha": 1000
+      },
+      "metadata_key": "base__BAYC__metadata__TF_IDF__Ridge__5",
+      "image_key": "base__BAYC__image__DreamSim__XGBoost__4",
+      "image_weight": 0.2,
+      "n": 6187,
+      "mse_lrp": 1.9141265202415678,
+      "rmse": 1.3835196132478815
+    },
+    {
+      "condition": "base",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "XGBoost",
+      "config_index": 2,
+      "config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "valid": true,
+      "n": 16221,
+      "mse_lrp": 0.1616084698375672,
+      "rmse": 0.4020055594610194
+    },
+    {
+      "condition": "base",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "config_index": 1,
+      "config": {
+        "components": 16
+      },
+      "valid": true,
+      "n": 16221,
+      "mse_lrp": 0.16185644685612466,
+      "rmse": 0.4023138660997464
+    },
+    {
+      "condition": "base",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "config_index": 1,
+      "config": {
+        "components": 16
+      },
+      "valid": true,
+      "n": 16221,
+      "mse_lrp": 0.1614402349208758,
+      "rmse": 0.40179626046153766
+    },
+    {
+      "condition": "base",
+      "collection": "MAYC",
+      "group": "late",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "config_index": 1,
+      "config": {
+        "components": 16
+      },
+      "metadata_family": "XGBoost",
+      "metadata_config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "metadata_key": "base__MAYC__metadata__TF_IDF__XGBoost__2",
+      "image_key": "base__MAYC__image__SDXL_VAE__PLS__1",
+      "image_weight": 0.4,
+      "n": 16221,
+      "mse_lrp": 0.1614795244423529,
+      "rmse": 0.40184514983056957
+    },
+    {
+      "condition": "strict",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LinearSVR",
+      "config_index": 5,
+      "config": {
+        "C": 1,
+        "epsilon": 0.2
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06453732831264106,
+      "rmse": 0.25404198139803796
+    },
+    {
+      "condition": "strict",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "config_index": 3,
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06610736088095859,
+      "rmse": 0.2571135174994862
+    },
+    {
+      "condition": "strict",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SigLIP2",
+      "family": "ElasticNet",
+      "config_index": 4,
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06430809730240686,
+      "rmse": 0.2535904124812428
+    },
+    {
+      "condition": "strict",
+      "collection": "BAYC",
+      "group": "late",
+      "encoder": "SigLIP2",
+      "family": "Ridge",
+      "config_index": 4,
+      "config": {
+        "alpha": 100
+      },
+      "metadata_family": "LinearSVR",
+      "metadata_config": {
+        "C": 1,
+        "epsilon": 0.2
+      },
+      "metadata_key": "strict__BAYC__metadata__TF_IDF__LinearSVR__5",
+      "image_key": "strict__BAYC__image__SigLIP2__Ridge__4",
+      "image_weight": 0.3,
+      "n": 5611,
+      "mse_lrp": 0.06398441180903494,
+      "rmse": 0.2529514020697156
+    },
+    {
+      "condition": "strict",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "OLS",
+      "config_index": 0,
+      "config": {},
+      "valid": true,
+      "n": 13573,
+      "mse_lrp": 0.17845111168646022,
+      "rmse": 0.42243474251825003
+    },
+    {
+      "condition": "strict",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "config_index": 0,
+      "config": {
+        "components": 8
+      },
+      "valid": true,
+      "n": 13573,
+      "mse_lrp": 0.17890709388885453,
+      "rmse": 0.4229741054590157
+    },
+    {
+      "condition": "strict",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "config_index": 1,
+      "config": {
+        "components": 16
+      },
+      "valid": true,
+      "n": 13573,
+      "mse_lrp": 0.17831262446866336,
+      "rmse": 0.4222707951879497
+    },
+    {
+      "condition": "strict",
+      "collection": "MAYC",
+      "group": "late",
+      "encoder": "SDXL_VAE",
+      "family": "HistGradientBoosting",
+      "config_index": 2,
+      "config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "metadata_family": "OLS",
+      "metadata_config": {},
+      "metadata_key": "strict__MAYC__metadata__TF_IDF__OLS__0",
+      "image_key": "strict__MAYC__image__SDXL_VAE__HistGradientBoosting__2",
+      "image_weight": 0.3,
+      "n": 13573,
+      "mse_lrp": 0.17832495210499577,
+      "rmse": 0.42228539177314167
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "LinearSVR",
+      "config_index": 5,
+      "config": {
+        "C": 1,
+        "epsilon": 0.2
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06455119963258739,
+      "rmse": 0.2540692811667467
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "BAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "ElasticNet",
+      "config_index": 3,
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.1
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06606406458157248,
+      "rmse": 0.25702930685346465
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "BAYC",
+      "group": "early",
+      "encoder": "SigLIP2",
+      "family": "ElasticNet",
+      "config_index": 4,
+      "config": {
+        "alpha": 0.01,
+        "l1_ratio": 0.5
+      },
+      "valid": true,
+      "n": 5611,
+      "mse_lrp": 0.06430908969995211,
+      "rmse": 0.25359236916743394
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "BAYC",
+      "group": "late",
+      "encoder": "SigLIP2",
+      "family": "Ridge",
+      "config_index": 4,
+      "config": {
+        "alpha": 100
+      },
+      "metadata_family": "LinearSVR",
+      "metadata_config": {
+        "C": 1,
+        "epsilon": 0.2
+      },
+      "metadata_key": "strict_no_wei__BAYC__metadata__TF_IDF__LinearSVR__5",
+      "image_key": "strict_no_wei__BAYC__image__SigLIP2__Ridge__4",
+      "image_weight": 0.3,
+      "n": 5611,
+      "mse_lrp": 0.06398762057811082,
+      "rmse": 0.2529577446493995
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoder": "TF_IDF",
+      "family": "PLS",
+      "config_index": 2,
+      "config": {
+        "components": 32
+      },
+      "valid": true,
+      "n": 13572,
+      "mse_lrp": 0.04706680936087796,
+      "rmse": 0.21694886346989228
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "MAYC",
+      "group": "image",
+      "encoder": "SDXL_VAE",
+      "family": "PLS",
+      "config_index": 0,
+      "config": {
+        "components": 8
+      },
+      "valid": true,
+      "n": 13572,
+      "mse_lrp": 0.04804904602610044,
+      "rmse": 0.2192009261524696
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "MAYC",
+      "group": "early",
+      "encoder": "CLIP",
+      "family": "PLS",
+      "config_index": 0,
+      "config": {
+        "components": 8
+      },
+      "valid": true,
+      "n": 13572,
+      "mse_lrp": 0.047062175196777814,
+      "rmse": 0.21693818289267985
+    },
+    {
+      "condition": "strict_no_wei",
+      "collection": "MAYC",
+      "group": "late",
+      "encoder": "SDXL_VAE",
+      "family": "LightGBM",
+      "config_index": 2,
+      "config": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "l2_regularization": 1
+      },
+      "metadata_family": "PLS",
+      "metadata_config": {
+        "components": 32
+      },
+      "metadata_key": "strict_no_wei__MAYC__metadata__TF_IDF__PLS__2",
+      "image_key": "strict_no_wei__MAYC__image__SDXL_VAE__LightGBM__2",
+      "image_weight": 0.1,
+      "n": 13572,
+      "mse_lrp": 0.04704389054307687,
+      "rmse": 0.21689603625487688
+    }
+  ],
+  "failed": [],
+  "iterations": [
+    {
+      "completed_utc": "2026-10-11T03:15:14.090915+00:00",
+      "required": [
+        "base__BAYC__metadata__TF_IDF__Ridge__5",
+        "base__BAYC__image__SDXL_VAE__ElasticNet__3",
+        "base__BAYC__early__SAM__LinearSVR__1",
+        "base__BAYC__image__DreamSim__XGBoost__4",
+        "base__MAYC__metadata__TF_IDF__XGBoost__2",
+        "base__MAYC__image__SDXL_VAE__PLS__1",
+        "base__MAYC__early__CLIP__PLS__1",
+        "strict__BAYC__metadata__TF_IDF__LinearSVR__5",
+        "strict__BAYC__image__SDXL_VAE__ElasticNet__3",
+        "strict__BAYC__early__SigLIP2__ElasticNet__4",
+        "strict__BAYC__image__SigLIP2__Ridge__4",
+        "strict__MAYC__metadata__TF_IDF__OLS__0",
+        "strict__MAYC__image__SDXL_VAE__PLS__0",
+        "strict__MAYC__early__CLIP__PLS__1",
+        "strict__MAYC__image__SDXL_VAE__HistGradientBoosting__2",
+        "strict_no_wei__BAYC__metadata__TF_IDF__LinearSVR__5",
+        "strict_no_wei__BAYC__image__SDXL_VAE__ElasticNet__3",
+        "strict_no_wei__BAYC__early__SigLIP2__ElasticNet__4",
+        "strict_no_wei__BAYC__image__SigLIP2__Ridge__4",
+        "strict_no_wei__MAYC__metadata__TF_IDF__PLS__2",
+        "strict_no_wei__MAYC__image__SDXL_VAE__PLS__0",
+        "strict_no_wei__MAYC__early__CLIP__PLS__0",
+        "strict_no_wei__MAYC__image__SDXL_VAE__LightGBM__2"
+      ],
+      "failed": []
+    }
+  ],
+  "evaluation_labels_loaded": false,
+  "final_models": {
+    "base__BAYC__metadata__TF_IDF__Ridge__5": "8a18ee552480236d8727e91f11d853cb4838affbcb74d203f956dff76328f477",
+    "base__BAYC__image__SDXL_VAE__ElasticNet__3": "0bec7c524c80bbc6c963867457d8572c130af14b746252ce5983fee0da10e224",
+    "base__BAYC__early__SAM__LinearSVR__1": "4a0f706d3ae26d114ecf9c533c6704f0800c2503463c0fc3e7b98cf12de003ce",
+    "base__BAYC__image__DreamSim__XGBoost__4": "c9c990e4fc61341647d1e6a583bca4db28afec0976e24e7ebbf5c045bcc15861",
+    "base__MAYC__metadata__TF_IDF__XGBoost__2": "bf6b6f246a2c918f6b129d488e79d79e7ad7f95264cec3fe72e85952b0a4a38a",
+    "base__MAYC__image__SDXL_VAE__PLS__1": "128eec62cffd31fdcf4fa806b096680f9ecb29d90b9b9ae2c7eb8779a19471a2",
+    "base__MAYC__early__CLIP__PLS__1": "9bca510a5927f4614fa943f643aa5dd9330c693c538529263dbf513bde6a3eaf",
+    "strict__BAYC__metadata__TF_IDF__LinearSVR__5": "2afc3680c7bc8a7a7af8b1ed234666bab69fa65550696adff6f53c6e444e23fe",
+    "strict__BAYC__image__SDXL_VAE__ElasticNet__3": "96cfb27ff2dfd6798eb8d7942d5ee2d3eca13bfdd8d5c60f18f8491d4954a719",
+    "strict__BAYC__early__SigLIP2__ElasticNet__4": "a695ea39be5fd0e2b8196fb0326f5c3b1acd757281962a0d2ef20acb425aa4aa",
+    "strict__BAYC__image__SigLIP2__Ridge__4": "4900660083ce1942c19a1541edd6944a4d01aa2aae2c38fac97a4bf1c600093c",
+    "strict__MAYC__metadata__TF_IDF__OLS__0": "89a3f2c81404d8250222735322ff065af18a7550d3fcbf9a6aafb7bae7ad491a",
+    "strict__MAYC__image__SDXL_VAE__PLS__0": "01b559d3165fbeee1c69f6b42b0126a917d5b7bb96d807632abc44385fc202a1",
+    "strict__MAYC__early__CLIP__PLS__1": "51d7caca5e97d9bfcf98c2314e7c6c6dac39b3c400a351303d521bae0ab5d1e9",
+    "strict__MAYC__image__SDXL_VAE__HistGradientBoosting__2": "c5bef59afe8c747056445fc1302bb6ccbc966a15952f3c470251ac7dbc116a73",
+    "strict_no_wei__BAYC__metadata__TF_IDF__LinearSVR__5": "7aa5af09543b3e31fa8c90604e60b8d49ff44a9b5692fcde9044607872aebeab",
+    "strict_no_wei__BAYC__image__SDXL_VAE__ElasticNet__3": "e9a7a6ee8295aba37d51fd223d5104dca201d7c70ca476075f02615465c0a171",
+    "strict_no_wei__BAYC__early__SigLIP2__ElasticNet__4": "f3f693435a0a50fede54b3034f2ae8c27d18456bee4817385bc51d244cc12729",
+    "strict_no_wei__BAYC__image__SigLIP2__Ridge__4": "b5b9bfa56a6d199c7d3e72f4befdcc304870650e0f488e3a5d0d43a9f1c8989c",
+    "strict_no_wei__MAYC__metadata__TF_IDF__PLS__2": "f58a93a7aa21458d8a9ba455c04d1d7be7ff79a73547f9cec405ae6abca23a56",
+    "strict_no_wei__MAYC__image__SDXL_VAE__PLS__0": "a304296755e843ab038ed896823d6ad421fed3afbd47306da624bd1d7a55bec9",
+    "strict_no_wei__MAYC__early__CLIP__PLS__0": "c98c230fb5a4777181397a2d2521d3cd560e1597587062898acce1b1a609af19",
+    "strict_no_wei__MAYC__image__SDXL_VAE__LightGBM__2": "897b8691963cf8017bb0eb5dd8e3d3aee7651a53c8ffdbe03ba013f2d09cafc0"
+  }
+}

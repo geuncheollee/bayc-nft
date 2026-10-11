@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-10T05:29:03.923Z",
+  "reason": "Use sklearn ElasticNet precompute=True to reduce repeated coordinate-descent cost. Same objective, sample weights, alpha/l1 grids, tolerance, max_iter and initialization.",
+  "development_only": true,
+  "evaluation_labels_loaded": false,
+  "preflight_metadata_max_prediction_gap": 5.551115123125783e-14,
+  "old_elasticnet_outputs": "precompute_false_excluded",
+  "rerun": "All ElasticNet candidates including previously completed metadata candidates",
+  "execution_sources_sha256": "9e19e7f90af1a1af16f9fee64aa2a2cf0ce520849ceb96ae0758797f91952d6a"
+}

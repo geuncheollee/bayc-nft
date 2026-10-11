@@ -1,0 +1,181 @@
+{
+  "created_utc": "2026-10-10T05:39:17.167Z",
+  "sources": [
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/libpath.py",
+      "sha256": "8bbb0e24ec927715d44e6af5da412a62149a2c2eaff5a3150b56c9e636a1b363"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/compat.py",
+      "sha256": "74422408002c29854e29f9746199fc44097800883f95c9952ee412b9e07ca232"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/basic.py",
+      "sha256": "3bb8761547ec0c5064947ab95eee3785c36defc294494d459c0db58a51a722f2"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/callback.py",
+      "sha256": "958d3aed952cd6d2001f2b1fec4b06a7bdf85b19ac78f407bc955b70c8892775"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/engine.py",
+      "sha256": "56782ac9b113182273a22b4732158a9a90eaf423c4c3808d32d8f52abf70881f"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/sklearn.py",
+      "sha256": "0d1e4ed615464d26dcfa09549f4081573e6c12431a929e64b8e17684e31c2987"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/plotting.py",
+      "sha256": "7aced1bd07f60b9dc2b5be64212dc81b1d3ed05bc0430852316a06f946ae03b9"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/dask.py",
+      "sha256": "f57d9810b566701fff81b792b1c953a642e7b7b8974d78fbd826c733ac505521"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/lightgbm/__init__.py",
+      "sha256": "402e67c2be1e884cea21453f97e32bdfaf10d013e989a3788573342479d55baa"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/_typing.py",
+      "sha256": "c9824b0775fc33c2f5b6d4207805e0917007dbd1d88d96e1e11ba93db52b600b"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/compat.py",
+      "sha256": "91072bb0051a0ad4f580d85b13deb67faeef4913d641f3d1f6f66f379f629c92"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/_data_utils.py",
+      "sha256": "0aff2c089566b043ab8eb6427ea366ac4b366b197e386f7124c8f12e416206c9"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/libpath.py",
+      "sha256": "8aa593af825003cfaa5a6c7a2d7b999c20f56d4477d50fcdcbfd3f1909a0ae1d"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/core.py",
+      "sha256": "6c6d3bfbc934d711a6bf23b199ebf731e99b42b4613477fb78069c64dc6a039c"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/tracker.py",
+      "sha256": "5320439a198dedef5529e97fdde731b1f0c67c162ef8ada0058dd34f5343335b"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/collective.py",
+      "sha256": "7e273e3e5143286a62535070ea67a39f61fcc5ae7456237a5c09ae6c5f04837d"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/callback.py",
+      "sha256": "d1656bcaeacda5d1b395579a1574f6b20918a71ff488bacdc608ee0a79602ef9"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/training.py",
+      "sha256": "046c0a44d5752df5842449a0ab6e2a6476ed00f6683dc2cf0c9c489dcbd2fd41"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/config.py",
+      "sha256": "f895df1ad67df2b55850649f51ca0d0ca4a32b3f36ada58a0219ec9bc26ae656"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/data.py",
+      "sha256": "bca390af19101d71d68a1a31d495200545e2a0d656931dff59bd8bf09e700e2f"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/sklearn.py",
+      "sha256": "47ef21b3af5bdbe2130554fdb16e4b21867c15cc2ee0b91bff0d9e96dfbda078"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/plotting.py",
+      "sha256": "dbe4e43e606cd51c5644f5abde42ccf4afcdc8414e22253ebf28e930c169510e"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/packages/xgboost/__init__.py",
+      "sha256": "56764c9980ac59493185ee45d56822d4490f12475b741801f0405f3f19cd193f"
+    },
+    {
+      "path": "results/seven_encoder_full_rerun/code/audit_inputs.py",
+      "sha256": "8aaba4cceabce712fb96e4fc78a42b725d806e3a1c5108bb3b627189cc38c373"
+    },
+    {
+      "path": "revision/code/metadata_baseline_pipeline.py",
+      "sha256": "be625454ecfb76692a33a2c7b05ff48d81ba1ac73aaf2a255632e5960c2399e0"
+    },
+    {
+      "path": "revision/code/full_metadata_comparison.py",
+      "sha256": "142e041f010116f6db6b90f93502bb4a09e2fc68dc70aa89e0bc34605a444ba7"
+    },
+    {
+      "path": "revision/code/counted_primal_svr_v3.py",
+      "sha256": "96d547716e885ba8893e679a85039e4bf3b5e90944d19f0c6867babfad173a84"
+    },
+    {
+      "path": "revision/code/encoder_development_v4.py",
+      "sha256": "48523d4a38b2e03b60695c6232363daf8328bb7f3cd3da504fbd051d439b613c"
+    },
+    {
+      "path": "results/seven_encoder_full_rerun/code/canonical_runner.py",
+      "sha256": "d50feb0b2548924e2b129f22f8cae95fc5c1164d9f3ff93fa2903676f845f8b1"
+    },
+    {
+      "path": "results/metadata_boosting_benchmark_20260918/code/run_boosting.py",
+      "sha256": "da028593ba96bef59f46795a6d1d053ccec9b2aba857ddb008888fc761f64f97"
+    },
+    {
+      "path": "results/metadata_asinh_nine_regressors_20260920/code/run_experiment.py",
+      "sha256": "ce24df53434bdc426c6685c53df9677dabac0bdd026758f8a8622b27d15fe033"
+    },
+    {
+      "path": "results/metadata_temporal_token_balanced_20260920/code/run_temporal_token_balanced.py",
+      "sha256": "9a7d472a4b9dcf67c11b151b014f5cb6306fd670b2e5163bc383c72531bce54f"
+    },
+    {
+      "path": "results/seven_encoder_full_rerun/code/evaluate_frozen.py",
+      "sha256": "2493365cd6e957a1ad14f0ceee6db22f4c4b603ddc958cbab72aee58e6d844a8"
+    },
+    {
+      "path": "results/seven_encoder_pca1024_rerun/code/pca_runner.py",
+      "sha256": "6f6da1e7e5d1ddf389546662d7451d2880d2a3ca0cc29806dac69465c3d08d00"
+    },
+    {
+      "path": "results/image_asinh_transaction_2022_2024_eight_regressors_20260920/code/run_image_experiment.py",
+      "sha256": "97cb961f72df0f98e0b54b54e32d0b457c4d20a23f1bd4b07b6579ccadb1ede8"
+    },
+    {
+      "path": "results/early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921/code/run_early_fusion_tfidf_experiment.py",
+      "sha256": "2667671dbbc9d6decd77ce90c860a151ead0b6469f7172e0a838c8aa6ffddd3a"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/analyze_results.py",
+      "sha256": "70b025d34e94b5d7c0166580c8b9ad8bbddca2bf1c56b23e08418f028090280c"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/engine.py",
+      "sha256": "c866344cdb5c9b9165e7029e2f7e6d48902ceb830bbb148bc181a476f8f4b838"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/freeze_protocol.py",
+      "sha256": "014f08bf29b804a9d295c71fdb379937c51fbce34679614f6497202832a7197f"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/run_pipeline.py",
+      "sha256": "1e643674fbd948be6356e09372fcce74fbed3fe14f3239110d4985636dfe8780"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/select_final.py",
+      "sha256": "8fb78715f007ba4b5b2477ffd09786da8eab429f396c7bf8e8331587b44557c6"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/shared.py",
+      "sha256": "7915eba0fdcc9f3fa21fef98ed6db21de740672ad6f334af283c137d4b2658a4"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/verify_results.py",
+      "sha256": "90e1bc759f064671f12e76608dd51f70014bd17d4a934ff156ecc9260692177e"
+    },
+    {
+      "path": "rerevision/strict_reselection_20261010/code/write_reports.py",
+      "sha256": "6ca064f3f2fb138879f08e017bb4f211dc6cbe0801a2a01b81aefbacae50b74b"
+    }
+  ]
+}

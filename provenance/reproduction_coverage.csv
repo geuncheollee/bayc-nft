@@ -1,0 +1,13 @@
+source_file,source_rows_covered,numeric_cells
+baseline_audit_20261010/bootstrap_intervals_recomputed.csv,42,432
+baseline_audit_20261010/fixed_sensitivities_recomputed.csv,14,192
+baseline_audit_20261010/main_metrics_recomputed.csv,10,40
+baseline_audit_20261010/support_intervals_recomputed.csv,12,84
+matched_learner_20261010/original_paired_comparisons.csv,108,648
+matched_learner_20261010/original_performance.csv,51,306
+matched_learner_20261010/paired_comparisons.csv,471,2826
+matched_learner_20261010/performance.csv,153,918
+seen_unseen_20261010/paired_comparisons.csv,54,540
+seen_unseen_20261010/performance.csv,30,180
+strict_reselection_20261010/paired_comparisons.csv,384,3072
+strict_reselection_20261010/performance.csv,52,312

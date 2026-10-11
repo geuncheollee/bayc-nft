@@ -1,0 +1,11 @@
+{
+  "version": "4.1.0",
+  "build_stage": "prepared_for_publication",
+  "built_at_utc": "2026-10-11T15:17:09.204491+00:00",
+  "public_deposition_verified_at_build": false,
+  "version_doi_at_build": null,
+  "publication_receipt_location": "GitHub v4.1.0 release and linked Zenodo record",
+  "previous_version": "4.0.3",
+  "previous_version_doi": "10.5281/zenodo.22921602",
+  "full_raw_input_refit_during_packaging": false
+}

@@ -1,0 +1,25 @@
+﻿collection,condition,group,encoder,family,config,metadata_family,metadata_config,image_weight,development_rmse,encoder_changed,family_changed,config_changed,metadata_branch_changed,weight_changed
+BAYC,base,metadata,TF_IDF,Ridge,"{""alpha"": 1000}",,null,,1.3836209400597699,False,False,False,False,False
+BAYC,base,image,SDXL_VAE,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",,null,,1.3843807479674342,False,False,False,False,False
+BAYC,base,early,SAM,LinearSVR,"{""C"": 0.01, ""epsilon"": 0.2}",,null,,1.3835343128780728,False,False,False,False,False
+BAYC,base,late,DreamSim,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.1, ""max_leaf_nodes"": 15}",Ridge,"{""alpha"": 1000}",0.2,1.3835196132478815,False,False,False,False,False
+BAYC,strict,metadata,TF_IDF,LinearSVR,"{""C"": 1, ""epsilon"": 0.2}",,null,,0.25404198139803796,False,True,True,False,False
+BAYC,strict,image,SDXL_VAE,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",,null,,0.2571135174994862,False,False,False,False,False
+BAYC,strict,early,SigLIP2,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",,null,,0.2535904124812428,True,True,True,False,False
+BAYC,strict,late,SigLIP2,Ridge,"{""alpha"": 100}",LinearSVR,"{""C"": 1, ""epsilon"": 0.2}",0.3,0.2529514020697156,True,True,True,True,True
+BAYC,strict_no_wei,metadata,TF_IDF,LinearSVR,"{""C"": 1, ""epsilon"": 0.2}",,null,,0.2540692811667467,False,True,True,False,False
+BAYC,strict_no_wei,image,SDXL_VAE,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.1}",,null,,0.25702930685346465,False,False,False,False,False
+BAYC,strict_no_wei,early,SigLIP2,ElasticNet,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",,null,,0.25359236916743394,True,True,True,False,False
+BAYC,strict_no_wei,late,SigLIP2,Ridge,"{""alpha"": 100}",LinearSVR,"{""C"": 1, ""epsilon"": 0.2}",0.3,0.2529577446493995,True,True,True,True,True
+MAYC,base,metadata,TF_IDF,XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",,null,,0.4020055594610194,False,False,False,False,False
+MAYC,base,image,SDXL_VAE,PLS,"{""components"": 16}",,null,,0.4023138660997464,False,False,False,False,False
+MAYC,base,early,CLIP,PLS,"{""components"": 16}",,null,,0.40179626046153766,False,False,False,False,False
+MAYC,base,late,SDXL_VAE,PLS,"{""components"": 16}",XGBoost,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",0.4,0.40184514983056957,False,False,False,False,False
+MAYC,strict,metadata,TF_IDF,OLS,{},,null,,0.42243474251825003,False,True,True,False,False
+MAYC,strict,image,SDXL_VAE,PLS,"{""components"": 8}",,null,,0.4229741054590157,False,False,True,False,False
+MAYC,strict,early,CLIP,PLS,"{""components"": 16}",,null,,0.4222707951879497,False,False,False,False,False
+MAYC,strict,late,SDXL_VAE,HistGradientBoosting,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",OLS,{},0.3,0.42228539177314167,False,True,True,True,True
+MAYC,strict_no_wei,metadata,TF_IDF,PLS,"{""components"": 32}",,null,,0.21694886346989228,False,True,True,False,False
+MAYC,strict_no_wei,image,SDXL_VAE,PLS,"{""components"": 8}",,null,,0.2192009261524696,False,False,True,False,False
+MAYC,strict_no_wei,early,CLIP,PLS,"{""components"": 8}",,null,,0.21693818289267985,False,False,True,False,False
+MAYC,strict_no_wei,late,SDXL_VAE,LightGBM,"{""l2_regularization"": 1, ""learning_rate"": 0.05, ""max_leaf_nodes"": 31}",PLS,"{""components"": 32}",0.1,0.21689603625487688,False,True,True,True,True

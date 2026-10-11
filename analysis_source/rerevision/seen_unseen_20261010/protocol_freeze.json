@@ -1,0 +1,357 @@
+{
+  "created_utc": "2026-10-09T17:11:13.620898+00:00",
+  "analysis": "seen_unseen_training_tokens",
+  "status": "frozen_before_new_subgroup_results",
+  "reviewer_requests": [
+    "Editor 1",
+    "Reviewer 3"
+  ],
+  "training_start": "2022-01-01T00:00:00+00:00",
+  "training_end_exclusive": "2025-01-01T00:00:00+00:00",
+  "evaluation_start": "2025-01-01T00:00:00+00:00",
+  "evaluation_end_exclusive": "2026-04-14T00:00:00+00:00",
+  "seen_definition": "Token has at least one eligible modelling row in the actual 2022–2024 final training cohort; same definition for all selected models.",
+  "legacy_flag_policy": "Recalculate membership; compare existing known_training_token flag only as a provenance diagnostic.",
+  "selection_policy": "Use the eight baseline development-selected learned representatives unchanged, plus zero. No within-subgroup fitting or reselection.",
+  "target": "Original stored transaction LRP with the base-clean past-only market reference unchanged.",
+  "subgroups": [
+    "seen",
+    "unseen"
+  ],
+  "pooled_role": "Reproduce previous full-evaluation results as an integrity control.",
+  "point_metrics": [
+    "transaction_rmse",
+    "transaction_mae",
+    "transaction_r2",
+    "equal_token_rmse"
+  ],
+  "contrasts": [
+    {
+      "candidate": "early",
+      "reference": "metadata"
+    },
+    {
+      "candidate": "late",
+      "reference": "metadata"
+    },
+    {
+      "candidate": "early",
+      "reference": "late"
+    }
+  ],
+  "bootstrap": {
+    "iterations": 2000,
+    "seed": 20260908,
+    "interval": "percentile 95%, linear quantile",
+    "schemes": [
+      "paired_token_cluster",
+      "paired_14day_calendar_block"
+    ],
+    "calendar_anchor": "2025-01-01 UTC",
+    "calendar_days": 14,
+    "equal_token_ci": "Token-cluster bootstrap only, as in baseline outputs.",
+    "rng": "Reset default_rng(20260908) for each collection, subgroup and resampling scheme; all models share draws.",
+    "empty_blocks": "Sample occupied blocks within the fixed 14-day calendar partition; retain original calendar block IDs.",
+    "insufficient_clusters": "Do not calculate intervals with fewer than two occupied clusters; flag degenerate target variance.",
+    "interpretation": "Exploratory fixed-prediction uncertainty; no simultaneous subgroup correction, refitting or model-selection uncertainty."
+  },
+  "limits": [
+    "Retrospective evaluation previously examined.",
+    "Unseen means absent from final training rows, not necessarily never sold before 2022 or absent from generic encoder pretraining.",
+    "No causal inference from seen versus unseen performance levels."
+  ],
+  "selected_models": [
+    {
+      "collection": "BAYC",
+      "group": "metadata",
+      "encoding": "TF-IDF",
+      "family": "Ridge",
+      "selected_config": "{\"alpha\": 1000}",
+      "pre2025_validation_transaction_rmse": "1.3836209400597699",
+      "encoder": "",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "BAYC",
+      "group": "image",
+      "encoding": "",
+      "family": "ElasticNet",
+      "selected_config": "{\"alpha\": 0.01, \"l1_ratio\": 0.1}",
+      "pre2025_validation_transaction_rmse": "1.3843807479674342",
+      "encoder": "SDXL_VAE",
+      "native_dimension": "16384",
+      "analysis_dimension": "1024",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "BAYC",
+      "group": "early",
+      "encoding": "",
+      "family": "LinearSVR",
+      "selected_config": "{\"C\": 0.01, \"epsilon\": 0.2}",
+      "pre2025_validation_transaction_rmse": "1.3835343128780728",
+      "encoder": "SAM",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "171",
+      "idf_document_count": "5746",
+      "image_dimension": "256",
+      "early_dimension": "427",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "BAYC",
+      "group": "late",
+      "encoding": "",
+      "family": "",
+      "selected_config": "",
+      "pre2025_validation_transaction_rmse": "1.3835196132478815",
+      "encoder": "DreamSim",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "Ridge",
+      "image_family": "XGBoost",
+      "metadata_config": "{\"alpha\": 1000}",
+      "image_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 15}",
+      "image_weight": "0.2",
+      "validation_n": "6187",
+      "pre2025_validation_transaction_mse": "1.9141265202415678"
+    },
+    {
+      "collection": "MAYC",
+      "group": "metadata",
+      "encoding": "TF-IDF",
+      "family": "XGBoost",
+      "selected_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 31}",
+      "pre2025_validation_transaction_rmse": "0.4019698128769849",
+      "encoder": "",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "MAYC",
+      "group": "image",
+      "encoding": "",
+      "family": "PLS",
+      "selected_config": "{\"components\": 16}",
+      "pre2025_validation_transaction_rmse": "0.40231386609974634",
+      "encoder": "SDXL_VAE",
+      "native_dimension": "16384",
+      "analysis_dimension": "1024",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "MAYC",
+      "group": "early",
+      "encoding": "",
+      "family": "PLS",
+      "selected_config": "{\"components\": 16}",
+      "pre2025_validation_transaction_rmse": "0.4017962604615376",
+      "encoder": "CLIP",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "341",
+      "idf_document_count": "9568",
+      "image_dimension": "768",
+      "early_dimension": "1109",
+      "metadata_family": "",
+      "image_family": "",
+      "metadata_config": "",
+      "image_config": "",
+      "image_weight": "",
+      "validation_n": "",
+      "pre2025_validation_transaction_mse": ""
+    },
+    {
+      "collection": "MAYC",
+      "group": "late",
+      "encoding": "",
+      "family": "",
+      "selected_config": "",
+      "pre2025_validation_transaction_rmse": "0.401761060320268",
+      "encoder": "SDXL_VAE",
+      "native_dimension": "",
+      "analysis_dimension": "",
+      "metadata_dimension": "",
+      "idf_document_count": "",
+      "image_dimension": "",
+      "early_dimension": "",
+      "metadata_family": "XGBoost",
+      "image_family": "PLS",
+      "metadata_config": "{\"l2_regularization\": 1, \"learning_rate\": 0.1, \"max_leaf_nodes\": 31}",
+      "image_config": "{\"components\": 16}",
+      "image_weight": "0.4",
+      "validation_n": "16221",
+      "pre2025_validation_transaction_mse": "0.161411949589666"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "rerevision\\baseline_audit_20261010\\Analysis_Plan.md",
+      "sha256": "ed4715b95550236f491a4ba91326d4438c5c6b8687649ee4e7f8b43235449b28",
+      "bytes": 7791,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\plan_freeze.json",
+      "sha256": "7d0309e4e51cb0c9c39fb67ec40a9ee6ff8e072d27275be88ddba3728b662cbe",
+      "bytes": 194,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\selected_models.csv",
+      "sha256": "21f0725aa540cb0dd8cd02d528b5eefe9c9ba4660ad68222e92d56bafcc44747",
+      "bytes": 1318,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\cohort_audit.csv",
+      "sha256": "2114d2e129b0661d93248b14829144cbdf0ac841320126f1e84ce71eeda34e9b",
+      "bytes": 690,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "rerevision\\baseline_audit_20261010\\main_metrics_recomputed.csv",
+      "sha256": "4d5293f3f08b99e2f614a074121389aed571e00a72087c3d5d6040688a33fdce",
+      "bytes": 999,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "revision2\\revision_package_20260923_v3\\evidence\\inventory.json",
+      "sha256": "205f66ca484774ea70114348a460310b12342b1d51528fb888d582d6753b9daf",
+      "bytes": 36925,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "rerevision\\seen_unseen_20261010\\code\\run_seen_unseen.py",
+      "sha256": "62069f826e42420b9abb7a222668e50e4962a38bf8241d9c755fcf002a0f65a4",
+      "bytes": 17639,
+      "prior_baseline_verified": false
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_development_targets.jsonl",
+      "sha256": "790eb45a3264d32b6535cbe2ef340ab755804dd2c6d9a0934a1186414d7b6f60",
+      "bytes": 28954051,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\bayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "9f7bc993aca0aa75769332c64787e6266ce4f0366e28d8a772dc9e11a9c0a7b0",
+      "bytes": 2546845,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_TF_IDF_Ridge.npz",
+      "sha256": "1ce5c861bec320c605e58e873cf3a5ee6278fce7fb0d9155fe544500af2fcd91",
+      "bytes": 76467,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\BAYC_SDXL_VAE_ElasticNet.npz",
+      "sha256": "d0b6fd77a41c9e727be2371b43c8c4f1e5a6696cce5cc25d133eb693db3074d9",
+      "bytes": 75465,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\BAYC_SAM_LinearSVR.npz",
+      "sha256": "3e4a62a34dbf759ce025a1d12212314f982464e8949262cf2d49d3ed4ed95638",
+      "bytes": 75665,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\predictions\\BAYC_DreamSim_XGBoost.npz",
+      "sha256": "7b8e268af3a1f3a42dddc12abfae8e9febeecc2afe4124e16c5dbb9363e89437",
+      "bytes": 75429,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_development_targets.jsonl",
+      "sha256": "b106a9a54763121b234074ab9dfbbf386f9e62caeb88d1f4594dbc0fd8eafd43",
+      "bytes": 56334505,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "revision\\target_pipeline_20260909\\mayc_temporal_test_targets.NOT_FOR_SELECTION.jsonl",
+      "sha256": "df5b63f072c10fb3ad1756b14ce671fa882cbaafbbf1b5a83978643b1aadf9a1",
+      "bytes": 6497905,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\metadata_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_TF_IDF_XGBoost.npz",
+      "sha256": "3f1c2011c0b71c3bf880f7fdd578e2367216b163cfe018326dee707e19436e2f",
+      "bytes": 175733,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\image_asinh_transaction_2022_2024_eight_regressors_20260920_v1\\predictions\\MAYC_SDXL_VAE_PLS.npz",
+      "sha256": "915f05347045dd221ee8593da67a55f0beade34cf1c5e01bf08260715a3381a6",
+      "bytes": 173967,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\early_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260921_v1\\predictions\\MAYC_CLIP_PLS.npz",
+      "sha256": "c04a829659d1341d7c7caef7c6bd0cc1551f0eee46d2b02db480528588cc3fd7",
+      "bytes": 174963,
+      "prior_baseline_verified": true
+    },
+    {
+      "path": "results\\late_fusion_tfidf_asinh_transaction_2022_2024_eight_regressors_20260922_v2\\predictions\\MAYC_SDXL_VAE_PLS.npz",
+      "sha256": "ed4e5704f9afca4f7028f9ed49a909f5f161ed86b3d60bb4e05db30a3e553d33",
+      "bytes": 173955,
+      "prior_baseline_verified": true
+    }
+  ]
+}
