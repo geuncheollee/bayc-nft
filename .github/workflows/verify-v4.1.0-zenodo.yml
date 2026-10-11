@@ -1,0 +1,129 @@
+name: Verify v4.1.0 Zenodo archive
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-v4.1.0-zenodo.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: verify-bayc-v4.1.0-zenodo
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'geuncheollee/bayc-nft'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Verify public Zenodo files and record new version DOI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import datetime, hashlib, io, json, os, time, urllib.request, urllib.error, zipfile
+          
+          REPO = "geuncheollee/bayc-nft"
+          TAG = "v4.1.0"
+          COMMIT = "886c92215c4ddf584b1291260cf988ad7f92e40a"
+          ZIP_HASH = "fd3b499509235f70437d557c379e054e81603da776100c2be7ab7bc2f4f7dcc1"
+          MANIFEST_HASH = "8e4f6911d23e07fa3f3040833b3466679ef57b9016263881bc53856e93b27dba"
+          BASE = "https://api.github.com/repos/" + REPO
+          assert os.environ["GITHUB_REPOSITORY"] == REPO
+          
+          def public_bytes(url):
+              assert url.startswith(("https://zenodo.org/", "https://github.com/geuncheollee/bayc-nft/", "https://raw.githubusercontent.com/geuncheollee/bayc-nft/"))
+              request = urllib.request.Request(url, headers={"User-Agent": "BAYC-reproducibility-verification/4.1.0"})
+              with urllib.request.urlopen(request, timeout=120) as response:
+                  return response.read()
+          
+          def zenodo(url):
+              assert url.startswith("https://zenodo.org/")
+              return json.loads(public_bytes(url))
+          
+          def gh(path, method="GET", body=None, upload=False):
+              url = path if upload else BASE + path
+              assert url.startswith(BASE + "/") or url.startswith("https://uploads.github.com/repos/" + REPO + "/")
+              data = json.dumps(body, indent=2).encode() if body is not None else None
+              headers = {"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                         "Accept": "application/vnd.github+json", "Content-Type": "application/json"}
+              with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers, method=method), timeout=120) as response:
+                  return json.load(response)
+          
+          old = zenodo("https://zenodo.org/api/records/22921602")
+          assert old["doi"] == "10.5281/zenodo.22921602"
+          concept = str(old["conceptrecid"])
+          print("Existing Zenodo record and version family:", old["id"], concept, flush=True)
+          record = None
+          for attempt in range(10):
+              try:
+                  listing = zenodo("https://zenodo.org/api/records/?q=conceptrecid:" + concept + "&all_versions=true&size=100")
+                  candidates = [r for r in listing["hits"]["hits"] if str(r["metadata"].get("version", "")).lstrip("v") == "4.1.0"]
+                  assert len(candidates) <= 1, "Multiple v4.1.0 records require manual inspection"
+                  if candidates:
+                      record = zenodo("https://zenodo.org/api/records/" + str(candidates[0]["id"]))
+                      break
+              except (urllib.error.HTTPError, urllib.error.URLError) as error:
+                  print("Zenodo indexing check failed:", type(error).__name__, flush=True)
+              print("Waiting for v4.1.0 in the existing Zenodo version family, attempt", attempt + 1, flush=True)
+              time.sleep(30)
+          assert record is not None, "New Zenodo record not yet found; existing records remain untouched"
+          assert str(record["conceptrecid"]) == concept and record["id"] != old["id"]
+          assert record["metadata"]["access_right"] == "open"
+          assert len(record["metadata"]["creators"]) == 3
+          assert {c["name"] for c in record["metadata"]["creators"]} == {"Lee, Geun-Cheol", "Koo, Hoon-Young", "Lee, Heejung"}
+          doi = record["doi"]
+          assert doi != old["doi"] and doi.startswith("10.5281/zenodo.")
+          related = record["metadata"].get("related_identifiers", [])
+          assert any("github.com/geuncheollee/bayc-nft" in r["identifier"] and TAG in r["identifier"] for r in related), related
+          verified = []
+          for f in record["files"]:
+              archive = public_bytes(f["links"]["self"])
+              checksum = f["checksum"]
+              algorithm, value = checksum.split(":", 1)
+              assert hashlib.new(algorithm, archive).hexdigest() == value
+              with zipfile.ZipFile(io.BytesIO(archive)) as z:
+                  manifests = [n for n in z.namelist() if n.endswith("/MANIFEST_SHA256.json") and "legacy_v4_0_3/" not in n]
+                  assert len(manifests) == 1
+                  manifest_name = manifests[0]
+                  manifest_bytes = z.read(manifest_name)
+                  assert hashlib.sha256(manifest_bytes).hexdigest() == MANIFEST_HASH
+                  prefix = manifest_name[:-len("MANIFEST_SHA256.json")]
+                  manifest = json.loads(manifest_bytes)
+                  assert len(manifest) == 250
+                  for m in manifest:
+                      content = z.read(prefix + m["path"])
+                      assert len(content) == m["bytes"] and hashlib.sha256(content).hexdigest() == m["sha256"], m["path"]
+                  asset_bytes = z.read(prefix + "dist/bayc-mayc-v4.1.0.zip")
+                  assert hashlib.sha256(asset_bytes).hexdigest() == ZIP_HASH
+                  assert len(json.loads(z.read(prefix + "data/catalog.json"))) == 40
+                  verified.append({"name": f["key"], "bytes": len(archive), "checksum": checksum,
+                                   "sha256": hashlib.sha256(archive).hexdigest(), "download_url": f["links"]["self"],
+                                   "package_files_verified": 251, "datasets": 40})
+          assert verified
+          downloaded_asset = public_bytes("https://github.com/" + REPO + "/releases/download/" + TAG + "/bayc-mayc-v4.1.0.zip")
+          assert hashlib.sha256(downloaded_asset).hexdigest() == ZIP_HASH
+          old_after = zenodo("https://zenodo.org/api/records/22921602")
+          for key in ["id", "doi", "metadata", "files"]:
+              assert old_after[key] == old[key], ("Previous Zenodo record changed", key)
+          release = gh("/releases/tags/" + TAG)
+          assert release["id"] == 409760392 and release["target_commitish"] == COMMIT and not release["draft"]
+          assert gh("/git/ref/tags/" + TAG)["object"]["sha"] == COMMIT
+          receipt = {"verified_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                     "release_url": release["html_url"], "tag": TAG, "commit": COMMIT,
+                     "version_doi": doi, "zenodo_record_id": record["id"],
+                     "zenodo_record_url": "https://zenodo.org/records/" + str(record["id"]),
+                     "conceptrecid": concept, "previous_version_doi": old["doi"],
+                     "previous_record_unchanged": True, "github_asset_sha256": ZIP_HASH,
+                     "zenodo_archives": verified}
+          asset_name = "publication-verification.json"
+          assets = gh("/releases/" + str(release["id"]) + "/assets")
+          if not any(a["name"] == asset_name for a in assets):
+              gh(release["upload_url"].split("{")[0] + "?name=" + asset_name, "POST", receipt, upload=True)
+          pending = "Zenodo archival status: a new version DOI must be verified separately; the v4.0.3 DOI remains unchanged."
+          published = "Zenodo archived version: **[" + doi + "](https://doi.org/" + doi + ")**. The downloaded Zenodo archive was verified against all 250 manifest entries (251 package files), including all 40 datasets and the original release ZIP. The previous v4.0.3 record is preserved. See publication-verification.json for checksums."
+          if pending in release["body"]:
+              gh("/releases/" + str(release["id"]), "PATCH", {"body": release["body"].replace(pending, published)})
+          else:
+              assert doi in release["body"]
+          print("PUBLICATION_RECEIPT=" + json.dumps(receipt), flush=True)
+          
