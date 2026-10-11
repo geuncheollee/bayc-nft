@@ -53,19 +53,27 @@ jobs:
           assert old["doi"] == "10.5281/zenodo.22921602"
           concept = str(old["conceptrecid"])
           print("Existing Zenodo record and version family:", old["id"], concept, flush=True)
+          print("Zenodo version links:", json.dumps(old.get("links", {})), flush=True)
           record = None
-          for attempt in range(10):
-              try:
-                  listing = zenodo("https://zenodo.org/api/records/?q=conceptrecid:" + concept + "&all_versions=true&size=100")
-                  candidates = [r for r in listing["hits"]["hits"] if str(r["metadata"].get("version", "")).lstrip("v") == "4.1.0"]
-                  assert len(candidates) <= 1, "Multiple v4.1.0 records require manual inspection"
-                  if candidates:
-                      record = zenodo("https://zenodo.org/api/records/" + str(candidates[0]["id"]))
-                      break
-              except (urllib.error.HTTPError, urllib.error.URLError) as error:
-                  print("Zenodo indexing check failed:", type(error).__name__, flush=True)
-              print("Waiting for v4.1.0 in the existing Zenodo version family, attempt", attempt + 1, flush=True)
-              time.sleep(30)
+          for attempt in range(3):
+              latest_url = old.get("links", {}).get("latest")
+              urls = [latest_url] if latest_url else []
+              urls += ["https://zenodo.org/api/records?q=conceptrecid:" + concept + "&all_versions=true&size=100"]
+              for url in urls:
+                  try:
+                      result = zenodo(url)
+                      candidates = result.get("hits", {}).get("hits", []) if "hits" in result else [result]
+                      print("Version lookup:", url, [(r.get("id"), r.get("metadata", {}).get("version")) for r in candidates], flush=True)
+                      matches = [r for r in candidates if str(r.get("metadata", {}).get("version", "")).lstrip("v") == "4.1.0"]
+                      assert len(matches) <= 1
+                      if matches:
+                          record = zenodo("https://zenodo.org/api/records/" + str(matches[0]["id"]))
+                          break
+                  except (urllib.error.HTTPError, urllib.error.URLError) as error:
+                      print("Zenodo lookup error:", url, getattr(error, "code", str(error)), flush=True)
+              if record:
+                  break
+              time.sleep(15)
           assert record is not None, "New Zenodo record not yet found; existing records remain untouched"
           assert str(record["conceptrecid"]) == concept and record["id"] != old["id"]
           assert record["metadata"]["access_right"] == "open"
